@@ -1,0 +1,6 @@
+ - CNAME record: `www` pointing to `mttechindustries.github.io`
+   - A records pointing to GitHub Pages IPs:
+     - 185.199.108.153
+     - 185.199.109.153
+     - 185.199.110.153
+     - 185.199.111.153
