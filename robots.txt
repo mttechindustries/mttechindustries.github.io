@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mttechindustries.github.io/sitemap.xml
