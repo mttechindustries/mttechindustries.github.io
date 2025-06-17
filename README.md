@@ -3,13 +3,13 @@
 This is the official website repository for MT Tech Industries LLC, hosted on GitHub Pages.
 
 ## 🌐 Live Website
-Visit us at: [https://mttechindustries.github.io](https://mttechindustries.github.io)
+Visit us at: [MT Tech Industries](https://mttechindustries.github.io)
 
 ## 🚀 Technologies Featured
-- **theFreq** - Consciousness Evolution Platform
-- **WoofWize** - AI-Powered Pet Wellness
-- **PAID-FR** - Professional Augmented Intelligence
-- **BoloBeam** - Directional Audio Evolution
+- **theFreq** - Frequency Driven Wellness Center 
+- **WoofWize** - Wearable Subtle Cue Canine Wellness and Comunicator
+- **PAID-FR** - Plasma AI Material Field Repulsion 
+- **DNEA** - Directed Sound in a Noisy WORLD
 
 ## 📋 Website Features
 - Responsive design for all devices
