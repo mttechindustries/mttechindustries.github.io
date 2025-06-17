@@ -27,11 +27,6 @@ Visit us at: [MT Tech Industries](https://mttechindustries.github.io)
 - Intersection Observer API
 - Progressive Web App ready
 
-## 🔧 Local Development
-To run locally:
-1. Clone this repository
-2. Open `index.html` in your browser
-3. Or use a local server: `python -m http.server 8000`
 
 ## 📞 Contact
 - **Business**: business@mttechindustries.com
