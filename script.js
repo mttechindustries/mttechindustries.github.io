@@ -133,47 +133,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Investor Deck Download
-    const downloadDeckBtn = document.getElementById('download-deck');
-    if (downloadDeckBtn) {
-        downloadDeckBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            // Create a simple investor deck data
-            const investorData = {
-                company: 'MT Tech Industries LLC',
-                founded: '2025',
-                technologies: ['theFreq', 'WoofWize', 'PAID-FR', 'BoloBeam'],
-                market_size: '$147.2B combined market opportunity',
-                projections: {
-                    '2025': '$100K+ Revenue',
-                    '2026': '$1M+ Revenue',
-                    '2027': '$10M+ Revenue'
-                },
-                contact: 'investors@mttechindustries.com'
-            };
-            
-            // Create downloadable JSON file
-            const dataStr = JSON.stringify(investorData, null, 2);
-            const dataBlob = new Blob([dataStr], {type: 'application/json'});
-            const url = URL.createObjectURL(dataBlob);
-            
-            const link = document.createElement('a');
-            link.href = url;
-            link.download = 'MT-Tech-Industries-Investor-Deck.json';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-            URL.revokeObjectURL(url);
-            
-            // Update button text
-            const originalText = this.textContent;
-            this.textContent = 'Downloaded!';
-            setTimeout(() => {
-                this.textContent = originalText;
-            }, 2000);
-        });
-    }
+    // Investor Deck Download - Removed for privacy
+    // This functionality has been removed to maintain confidentiality
     
     // Intersection Observer for Animation on Scroll
     const observerOptions = {
@@ -349,20 +310,20 @@ trackEvent('page_view', {
     page_location: window.location.href
 });
 
-// Track technology interest
+// Track focus area interest
 document.querySelectorAll('.tech-card').forEach(card => {
     card.addEventListener('click', function() {
-        const techName = this.querySelector('h3').textContent;
-        trackEvent('technology_interest', {
-            technology: techName
+        const focusArea = this.querySelector('h3').textContent;
+        trackEvent('focus_area_interest', {
+            focus_area: focusArea
         });
     });
 });
 
-// Track investor interest
-document.querySelectorAll('.investor-buttons a').forEach(button => {
+// Track partnership interest
+document.querySelectorAll('.investor-buttons a, .investor-card a').forEach(button => {
     button.addEventListener('click', function() {
-        trackEvent('investor_interest', {
+        trackEvent('partnership_interest', {
             action: this.textContent
         });
     });
