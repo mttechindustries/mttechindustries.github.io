@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omnimath Engine | MT Tech Industries</title>
+    <meta name="description" content="Multi-algorithm adaptive solver with 8+ optimization algorithms.">
+    
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            900: '#0c4a6e',
+                        },
+                        accent: {
+                            500: '#8b5cf6',
+                            600: '#7c3aed',
+                        },
+                        dark: {
+                            900: '#0f172a',
+                            800: '#1e293b',
+                            700: '#334155',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .tech-grid-pattern {
+            background-image: radial-gradient(circle at 1px 1px, rgba(59, 130, 246, 0.15) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+<body class="bg-dark-900 text-slate-100 font-sans antialiased overflow-x-hidden">
+
+    <!-- Navigation Component -->
+    <script src="../components/navbar.js"></script>
+    <mt-nav></mt-nav>
+
+    <!-- Project Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center hero-gradient overflow-hidden" style="background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);">
+        <div class="absolute inset-0 opacity-30">
+            <div class="absolute -top-40 -right-40 w-96 h-96 bg-amber-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
+            <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-yellow-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style="animation-delay: 2s;"></div>
+        </div>
+
+        <div class="relative z-10 container mx-auto px-6 py-20">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800/50 border border-slate-700 mb-8">
+                    <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
+                    <span class="text-sm font-medium text-slate-300">Active Development</span>
+                </div>
+                
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-amber-400 to-yellow-500">
+                        Omnimath Engine
+                    </span>
+                    <br />
+                    <span class="text-slate-100 text-2xl md:text-3xl font-normal">Multi-algorithm Adaptive Solver</span>
+                </h1>
+                
+                <p class="text-lg md:text-xl text-slate-400 mb-10 max-w-3xl mx-auto leading-relaxed">
+                    Multi-algorithm adaptive solver with 8+ optimization algorithms for complex problem solving across multiple domains.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="#overview" class="group relative px-8 py-4 bg-gradient-to-r from-amber-600 to-yellow-600 rounded-lg font-semibold text-white overflow-hidden transition-all hover:scale-105 hover:shadow-2xl hover:shadow-amber-500/25">
+                        <span class="relative z-10 flex items-center gap-2">
+                            Project Details
+                            <i data-feather="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                        </span>
+                        <div class="absolute inset-0 bg-gradient-to-r from-yellow-600 to-amber-600 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    </a>
+                    <a href="../#contact" class="px-8 py-4 border border-slate-600 rounded-lg font-semibold text-slate-300 hover:bg-slate-800 hover:border-slate-500 transition-all">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section id="overview" class="py-20 bg-dark-800">
+        <div class="container mx-auto px-6">
+            <div class="max-w-5xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-3xl font-bold mb-4 text-slate-100">Project Overview</h2>
+                        <p class="text-slate-400 mb-6 leading-relaxed">
+                            The Omnimath Engine represents a breakthrough in computational mathematics, featuring an adaptive solver that intelligently selects and applies the most appropriate optimization algorithm for each specific problem domain.
+                        </p>
+                        <p class="text-slate-400 mb-6 leading-relaxed">
+                            With support for 8+ different optimization algorithms, the engine can tackle complex problems in physics simulation, engineering design, financial modeling, and advanced research applications.
+                        </p>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-amber-500/10 flex items-center justify-center flex-shrink-0 mt-1">
+                                    <i data-feather="check" class="w-4 h-4 text-amber-400"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-slate-200">Multi-algorithm Support</h4>
+                                    <p class="text-slate-400 text-sm">8+ optimization algorithms available</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-amber-500/10 flex items-center justify-center flex-shrink-0 mt-1">
+                                    <i data-feather="check" class="w-4 h-4 text-amber-400"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-slate-200">Adaptive Selection</h4>
+                                    <p class="text-slate-400 text-sm">Intelligent algorithm choice based on problem characteristics</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-amber-500/10 flex items-center justify-center flex-shrink-0 mt-1">
+                                    <i data-feather="check" class="w-4 h-4 text-amber-400"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-slate-200">Cross-domain</h4>
+                                    <p class="text-slate-400 text-sm">Applicable to multiple problem domains</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="glass-panel p-8 rounded-2xl border-slate-700">
+                        <h3 class="text-xl font-semibold mb-4 text-slate-100">Technical Specifications</h3>
+                        
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-slate-400">Algorithms</span>
+                                    <span class="text-slate-200">8+</span>
+                                </div>
+                                <div class="w-full bg-slate-700 rounded-full h-2">
+                                    <div class="bg-amber-500 h-2 rounded-full" style="width: 100%"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-slate-400">Problem Types</span>
+                                    <span class="text-slate-200">Mixed</span>
+                                </div>
+                                <div class="w-full bg-slate-700 rounded-full h-2">
+                                    <div class="bg-yellow-500 h-2 rounded-full" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-slate-400">Performance</span>
+                                    <span class="text-slate-200">Optimized</span>
+                                </div>
+                                <div class="w-full bg-slate-700 rounded-full h-2">
+                                    <div class="bg-orange-500 h-2 rounded-full" style="width: 95%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6 pt-6 border-t border-slate-700">
+                            <h4 class="font-semibold text-slate-200 mb-3">Technology Stack</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs">Python</span>
+                                <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs">NumPy</span>
+                                <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs">SciPy</span>
+                                <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs">JAX</span>
+                                <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs">Cython</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Algorithms -->
+    <section class="py-20 bg-dark-900">
+        <div class="container mx-auto px-6">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-100">Supported Algorithms</h2>
+                <p class="text-lg text-slate-400">
+                    Comprehensive optimization toolkit for diverse problem-solving needs
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="glass-panel p-6 rounded-xl border-slate-700">
+                    <div class="w-10 h-10 bg-amber-500/10 rounded-lg flex items-center justify-center mb-4 mx-auto">
+                        <i data-feather="activity" class="w-5 h-5 text-amber-400"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2 text-slate-100 text-center">Genetic Algorithm</h3>
+                    <p class="text-slate-400 text-sm text-center">Evolutionary optimization approach</p>
+                </div>
+
+                <div class="glass-panel p-6 rounded-xl border-slate-700">
+                    <div class="w-10 h-10 bg-amber-500/10 rounded-lg flex items-center justify-center mb-4 mx-auto">
+                        <i data-feather="zap" class="w-5 h-5 text-amber-400"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2 text-slate-100 text-center">Simulated Annealing</h3>
+                    <p class="text-slate-400 text-sm text-center">Probabilistic technique for global optimization</p>
+                </div>
+
+                <div class="glass-panel p-6 rounded-xl border-slate-700">
+                    <div class="w-10 h-10 bg-amber-500/10 rounded-lg flex items-center justify-center mb-4 mx-auto">
+                        <i data-feather="trending-up" class="w-5 h-5 text-amber-400"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2 text-slate-100 text-center">Gradient Descent</h3>
+                    <p class="text-slate-400 text-sm text-center">First-order iterative optimization algorithm</p>
+                </div>
+
+                <div class="glass-panel p-6 rounded-xl border-slate-700">
+                    <div class="w-10 h-10 bg-amber-500/10 rounded-lg flex items-center justify-center mb-4 mx-auto">
+                        <i data-feather="pie-chart" class="w-5 h-5 text-amber-400"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2 text-slate-100 text-center">Particle Swarm</h3>
+                    <p class="text-slate-400 text-sm text-center">Population-based stochastic optimization</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Applications -->
+    <section class="py-20 bg-dark-800">
+        <div class="container mx-auto px-6">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-100">Applications</h2>
+                <p class="text-lg text-slate-400">
+                    Versatile engine applicable across multiple domains and industries
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-panel p-8 rounded-2xl border-slate-700">
+                    <h3 class="text-xl font-semibold mb-4 text-slate-100">Engineering Design</h3>
+                    <p class="text-slate-400 mb-4">
+                        Optimize complex engineering systems and components for performance, cost, and reliability.
+                    </p>
+                    <ul class="space-y-2 text-slate-400">
+                        <li class="flex items-start gap-2">
+                            <i data-feather="check-circle" class="w-4 h-4 text-green-400 flex-shrink-0 mt-1"></i>
+                            <span>Structural optimization</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-feather="check-circle" class="w-4 h-4 text-green-400 flex-shrink-0 mt-1"></i>
+                            <span>Thermal systems</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-feather="check-circle" class="w-4 h-4 text-green-400 flex-shrink-0 mt-1"></i>
+                            <span>Fluid dynamics</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="glass-panel p-8 rounded-2xl border-slate-700">
+                    <h3 class="text-xl font-semibold mb-4 text-slate-100">Financial Modeling</h3>
+                    <p class="text-slate-400 mb-4">
+                        Portfolio optimization, risk analysis, and algorithmic trading strategy development.
+                    </p>
+                    <ul class="space-y-2 text-slate-400">
+                        <li class="flex items-start gap-2">
+                            <i data-feather="check-circle" class="w-4 h-4 text-green-400 flex-shrink-0 mt-1"></i>
+                            <span>Portfolio optimization</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-feather="check-circle" class="w-4 h-4 text-green-400 flex-shrink-0 mt-1"></i>
+                            <span>Risk modeling</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-feather="check-circle" class="w-4 h-4 text-green-400 flex-shrink-0 mt-1"></i>
+                            <span>Algorithmic trading</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="glass-panel p-8 rounded-2xl border-slate-700">
+                    <h3 class="text-xl font-semibold mb-4 text-slate-100">Research Applications</h3>
+                    <p class="text-slate-400 mb-4">
+                        Scientific computing, parameter estimation, and complex system modeling.
+                    </p>
+                    <ul class="space-y-2 text-slate-400">
+                        <li class="flex items-start gap-2">
+                            <i data-feather="check-circle" class="w-4 h-4 text-green-400 flex-shrink-0 mt-1"></i>
+                            <span>Data fitting</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-feather="check-circle" class="w-4 h-4 text-green-400 flex-shrink-0 mt-1"></i>
+                            <span>Parameter estimation</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-feather="check-circle" class="w-4 h-4 text-green-400 flex-shrink-0 mt-1"></i>
+                            <span>System identification</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="py-20 bg-gradient-to-br from-dark-800 to-dark-900">
+        <div class="container mx-auto px-6">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-100">Interested in Omnimath Engine?</h2>
+                <p class="text-lg text-slate-400 mb-8">
+                    Contact our team to learn more about licensing, partnerships, or research collaborations.
+                </p>
+                <a href="../#contact" class="inline-block px-8 py-4 bg-gradient-to-r from-amber-600 to-yellow-600 rounded-lg font-semibold text-white hover:from-amber-500 hover:to-yellow-500 transition-all transform hover:scale-105">
+                    Get in Touch
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Component -->
+    <script src="../components/footer.js"></script>
+    <mt-footer></mt-footer>
+
+    <!-- Scripts -->
+    <script src="../script.js"></script>
+    <script>feather.replace();</script>
+
+</body>
+</html>
