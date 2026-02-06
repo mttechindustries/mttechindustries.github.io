@@ -20,10 +20,13 @@ class MtFooter extends HTMLElement {
             <div>
               <h4 class="text-slate-200 font-semibold mb-4">Projects</h4>
               <ul class="space-y-2">
-                <li><a href="#technologies" class="text-slate-400 hover:text-cyan-400 transition-colors text-sm">WoofWizeX-FRS</a></li>
-                <li><a href="#technologies" class="text-slate-400 hover:text-cyan-400 transition-colors text-sm">PAID-FR 4.0</a></li>
-                <li><a href="#technologies" class="text-slate-400 hover:text-cyan-400 transition-colors text-sm">PAFFT Omnimath</a></li>
-                <li><a href="#technologies" class="text-slate-400 hover:text-cyan-400 transition-colors text-sm">BoloBeam Mk. II</a></li>
+                <li><a href="projects/woofwizex-frs.html" class="text-slate-400 hover:text-cyan-400 transition-colors text-sm">WoofWizeX-FRS</a></li>
+                <li><a href="projects/paid-fr.html" class="text-slate-400 hover:text-cyan-400 transition-colors text-sm">PAID-FR 4.0</a></li>
+                <li><a href="projects/pafft.html" class="text-slate-400 hover:text-cyan-400 transition-colors text-sm">PAFFT Omnimath</a></li>
+                <li><a href="projects/bolobeam.html" class="text-slate-400 hover:text-cyan-400 transition-colors text-sm">BoloBeam Mk. II</a></li>
+                <li><a href="projects/thefreq.html" class="text-slate-400 hover:text-cyan-400 transition-colors text-sm">theFreq</a></li>
+                <li><a href="projects/mk2.html" class="text-slate-400 hover:text-cyan-400 transition-colors text-sm">MK2 Platform</a></li>
+                <li><a href="projects/omnix.html" class="text-slate-400 hover:text-cyan-400 transition-colors text-sm">OmniX AI</a></li>
               </ul>
             </div>
             

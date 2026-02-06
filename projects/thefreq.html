@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>theFreq | MT Tech Industries</title>
+    <meta name="description" content="Frequency Driven Wellness Center for advanced applications.">
+    
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            900: '#0c4a6e',
+                        },
+                        accent: {
+                            500: '#8b5cf6',
+                            600: '#7c3aed',
+                        },
+                        dark: {
+                            900: '#0f172a',
+                            800: '#1e293b',
+                            700: '#334155',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .tech-grid-pattern {
+            background-image: radial-gradient(circle at 1px 1px, rgba(59, 130, 246, 0.15) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+<body class="bg-dark-900 text-slate-100 font-sans antialiased overflow-x-hidden">
+
+    <!-- Navigation Component -->
+    <script src="../components/navbar.js"></script>
+    <mt-nav></mt-nav>
+
+    <!-- Project Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center hero-gradient overflow-hidden" style="background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);">
+        <div class="absolute inset-0 opacity-30">
+            <div class="absolute -top-40 -right-40 w-96 h-96 bg-purple-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
+            <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-indigo-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style="animation-delay: 2s;"></div>
+        </div>
+
+        <div class="relative z-10 container mx-auto px-6 py-20">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800/50 border border-slate-700 mb-8">
+                    <span class="w-2 h-2 rounded-full bg-purple-500 animate-pulse"></span>
+                    <span class="text-sm font-medium text-slate-300">Active Development</span>
+                </div>
+                
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-indigo-500">
+                        theFreq
+                    </span>
+                    <br />
+                    <span class="text-slate-100 text-2xl md:text-3xl font-normal">Frequency Driven Wellness Center</span>
+                </h1>
+                
+                <p class="text-lg md:text-xl text-slate-400 mb-10 max-w-3xl mx-auto leading-relaxed">
+                    Advanced wellness platform leveraging frequency-based therapies and precision signal processing for holistic health applications.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="#overview" class="group relative px-8 py-4 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-lg font-semibold text-white overflow-hidden transition-all hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25">
+                        <span class="relative z-10 flex items-center gap-2">
+                            Project Details
+                            <i data-feather="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                        </span>
+                        <div class="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    </a>
+                    <a href="../#contact" class="px-8 py-4 border border-slate-600 rounded-lg font-semibold text-slate-300 hover:bg-slate-800 hover:border-slate-500 transition-all">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section id="overview" class="py-20 bg-dark-800">
+        <div class="container mx-auto px-6">
+            <div class="max-w-5xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-3xl font-bold mb-4 text-slate-100">Project Overview</h2>
+                        <p class="text-slate-400 mb-6 leading-relaxed">
+                            theFreq represents a revolutionary approach to wellness, utilizing precisely controlled frequency-based therapies to promote healing, relaxation, and overall well-being. Our platform combines advanced signal processing with biometric feedback to deliver personalized wellness experiences.
+                        </p>
+                        <p class="text-slate-400 mb-6 leading-relaxed">
+                            The system integrates multiple frequency modalities to target specific physiological responses, creating a comprehensive wellness ecosystem that adapts to individual needs.
+                        </p>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-purple-500/10 flex items-center justify-center flex-shrink-0 mt-1">
+                                    <i data-feather="check" class="w-4 h-4 text-purple-400"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-slate-200">Frequency Therapy</h4>
+                                    <p class="text-slate-400 text-sm">Precisely controlled therapeutic frequencies</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-purple-500/10 flex items-center justify-center flex-shrink-0 mt-1">
+                                    <i data-feather="check" class="w-4 h-4 text-purple-400"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-slate-200">Biometric Feedback</h4>
+                                    <p class="text-slate-400 text-sm">Real-time physiological monitoring</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-purple-500/10 flex items-center justify-center flex-shrink-0 mt-1">
+                                    <i data-feather="check" class="w-4 h-4 text-purple-400"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-slate-200">Personalized Protocols</h4>
+                                    <p class="text-slate-400 text-sm">Adaptive wellness programs</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="glass-panel p-8 rounded-2xl border-slate-700">
+                        <h3 class="text-xl font-semibold mb-4 text-slate-100">Technical Specifications</h3>
+                        
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-slate-400">Frequency Range</span>
+                                    <span class="text-slate-200">0.1Hz - 100kHz</span>
+                                </div>
+                                <div class="w-full bg-slate-700 rounded-full h-2">
+                                    <div class="bg-purple-500 h-2 rounded-full" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-slate-400">Precision</span>
+                                    <span class="text-slate-200">±0.01Hz</span>
+                                </div>
+                                <div class="w-full bg-slate-700 rounded-full h-2">
+                                    <div class="bg-indigo-500 h-2 rounded-full" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-slate-400">Channels</span>
+                                    <span class="text-slate-200">8+</span>
+                                </div>
+                                <div class="w-full bg-slate-700 rounded-full h-2">
+                                    <div class="bg-pink-500 h-2 rounded-full" style="width: 80%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6 pt-6 border-t border-slate-700">
+                            <h4 class="font-semibold text-slate-200 mb-3">Technology Stack</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs">Python</span>
+                                <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs">DSP</span>
+                                <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs">Biometrics</span>
+                                <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs">FPGA</span>
+                                <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs">Signal Proc.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="py-20 bg-dark-900">
+        <div class="container mx-auto px-6">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-100">Key Features</h2>
+                <p class="text-lg text-slate-400">
+                    Advanced capabilities that define the next generation of frequency-based wellness
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-panel p-8 rounded-2xl border-slate-700 hover:border-purple-500/30 transition-all">
+                    <div class="w-12 h-12 bg-purple-500/10 rounded-xl flex items-center justify-center mb-6">
+                        <i data-feather="wave-sine" class="w-6 h-6 text-purple-400"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-slate-100">Precision Frequencies</h3>
+                    <p class="text-slate-400">
+                        Ultra-precise frequency generation with sub-Hertz accuracy for therapeutic applications.
+                    </p>
+                </div>
+
+                <div class="glass-panel p-8 rounded-2xl border-slate-700 hover:border-indigo-500/30 transition-all">
+                    <div class="w-12 h-12 bg-indigo-500/10 rounded-xl flex items-center justify-center mb-6">
+                        <i data-feather="activity" class="w-6 h-6 text-indigo-400"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-slate-100">Biometric Integration</h3>
+                    <p class="text-slate-400">
+                        Real-time physiological feedback to adjust therapy parameters dynamically.
+                    </p>
+                </div>
+
+                <div class="glass-panel p-8 rounded-2xl border-slate-700 hover:border-pink-500/30 transition-all">
+                    <div class="w-12 h-12 bg-pink-500/10 rounded-xl flex items-center justify-center mb-6">
+                        <i data-feather="heart" class="w-6 h-6 text-pink-400"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-slate-100">Wellness Protocols</h3>
+                    <p class="text-slate-400">
+                        Pre-configured therapeutic programs for specific wellness goals.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Applications -->
+    <section class="py-20 bg-dark-800">
+        <div class="container mx-auto px-6">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-100">Applications</h2>
+                <p class="text-lg text-slate-400">
+                    Versatile platform with applications across multiple wellness domains
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="glass-panel p-8 rounded-2xl border-slate-700">
+                    <h3 class="text-xl font-semibold mb-4 text-slate-100">Therapeutic Applications</h3>
+                    <p class="text-slate-400 mb-4">
+                        Targeted frequency therapies for pain management, tissue repair, and stress reduction.
+                    </p>
+                    <ul class="space-y-2 text-slate-400">
+                        <li class="flex items-start gap-2">
+                            <i data-feather="check-circle" class="w-4 h-4 text-green-400 flex-shrink-0 mt-1"></i>
+                            <span>Pain management protocols</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-feather="check-circle" class="w-4 h-4 text-green-400 flex-shrink-0 mt-1"></i>
+                            <span>Tissue regeneration support</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-feather="check-circle" class="w-4 h-4 text-green-400 flex-shrink-0 mt-1"></i>
+                            <span>Stress and anxiety reduction</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="glass-panel p-8 rounded-2xl border-slate-700">
+                    <h3 class="text-xl font-semibold mb-4 text-slate-100">Wellness Optimization</h3>
+                    <p class="text-slate-400 mb-4">
+                        Personalized wellness programs for enhanced vitality and performance.
+                    </p>
+                    <ul class="space-y-2 text-slate-400">
+                        <li class="flex items-start gap-2">
+                            <i data-feather="check-circle" class="w-4 h-4 text-green-400 flex-shrink-0 mt-1"></i>
+                            <span>Energy optimization</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-feather="check-circle" class="w-4 h-4 text-green-400 flex-shrink-0 mt-1"></i>
+                            <span>Sleep enhancement</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-feather="check-circle" class="w-4 h-4 text-green-400 flex-shrink-0 mt-1"></i>
+                            <span>Cognitive performance</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="py-20 bg-gradient-to-br from-dark-800 to-dark-900">
+        <div class="container mx-auto px-6">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-100">Interested in theFreq?</h2>
+                <p class="text-lg text-slate-400 mb-8">
+                    Contact our team to learn more about licensing, partnerships, or research collaborations.
+                </p>
+                <a href="../#contact" class="inline-block px-8 py-4 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-lg font-semibold text-white hover:from-purple-500 hover:to-indigo-500 transition-all transform hover:scale-105">
+                    Get in Touch
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Component -->
+    <script src="../components/footer.js"></script>
+    <mt-footer></mt-footer>
+
+    <!-- Scripts -->
+    <script src="../script.js"></script>
+    <script>feather.replace();</script>
+
+</body>
+</html>
