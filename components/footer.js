@@ -35,8 +35,8 @@ class MtFooter extends HTMLElement {
               <ul class="space-y-2">
                 <li><a href="#" class="text-slate-400 hover:text-cyan-400 transition-colors text-sm">Research Papers</a></li>
                 <li><a href="#" class="text-slate-400 hover:text-cyan-400 transition-colors text-sm">Technical Docs</a></li>
-                <li><a href="#" class="text-slate-400 hover:text-cyan-400 transition-colors text-sm">Patent Filings</a></li>
                 <li><a href="#" class="text-slate-400 hover:text-cyan-400 transition-colors text-sm">Case Studies</a></li>
+                <li><a href="#" class="text-slate-400 hover:text-cyan-400 transition-colors text-sm">Publications</a></li>
               </ul>
             </div>
             
