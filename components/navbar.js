@@ -6,9 +6,7 @@ class MtNav extends HTMLElement {
         <div class="container mx-auto px-6 py-4">
           <div class="flex items-center justify-between">
             <a href="#" class="flex items-center gap-3">
-              <div class="w-10 h-10 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
-                <span class="font-bold text-white text-lg">MT</span>
-              </div>
+              <img src="../MT-Tech-Industries.png" alt="MT Tech Industries Logo" class="w-10 h-10 rounded-lg object-contain">
               <span class="text-xl font-bold text-slate-100">MT Tech Industries</span>
             </a>
             

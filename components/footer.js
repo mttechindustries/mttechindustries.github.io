@@ -7,9 +7,7 @@ class MtFooter extends HTMLElement {
           <div class="grid md:grid-cols-4 gap-8 mb-12">
             <div>
               <div class="flex items-center gap-3 mb-4">
-                <div class="w-8 h-8 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
-                  <span class="font-bold text-white text-sm">MT</span>
-                </div>
+                <img src="../MT-Tech-Industries.png" alt="MT Tech Industries Logo" class="w-8 h-8 rounded-lg object-contain">
                 <span class="text-lg font-bold text-slate-100">MT Tech Industries</span>
               </div>
               <p class="text-slate-400 text-sm">
