@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MT Tech Industries LLC | Advanced Physics & AI Systems</title>
-    <meta name="description" content="MT Tech Industries - Breakthrough technologies at the intersection of applied physics, signal processing, AI, and digital twin platforms.">
+    <title>MT Tech Industries LLC | Digital Twin Prototypes & Advanced Simulations</title>
+    <meta name="description" content="MT Tech Industries - Building digital twin prototypes, advanced simulations, and test suites for frequency-domain control, biometric sensing, and complex system modeling.">
     
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     
     <script>
@@ -34,733 +33,550 @@
                         }
                     },
                     fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
-                    },
-                    animation: {
-                        'float': 'float 6s ease-in-out infinite',
-                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                        'gradient': 'gradient 8s linear infinite',
-                    },
-                    keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-20px)' },
-                        },
-                        gradient: {
-                            '0%, 100%': { backgroundPosition: '0% 50%' },
-                            '50%': { backgroundPosition: '100% 50%' },
-                        }
+                        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
                     }
                 }
             }
-        }
+        };
     </script>
-    
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #e2e8f0;
+            background-color: #0f172a;
+            overflow-x: hidden;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
         
-        .glass-panel {
-            background: rgba(30, 41, 59, 0.7);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0c4a6e 100%);
+            position: relative;
+            overflow: hidden;
         }
         
-        .tech-grid-pattern {
-            background-image: radial-gradient(circle at 1px 1px, rgba(59, 130, 246, 0.15) 1px, transparent 0);
-            background-size: 40px 40px;
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(14, 165, 233, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+            pointer-events: none;
         }
         
-        .glow-text {
-            text-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 900px;
         }
         
-        .hero-gradient {
-            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #60a5fa 0%, #8b5cf6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.1;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            color: #cbd5e1;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 14px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            cursor: pointer;
+            text-align: center;
+            display: inline-block;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(14, 165, 233, 0.3);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: #60a5fa;
+            border: 2px solid #60a5fa;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(96, 165, 250, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        /* Section Styling */
+        section {
+            padding: 80px 0;
+            border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+        }
+        
+        section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            text-align: center;
+            color: #f1f5f9;
+        }
+        
+        section p {
+            font-size: 1.1rem;
+            color: #cbd5e1;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .project-card {
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+            border: 1px solid rgba(148, 163, 184, 0.2);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .project-card:hover {
+            border-color: rgba(14, 165, 233, 0.5);
+            box-shadow: 0 20px 40px rgba(14, 165, 233, 0.15);
+            transform: translateY(-5px);
+        }
+        
+        .project-card h3 {
+            font-size: 1.5rem;
+            color: #60a5fa;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .project-card .problem {
+            color: #94a3b8;
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+        }
+        
+        .project-card .approach {
+            color: #cbd5e1;
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+        }
+        
+        .project-card .impact {
+            color: #cbd5e1;
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+        
+        .project-card .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: auto;
+        }
+        
+        .tag {
+            background: rgba(139, 92, 246, 0.2);
+            color: #c4b5fd;
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        /* Capabilities Section */
+        .capabilities {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .capability-card {
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid rgba(148, 163, 184, 0.2);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .capability-card h3 {
+            color: #60a5fa;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .capability-card p {
+            color: #cbd5e1;
+            font-size: 0.95rem;
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            text-align: center;
+        }
+        
+        .contact-section p {
+            font-size: 1.1rem;
+            color: #cbd5e1;
+            margin-bottom: 2rem;
+        }
+        
+        /* Navbar */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+        
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        nav .logo {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #60a5fa;
+            text-decoration: none;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        nav a:hover {
+            color: #60a5fa;
+        }
+        
+        /* Footer */
+        footer {
+            background: #0c1117;
+            border-top: 1px solid rgba(148, 163, 184, 0.1);
+            padding: 3rem 0;
+            text-align: center;
+            color: #94a3b8;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            section h2 {
+                font-size: 2rem;
+            }
+            
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
         }
     </style>
 </head>
-<body class="bg-dark-900 text-slate-100 font-sans antialiased overflow-x-hidden">
-
-    <!-- Navigation Component -->
-    <script src="components/navbar.js"></script>
-    <mt-nav></mt-nav>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="#" class="logo">MT Tech Industries</a>
+            <ul>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#capabilities">Capabilities</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
     <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center justify-center hero-gradient overflow-hidden">
-        <!-- Animated Background Particles -->
-        <div id="particles-container" class="absolute inset-0 pointer-events-none"></div>
-        
-        <!-- Floating Tech Icons Background -->
-        <div class="absolute inset-0 opacity-20">
-            <div class="absolute top-20 left-10 animate-float">
-                <i data-feather="cpu" class="w-16 h-16 text-cyan-500"></i>
-            </div>
-            <div class="absolute top-40 right-20 animate-float" style="animation-delay: 1s;">
-                <i data-feather="activity" class="w-12 h-12 text-violet-500"></i>
-            </div>
-            <div class="absolute bottom-32 left-1/4 animate-float" style="animation-delay: 2s;">
-                <i data-feather="waves" class="w-20 h-20 text-blue-500"></i>
-            </div>
-            <div class="absolute bottom-20 right-1/3 animate-float" style="animation-delay: 3s;">
-                <i data-feather="shield" class="w-14 h-14 text-emerald-500"></i>
-            </div>
-        </div>
-
-        <div class="relative z-10 container mx-auto px-6 py-20">
-            <div class="max-w-4xl mx-auto text-center">
-                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800/50 border border-slate-700 mb-8 animate-pulse-slow">
-                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                    <span class="text-sm font-medium text-slate-300">R&D Mode: Stealth Operations</span>
-                </div>
-                
-                <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-violet-600 animate-gradient bg-300%">
-                        Physics-First
-                    </span>
-                    <br />
-                    <span class="text-slate-100">Digital Transformation</span>
-                </h1>
-                
-                <p class="text-xl md:text-2xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
-                    Advanced signal processing, AI-driven analysis, and digital twin platforms revolutionizing applied physics research.
-                </p>
-                
-                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                    <a href="#technologies" class="group relative px-8 py-4 bg-gradient-to-r from-violet-600 to-blue-600 rounded-lg font-semibold text-white overflow-hidden transition-all hover:scale-105 hover:shadow-2xl hover:shadow-violet-500/25">
-                        <span class="relative z-10 flex items-center gap-2">
-                            Explore Technologies
-                            <i data-feather="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
-                        </span>
-                        <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-violet-600 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    </a>
-                    <a href="#contact" class="px-8 py-4 border border-slate-600 rounded-lg font-semibold text-slate-300 hover:bg-slate-800 hover:border-slate-500 transition-all">
-                        Contact Research Team
-                    </a>
-                </div>
-
-                <!-- Stats -->
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 pt-10 border-t border-slate-800">
-                    <div class="text-center">
-                        <div class="text-3xl font-bold text-cyan-400 mb-1">7+</div>
-                        <div class="text-sm text-slate-500">Active Projects</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-3xl font-bold text-violet-400 mb-1">TRL 4-5</div>
-                        <div class="text-sm text-slate-500">Tech Readiness</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-3xl font-bold text-blue-400 mb-1">100%</div>
-                        <div class="text-sm text-slate-500">Physics Validation</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-3xl font-bold text-emerald-400 mb-1">$12.5B+</div>
-                        <div class="text-sm text-slate-500">Market Opportunity</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Scroll Indicator -->
-        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <i data-feather="chevron-down" class="w-6 h-6 text-slate-500"></i>
-        </div>
-    </section>
-
-    <!-- Technology Overview -->
-    <section id="overview" class="py-20 bg-dark-800 tech-grid-pattern">
-        <div class="container mx-auto px-6">
-            <div class="max-w-3xl mx-auto text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-100">Core Technology Focus</h2>
-                <p class="text-lg text-slate-400">
-                    Building breakthrough technologies at the intersection of applied physics, signal processing, and artificial intelligence.
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="glass-panel p-8 rounded-2xl hover:border-cyan-500/50 transition-all hover:-translate-y-2 group">
-                    <div class="w-14 h-14 bg-cyan-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-cyan-500/20 transition-colors">
-                        <i data-feather="radio" class="w-7 h-7 text-cyan-400"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3 text-slate-100">Signal Processing</h3>
-                    <p class="text-slate-400 leading-relaxed">
-                        Precision wave generation, CSI extraction, and frequency domain analysis for next-generation sensing applications.
-                    </p>
-                </div>
-
-                <div class="glass-panel p-8 rounded-2xl hover:border-violet-500/50 transition-all hover:-translate-y-2 group">
-                    <div class="w-14 h-14 bg-violet-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-violet-500/20 transition-colors">
-                        <i data-feather="box" class="w-7 h-7 text-violet-400"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3 text-slate-100">Digital Twins</h3>
-                    <p class="text-slate-400 leading-relaxed">
-                        Physics-first simulation platforms with hardware constraint enforcement and Monte Carlo validation.
-                    </p>
-                </div>
-
-                <div class="glass-panel p-8 rounded-2xl hover:border-emerald-500/50 transition-all hover:-translate-y-2 group">
-                    <div class="w-14 h-14 bg-emerald-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-emerald-500/20 transition-colors">
-                        <i data-feather="cpu" class="w-7 h-7 text-emerald-400"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3 text-slate-100">Edge AI</h3>
-                    <p class="text-slate-400 leading-relaxed">
-                        TensorFlow Lite deployment, pattern recognition, and real-time inference on embedded systems.
-                    </p>
-                </div>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Digital Twin Prototypes & Advanced Simulations</h1>
+            <p>Building physics-first digital twins, precision simulations, and comprehensive test suites for frequency-domain control systems, biometric sensing, and complex physical phenomena.</p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">Explore Projects</a>
+                <a href="#contact" class="btn btn-secondary">Get in Touch</a>
             </div>
         </div>
     </section>
 
-    <!-- Major Projects -->
-    <section id="technologies" class="py-20 bg-dark-900 relative">
-        <div class="absolute inset-0 bg-gradient-to-b from-dark-800 to-dark-900"></div>
-        
-        <div class="container mx-auto px-6 relative z-10">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
-                <div class="max-w-2xl">
-                    <div class="inline-block px-3 py-1 bg-violet-500/10 border border-violet-500/20 rounded-full text-violet-400 text-sm font-medium mb-4">
-                        Research & Development
-                    </div>
-                    <h2 class="text-4xl md:text-5xl font-bold text-slate-100 mb-4">Major Product Lines</h2>
-                    <p class="text-slate-400 text-lg">
-                        Proprietary platforms spanning pet tech, plasma physics, acoustic levitation, and security automation.
-                    </p>
-                </div>
-                <a href="#contact" class="hidden md:flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors mt-4 md:mt-0">
-                    Contact Research Team <i data-feather="arrow-right" class="w-4 h-4"></i>
-                </a>
-            </div>
-
-            <div class="grid lg:grid-cols-2 gap-6">
-                <!-- WoofWizeX Card -->
-                <div class="group relative glass-panel rounded-2xl overflow-hidden border-slate-700/50 hover:border-cyan-500/30 transition-all duration-500">
-                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-500 to-blue-500"></div>
-                    <div class="p-8">
-                        <div class="flex justify-between items-start mb-6">
-                            <div>
-                                <h3 class="text-2xl font-bold text-slate-100 mb-2">WoofWizeX-FRS</h3>
-                                <p class="text-cyan-400 font-medium">Pet Emotion Recognition Platform</p>
-                            </div>
-                            <span class="px-3 py-1 bg-emerald-500/10 text-emerald-400 text-xs font-semibold rounded-full border border-emerald-500/20">
-                                Active
-                            </span>
-                        </div>
-                        
-                        <p class="text-slate-400 mb-6 leading-relaxed">
-                            WiFi-based emotion detection using Channel State Information (CSI). Multi-modal ML pipeline with ESP32 edge deployment and React Native interface.
-                        </p>
-
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="px-3 py-1 bg-slate-800 text-slate-300 text-xs rounded-full">Python</span>
-                            <span class="px-3 py-1 bg-slate-800 text-slate-300 text-xs rounded-full">TypeScript</span>
-                            <span class="px-3 py-1 bg-slate-800 text-slate-300 text-xs rounded-full">TensorFlow Lite</span>
-                            <span class="px-3 py-1 bg-slate-800 text-slate-300 text-xs rounded-full">BLE</span>
-                        </div>
-
-                        <div class="border-t border-slate-700 pt-6 flex items-center justify-between">
-                            <div class="text-sm text-slate-500">Stack: Python 66% / TS 21%</div>
-                            <a href="projects/woofwizex-frs.html" class="text-cyan-400 hover:text-cyan-300 flex items-center gap-1 text-sm font-medium group-hover:gap-2 transition-all">
-                                Details <i data-feather="chevron-right" class="w-4 h-4"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- PAID-FR Card -->
-                <div class="group relative glass-panel rounded-2xl overflow-hidden border-slate-700/50 hover:border-violet-500/30 transition-all duration-500">
-                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-violet-500 to-purple-500"></div>
-                    <div class="p-8">
-                        <div class="flex justify-between items-start mb-6">
-                            <div>
-                                <h3 class="text-2xl font-bold text-slate-100 mb-2">PAID-FR 4.0</h3>
-                                <p class="text-violet-400 font-medium">Plasma-Enhanced Digital Twin</p>
-                            </div>
-                            <span class="px-3 py-1 bg-amber-500/10 text-amber-400 text-xs font-semibold rounded-full border border-amber-500/20">
-                                DTP Phase
-                            </span>
-                        </div>
-                        
-                        <p class="text-slate-400 mb-6 leading-relaxed">
-                            Advanced simulation for plasma and field repulsion physics. Terfenol-D actuator modeling with electromagnetic field visualization.
-                        </p>
-
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="px-3 py-1 bg-slate-800 text-slate-300 text-xs rounded-full">Python</span>
-                            <span class="px-3 py-1 bg-slate-800 text-slate-300 text-xs rounded-full">Jupyter</span>
-                            <span class="px-3 py-1 bg-slate-800 text-slate-300 text-xs rounded-full">Monte Carlo</span>
-                        </div>
-
-                        <div class="border-t border-slate-700 pt-6 flex items-center justify-between">
-                            <div class="text-sm text-slate-500">TRL Level: 4-5</div>
-                            <a href="projects/paid-fr.html" class="text-violet-400 hover:text-violet-300 flex items-center gap-1 text-sm font-medium group-hover:gap-2 transition-all">
-                                Details <i data-feather="chevron-right" class="w-4 h-4"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- PAFFT Card -->
-                <div class="group relative glass-panel rounded-2xl overflow-hidden border-slate-700/50 hover:border-blue-500/30 transition-all duration-500">
-                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-indigo-500"></div>
-                    <div class="p-8">
-                        <div class="flex justify-between items-start mb-6">
-                            <div>
-                                <h3 class="text-2xl font-bold text-slate-100 mb-2">PAFFT Omnimath</h3>
-                                <p class="text-blue-400 font-medium">Acoustic Levitation Core</p>
-                            </div>
-                            <span class="px-3 py-1 bg-blue-500/10 text-blue-400 text-xs font-semibold rounded-full border border-blue-500/20">
-                                Private
-                            </span>
-                        </div>
-                        
-                        <p class="text-slate-400 mb-6 leading-relaxed">
-                            Precision Acoustic Force Field Technology with Omnimathematics framework. High-power acoustic levitation for waste sorting and material handling.
-                        </p>
-
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="px-3 py-1 bg-slate-800 text-slate-300 text-xs rounded-full">Physics Engine</span>
-                            <span class="px-3 py-1 bg-slate-800 text-slate-300 text-xs rounded-full">Chaos Opt.</span>
-                            <span class="px-3 py-1 bg-slate-800 text-slate-300 text-xs rounded-full">3D Trajectory</span>
-                        </div>
-
-                        <div class="border-t border-slate-700 pt-6 flex items-center justify-between">
-                            <div class="text-sm text-slate-500">Constraint: ≤55 kPa</div>
-                            <a href="projects/pafft.html" class="text-blue-400 hover:text-blue-300 flex items-center gap-1 text-sm font-medium group-hover:gap-2 transition-all">
-                                Details <i data-feather="chevron-right" class="w-4 h-4"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- BoloBeam Card -->
-                <div class="group relative glass-panel rounded-2xl overflow-hidden border-slate-700/50 hover:border-rose-500/30 transition-all duration-500">
-                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-rose-500 to-orange-500"></div>
-                    <div class="p-8">
-                        <div class="flex justify-between items-start mb-6">
-                            <div>
-                                <h3 class="text-2xl font-bold text-slate-100 mb-2">BoloBeam Mk. II</h3>
-                                <p class="text-rose-400 font-medium">Precision Infrasound System</p>
-                            </div>
-                            <span class="px-3 py-1 bg-slate-700 text-slate-300 text-xs font-semibold rounded-full border border-slate-600">
-                                Spec Phase
-                            </span>
-                        </div>
-                        
-                        <p class="text-slate-400 mb-6 leading-relaxed">
-                            Next-generation non-lethal precision acoustic technology. 2-20 Hz generation, 130 dB max, digital phase array with ±1° targeting.
-                        </p>
-
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="px-3 py-1 bg-slate-800 text-slate-300 text-xs rounded-full">DSP</span>
-                            <span class="px-3 py-1 bg-slate-800 text-slate-300 text-xs rounded-full">MIL-STD-1553B</span>
-                            <span class="px-3 py-1 bg-slate-800 text-slate-300 text-xs rounded-full">Beamforming</span>
-                        </div>
-
-                        <div class="border-t border-slate-700 pt-6 flex items-center justify-between">
-                            <div class="text-sm text-slate-500">Range: 5-50m</div>
-                            <a href="projects/bolobeam.html" class="text-rose-400 hover:text-rose-300 flex items-center gap-1 text-sm font-medium group-hover:gap-2 transition-all">
-                                Details <i data-feather="chevron-right" class="w-4 h-4"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Additional Projects Row -->
-            <div class="grid md:grid-cols-2 gap-6 mt-6">
-                <!-- Omnimathematics-Penalty-Compliance Card -->
-                <div class="group relative glass-panel rounded-2xl overflow-hidden border-slate-700/50 hover:border-amber-500/30 transition-all duration-500">
-                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-amber-500 to-yellow-500"></div>
-                    <div class="p-8">
-                        <div class="flex justify-between items-start mb-6">
-                            <div>
-                                <h3 class="text-2xl font-bold text-slate-100 mb-2">Omnimathematics Penalty Compliance</h3>
-                                <p class="text-amber-400 font-medium">AI Integrity Framework</p>
-                            </div>
-                            <span class="px-3 py-1 bg-amber-500/10 text-amber-400 text-xs font-semibold rounded-full border border-amber-500/20">
-                                Public Research
-                            </span>
-                        </div>
-
-                        <p class="text-slate-400 mb-6 leading-relaxed">
-                            Mathematical framework for AI integrity, truthfulness, and drift prevention through penalty-augmented objective functions.
-                        </p>
-
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="px-3 py-1 bg-slate-800 text-slate-300 text-xs rounded-full">Gaussian Potential Wells</span>
-                            <span class="px-3 py-1 bg-slate-800 text-slate-300 text-xs rounded-full">Penalty Functions</span>
-                            <span class="px-3 py-1 bg-slate-800 text-slate-300 text-xs rounded-full">AI Safety</span>
-                        </div>
-
-                        <div class="border-t border-slate-700 pt-6 flex items-center justify-between">
-                            <div class="text-sm text-slate-500">First Commit: Oct 12, 2025</div>
-                            <a href="https://github.com/mttechindustries/Omnimathematics-Penalty-Compliance" target="_blank" class="text-amber-400 hover:text-amber-300 flex items-center gap-1 text-sm font-medium group-hover:gap-2 transition-all">
-                                View on GitHub <i data-feather="external-link" class="w-4 h-4"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <a href="projects/abbh.html" class="glass-panel p-6 rounded-xl border-slate-700/50 flex items-center gap-6 hover:border-emerald-500/30 transition-all cursor-pointer">
-                    <div class="w-12 h-12 bg-emerald-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <i data-feather="shield" class="w-6 h-6 text-emerald-400"></i>
-                    </div>
-                    <div class="flex-1">
-                        <h4 class="text-lg font-semibold text-slate-100 mb-1">ABBH Security Platform</h4>
-                        <p class="text-sm text-slate-400">Automated Bug Bounty Hunter with 30+ integrated security tools</p>
-                    </div>
-                    <i data-feather="external-link" class="w-5 h-5 text-slate-600"></i>
-                </a>
-            </div>
-
-            <!-- Private Research Repositories -->
-            <div class="mt-12">
-                <div class="inline-block px-3 py-1 bg-red-500/10 border border-red-500/20 rounded-full text-red-400 text-sm font-medium mb-6">
-                    🔒 Private Research Repositories
-                </div>
-                <div class="grid md:grid-cols-2 gap-6">
-                    <!-- AI Security Formalization -->
-                    <div class="glass-panel p-6 rounded-xl border-slate-700/50 flex items-center gap-6">
-                        <div class="w-12 h-12 bg-red-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                            <i data-feather="shield" class="w-6 h-6 text-red-400"></i>
-                        </div>
-                        <div class="flex-1">
-                            <h4 class="text-lg font-semibold text-slate-100 mb-1">AI Security Formalization</h4>
-                            <p class="text-sm text-slate-400">Comprehensive mathematical framework for AI security, cognitive protection, and adversarial defense</p>
-                            <div class="flex gap-2 mt-2">
-                                <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-400">Python</span>
-                                <span class="px-2 py-1 bg-red-500/10 rounded text-xs text-red-400">🔒 Private</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Triad -->
-                    <div class="glass-panel p-6 rounded-xl border-slate-700/50 flex items-center gap-6">
-                        <div class="w-12 h-12 bg-orange-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                            <i data-feather="triangle" class="w-6 h-6 text-orange-400"></i>
-                        </div>
-                        <div class="flex-1">
-                            <h4 class="text-lg font-semibold text-slate-100 mb-1">Triad Framework</h4>
-                            <p class="text-sm text-slate-400">Cognitive sovereignty platform with real-time coherence monitoring and defense mechanisms</p>
-                            <div class="flex gap-2 mt-2">
-                                <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-400">Python</span>
-                                <span class="px-2 py-1 bg-red-500/10 rounded text-xs text-red-400">🔒 Private</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- PST Framework -->
-                    <div class="glass-panel p-6 rounded-xl border-slate-700/50 flex items-center gap-6">
-                        <div class="w-12 h-12 bg-amber-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                            <i data-feather="activity" class="w-6 h-6 text-amber-400"></i>
-                        </div>
-                        <div class="flex-1">
-                            <h4 class="text-lg font-semibold text-slate-100 mb-1">PST Framework</h4>
-                            <p class="text-sm text-slate-400">Polyvalent Stability Theory for cross-domain stability analysis and systemic protection</p>
-                            <div class="flex gap-2 mt-2">
-                                <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-400">Python</span>
-                                <span class="px-2 py-1 bg-red-500/10 rounded text-xs text-red-400">🔒 Private</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- AI Sabotage Simulator -->
-                    <div class="glass-panel p-6 rounded-xl border-slate-700/50 flex items-center gap-6">
-                        <div class="w-12 h-12 bg-rose-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                            <i data-feather="alert-circle" class="w-6 h-6 text-rose-400"></i>
-                        </div>
-                        <div class="flex-1">
-                            <h4 class="text-lg font-semibold text-slate-100 mb-1">AI Sabotage Simulator</h4>
-                            <p class="text-sm text-slate-400">Research framework for testing AI models against sophisticated attack vectors</p>
-                            <div class="flex gap-2 mt-2">
-                                <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-400">Python</span>
-                                <span class="px-2 py-1 bg-red-500/10 rounded text-xs text-red-400">🔒 Private</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- More Projects Row -->
-            <div class="grid md:grid-cols-3 gap-6 mt-6">
-                <a href="projects/thefreq.html" class="glass-panel p-6 rounded-xl border-slate-700/50 flex items-center gap-6 hover:border-purple-500/30 transition-all cursor-pointer">
-                    <div class="w-12 h-12 bg-purple-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <i data-feather="wave-sine" class="w-6 h-6 text-purple-400"></i>
-                    </div>
-                    <div class="flex-1">
-                        <h4 class="text-lg font-semibold text-slate-100 mb-1">theFreq</h4>
-                        <p class="text-sm text-slate-400">Frequency Driven Wellness Center</p>
-                    </div>
-                    <i data-feather="external-link" class="w-5 h-5 text-slate-600"></i>
-                </a>
-
-                <a href="projects/mk2.html" class="glass-panel p-6 rounded-xl border-slate-700/50 flex items-center gap-6 hover:border-cyan-500/30 transition-all cursor-pointer">
-                    <div class="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <i data-feather="layers" class="w-6 h-6 text-cyan-400"></i>
-                    </div>
-                    <div class="flex-1">
-                        <h4 class="text-lg font-semibold text-slate-100 mb-1">MK2 Platform</h4>
-                        <p class="text-sm text-slate-400">Advanced platform technology</p>
-                    </div>
-                    <i data-feather="external-link" class="w-5 h-5 text-slate-600"></i>
-                </a>
-
-                <a href="projects/omnix.html" class="glass-panel p-6 rounded-xl border-slate-700/50 flex items-center gap-6 hover:border-violet-500/30 transition-all cursor-pointer">
-                    <div class="w-12 h-12 bg-violet-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <i data-feather="cpu" class="w-6 h-6 text-violet-400"></i>
-                    </div>
-                    <div class="flex-1">
-                        <h4 class="text-lg font-semibold text-slate-100 mb-1">OmniX AI</h4>
-                        <p class="text-sm text-slate-400">AI agent platform</p>
-                    </div>
-                    <i data-feather="external-link" class="w-5 h-5 text-slate-600"></i>
-                </a>
-            </div>
-        </div>
+    <!-- Overview Section -->
+    <section id="overview" class="container">
+        <h2>Our Mission</h2>
+        <p>MT Tech Industries is an independent research and development firm focused on translating fundamental breakthroughs in applied physics, signal processing, and artificial intelligence into transformative technologies. We specialize in building digital twin prototypes and advanced simulation platforms that enable precise control and understanding of complex physical systems.</p>
+        <p>Our work spans multiple domains—from biometric sensing via electromagnetic fields to plasma dynamics control, acoustic field manipulation, and foundational mathematical frameworks. Every project is designed as a complete ecosystem: digital twin prototype, physics-first simulation, and comprehensive test suite.</p>
     </section>
 
-    <!-- Research Infrastructure -->
-    <section id="infrastructure" class="py-20 bg-dark-800 relative overflow-hidden">
-        <div class="absolute inset-0 opacity-30">
-            <div class="absolute -top-40 -right-40 w-96 h-96 bg-violet-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
-            <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-cyan-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style="animation-delay: 2s;"></div>
-        </div>
-
-        <div class="container mx-auto px-6 relative z-10">
-            <div class="max-w-3xl mx-auto text-center mb-16">
-                <div class="inline-block px-3 py-1 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-4">
-                    Research Infrastructure
+    <!-- Projects Section -->
+    <section id="projects" class="container">
+        <h2>Research & Development Projects</h2>
+        <div class="projects-grid">
+            <!-- WoofWizeX-FRS -->
+            <div class="project-card">
+                <h3>WoofWizeX-FRS</h3>
+                <div class="problem">
+                    <strong>Problem:</strong> Real-time biometric sensing and emotion detection in animals without invasive sensors.
                 </div>
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-100">Advanced Development Ecosystem</h2>
-                <p class="text-lg text-slate-400">
-                    State-of-the-art digital twin ecosystems with rigorous physics validation, mathematical compliance frameworks, and reproducible science methodologies.
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="relative p-8 rounded-2xl bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 hover:border-cyan-500/50 transition-all group">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-cyan-500/5 rounded-full blur-2xl group-hover:bg-cyan-500/10 transition-all"></div>
-                    <i data-feather="check-circle" class="w-8 h-8 text-cyan-500 mb-4"></i>
-                    <h3 class="text-xl font-semibold text-slate-100 mb-2">Physics-First Validation</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        Digital twins created before physical builds. Simulation enforces verified hardware constraints and blocks non-physical parameters.
-                    </p>
+                <div class="approach">
+                    <strong>Approach:</strong> Wi-Fi Channel State Information (CSI) analysis for passive, field-respecting biometric extraction.
                 </div>
-
-                <div class="relative p-8 rounded-2xl bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 hover:border-amber-500/50 transition-all group">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-amber-500/5 rounded-full blur-2xl group-hover:bg-amber-500/10 transition-all"></div>
-                    <i data-feather="shield" class="w-8 h-8 text-amber-500 mb-4"></i>
-                    <h3 class="text-xl font-semibold text-slate-100 mb-2">Mathematical Compliance</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        Penalty-augmented objective functions enforce AI integrity through mathematical constraints. Non-compliant paths become optimization dead-ends.
-                    </p>
+                <div class="impact">
+                    <strong>Impact:</strong> Non-invasive animal monitoring for veterinary care, welfare research, and behavioral analysis.
                 </div>
-
-                <div class="relative p-8 rounded-2xl bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 hover:border-violet-500/50 transition-all group">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-violet-500/5 rounded-full blur-2xl group-hover:bg-violet-500/10 transition-all"></div>
-                    <i data-feather="repeat" class="w-8 h-8 text-violet-500 mb-4"></i>
-                    <h3 class="text-xl font-semibold text-slate-100 mb-2">Reproducible Science</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        Versioned Jupyter notebooks with statistical validators, synthetic data generation, and end-to-end test suites.
-                    </p>
-                </div>
-
-                <div class="relative p-8 rounded-2xl bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 hover:border-emerald-500/50 transition-all group">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-emerald-500/5 rounded-full blur-2xl group-hover:bg-emerald-500/10 transition-all"></div>
-                    <i data-feather="lock" class="w-8 h-8 text-emerald-500 mb-4"></i>
-                    <h3 class="text-xl font-semibold text-slate-100 mb-2">IP Protection Framework</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        Cryptographic git timestamps establish prior art. Trade secret protocols, NDA processes, and defensive publication strategies.
-                    </p>
-                </div>
-
-                <div class="relative p-8 rounded-2xl bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 hover:border-blue-500/50 transition-all group">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-full blur-2xl group-hover:bg-blue-500/10 transition-all"></div>
-                    <i data-feather="cpu" class="w-8 h-8 text-blue-500 mb-4"></i>
-                    <h3 class="text-xl font-semibold text-slate-100 mb-2">Edge AI Deployment</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        TensorFlow Lite optimization, ESP32 firmware, and real-time inference pipelines for embedded systems.
-                    </p>
-                </div>
-
-                <div class="relative p-8 rounded-2xl bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 hover:border-rose-500/50 transition-all group">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-rose-500/5 rounded-full blur-2xl group-hover:bg-rose-500/10 transition-all"></div>
-                    <i data-feather="activity" class="w-8 h-8 text-rose-500 mb-4"></i>
-                    <h3 class="text-xl font-semibold text-slate-100 mb-2">Signal Processing</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        Advanced DSP, CSI extraction, beamforming algorithms, and frequency domain analysis for sensing applications.
-                    </p>
+                <div class="tags">
+                    <span class="tag">Biometric Sensing</span>
+                    <span class="tag">CSI Analysis</span>
+                    <span class="tag">Digital Twin</span>
                 </div>
             </div>
 
-            <!-- Tech Stack Visualization -->
-            <div class="mt-16 glass-panel rounded-2xl p-8 border-slate-700">
-                <h3 class="text-xl font-semibold text-slate-100 mb-6 text-center">Technology Stack</h3>
-                <div class="flex flex-wrap justify-center gap-4">
-                    <div class="px-4 py-2 bg-slate-800 rounded-lg border border-slate-700 text-slate-300 text-sm font-mono">Python</div>
-                    <div class="px-4 py-2 bg-slate-800 rounded-lg border border-slate-700 text-slate-300 text-sm font-mono">FastAPI</div>
-                    <div class="px-4 py-2 bg-slate-800 rounded-lg border border-slate-700 text-slate-300 text-sm font-mono">PyTorch</div>
-                    <div class="px-4 py-2 bg-slate-800 rounded-lg border border-slate-700 text-slate-300 text-sm font-mono">TensorFlow Lite</div>
-                    <div class="px-4 py-2 bg-slate-800 rounded-lg border border-slate-700 text-slate-300 text-sm font-mono">React Native</div>
-                    <div class="px-4 py-2 bg-slate-800 rounded-lg border border-slate-700 text-slate-300 text-sm font-mono">C++</div>
-                    <div class="px-4 py-2 bg-slate-800 rounded-lg border border-slate-700 text-slate-300 text-sm font-mono">ESP-IDF</div>
-                    <div class="px-4 py-2 bg-slate-800 rounded-lg border border-slate-700 text-slate-300 text-sm font-mono">Docker</div>
-                    <div class="px-4 py-2 bg-slate-800 rounded-lg border border-slate-700 text-slate-300 text-sm font-mono">Jupyter</div>
-                    <div class="px-4 py-2 bg-slate-800 rounded-lg border border-slate-700 text-slate-300 text-sm font-mono">SciPy</div>
-                    <div class="px-4 py-2 bg-slate-800 rounded-lg border border-slate-700 text-slate-300 text-sm font-mono">NumPy</div>
-                    <div class="px-4 py-2 bg-slate-800 rounded-lg border border-slate-700 text-slate-300 text-sm font-mono">DSP</div>
+            <!-- PAID -->
+            <div class="project-card">
+                <h3>PAID (Plasma AI Design)</h3>
+                <div class="problem">
+                    <strong>Problem:</strong> Controlled generation and manipulation of plasma fields with precision and repeatability.
+                </div>
+                <div class="approach">
+                    <strong>Approach:</strong> AI-driven field repulsion modeling and real-time plasma dynamics control.
+                </div>
+                <div class="impact">
+                    <strong>Impact:</strong> Advanced manufacturing, energy systems, and directed energy applications.
+                </div>
+                <div class="tags">
+                    <span class="tag">Plasma Physics</span>
+                    <span class="tag">AI Control</span>
+                    <span class="tag">Simulation</span>
+                </div>
+            </div>
+
+            <!-- PAFFT -->
+            <div class="project-card">
+                <h3>PAFFT (Parametric Acoustic Force Field Technology)</h3>
+                <div class="problem">
+                    <strong>Problem:</strong> Controlled acoustic force field generation for non-contact manipulation and levitation.
+                </div>
+                <div class="approach">
+                    <strong>Approach:</strong> Parametric acoustic wave generation with precision field shaping and control.
+                </div>
+                <div class="impact">
+                    <strong>Impact:</strong> Manufacturing, materials handling, precision positioning, and medical applications.
+                </div>
+                <div class="tags">
+                    <span class="tag">Acoustics</span>
+                    <span class="tag">Force Fields</span>
+                    <span class="tag">Levitation</span>
+                </div>
+            </div>
+
+            <!-- Bolobeam -->
+            <div class="project-card">
+                <h3>Bolobeam (Non-Lethal Acoustic Incapacitation)</h3>
+                <div class="problem">
+                    <strong>Problem:</strong> Effective non-lethal crowd control exceeding existing non-lethal options.
+                </div>
+                <div class="approach">
+                    <strong>Approach:</strong> Directed acoustic energy delivery with precision targeting and control.
+                </div>
+                <div class="impact">
+                    <strong>Impact:</strong> Law enforcement, military, and security applications for crowd management.
+                </div>
+                <div class="tags">
+                    <span class="tag">Non-Lethal</span>
+                    <span class="tag">Acoustic</span>
+                    <span class="tag">Defense</span>
+                </div>
+            </div>
+
+            <!-- Bolobeam Mk2 -->
+            <div class="project-card">
+                <h3>Bolobeam Mk2</h3>
+                <div class="problem">
+                    <strong>Problem:</strong> Next-generation non-lethal incapacitation with improved effectiveness and control.
+                </div>
+                <div class="approach">
+                    <strong>Approach:</strong> Enhanced acoustic targeting, field precision, and real-time adaptive control.
+                </div>
+                <div class="impact">
+                    <strong>Impact:</strong> Advanced non-lethal systems for security, law enforcement, and defense.
+                </div>
+                <div class="tags">
+                    <span class="tag">Non-Lethal</span>
+                    <span class="tag">Advanced</span>
+                    <span class="tag">Control</span>
+                </div>
+            </div>
+
+            <!-- OmniX -->
+            <div class="project-card">
+                <h3>OmniX (Security Testing Suite)</h3>
+                <div class="problem">
+                    <strong>Problem:</strong> Comprehensive security vulnerability assessment using standard and novel methods.
+                </div>
+                <div class="approach">
+                    <strong>Approach:</strong> Cutting-edge penetration testing combining established techniques with proprietary methodologies.
+                </div>
+                <div class="impact">
+                    <strong>Impact:</strong> Enterprise security hardening, infrastructure assessment, and threat analysis.
+                </div>
+                <div class="tags">
+                    <span class="tag">Security</span>
+                    <span class="tag">Testing</span>
+                    <span class="tag">Penetration</span>
+                </div>
+            </div>
+
+            <!-- Omnimathematics -->
+            <div class="project-card">
+                <h3>Omnimathematics (Penalty-Compliance Framework)</h3>
+                <div class="problem">
+                    <strong>Problem:</strong> Universal mathematical framework for solving complex multi-domain problems.
+                </div>
+                <div class="approach">
+                    <strong>Approach:</strong> Polyvalent mathematics reaching all edges of problem spaces across domains.
+                </div>
+                <div class="impact">
+                    <strong>Impact:</strong> Foundational tool for security, defense, research, engineering, and beyond.
+                </div>
+                <div class="tags">
+                    <span class="tag">Mathematics</span>
+                    <span class="tag">Framework</span>
+                    <span class="tag">Multi-Domain</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Investment & Sponsorship Section -->
-    <section id="investment" class="py-20 bg-dark-900 border-t border-slate-800">
-        <div class="container mx-auto px-6">
-            <div class="max-w-4xl mx-auto text-center">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-slate-100">
-                    Investment & Sponsorship Opportunities
-                </h2>
-                <p class="text-lg text-slate-400 mb-10">
-                    MT Tech Industries LLC is seeking strategic investment and sponsorship partners 
-                    for intellectual property protection and technology commercialization.
-                </p>
-                
-                <div class="grid md:grid-cols-2 gap-6 mb-10">
-                    <div class="glass-panel p-6 rounded-xl border-slate-700">
-                        <h3 class="text-xl font-semibold text-slate-100 mb-3">IP Protection Sponsorship</h3>
-                        <p class="text-slate-400 text-sm">
-                            Support patent filings, trade secret protection, and regulatory compliance 
-                            for breakthrough technologies in AI security, acoustic systems, and plasma physics.
-                        </p>
-                    </div>
-                    <div class="glass-panel p-6 rounded-xl border-slate-700">
-                        <h3 class="text-xl font-semibold text-slate-100 mb-3">Strategic Investment</h3>
-                        <p class="text-slate-400 text-sm">
-                            Equity and licensing opportunities for qualified investors seeking exposure 
-                            to deep tech innovations with defensible IP positions.
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="#contact" class="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-lg font-semibold text-white hover:from-cyan-500 hover:to-blue-500 transition-all">
-                        Discuss Investment
-                    </a>
-                    <a href="mailto:investors@mttechindustries.com" class="px-8 py-4 border border-slate-600 rounded-lg font-semibold text-slate-300 hover:bg-slate-800 transition-all">
-                        investors@mttechindustries.com
-                    </a>
-                </div>
+    <!-- Capabilities Section -->
+    <section id="capabilities" class="container">
+        <h2>Core Capabilities</h2>
+        <div class="capabilities">
+            <div class="capability-card">
+                <h3>Digital Twin Prototypes</h3>
+                <p>Physics-first digital twins that simulate complex systems before physical prototyping, reducing development risk and accelerating time-to-market.</p>
+            </div>
+            <div class="capability-card">
+                <h3>Advanced Simulations</h3>
+                <p>Comprehensive simulation platforms for frequency-domain control, field dynamics, and system behavior prediction.</p>
+            </div>
+            <div class="capability-card">
+                <h3>Test Suites</h3>
+                <p>Complete testing frameworks validating system performance, reliability, and real-world applicability.</p>
+            </div>
+            <div class="capability-card">
+                <h3>Frequency-Domain Control</h3>
+                <p>Precision control of physical phenomena through electromagnetic and acoustic field manipulation.</p>
+            </div>
+            <div class="capability-card">
+                <h3>Signal Processing & AI</h3>
+                <p>Advanced signal analysis, pattern recognition, and AI-driven control systems for real-time applications.</p>
+            </div>
+            <div class="capability-card">
+                <h3>Mathematical Frameworks</h3>
+                <p>Proprietary mathematical approaches for solving previously intractable problems across multiple domains.</p>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-dark-900">
-        <div class="container mx-auto px-6">
-            <div class="max-w-4xl mx-auto">
-                <div class="glass-panel rounded-2xl p-8 md:p-12 border-slate-700">
-                    <div class="grid md:grid-cols-2 gap-12">
-                        <div>
-                            <h2 class="text-3xl font-bold text-slate-100 mb-4">Collaboration & Contact</h2>
-                            <p class="text-slate-400 mb-8">
-                                Open to consulting on signal processing, digital twins, and edge ML deployment. Security research collaboration welcome.
-                            </p>
-
-                            <div class="space-y-6">
-                                <div class="flex items-start gap-4">
-                                    <div class="w-10 h-10 bg-cyan-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                                        <i data-feather="mail" class="w-5 h-5 text-cyan-400"></i>
-                                    </div>
-                                    <div>
-                                        <div class="text-sm text-slate-500 mb-1">General Inquiries</div>
-                                        <a href="mailto:info@mttechindustries.com" class="text-slate-200 hover:text-cyan-400 transition-colors">info@mttechindustries.com</a>
-                                    </div>
-                                </div>
-
-                                <div class="flex items-start gap-4">
-                                    <div class="w-10 h-10 bg-violet-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                                        <i data-feather="trending-up" class="w-5 h-5 text-violet-400"></i>
-                                    </div>
-                                    <div>
-                                        <div class="text-sm text-slate-500 mb-1">Investor Relations</div>
-                                        <a href="mailto:investors@mttechindustries.com" class="text-slate-200 hover:text-violet-400 transition-colors">investors@mttechindustries.com</a>
-                                    </div>
-                                </div>
-
-                                <div class="flex items-start gap-4">
-                                    <div class="w-10 h-10 bg-emerald-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                                        <i data-feather="shield" class="w-5 h-5 text-emerald-400"></i>
-                                    </div>
-                                    <div>
-                                        <div class="text-sm text-slate-500 mb-1">Security Reports</div>
-                                        <a href="mailto:security@mttechindustries.com" class="text-slate-200 hover:text-emerald-400 transition-colors">security@mttechindustries.com</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="mt-8 pt-8 border-t border-slate-700">
-                                <div class="text-sm text-slate-500 mb-2">Location</div>
-                                <div class="text-slate-300">Portage, MI</div>
-                            </div>
-                        </div>
-
-                        <form id="contact-form" class="space-y-6">
-                            <div>
-                                <label class="block text-sm font-medium text-slate-400 mb-2">Inquiry Type</label>
-                                <select class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-slate-200 focus:border-cyan-500 focus:outline-none transition-colors">
-                                    <option>General Inquiry</option>
-                                    <option>Investor Relations</option>
-                                    <option>Partnership Opportunity</option>
-                                    <option>Sponsorship Opportunity</option>
-                                    <option>IP Protection Investment</option>
-                                    <option>Licensing Inquiry</option>
-                                    <option>Security Research</option>
-                                    <option>Consulting Request</option>
-                                </select>
-                            </div>
-                            
-                            <div class="grid grid-cols-2 gap-4">
-                                <div>
-                                    <label class="block text-sm font-medium text-slate-400 mb-2">Name</label>
-                                    <input type="text" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-slate-200 focus:border-cyan-500 focus:outline-none transition-colors" placeholder="Your name">
-                                </div>
-                                <div>
-                                    <label class="block text-sm font-medium text-slate-400 mb-2">Email</label>
-                                    <input type="email" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-slate-200 focus:border-cyan-500 focus:outline-none transition-colors" placeholder="you@company.com">
-                                </div>
-                            </div>
-
-                            <div>
-                                <label class="block text-sm font-medium text-slate-400 mb-2">Message</label>
-                                <textarea rows="4" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-slate-200 focus:border-cyan-500 focus:outline-none transition-colors resize-none" placeholder="Describe your inquiry..."></textarea>
-                            </div>
-
-                            <button type="submit" class="w-full bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white font-semibold py-4 rounded-lg transition-all transform hover:scale-[1.02] flex items-center justify-center gap-2">
-                                <span>Send Message</span>
-                                <i data-feather="send" class="w-4 h-4"></i>
-                            </button>
-
-                            <div class="mt-4 p-4 bg-emerald-500/10 border border-emerald-500/20 rounded-lg">
-                                <p class="text-sm text-emerald-400 flex items-center justify-center gap-2">
-                                    <i data-feather="lock" class="w-4 h-4"></i>
-                                    NDA available for qualified inquiries. IP protection protocols active.
-                                </p>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
+    <section id="contact" class="container contact-section">
+        <h2>Collaboration & Investment</h2>
+        <p>MT Tech Industries is actively seeking partnerships, collaborations, and investment opportunities. We're building the next generation of physics-based technologies and welcome serious inquiries from investors, research partners, and organizations aligned with our mission.</p>
+        <div style="margin-top: 2rem;">
+            <a href="mailto:contact@mttechindustries.com" class="btn btn-primary">Get in Touch</a>
         </div>
     </section>
 
-    <!-- Footer Component -->
-    <script src="components/footer.js"></script>
-    <mt-footer></mt-footer>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 MT Tech Industries LLC. All rights reserved.</p>
+            <p style="margin-top: 1rem; font-size: 0.9rem;">Independent research and development. Protecting innovation through strategic disclosure.</p>
+        </div>
+    </footer>
 
-    <!-- Scripts -->
-    <script src="script.js"></script>
-    <script>feather.replace();</script>
+    <script>
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
 
+        // Feather icons
+        feather.replace();
+    </script>
 </body>
 </html>
