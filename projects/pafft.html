@@ -3,342 +3,450 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PAFFT Omnimath | MT Tech Industries</title>
-    <meta name="description" content="Precision Acoustic Force Field Technology with Omnimathematics framework for advanced applications.">
+    <title>PAFFT | MT Tech Industries</title>
+    <meta name="description" content="PAFFT - Parametric Acoustic Force Field Technology. Controlled acoustic force field generation, precision levitation, and non-contact manipulation.">
     
-    <link rel="stylesheet" href="../style.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: {
-                            50: '#f0f9ff',
-                            100: '#e0f2fe',
-                            500: '#0ea5e9',
-                            600: '#0284c7',
-                            900: '#0c4a6e',
-                        },
-                        accent: {
-                            500: '#8b5cf6',
-                            600: '#7c3aed',
-                        },
-                        dark: {
-                            900: '#0f172a',
-                            800: '#1e293b',
-                            700: '#334155',
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
-                    }
-                }
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #e2e8f0;
+            background-color: #0f172a;
+            overflow-x: hidden;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(14, 165, 233, 0.2);
+        }
+        
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 20px;
+        }
+        
+        nav a {
+            color: #e2e8f0;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        nav a:hover {
+            color: #0ea5e9;
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0c4a6e 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(14, 165, 233, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 900px;
+        }
+        
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #0ea5e9 0%, #8b5cf6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero .subtitle {
+            font-size: 1.5rem;
+            color: #0ea5e9;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            color: #cbd5e1;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 12px 32px;
+            background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin: 0 10px;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(14, 165, 233, 0.3);
+        }
+        
+        .cta-button.secondary {
+            background: transparent;
+            border: 2px solid #0ea5e9;
+        }
+        
+        /* Section Styling */
+        section {
+            padding: 80px 0;
+            border-top: 1px solid rgba(14, 165, 233, 0.1);
+        }
+        
+        section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            text-align: center;
+            background: linear-gradient(135deg, #0ea5e9 0%, #8b5cf6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Content Cards */
+        .content-card {
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+            border: 1px solid rgba(14, 165, 233, 0.2);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .content-card h3 {
+            color: #0ea5e9;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .content-card p {
+            color: #cbd5e1;
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+        
+        .content-card ul {
+            list-style: none;
+            margin: 1rem 0;
+        }
+        
+        .content-card li {
+            color: #cbd5e1;
+            margin: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .content-card li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #0ea5e9;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(14, 165, 233, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+            border: 1px solid rgba(14, 165, 233, 0.3);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .highlight-box h4 {
+            color: #0ea5e9;
+            margin-bottom: 0.5rem;
+        }
+        
+        .highlight-box p {
+            color: #cbd5e1;
+            font-style: italic;
+        }
+        
+        /* Grid Layout */
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .two-column {
+                grid-template-columns: 1fr;
             }
         }
-    </script>
-    
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
         
-        .glass-panel {
-            background: rgba(30, 41, 59, 0.7);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+        /* Footer */
+        footer {
+            background: #0c1117;
+            border-top: 1px solid rgba(14, 165, 233, 0.1);
+            padding: 3rem 0;
+            text-align: center;
+            color: #94a3b8;
         }
         
-        .tech-grid-pattern {
-            background-image: radial-gradient(circle at 1px 1px, rgba(59, 130, 246, 0.15) 1px, transparent 0);
-            background-size: 40px 40px;
+        footer a {
+            color: #0ea5e9;
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
-<body class="bg-dark-900 text-slate-100 font-sans antialiased overflow-x-hidden">
-
-    <!-- Navigation Component -->
-    <script src="../components/navbar.js"></script>
-    <mt-nav></mt-nav>
-
-    <!-- Project Hero Section -->
-    <section class="relative min-h-screen flex items-center justify-center hero-gradient overflow-hidden" style="background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);">
-        <div class="absolute inset-0 opacity-30">
-            <div class="absolute -top-40 -right-40 w-96 h-96 bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
-            <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-indigo-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style="animation-delay: 2s;"></div>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div style="font-weight: 700; font-size: 1.25rem; color: #0ea5e9;">
+                <a href="../index.html" style="color: #0ea5e9; text-decoration: none;">MT Tech Industries</a>
+            </div>
+            <div>
+                <a href="../index.html">Home</a>
+                <a href="../index.html#projects">Projects</a>
+                <a href="../index.html#contact">Contact</a>
+            </div>
         </div>
+    </nav>
 
-        <div class="relative z-10 container mx-auto px-6 py-20">
-            <div class="max-w-4xl mx-auto text-center">
-                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800/50 border border-slate-700 mb-8">
-                    <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
-                    <span class="text-sm font-medium text-slate-300">Private Development</span>
-                </div>
-                
-                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-indigo-500">
-                        PAFFT Omnimath
-                    </span>
-                    <br />
-                    <span class="text-slate-100 text-2xl md:text-3xl font-normal">Acoustic Levitation Core</span>
-                </h1>
-                
-                <p class="text-lg md:text-xl text-slate-400 mb-10 max-w-3xl mx-auto leading-relaxed">
-                    Precision Acoustic Force Field Technology with Omnimathematics framework. High-power acoustic levitation for waste sorting and material handling.
-                </p>
-                
-                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                    <a href="#overview" class="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg font-semibold text-white overflow-hidden transition-all hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25">
-                        <span class="relative z-10 flex items-center gap-2">
-                            Project Details
-                            <i data-feather="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
-                        </span>
-                        <div class="absolute inset-0 bg-gradient-to-r from-indigo-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    </a>
-                    <a href="../#contact" class="px-8 py-4 border border-slate-600 rounded-lg font-semibold text-slate-300 hover:bg-slate-800 hover:border-slate-500 transition-all">
-                        Contact Us
-                    </a>
-                </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>PAFFT</h1>
+            <div class="subtitle">Parametric Acoustic Force Field Technology</div>
+            <p>Controlled acoustic force field generation and manipulation. Precision acoustic levitation, force field control, and non-contact manipulation through parametric wave generation and field shaping.</p>
+            <div>
+                <a href="../index.html#contact" class="cta-button">Contact for Details</a>
+                <a href="../index.html" class="cta-button secondary">Back to Projects</a>
             </div>
         </div>
     </section>
 
-    <!-- Project Overview -->
-    <section id="overview" class="py-20 bg-dark-800">
-        <div class="container mx-auto px-6">
-            <div class="max-w-5xl mx-auto">
-                <div class="grid md:grid-cols-2 gap-12 items-center">
+    <!-- Core Technology Section -->
+    <section>
+        <div class="container">
+            <h2>Core Technology</h2>
+            
+            <div class="content-card">
+                <h3>Parametric Acoustic Wave Generation & Field Shaping</h3>
+                <p>PAFFT leverages advanced parametric acoustic principles to generate and precisely control acoustic force fields. This enables non-contact manipulation, levitation, and positioning of objects through controlled acoustic energy.</p>
+                
+                <div class="two-column">
                     <div>
-                        <h2 class="text-3xl font-bold mb-4 text-slate-100">Project Overview</h2>
-                        <p class="text-slate-400 mb-6 leading-relaxed">
-                            PAFFT Omnimath represents a breakthrough in acoustic levitation technology, combining precision acoustic force field generation with advanced mathematical frameworks to achieve unprecedented control over suspended objects.
-                        </p>
-                        <p class="text-slate-400 mb-6 leading-relaxed">
-                            The Omnimathematics framework provides the theoretical foundation for optimizing acoustic field configurations, enabling applications in waste sorting, material handling, and precision manufacturing.
-                        </p>
-                        
-                        <div class="space-y-4">
-                            <div class="flex items-start gap-3">
-                                <div class="w-6 h-6 rounded-full bg-blue-500/10 flex items-center justify-center flex-shrink-0 mt-1">
-                                    <i data-feather="check" class="w-4 h-4 text-blue-400"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-slate-200">Acoustic Levitation</h4>
-                                    <p class="text-slate-400 text-sm">High-power acoustic field generation</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start gap-3">
-                                <div class="w-6 h-6 rounded-full bg-blue-500/10 flex items-center justify-center flex-shrink-0 mt-1">
-                                    <i data-feather="check" class="w-4 h-4 text-blue-400"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-slate-200">Omnimathematics</h4>
-                                    <p class="text-slate-400 text-sm">Advanced mathematical optimization</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start gap-3">
-                                <div class="w-6 h-6 rounded-full bg-blue-500/10 flex items-center justify-center flex-shrink-0 mt-1">
-                                    <i data-feather="check" class="w-4 h-4 text-blue-400"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-slate-200">Material Handling</h4>
-                                    <p class="text-slate-400 text-sm">Contactless manipulation of objects</p>
-                                </div>
-                            </div>
-                        </div>
+                        <h4 style="color: #0ea5e9; margin-bottom: 1rem;">Core Capabilities</h4>
+                        <ul>
+                            <li>Precision acoustic levitation</li>
+                            <li>Force field control and manipulation</li>
+                            <li>Non-contact object positioning</li>
+                            <li>Parametric wave generation</li>
+                            <li>Real-time field shaping</li>
+                        </ul>
                     </div>
-                    
-                    <div class="glass-panel p-8 rounded-2xl border-slate-700">
-                        <h3 class="text-xl font-semibold mb-4 text-slate-100">Technical Specifications</h3>
-                        
-                        <div class="space-y-4">
-                            <div>
-                                <div class="flex justify-between mb-1">
-                                    <span class="text-slate-400">Max Pressure</span>
-                                    <span class="text-slate-200">≤55 kPa</span>
-                                </div>
-                                <div class="w-full bg-slate-700 rounded-full h-2">
-                                    <div class="bg-blue-500 h-2 rounded-full" style="width: 75%"></div>
-                                </div>
-                            </div>
-                            
-                            <div>
-                                <div class="flex justify-between mb-1">
-                                    <span class="text-slate-400">Frequency Range</span>
-                                    <span class="text-slate-200">20Hz-20kHz</span>
-                                </div>
-                                <div class="w-full bg-slate-700 rounded-full h-2">
-                                    <div class="bg-indigo-500 h-2 rounded-full" style="width: 85%"></div>
-                                </div>
-                            </div>
-                            
-                            <div>
-                                <div class="flex justify-between mb-1">
-                                    <span class="text-slate-400">Object Size</span>
-                                    <span class="text-slate-200">Varies</span>
-                                </div>
-                                <div class="w-full bg-slate-700 rounded-full h-2">
-                                    <div class="bg-cyan-500 h-2 rounded-full" style="width: 90%"></div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="mt-6 pt-6 border-t border-slate-700">
-                            <h4 class="font-semibold text-slate-200 mb-3">Technology Stack</h4>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs">Physics Engine</span>
-                                <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs">Chaos Opt.</span>
-                                <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs">3D Trajectory</span>
-                                <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs">FEM</span>
-                                <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs">CUDA</span>
-                            </div>
-                        </div>
+                    <div>
+                        <h4 style="color: #8b5cf6; margin-bottom: 1rem;">Proprietary IP</h4>
+                        <ul>
+                            <li>Parametric acoustic algorithms</li>
+                            <li>Field generation methods</li>
+                            <li>Control optimization systems</li>
+                            <li>Precision targeting protocols</li>
+                            <li>Safety and containment systems</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Features -->
-    <section class="py-20 bg-dark-900">
-        <div class="container mx-auto px-6">
-            <div class="max-w-3xl mx-auto text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-100">Key Features</h2>
-                <p class="text-lg text-slate-400">
-                    Advanced capabilities that define the next generation of acoustic manipulation technology
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="glass-panel p-8 rounded-2xl border-slate-700 hover:border-blue-500/30 transition-all">
-                    <div class="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center mb-6">
-                        <i data-feather="volume-2" class="w-6 h-6 text-blue-400"></i>
+    <!-- System Architecture Section -->
+    <section>
+        <div class="container">
+            <h2>System Architecture</h2>
+            
+            <div class="content-card">
+                <h3>Digital Twin Framework Implementation</h3>
+                <p>PAFFT is built on a comprehensive digital twin architecture that enables simulation, validation, and optimization before physical implementation.</p>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                    <div class="content-card">
+                        <h4 style="color: #0ea5e9;">Digital Twin Core</h4>
+                        <ul>
+                            <li>Fundamental physics models</li>
+                            <li>Main simulation orchestrator</li>
+                            <li>Plotting and analysis tools</li>
+                            <li>Parameter optimization</li>
+                        </ul>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3 text-slate-100">Acoustic Levitation</h3>
-                    <p class="text-slate-400">
-                        Contactless manipulation of objects using precisely controlled acoustic fields.
-                    </p>
-                </div>
-
-                <div class="glass-panel p-8 rounded-2xl border-slate-700 hover:border-indigo-500/30 transition-all">
-                    <div class="w-12 h-12 bg-indigo-500/10 rounded-xl flex items-center justify-center mb-6">
-                        <i data-feather="activity" class="w-6 h-6 text-indigo-400"></i>
+                    <div class="content-card">
+                        <h4 style="color: #8b5cf6;">Mathematics Layer</h4>
+                        <ul>
+                            <li>Omnimathematics optimizer</li>
+                            <li>Gaussian potential well model</li>
+                            <li>Penalty-augmented objectives</li>
+                            <li>Advanced numerical solvers</li>
+                        </ul>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3 text-slate-100">Omnimathematics</h3>
-                    <p class="text-slate-400">
-                        Advanced mathematical framework for optimizing acoustic field configurations.
-                    </p>
-                </div>
-
-                <div class="glass-panel p-8 rounded-2xl border-slate-700 hover:border-cyan-500/30 transition-all">
-                    <div class="w-12 h-12 bg-cyan-500/10 rounded-xl flex items-center justify-center mb-6">
-                        <i data-feather="settings" class="w-6 h-6 text-cyan-400"></i>
+                    <div class="content-card">
+                        <h4 style="color: #10b981;">Validation Suite</h4>
+                        <ul>
+                            <li>Analytical benchmarks</li>
+                            <li>Known analytical solutions</li>
+                            <li>Test execution and reporting</li>
+                            <li>Performance validation</li>
+                        </ul>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3 text-slate-100">Precision Control</h3>
-                    <p class="text-slate-400">
-                        Fine-grained control over acoustic field parameters for specific applications.
-                    </p>
+                    <div class="content-card">
+                        <h4 style="color: #f59e0b;">Applications</h4>
+                        <ul>
+                            <li>Levitation optimization</li>
+                            <li>Medical applications</li>
+                            <li>Manufacturing systems</li>
+                            <li>Industrial applications</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Applications -->
-    <section class="py-20 bg-dark-800">
-        <div class="container mx-auto px-6">
-            <div class="max-w-3xl mx-auto text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-100">Applications</h2>
-                <p class="text-lg text-slate-400">
-                    Versatile technology with applications across multiple industries
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="glass-panel p-8 rounded-2xl border-slate-700">
-                    <h3 class="text-xl font-semibold mb-4 text-slate-100">Waste Sorting</h3>
-                    <p class="text-slate-400 mb-4">
-                        Contactless separation of materials based on acoustic properties, density, and composition.
-                    </p>
-                    <ul class="space-y-2 text-slate-400">
-                        <li class="flex items-start gap-2">
-                            <i data-feather="check-circle" class="w-4 h-4 text-green-400 flex-shrink-0 mt-1"></i>
-                            <span>Separate plastics, metals, and organics</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <i data-feather="check-circle" class="w-4 h-4 text-green-400 flex-shrink-0 mt-1"></i>
-                            <span>No contamination from mechanical handling</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <i data-feather="check-circle" class="w-4 h-4 text-green-400 flex-shrink-0 mt-1"></i>
-                            <span>High throughput sorting</span>
-                        </li>
-                    </ul>
+    <!-- Applications Section -->
+    <section>
+        <div class="container">
+            <h2>Applications & Impact</h2>
+            
+            <div class="content-card">
+                <h3>Manufacturing & Materials Handling</h3>
+                <p>PAFFT enables precision manufacturing processes through non-contact manipulation and positioning. This technology revolutionizes materials handling by eliminating physical contact and contamination risks.</p>
+                
+                <div class="two-column">
+                    <div class="highlight-box">
+                        <h4>Manufacturing Applications</h4>
+                        <p>Precision positioning, contamination-free handling, delicate component assembly, and quality control processes.</p>
+                    </div>
+                    <div class="highlight-box">
+                        <h4>Medical Applications</h4>
+                        <p>Non-invasive procedures, sterile manipulation, precision drug delivery, and therapeutic applications.</p>
+                    </div>
                 </div>
-
-                <div class="glass-panel p-8 rounded-2xl border-slate-700">
-                    <h3 class="text-xl font-semibold mb-4 text-slate-100">Material Handling</h3>
-                    <p class="text-slate-400 mb-4">
-                        Gentle, contactless manipulation of delicate or hazardous materials.
-                    </p>
-                    <ul class="space-y-2 text-slate-400">
-                        <li class="flex items-start gap-2">
-                            <i data-feather="check-circle" class="w-4 h-4 text-green-400 flex-shrink-0 mt-1"></i>
-                            <span>Handle fragile items without damage</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <i data-feather="check-circle" class="w-4 h-4 text-green-400 flex-shrink-0 mt-1"></i>
-                            <span>Process hazardous materials safely</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <i data-feather="check-circle" class="w-4 h-4 text-green-400 flex-shrink-0 mt-1"></i>
-                            <span>Microgravity simulation environments</span>
-                        </li>
-                    </ul>
+            </div>
+            
+            <div class="content-card">
+                <h3>Technical Advantages</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 2rem;">
+                    <div class="highlight-box">
+                        <h4>Precision Control</h4>
+                        <p>Micron-level positioning accuracy</p>
+                    </div>
+                    <div class="highlight-box">
+                        <h4>Non-Contact</h4>
+                        <p>Zero contamination risk</p>
+                    </div>
+                    <div class="highlight-box">
+                        <h4>Real-Time</h4>
+                        <p>Instantaneous field adjustment</p>
+                    </div>
+                    <div class="highlight-box">
+                        <h4>Scalable</h4>
+                        <p>From micro to macro applications</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact CTA -->
-    <section class="py-20 bg-gradient-to-br from-dark-800 to-dark-900">
-        <div class="container mx-auto px-6">
-            <div class="max-w-3xl mx-auto text-center">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-100">Interested in PAFFT Omnimath?</h2>
-                <p class="text-lg text-slate-400 mb-8">
-                    Contact our team to learn more about licensing, partnerships, or research collaborations.
-                </p>
-                <a href="../#contact" class="inline-block px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg font-semibold text-white hover:from-blue-500 hover:to-indigo-500 transition-all transform hover:scale-105">
-                    Get in Touch
-                </a>
+    <!-- Digital Twin Integration -->
+    <section>
+        <div class="container">
+            <h2>Digital Twin Integration</h2>
+            
+            <div class="content-card">
+                <h3>Part of the Unified Ecosystem</h3>
+                <p>PAFFT integrates with the broader MT Tech Industries digital twin ecosystem, leveraging Omnimathematics for compliance enforcement and connecting with other physics-based projects.</p>
+                
+                <div class="highlight-box">
+                    <h4>Cross-Project Synergy</h4>
+                    <p>PAFFT acoustic fields complement PAID plasma systems, integrate with WoofWizeX sensing capabilities, and utilize Omnimathematics mathematical frameworks for optimal performance and safety.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer Component -->
-    <script src="../components/footer.js"></script>
-    <mt-footer></mt-footer>
-
-    <!-- Investment Badge -->
-    <div class="py-12 bg-dark-900 border-t border-slate-800">
-        <div class="container mx-auto px-6">
-            <div class="max-w-3xl mx-auto text-center">
-                <p class="text-slate-400 text-sm mb-3">
-                    💼 This technology is available for licensing and investment
-                </p>
-                <a href="../#investment" class="text-cyan-400 hover:text-cyan-300 text-sm font-medium">
-                    Learn More →
-                </a>
+    <!-- Strategic Disclosure -->
+    <section>
+        <div class="container">
+            <h2>IP Protection & Availability</h2>
+            
+            <div class="content-card">
+                <h3>Strategic Implementation Approach</h3>
+                <p>PAFFT represents advanced proprietary research with production-grade implementations. Our approach balances capability demonstration with IP protection.</p>
+                
+                <div class="two-column">
+                    <div class="highlight-box">
+                        <h4>Demonstrated Capability</h4>
+                        <p>Production-grade digital twin framework with comprehensive simulation, validation, and optimization systems.</p>
+                    </div>
+                    <div class="highlight-box">
+                        <h4>Advanced Implementations</h4>
+                        <p>Full production systems available for qualified partners and investors through private repositories and direct collaboration.</p>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Scripts -->
-    <script src="../script.js"></script>
-    <script>feather.replace();</script>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 MT Tech Industries LLC. All rights reserved.</p>
+            <p style="margin-top: 1rem; font-size: 0.9rem;">
+                <a href="https://github.com/mttechindustries">GitHub</a> | 
+                <a href="../index.html">Back to Main Site</a>
+            </p>
+        </div>
+    </footer>
 
+    <script>
+        feather.replace();
+    </script>
 </body>
 </html>
