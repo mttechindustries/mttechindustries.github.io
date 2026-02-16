@@ -183,6 +183,7 @@
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
+            cursor: pointer;
         }
         
         .project-card::before {
@@ -243,7 +244,7 @@
             color: #0ea5e9;
         }
         
-        .project-card a {
+        .project-card .learn-more {
             display: inline-block;
             margin-top: 1rem;
             color: #0ea5e9;
@@ -252,7 +253,7 @@
             transition: all 0.3s ease;
         }
         
-        .project-card a:hover {
+        .project-card .learn-more:hover {
             color: #8b5cf6;
         }
         
@@ -445,99 +446,86 @@
             
             <div class="projects-grid">
                 <!-- Omnimathematics -->
-                <div class="project-card">
+                <div class="project-card" onclick="window.location.href='projects/omnimath.html'">
                     <div class="project-card-content">
                         <div class="category">AI Safety & Mathematics</div>
                         <h3>Omnimathematics</h3>
                         <p><strong>Penalty-Compliance Framework</strong></p>
-                        <p>Mathematical enforcement of AI compliance and truthfulness. Replaces brittle heuristic constraints with penalty-augmented objective functions that make non-compliant behavior pathologically expensive for optimization.</p>
+                        <p>Mathematical enforcement of AI compliance and truthfulness. Replaces brittle heuristic constraints with penalty-augmented objective functions.</p>
                         <div class="details">
                             <strong>Core Innovation:</strong> Compliance as gradient of least resistance. Non-truthful paths become mathematical dead-ends.
                         </div>
-                        <div class="details">
-                            <strong>Mechanism:</strong> Predictive violation detection + automatic repair in abstract domain before physical manifestation.
-                        </div>
-                        <a href="https://github.com/mttechindustries/Omnimathematics-Penalty-Compliance">View Repository →</a>
+                        <a href="projects/omnimath.html" class="learn-more">Learn More →</a>
                     </div>
                 </div>
 
                 <!-- PAFFT -->
-                <div class="project-card">
+                <div class="project-card" onclick="window.location.href='projects/pafft.html'">
                     <div class="project-card-content">
                         <div class="category">Acoustic Engineering</div>
                         <h3>PAFFT</h3>
                         <p><strong>Parametric Acoustic Force Field Technology</strong></p>
-                        <p>Controlled acoustic force field generation and manipulation. Precision acoustic levitation, force field control, and non-contact manipulation through parametric wave generation.</p>
+                        <p>Controlled acoustic force field generation and manipulation. Precision acoustic levitation and non-contact manipulation through parametric wave generation.</p>
                         <div class="details">
                             <strong>Capability:</strong> Precision acoustic field shaping for manufacturing, materials handling, and medical applications.
                         </div>
-                        <div class="details">
-                            <strong>IP:</strong> Proprietary parametric acoustic algorithms and field generation methods.
-                        </div>
+                        <a href="projects/pafft.html" class="learn-more">Learn More →</a>
                     </div>
                 </div>
 
                 <!-- PAID -->
-                <div class="project-card">
+                <div class="project-card" onclick="window.location.href='projects/paid-fr.html'">
                     <div class="project-card-content">
                         <div class="category">Plasma Physics</div>
                         <h3>PAID</h3>
                         <p><strong>Plasma AI Design</strong></p>
-                        <p>Controlled plasma field generation and manipulation through AI-driven optimization. Precision plasma behavior prediction and real-time control for advanced manufacturing and energy systems.</p>
-                        <div class="details">
-                            <strong>Capability:</strong> AI-optimized plasma field control with predictive modeling.
-                        </div>
+                        <p>Controlled plasma field generation and manipulation through AI-driven optimization. Precision plasma behavior prediction and real-time control.</p>
                         <div class="details">
                             <strong>Applications:</strong> Advanced manufacturing, energy systems, directed energy applications.
                         </div>
+                        <a href="projects/paid-fr.html" class="learn-more">Learn More →</a>
                     </div>
                 </div>
 
                 <!-- WoofWizeX-FRS -->
-                <div class="project-card">
+                <div class="project-card" onclick="window.location.href='projects/woofwizex-frs.html'">
                     <div class="project-card-content">
                         <div class="category">Biometric Sensing</div>
                         <h3>WoofWizeX-FRS</h3>
                         <p><strong>Field-Respectful Sensing</strong></p>
-                        <p>Real-time biometric sensing and emotion detection through Wi-Fi CSI analysis. Non-invasive, passive detection via standard Wi-Fi signals without cameras, microphones, GPS, or mandatory wearables.</p>
-                        <div class="details">
-                            <strong>Approach:</strong> Wi-Fi Channel State Information analysis for biological signal extraction.
-                        </div>
+                        <p>Real-time biometric sensing and emotion detection through Wi-Fi CSI analysis. Non-invasive, passive detection without cameras, microphones, or wearables.</p>
                         <div class="details">
                             <strong>Impact:</strong> Veterinary care, animal welfare monitoring, behavioral research.
                         </div>
+                        <a href="projects/woofwizex-frs.html" class="learn-more">Learn More →</a>
                     </div>
                 </div>
 
                 <!-- Bolobeam -->
-                <div class="project-card">
+                <div class="project-card" onclick="window.location.href='projects/bolobeam.html'">
                     <div class="project-card-content">
                         <div class="category">Non-Lethal Systems</div>
                         <h3>Bolobeam</h3>
                         <p><strong>Non-Lethal Acoustic Incapacitation</strong></p>
-                        <p>Directed acoustic energy for temporary incapacitation. First system to exceed effectiveness of existing non-lethal options. Mk2 version with advanced targeting and energy delivery.</p>
-                        <div class="details">
-                            <strong>Capability:</strong> Precision acoustic targeting exceeding current non-lethal effectiveness.
-                        </div>
+                        <p>Directed acoustic energy for temporary incapacitation. First system to exceed effectiveness of existing non-lethal options.</p>
                         <div class="details">
                             <strong>Applications:</strong> Law enforcement, military, security, crowd management.
                         </div>
+                        <a href="projects/bolobeam.html" class="learn-more">Learn More →</a>
                     </div>
                 </div>
 
                 <!-- OmniX -->
-                <div class="project-card">
+                <div class="project-card" onclick="window.location.href='projects/omnix.html'">
                     <div class="project-card-content">
                         <div class="category">Security & Testing</div>
                         <h3>OmniX</h3>
                         <p><strong>Security Testing Suite</strong></p>
-                        <p>Comprehensive security vulnerability assessment combining standard methods with novel proprietary techniques. Cutting-edge penetration testing and security analysis.</p>
-                        <div class="details">
-                            <strong>Approach:</strong> Hybrid methodology leveraging standard + proprietary techniques.
-                        </div>
+                        <p>Comprehensive security vulnerability assessment combining standard methods with novel proprietary techniques.</p>
                         <div class="details">
                             <strong>Impact:</strong> Enterprise security, infrastructure hardening, threat assessment.
                         </div>
+                        <a href="projects/omnix.html" class="learn-more">Learn More →</a>
                     </div>
                 </div>
             </div>
