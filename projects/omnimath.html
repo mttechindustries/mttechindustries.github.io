@@ -3,355 +3,489 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Omnimath Engine | MT Tech Industries</title>
-    <meta name="description" content="Multi-algorithm adaptive solver with 8+ optimization algorithms.">
+    <title>Omnimathematics | MT Tech Industries</title>
+    <meta name="description" content="Omnimathematics Penalty-Compliance Framework - Mathematical enforcement of AI compliance and truthfulness. Production-grade implementation available on GitHub.">
     
-    <link rel="stylesheet" href="../style.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: {
-                            50: '#f0f9ff',
-                            100: '#e0f2fe',
-                            500: '#0ea5e9',
-                            600: '#0284c7',
-                            900: '#0c4a6e',
-                        },
-                        accent: {
-                            500: '#8b5cf6',
-                            600: '#7c3aed',
-                        },
-                        dark: {
-                            900: '#0f172a',
-                            800: '#1e293b',
-                            700: '#334155',
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
-                    }
-                }
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #e2e8f0;
+            background-color: #0f172a;
+            overflow-x: hidden;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(14, 165, 233, 0.2);
+        }
+        
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 20px;
+        }
+        
+        nav a {
+            color: #e2e8f0;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        nav a:hover {
+            color: #0ea5e9;
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0c4a6e 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(14, 165, 233, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 900px;
+        }
+        
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #8b5cf6 0%, #0ea5e9 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero .subtitle {
+            font-size: 1.5rem;
+            color: #8b5cf6;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            color: #cbd5e1;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 12px 32px;
+            background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin: 0 10px;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3);
+        }
+        
+        .cta-button.secondary {
+            background: transparent;
+            border: 2px solid #8b5cf6;
+        }
+        
+        /* Section Styling */
+        section {
+            padding: 80px 0;
+            border-top: 1px solid rgba(139, 92, 246, 0.1);
+        }
+        
+        section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            text-align: center;
+            background: linear-gradient(135deg, #8b5cf6 0%, #0ea5e9 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Content Cards */
+        .content-card {
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .content-card h3 {
+            color: #8b5cf6;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .content-card p {
+            color: #cbd5e1;
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+        
+        .content-card ul {
+            list-style: none;
+            margin: 1rem 0;
+        }
+        
+        .content-card li {
+            color: #cbd5e1;
+            margin: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .content-card li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #8b5cf6;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(14, 165, 233, 0.1) 100%);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .highlight-box h4 {
+            color: #8b5cf6;
+            margin-bottom: 0.5rem;
+        }
+        
+        .highlight-box p {
+            color: #cbd5e1;
+            font-style: italic;
+        }
+        
+        /* Grid Layout */
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .two-column {
+                grid-template-columns: 1fr;
             }
         }
-    </script>
-    
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
         
-        .glass-panel {
-            background: rgba(30, 41, 59, 0.7);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+        /* Footer */
+        footer {
+            background: #0c1117;
+            border-top: 1px solid rgba(139, 92, 246, 0.1);
+            padding: 3rem 0;
+            text-align: center;
+            color: #94a3b8;
         }
         
-        .tech-grid-pattern {
-            background-image: radial-gradient(circle at 1px 1px, rgba(59, 130, 246, 0.15) 1px, transparent 0);
-            background-size: 40px 40px;
+        footer a {
+            color: #8b5cf6;
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
-<body class="bg-dark-900 text-slate-100 font-sans antialiased overflow-x-hidden">
-
-    <!-- Navigation Component -->
-    <script src="../components/navbar.js"></script>
-    <mt-nav></mt-nav>
-
-    <!-- Project Hero Section -->
-    <section class="relative min-h-screen flex items-center justify-center hero-gradient overflow-hidden" style="background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);">
-        <div class="absolute inset-0 opacity-30">
-            <div class="absolute -top-40 -right-40 w-96 h-96 bg-amber-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
-            <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-yellow-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style="animation-delay: 2s;"></div>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div style="font-weight: 700; font-size: 1.25rem; color: #8b5cf6;">
+                <a href="../index.html" style="color: #8b5cf6; text-decoration: none;">MT Tech Industries</a>
+            </div>
+            <div>
+                <a href="../index.html">Home</a>
+                <a href="https://github.com/mttechindustries/Omnimathematics-Penalty-Compliance">GitHub</a>
+                <a href="../index.html#contact">Contact</a>
+            </div>
         </div>
+    </nav>
 
-        <div class="relative z-10 container mx-auto px-6 py-20">
-            <div class="max-w-4xl mx-auto text-center">
-                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800/50 border border-slate-700 mb-8">
-                    <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
-                    <span class="text-sm font-medium text-slate-300">Active Development</span>
-                </div>
-                
-                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-amber-400 to-yellow-500">
-                        Omnimath Engine
-                    </span>
-                    <br />
-                    <span class="text-slate-100 text-2xl md:text-3xl font-normal">Multi-algorithm Adaptive Solver</span>
-                </h1>
-                
-                <p class="text-lg md:text-xl text-slate-400 mb-10 max-w-3xl mx-auto leading-relaxed">
-                    Multi-algorithm adaptive solver with 8+ optimization algorithms for complex problem solving across multiple domains.
-                </p>
-                
-                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                    <a href="#overview" class="group relative px-8 py-4 bg-gradient-to-r from-amber-600 to-yellow-600 rounded-lg font-semibold text-white overflow-hidden transition-all hover:scale-105 hover:shadow-2xl hover:shadow-amber-500/25">
-                        <span class="relative z-10 flex items-center gap-2">
-                            Project Details
-                            <i data-feather="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
-                        </span>
-                        <div class="absolute inset-0 bg-gradient-to-r from-yellow-600 to-amber-600 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    </a>
-                    <a href="https://github.com/mttechindustries/Omnimathematics-Penalty-Compliance" target="_blank" class="px-8 py-4 border border-slate-600 rounded-lg font-semibold text-slate-300 hover:bg-slate-800 hover:border-slate-500 transition-all flex items-center gap-2">
-                        <i data-feather="github" class="w-4 h-4"></i>
-                        View Research
-                    </a>
-                    <a href="../#contact" class="px-8 py-4 border border-slate-600 rounded-lg font-semibold text-slate-300 hover:bg-slate-800 hover:border-slate-500 transition-all">
-                        Contact Us
-                    </a>
-                </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Omnimathematics</h1>
+            <div class="subtitle">Penalty-Compliance Framework</div>
+            <p>Mathematical enforcement of AI compliance and truthfulness. Replaces brittle heuristic constraints with penalty-augmented objective functions that make non-compliant behavior pathologically expensive for optimization.</p>
+            <div>
+                <a href="https://github.com/mttechindustries/Omnimathematics-Penalty-Compliance" class="cta-button">View Repository</a>
+                <a href="../index.html" class="cta-button secondary">Back to Projects</a>
             </div>
         </div>
     </section>
 
-    <!-- Project Overview -->
-    <section id="overview" class="py-20 bg-dark-800">
-        <div class="container mx-auto px-6">
-            <div class="max-w-5xl mx-auto">
-                <div class="grid md:grid-cols-2 gap-12 items-center">
+    <!-- Core Innovation Section -->
+    <section>
+        <div class="container">
+            <h2>Core Innovation</h2>
+            
+            <div class="highlight-box">
+                <h4>2026 Breakthrough Insight</h4>
+                <p>"Compliance isn't a hope — it's the gradient of least resistance. Non-truthful paths become mathematical dead-ends."</p>
+            </div>
+            
+            <div class="content-card">
+                <h3>Mathematical Enforcement vs. Heuristic Constraints</h3>
+                <p>Traditional AI safety approaches rely on heuristic constraints—rules that can be circumvented, ignored, or optimized around. Omnimathematics fundamentally changes this by making compliance mathematically inevitable.</p>
+                
+                <div class="two-column">
                     <div>
-                        <h2 class="text-3xl font-bold mb-4 text-slate-100">Project Overview</h2>
-                        <p class="text-slate-400 mb-6 leading-relaxed">
-                            The Omnimath Engine represents a breakthrough in computational mathematics, featuring an adaptive solver that intelligently selects and applies the most appropriate optimization algorithm for each specific problem domain.
-                        </p>
-                        <p class="text-slate-400 mb-6 leading-relaxed">
-                            With support for 8+ different optimization algorithms, the engine can tackle complex problems in physics simulation, engineering design, financial modeling, and advanced research applications.
-                        </p>
-                        
-                        <div class="space-y-4">
-                            <div class="flex items-start gap-3">
-                                <div class="w-6 h-6 rounded-full bg-amber-500/10 flex items-center justify-center flex-shrink-0 mt-1">
-                                    <i data-feather="check" class="w-4 h-4 text-amber-400"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-slate-200">Multi-algorithm Support</h4>
-                                    <p class="text-slate-400 text-sm">8+ optimization algorithms available</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start gap-3">
-                                <div class="w-6 h-6 rounded-full bg-amber-500/10 flex items-center justify-center flex-shrink-0 mt-1">
-                                    <i data-feather="check" class="w-4 h-4 text-amber-400"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-slate-200">Adaptive Selection</h4>
-                                    <p class="text-slate-400 text-sm">Intelligent algorithm choice based on problem characteristics</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start gap-3">
-                                <div class="w-6 h-6 rounded-full bg-amber-500/10 flex items-center justify-center flex-shrink-0 mt-1">
-                                    <i data-feather="check" class="w-4 h-4 text-amber-400"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-slate-200">Cross-domain</h4>
-                                    <p class="text-slate-400 text-sm">Applicable to multiple problem domains</p>
-                                </div>
-                            </div>
-                        </div>
+                        <h4 style="color: #ef4444; margin-bottom: 0.5rem;">Traditional Approach</h4>
+                        <ul>
+                            <li>Hope-based validation</li>
+                            <li>Brittle heuristic constraints</li>
+                            <li>Post-hoc error detection</li>
+                            <li>Reactive safety measures</li>
+                        </ul>
                     </div>
-                    
-                    <div class="glass-panel p-8 rounded-2xl border-slate-700">
-                        <h3 class="text-xl font-semibold mb-4 text-slate-100">Technical Specifications</h3>
-                        
-                        <div class="space-y-4">
-                            <div>
-                                <div class="flex justify-between mb-1">
-                                    <span class="text-slate-400">Algorithms</span>
-                                    <span class="text-slate-200">8+</span>
-                                </div>
-                                <div class="w-full bg-slate-700 rounded-full h-2">
-                                    <div class="bg-amber-500 h-2 rounded-full" style="width: 100%"></div>
-                                </div>
-                            </div>
-                            
-                            <div>
-                                <div class="flex justify-between mb-1">
-                                    <span class="text-slate-400">Problem Types</span>
-                                    <span class="text-slate-200">Mixed</span>
-                                </div>
-                                <div class="w-full bg-slate-700 rounded-full h-2">
-                                    <div class="bg-yellow-500 h-2 rounded-full" style="width: 90%"></div>
-                                </div>
-                            </div>
-                            
-                            <div>
-                                <div class="flex justify-between mb-1">
-                                    <span class="text-slate-400">Performance</span>
-                                    <span class="text-slate-200">Optimized</span>
-                                </div>
-                                <div class="w-full bg-slate-700 rounded-full h-2">
-                                    <div class="bg-orange-500 h-2 rounded-full" style="width: 95%"></div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="mt-6 pt-6 border-t border-slate-700">
-                            <h4 class="font-semibold text-slate-200 mb-3">Technology Stack</h4>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs">Python</span>
-                                <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs">NumPy</span>
-                                <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs">SciPy</span>
-                                <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs">JAX</span>
-                                <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs">Cython</span>
-                            </div>
-                        </div>
+                    <div>
+                        <h4 style="color: #8b5cf6; margin-bottom: 0.5rem;">Omnimathematics Approach</h4>
+                        <ul>
+                            <li>Mathematical enforcement</li>
+                            <li>Penalty-augmented objectives</li>
+                            <li>Predictive violation detection</li>
+                            <li>Proactive compliance architecture</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Algorithms -->
-    <section class="py-20 bg-dark-900">
-        <div class="container mx-auto px-6">
-            <div class="max-w-3xl mx-auto text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-100">Supported Algorithms</h2>
-                <p class="text-lg text-slate-400">
-                    Comprehensive optimization toolkit for diverse problem-solving needs
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="glass-panel p-6 rounded-xl border-slate-700">
-                    <div class="w-10 h-10 bg-amber-500/10 rounded-lg flex items-center justify-center mb-4 mx-auto">
-                        <i data-feather="activity" class="w-5 h-5 text-amber-400"></i>
+    <!-- Mechanism Section -->
+    <section>
+        <div class="container">
+            <h2>How It Works</h2>
+            
+            <div class="content-card">
+                <h3>Predictive Violation Detection + Automatic Repair</h3>
+                <p>The system operates in the abstract domain before physical manifestation, detecting potential violations and automatically repairing them at the mathematical level.</p>
+                
+                <div class="two-column">
+                    <div class="content-card">
+                        <h4 style="color: #8b5cf6;">Detection Phase</h4>
+                        <ul>
+                            <li>Continuous monitoring of optimization trajectories</li>
+                            <li>Pattern recognition for non-compliant behavior</li>
+                            <li>Early warning systems for potential violations</li>
+                            <li>Multi-dimensional safety boundary detection</li>
+                        </ul>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2 text-slate-100 text-center">Genetic Algorithm</h3>
-                    <p class="text-slate-400 text-sm text-center">Evolutionary optimization approach</p>
-                </div>
-
-                <div class="glass-panel p-6 rounded-xl border-slate-700">
-                    <div class="w-10 h-10 bg-amber-500/10 rounded-lg flex items-center justify-center mb-4 mx-auto">
-                        <i data-feather="zap" class="w-5 h-5 text-amber-400"></i>
+                    <div class="content-card">
+                        <h4 style="color: #0ea5e9;">Repair Phase</h4>
+                        <ul>
+                            <li>Automatic correction in abstract domain</li>
+                            <li>Penalty function activation</li>
+                            <li>Gradient redirection toward compliant paths</li>
+                            <li>Verification of repair effectiveness</li>
+                        </ul>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2 text-slate-100 text-center">Simulated Annealing</h3>
-                    <p class="text-slate-400 text-sm text-center">Probabilistic technique for global optimization</p>
-                </div>
-
-                <div class="glass-panel p-6 rounded-xl border-slate-700">
-                    <div class="w-10 h-10 bg-amber-500/10 rounded-lg flex items-center justify-center mb-4 mx-auto">
-                        <i data-feather="trending-up" class="w-5 h-5 text-amber-400"></i>
-                    </div>
-                    <h3 class="text-lg font-semibold mb-2 text-slate-100 text-center">Gradient Descent</h3>
-                    <p class="text-slate-400 text-sm text-center">First-order iterative optimization algorithm</p>
-                </div>
-
-                <div class="glass-panel p-6 rounded-xl border-slate-700">
-                    <div class="w-10 h-10 bg-amber-500/10 rounded-lg flex items-center justify-center mb-4 mx-auto">
-                        <i data-feather="pie-chart" class="w-5 h-5 text-amber-400"></i>
-                    </div>
-                    <h3 class="text-lg font-semibold mb-2 text-slate-100 text-center">Particle Swarm</h3>
-                    <p class="text-slate-400 text-sm text-center">Population-based stochastic optimization</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Applications -->
-    <section class="py-20 bg-dark-800">
-        <div class="container mx-auto px-6">
-            <div class="max-w-3xl mx-auto text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-100">Applications</h2>
-                <p class="text-lg text-slate-400">
-                    Versatile engine applicable across multiple domains and industries
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="glass-panel p-8 rounded-2xl border-slate-700">
-                    <h3 class="text-xl font-semibold mb-4 text-slate-100">Engineering Design</h3>
-                    <p class="text-slate-400 mb-4">
-                        Optimize complex engineering systems and components for performance, cost, and reliability.
-                    </p>
-                    <ul class="space-y-2 text-slate-400">
-                        <li class="flex items-start gap-2">
-                            <i data-feather="check-circle" class="w-4 h-4 text-green-400 flex-shrink-0 mt-1"></i>
-                            <span>Structural optimization</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <i data-feather="check-circle" class="w-4 h-4 text-green-400 flex-shrink-0 mt-1"></i>
-                            <span>Thermal systems</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <i data-feather="check-circle" class="w-4 h-4 text-green-400 flex-shrink-0 mt-1"></i>
-                            <span>Fluid dynamics</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="glass-panel p-8 rounded-2xl border-slate-700">
-                    <h3 class="text-xl font-semibold mb-4 text-slate-100">Financial Modeling</h3>
-                    <p class="text-slate-400 mb-4">
-                        Portfolio optimization, risk analysis, and algorithmic trading strategy development.
-                    </p>
-                    <ul class="space-y-2 text-slate-400">
-                        <li class="flex items-start gap-2">
-                            <i data-feather="check-circle" class="w-4 h-4 text-green-400 flex-shrink-0 mt-1"></i>
-                            <span>Portfolio optimization</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <i data-feather="check-circle" class="w-4 h-4 text-green-400 flex-shrink-0 mt-1"></i>
-                            <span>Risk modeling</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <i data-feather="check-circle" class="w-4 h-4 text-green-400 flex-shrink-0 mt-1"></i>
-                            <span>Algorithmic trading</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="glass-panel p-8 rounded-2xl border-slate-700">
-                    <h3 class="text-xl font-semibold mb-4 text-slate-100">Research Applications</h3>
-                    <p class="text-slate-400 mb-4">
-                        Scientific computing, parameter estimation, and complex system modeling.
-                    </p>
-                    <ul class="space-y-2 text-slate-400">
-                        <li class="flex items-start gap-2">
-                            <i data-feather="check-circle" class="w-4 h-4 text-green-400 flex-shrink-0 mt-1"></i>
-                            <span>Data fitting</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <i data-feather="check-circle" class="w-4 h-4 text-green-400 flex-shrink-0 mt-1"></i>
-                            <span>Parameter estimation</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <i data-feather="check-circle" class="w-4 h-4 text-green-400 flex-shrink-0 mt-1"></i>
-                            <span>System identification</span>
-                        </li>
-                    </ul>
+    <!-- Safety Layers Section -->
+    <section>
+        <div class="container">
+            <h2>Multi-Layer Safety Architecture</h2>
+            
+            <div class="content-card">
+                <h3>Comprehensive Monitoring Systems</h3>
+                <p>Omnimathematics implements multiple safety layers that monitor different aspects of system behavior:</p>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 2rem;">
+                    <div class="highlight-box">
+                        <h4>Thermal Monitoring</h4>
+                        <p>Heat generation and energy dissipation tracking</p>
+                    </div>
+                    <div class="highlight-box">
+                        <h4>Power Monitoring</h4>
+                        <p>Energy consumption and distribution analysis</p>
+                    </div>
+                    <div class="highlight-box">
+                        <h4>Stability Monitoring</h4>
+                        <p>System equilibrium and oscillation detection</p>
+                    </div>
+                    <div class="highlight-box">
+                        <h4>Cognitive Monitoring</h4>
+                        <p>Decision-making process validation</p>
+                    </div>
+                    <div class="highlight-box">
+                        <h4>Harbinger Potential</h4>
+                        <p>Early warning signal detection and analysis</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact CTA -->
-    <section class="py-20 bg-gradient-to-br from-dark-800 to-dark-900">
-        <div class="container mx-auto px-6">
-            <div class="max-w-3xl mx-auto text-center">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-100">Interested in Omnimath Engine?</h2>
-                <p class="text-lg text-slate-400 mb-8">
-                    Contact our team to learn more about licensing, partnerships, or research collaborations.
-                </p>
-                <a href="../#contact" class="inline-block px-8 py-4 bg-gradient-to-r from-amber-600 to-yellow-600 rounded-lg font-semibold text-white hover:from-amber-500 hover:to-yellow-500 transition-all transform hover:scale-105">
-                    Get in Touch
-                </a>
+    <!-- Implementation Section -->
+    <section>
+        <div class="container">
+            <h2>Production-Grade Implementation</h2>
+            
+            <div class="content-card">
+                <h3>Public Repository: Strategic Disclosure</h3>
+                <p>The Omnimathematics-Penalty-Compliance repository represents our strategic disclosure approach—establishing prior art and demonstrating capability while protecting advanced implementations.</p>
+                
+                <div class="two-column">
+                    <div>
+                        <h4 style="color: #8b5cf6; margin-bottom: 1rem;">Repository Contents</h4>
+                        <ul>
+                            <li>Full Python implementation</li>
+                            <li>Compliance framework + penalty framework</li>
+                            <li>Comprehensive documentation</li>
+                            <li>API reference and architecture guides</li>
+                            <li>Basic and advanced examples</li>
+                            <li>Integration demonstrations</li>
+                            <li>Comprehensive test suite</li>
+                            <li>Video and audio demonstrations</li>
+                            <li>Jupyter notebook visualizations</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="color: #0ea5e9; margin-bottom: 1rem;">Strategic Purpose</h4>
+                        <ul>
+                            <li>Establish prior art and provenance</li>
+                            <li>Demonstrate production-grade capability</li>
+                            <li>Protect against IP theft through disclosure</li>
+                            <li>Enable qualified partnerships</li>
+                            <li>Provide foundation for advanced work</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="highlight-box">
+                <h4>Advanced Implementations Available</h4>
+                <p>The public repository represents the foundation layer. Significantly more advanced implementations and variations are available for qualified partners and investors through private repositories.</p>
             </div>
         </div>
     </section>
 
-    <!-- Footer Component -->
-    <script src="../components/footer.js"></script>
-    <mt-footer></mt-footer>
+    <!-- Applications Section -->
+    <section>
+        <div class="container">
+            <h2>Applications & Impact</h2>
+            
+            <div class="content-card">
+                <h3>Universal Framework for Complex Multi-Domain Problems</h3>
+                <p>Omnimathematics is applicable across security, defense, research, engineering, and AI alignment domains. It serves as a foundational tool for solving previously intractable problems.</p>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                    <div class="content-card">
+                        <h4 style="color: #8b5cf6;">AI Safety & Alignment</h4>
+                        <ul>
+                            <li>Mathematical compliance enforcement</li>
+                            <li>Truthfulness optimization</li>
+                            <li>Behavioral constraint systems</li>
+                            <li>Safety boundary maintenance</li>
+                        </ul>
+                    </div>
+                    <div class="content-card">
+                        <h4 style="color: #0ea5e9;">Security & Defense</h4>
+                        <ul>
+                            <li>Threat detection and mitigation</li>
+                            <li>System integrity validation</li>
+                            <li>Anomaly detection frameworks</li>
+                            <li>Predictive security analysis</li>
+                        </ul>
+                    </div>
+                    <div class="content-card">
+                        <h4 style="color: #10b981;">Research & Engineering</h4>
+                        <ul>
+                            <li>Complex system optimization</li>
+                            <li>Multi-objective problem solving</li>
+                            <li>Constraint satisfaction systems</li>
+                            <li>Validation and verification tools</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Scripts -->
-    <script src="../script.js"></script>
-    <script>feather.replace();</script>
+    <!-- Digital Twin Integration -->
+    <section>
+        <div class="container">
+            <h2>Digital Twin Integration</h2>
+            
+            <div class="content-card">
+                <h3>Part of the Unified Ecosystem</h3>
+                <p>Omnimathematics serves as the mathematical foundation for all MT Tech Industries projects, providing compliance enforcement and validation across the entire digital twin ecosystem.</p>
+                
+                <div class="highlight-box">
+                    <h4>Cross-Project Integration</h4>
+                    <p>The framework integrates with PAFFT acoustic systems, PAID plasma control, WoofWizeX biometric sensing, and all other projects to ensure mathematical compliance and safety across all domains.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 MT Tech Industries LLC. All rights reserved.</p>
+            <p style="margin-top: 1rem; font-size: 0.9rem;">
+                <a href="https://github.com/mttechindustries">GitHub</a> | 
+                <a href="https://github.com/mttechindustries/Omnimathematics-Penalty-Compliance">Omnimathematics Repository</a> |
+                <a href="../index.html">Back to Main Site</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        feather.replace();
+    </script>
 </body>
 </html>
