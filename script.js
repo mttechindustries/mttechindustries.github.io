@@ -1,9 +1,45 @@
 // MT Tech Industries - Interactive Features
 
 document.addEventListener('DOMContentLoaded', function() {
-    
+
     // Initialize feather icons
     feather.replace();
+    
+    // IP Protection: Disable right-click
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+        return false;
+    });
+    
+    // IP Protection: Disable text selection
+    document.body.style.userSelect = 'none';
+    document.body.style.webkitUserSelect = 'none';
+    document.body.style.mozUserSelect = 'none';
+    document.body.style.msUserSelect = 'none';
+    
+    // IP Protection: Disable common keyboard shortcuts
+    document.addEventListener('keydown', function(e) {
+        // Disable Ctrl+A (select all)
+        if ((e.ctrlKey || e.metaKey) && e.key === 'a') {
+            e.preventDefault();
+            return false;
+        }
+        // Disable Ctrl+C (copy)
+        if ((e.ctrlKey || e.metaKey) && e.key === 'c') {
+            e.preventDefault();
+            return false;
+        }
+        // Disable Ctrl+U (view source)
+        if ((e.ctrlKey || e.metaKey) && e.key === 'u') {
+            e.preventDefault();
+            return false;
+        }
+        // Disable F12 (developer tools)
+        if (e.key === 'F12') {
+            e.preventDefault();
+            return false;
+        }
+    });
     
     // Mobile Navigation Toggle
     const navHamburger = document.getElementById('mobile-menu-toggle');

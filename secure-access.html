@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authorized Access | MT Tech Industries</title>
+    <meta name="description" content="Secure access for partners, collaborators, and investors">
+    <meta name="keywords" content="secure access, partner portal, investor portal, collaboration">
+    <meta name="author" content="MT Tech Industries LLC">
+    <meta name="copyright" content="MT Tech Industries LLC">
+    <meta name="robots" content="noindex, nofollow">
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            900: '#0c4a6e',
+                        },
+                        accent: {
+                            500: '#8b5cf6',
+                            600: '#7c3aed',
+                        },
+                        dark: {
+                            900: '#0f172a',
+                            800: '#1e293b',
+                            700: '#334155',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .tech-grid-pattern {
+            background-image: radial-gradient(circle at 1px 1px, rgba(59, 130, 246, 0.15) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+<body class="bg-dark-900 text-slate-100 font-sans antialiased overflow-x-hidden">
+
+    <!-- Navigation Component -->
+    <script src="components/navbar.js"></script>
+    <mt-nav></mt-nav>
+
+    <!-- Secure Access Hero -->
+    <section class="relative min-h-screen flex items-center justify-center hero-gradient overflow-hidden" style="background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);">
+        <div class="absolute inset-0 opacity-30">
+            <div class="absolute -top-40 -right-40 w-96 h-96 bg-cyan-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
+            <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-violet-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style="animation-delay: 2s;"></div>
+        </div>
+
+        <div class="relative z-10 container mx-auto px-6 py-20">
+            <div class="max-w-md mx-auto">
+                <div class="glass-panel p-8 rounded-2xl border-slate-700">
+                    <div class="text-center mb-8">
+                        <div class="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i data-feather="shield" class="w-8 h-8 text-cyan-400"></i>
+                        </div>
+                        <h1 class="text-3xl font-bold text-slate-100 mb-2">Authorized Access</h1>
+                        <p class="text-slate-400">For Partners, Collaborators, and Investors</p>
+                    </div>
+
+                    <form id="access-form">
+                        <div class="mb-6">
+                            <label class="block text-sm font-medium text-slate-400 mb-2">Access Token</label>
+                            <input type="password" id="token" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-slate-200 focus:border-cyan-500 focus:outline-none transition-colors" placeholder="Enter your access token">
+                            <p class="text-xs text-slate-500 mt-2">Contact us if you need an access token</p>
+                        </div>
+
+                        <button type="submit" class="w-full bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white font-semibold py-4 rounded-lg transition-all transform hover:scale-[1.02]">
+                            Gain Secure Access
+                        </button>
+                    </form>
+
+                    <div class="mt-6 text-center">
+                        <p class="text-slate-500 text-sm">
+                            Need access? <a href="#contact" class="text-cyan-400 hover:text-cyan-300">Contact our team</a>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="mt-8 text-center">
+                    <p class="text-slate-500 text-sm">
+                        <i data-feather="lock" class="inline mr-1"></i>
+                        This portal contains confidential information. Unauthorized access is prohibited.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Component -->
+    <script src="components/footer.js"></script>
+    <mt-footer></mt-footer>
+
+    <!-- Scripts -->
+    <script>
+        document.getElementById('access-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const token = document.getElementById('token').value;
+            
+            // Simple client-side validation (in a real implementation, this would be server-side)
+            // In a real scenario, you'd have different tokens for different access levels
+            const validTokens = {
+                'partner_access': 'partner',
+                'investor_access': 'investor',
+                'collaborator_access': 'collaborator',
+                'admin_access': 'admin'
+            };
+            
+            if(validTokens[token]) {
+                // Store access level in session
+                sessionStorage.setItem('accessLevel', validTokens[token]);
+                sessionStorage.setItem('authenticated', 'true');
+                
+                // Redirect based on access level
+                if(validTokens[token] === 'admin') {
+                    window.location.href = 'secure-portal-admin.html';
+                } else if(validTokens[token] === 'investor') {
+                    window.location.href = 'secure-portal-investor.html';
+                } else {
+                    window.location.href = 'secure-portal.html';
+                }
+            } else {
+                alert('Invalid access token. Please contact MT Tech Industries for authorization.');
+            }
+        });
+        
+        // Initialize feather icons
+        feather.replace();
+    </script>
+
+</body>
+</html>

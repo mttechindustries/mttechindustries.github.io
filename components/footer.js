@@ -65,6 +65,17 @@ class MtFooter extends HTMLElement {
               </a>
             </div>
           </div>
+          
+          <div class="text-slate-500 text-xs text-center mt-4 pt-4 border-t border-slate-800">
+            <p>This website and its contents are protected by U.S. and international copyright and intellectual property laws.</p>
+            <p>All content is proprietary to MT Tech Industries LLC and may not be reproduced without express written consent.</p>
+            <p>Our innovative technologies, including the Omnimath optimization framework, represent original research and development.</p>
+            <div class="mt-2 flex justify-center gap-4">
+              <a href="privacy-policy.html" class="text-slate-500 hover:text-cyan-400 text-xs">Privacy Policy</a>
+              <a href="terms-of-service.html" class="text-slate-500 hover:text-cyan-400 text-xs">Terms of Service</a>
+              <a href="secure-access.html" class="text-slate-500 hover:text-cyan-400 text-xs">Secure Access</a>
+            </div>
+          </div>
         </div>
       </footer>
     `;

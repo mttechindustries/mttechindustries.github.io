@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Access | MT Tech Industries</title>
+    <meta name="description" content="Member access to exclusive research and development content">
+    <meta name="keywords" content="member access, exclusive content, research, development">
+    <meta name="author" content="MT Tech Industries LLC">
+    <meta name="copyright" content="MT Tech Industries LLC">
+    <meta name="robots" content="noindex, nofollow">
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            900: '#0c4a6e',
+                        },
+                        accent: {
+                            500: '#8b5cf6',
+                            600: '#7c3aed',
+                        },
+                        dark: {
+                            900: '#0f172a',
+                            800: '#1e293b',
+                            700: '#334155',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .tech-grid-pattern {
+            background-image: radial-gradient(circle at 1px 1px, rgba(59, 130, 246, 0.15) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+<body class="bg-dark-900 text-slate-100 font-sans antialiased overflow-x-hidden">
+
+    <!-- Navigation Component -->
+    <script src="components/navbar.js"></script>
+    <mt-nav></mt-nav>
+
+    <!-- Login Hero -->
+    <section class="relative min-h-screen flex items-center justify-center hero-gradient overflow-hidden" style="background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);">
+        <div class="absolute inset-0 opacity-30">
+            <div class="absolute -top-40 -right-40 w-96 h-96 bg-cyan-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
+            <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-violet-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style="animation-delay: 2s;"></div>
+        </div>
+
+        <div class="relative z-10 container mx-auto px-6 py-20">
+            <div class="max-w-md mx-auto">
+                <div class="glass-panel p-8 rounded-2xl border-slate-700">
+                    <div class="text-center mb-8">
+                        <div class="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i data-feather="lock" class="w-8 h-8 text-cyan-400"></i>
+                        </div>
+                        <h1 class="text-3xl font-bold text-slate-100 mb-2">Member Access</h1>
+                        <p class="text-slate-400">Access exclusive research and development content</p>
+                    </div>
+
+                    <form id="login-form">
+                        <div class="mb-6">
+                            <label class="block text-sm font-medium text-slate-400 mb-2">Username</label>
+                            <input type="text" id="username" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-slate-200 focus:border-cyan-500 focus:outline-none transition-colors" placeholder="Enter your username">
+                        </div>
+
+                        <div class="mb-6">
+                            <label class="block text-sm font-medium text-slate-400 mb-2">Password</label>
+                            <input type="password" id="password" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-slate-200 focus:border-cyan-500 focus:outline-none transition-colors" placeholder="Enter your password">
+                        </div>
+
+                        <button type="submit" class="w-full bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white font-semibold py-4 rounded-lg transition-all transform hover:scale-[1.02]">
+                            Access Exclusive Content
+                        </button>
+                    </form>
+
+                    <div class="mt-6 text-center">
+                        <p class="text-slate-500 text-sm">
+                            Need access? <a href="#contact" class="text-cyan-400 hover:text-cyan-300">Contact us</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Component -->
+    <script src="components/footer.js"></script>
+    <mt-footer></mt-footer>
+
+    <!-- Scripts -->
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            
+            // Simple client-side validation (in a real implementation, this would be server-side)
+            if(username === 'researcher' && password === 'securePass123') {
+                // Redirect to member area
+                sessionStorage.setItem('authenticated', 'true');
+                window.location.href = 'members-area.html';
+            } else {
+                alert('Invalid credentials. For demonstration purposes, use username: researcher, password: securePass123');
+            }
+        });
+        
+        // Initialize feather icons
+        feather.replace();
+    </script>
+
+</body>
+</html>

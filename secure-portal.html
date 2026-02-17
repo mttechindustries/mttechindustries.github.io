@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Portal | MT Tech Industries</title>
+    <meta name="description" content="Secure portal for partners and collaborators">
+    <meta name="keywords" content="secure portal, partner resources, collaboration tools">
+    <meta name="author" content="MT Tech Industries LLC">
+    <meta name="copyright" content="MT Tech Industries LLC">
+    <meta name="robots" content="noindex, nofollow">
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            900: '#0c4a6e',
+                        },
+                        accent: {
+                            500: '#8b5cf6',
+                            600: '#7c3aed',
+                        },
+                        dark: {
+                            900: '#0f172a',
+                            800: '#1e293b',
+                            700: '#334155',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .tech-grid-pattern {
+            background-image: radial-gradient(circle at 1px 1px, rgba(59, 130, 246, 0.15) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+<body class="bg-dark-900 text-slate-100 font-sans antialiased overflow-x-hidden">
+
+    <!-- Navigation Component -->
+    <script src="components/navbar.js"></script>
+    <mt-nav></mt-nav>
+
+    <!-- Secure Portal Hero -->
+    <section class="relative min-h-screen flex items-center justify-center hero-gradient overflow-hidden" style="background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);">
+        <div class="absolute inset-0 opacity-30">
+            <div class="absolute -top-40 -right-40 w-96 h-96 bg-cyan-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
+            <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-violet-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style="animation-delay: 2s;"></div>
+        </div>
+
+        <div class="relative z-10 container mx-auto px-6 py-20">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800/50 border border-slate-700 mb-4">
+                        <i data-feather="shield" class="w-4 h-4 text-emerald-400"></i>
+                        <span class="text-sm font-medium text-slate-300">Secure Partner Portal</span>
+                    </div>
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight">
+                        <span class="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500">
+                            Partner & Collaborator Portal
+                        </span>
+                    </h1>
+                    <p class="text-lg text-slate-400 max-w-2xl mx-auto">
+                        Exclusive access to technical documentation, roadmaps, and collaboration resources
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <!-- Technical Documentation -->
+                    <div class="glass-panel p-6 rounded-2xl border-slate-700">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 bg-cyan-500/10 rounded-lg flex items-center justify-center">
+                                <i data-feather="book-open" class="w-5 h-5 text-cyan-400"></i>
+                            </div>
+                            <h2 class="text-xl font-bold text-slate-100">Technical Documentation</h2>
+                        </div>
+                        <p class="text-slate-400 mb-4 text-sm">
+                            Detailed technical specifications, API documentation, and integration guides
+                        </p>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-center gap-2">
+                                <i data-feather="file-text" class="w-4 h-4 text-slate-500"></i>
+                                <a href="docs/omnimath-specs.pdf" class="text-cyan-400 hover:text-cyan-300">Omnimath Framework Specs</a>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-feather="file-text" class="w-4 h-4 text-slate-500"></i>
+                                <a href="docs/paid-fr-integration.pdf" class="text-cyan-400 hover:text-cyan-300">PAID-FR Integration Guide</a>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-feather="file-text" class="w-4 h-4 text-slate-500"></i>
+                                <a href="docs/pafft-technical.pdf" class="text-cyan-400 hover:text-cyan-300">PAFFT Technical Manual</a>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-feather="file-text" class="w-4 h-4 text-slate-500"></i>
+                                <a href="docs/woofwizex-api.pdf" class="text-cyan-400 hover:text-cyan-300">WoofWizeX-FRS API Docs</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Roadmaps -->
+                    <div class="glass-panel p-6 rounded-2xl border-slate-700">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 bg-violet-500/10 rounded-lg flex items-center justify-center">
+                                <i data-feather="map" class="w-5 h-5 text-violet-400"></i>
+                            </div>
+                            <h2 class="text-xl font-bold text-slate-100">Development Roadmaps</h2>
+                        </div>
+                        <p class="text-slate-400 mb-4 text-sm">
+                            Future development plans, milestones, and technology evolution timelines
+                        </p>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-center gap-2">
+                                <i data-feather="calendar" class="w-4 h-4 text-slate-500"></i>
+                                <a href="roadmaps/omnimath-q1-2026.pdf" class="text-violet-400 hover:text-violet-300">Omnimath Q1 2026 Roadmap</a>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-feather="calendar" class="w-4 h-4 text-slate-500"></i>
+                                <a href="roadmaps/paid-fr-q2-2026.pdf" class="text-violet-400 hover:text-violet-300">PAID-FR Q2 2026 Roadmap</a>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-feather="calendar" class="w-4 h-4 text-slate-500"></i>
+                                <a href="roadmaps/pafft-q3-2026.pdf" class="text-violet-400 hover:text-violet-300">PAFFT Q3 2026 Roadmap</a>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-feather="calendar" class="w-4 h-4 text-slate-500"></i>
+                                <a href="roadmaps/woofwizex-q4-2026.pdf" class="text-violet-400 hover:text-violet-300">WoofWizeX-FRS Q4 2026 Roadmap</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Collaboration Tools -->
+                    <div class="glass-panel p-6 rounded-2xl border-slate-700">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 bg-emerald-500/10 rounded-lg flex items-center justify-center">
+                                <i data-feather="users" class="w-5 h-5 text-emerald-400"></i>
+                            </div>
+                            <h2 class="text-xl font-bold text-slate-100">Collaboration Tools</h2>
+                        </div>
+                        <p class="text-slate-400 mb-4 text-sm">
+                            Secure communication channels and project management resources
+                        </p>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-center gap-2">
+                                <i data-feather="message-square" class="w-4 h-4 text-slate-500"></i>
+                                <a href="#" class="text-emerald-400 hover:text-emerald-300">Partner Discussion Forum</a>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-feather="calendar" class="w-4 h-4 text-slate-500"></i>
+                                <a href="#" class="text-emerald-400 hover:text-emerald-300">Schedule Technical Call</a>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-feather="upload" class="w-4 h-4 text-slate-500"></i>
+                                <a href="#" class="text-emerald-400 hover:text-emerald-300">Secure File Upload</a>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-feather="git-branch" class="w-4 h-4 text-slate-500"></i>
+                                <a href="#" class="text-emerald-400 hover:text-emerald-300">Shared Repository Access</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- IP Protection Resources -->
+                    <div class="glass-panel p-6 rounded-2xl border-slate-700">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 bg-amber-500/10 rounded-lg flex items-center justify-center">
+                                <i data-feather="lock" class="w-5 h-5 text-amber-400"></i>
+                            </div>
+                            <h2 class="text-xl font-bold text-slate-100">IP Protection Resources</h2>
+                        </div>
+                        <p class="text-slate-400 mb-4 text-sm">
+                            Information about our intellectual property protections and prior art declarations
+                        </p>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-center gap-2">
+                                <i data-feather="file" class="w-4 h-4 text-slate-500"></i>
+                                <a href="docs/ip-protection-overview.pdf" class="text-amber-400 hover:text-amber-300">IP Protection Overview</a>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-feather="file" class="w-4 h-4 text-slate-500"></i>
+                                <a href="docs/prior-art-declarations.pdf" class="text-amber-400 hover:text-amber-300">Prior Art Declarations</a>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-feather="file" class="w-4 h-4 text-slate-500"></i>
+                                <a href="docs/ip-violation-reporting.pdf" class="text-amber-400 hover:text-amber-300">Violation Reporting Process</a>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-feather="file" class="w-4 h-4 text-slate-500"></i>
+                                <a href="docs/collaboration-agreements.pdf" class="text-amber-400 hover:text-amber-300">Collaboration Agreements</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <a href="logout.html" class="inline-flex items-center gap-2 text-rose-400 hover:text-rose-300">
+                        <i data-feather="log-out" class="w-4 h-4"></i>
+                        <span>Logout</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Component -->
+    <script src="components/footer.js"></script>
+    <mt-footer></mt-footer>
+
+    <!-- Scripts -->
+    <script>
+        // Check if user is authenticated
+        if(!sessionStorage.getItem('authenticated')) {
+            window.location.href = 'secure-access.html';
+        }
+        
+        // Initialize feather icons
+        feather.replace();
+    </script>
+
+</body>
+</html>
