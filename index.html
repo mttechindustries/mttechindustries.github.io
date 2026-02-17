@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MT Tech Industries LLC | Advanced Physics & AI Systems</title>
-    <meta name="description" content="MT Tech Industries - Breakthrough technologies at the intersection of applied physics, signal processing, AI, and digital twin platforms.">
-    
+    <title>MT Tech Industries LLC | Digital Twin Prototypes & Advanced Simulations</title>
+    <meta name="description" content="MT Tech Industries - 77 repositories spanning applied physics, AI safety, and digital twin systems. Production-grade implementations in frequency-domain control, biometric sensing, plasma dynamics, and mathematical compliance frameworks.">
+
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    
+
     <script>
         tailwind.config = {
             theme: {
@@ -55,28 +55,102 @@
             }
         }
     </script>
-    
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-        
+
         .glass-panel {
             background: rgba(30, 41, 59, 0.7);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
-        
+
         .tech-grid-pattern {
             background-image: radial-gradient(circle at 1px 1px, rgba(59, 130, 246, 0.15) 1px, transparent 0);
             background-size: 40px 40px;
         }
-        
+
         .glow-text {
             text-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
         }
-        
+
         .hero-gradient {
             background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
+        }
+
+        /* Ecosystem Section */
+        .ecosystem-diagram {
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+            border: 1px solid rgba(14, 165, 233, 0.2);
+            border-radius: 12px;
+            padding: 3rem;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .ecosystem-layers {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .ecosystem-layer {
+            background: rgba(15, 23, 42, 0.5);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .ecosystem-layer:hover {
+            transform: translateY(-4px);
+            border-color: rgba(139, 92, 246, 0.6);
+        }
+
+        .ecosystem-layer h4 {
+            color: #8b5cf6;
+            margin-bottom: 0.5rem;
+        }
+
+        .ecosystem-layer p {
+            font-size: 0.9rem;
+            color: #cbd5e1;
+        }
+
+        /* Operating Context */
+        .operating-context {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(14, 165, 233, 0.1) 100%);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 3rem 0;
+        }
+
+        .operating-context h4 {
+            color: #0ea5e9;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .operating-context ul {
+            list-style: none;
+            margin: 1rem 0;
+        }
+
+        .operating-context li {
+            color: #cbd5e1;
+            margin: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .operating-context li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #0ea5e9;
         }
     </style>
 </head>
@@ -90,7 +164,7 @@
     <section class="relative min-h-screen flex items-center justify-center hero-gradient overflow-hidden">
         <!-- Animated Background Particles -->
         <div id="particles-container" class="absolute inset-0 pointer-events-none"></div>
-        
+
         <!-- Floating Tech Icons Background -->
         <div class="absolute inset-0 opacity-20">
             <div class="absolute top-20 left-10 animate-float">
@@ -111,39 +185,40 @@
             <div class="max-w-4xl mx-auto text-center">
                 <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800/50 border border-slate-700 mb-8 animate-pulse-slow">
                     <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                    <span class="text-sm font-medium text-slate-300">R&D Mode: Stealth Operations</span>
+                    <span class="text-sm font-medium text-slate-300">77 Repositories • Production-Grade Research</span>
                 </div>
-                
+
                 <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
                     <span class="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-violet-600 animate-gradient bg-300%">
-                        Physics-First
+                        Digital Twin Prototypes
                     </span>
                     <br />
-                    <span class="text-slate-100">Digital Transformation</span>
+                    <span class="text-slate-100">& Advanced Simulations</span>
                 </h1>
-                
-                <p class="text-xl md:text-2xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
-                    Advanced signal processing, AI-driven analysis, and digital twin platforms revolutionizing applied physics research.
+
+                <p class="text-xl md:text-2xl text-slate-400 mb-10 max-w-3xl mx-auto leading-relaxed">
+                    77 repositories spanning applied physics, AI safety, and complex system modeling. Production-grade implementations in frequency-domain control, biometric sensing, plasma dynamics, and mathematical compliance frameworks.
                 </p>
-                
+
                 <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                    <a href="#technologies" class="group relative px-8 py-4 bg-gradient-to-r from-violet-600 to-blue-600 rounded-lg font-semibold text-white overflow-hidden transition-all hover:scale-105 hover:shadow-2xl hover:shadow-violet-500/25">
+                    <a href="#projects" class="group relative px-8 py-4 bg-gradient-to-r from-violet-600 to-blue-600 rounded-lg font-semibold text-white overflow-hidden transition-all hover:scale-105 hover:shadow-2xl hover:shadow-violet-500/25">
                         <span class="relative z-10 flex items-center gap-2">
-                            Explore Technologies
+                            Explore Projects
                             <i data-feather="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
                         </span>
                         <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-violet-600 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                     </a>
-                    <a href="#contact" class="px-8 py-4 border border-slate-600 rounded-lg font-semibold text-slate-300 hover:bg-slate-800 hover:border-slate-500 transition-all">
-                        Contact Research Team
+                    <a href="https://github.com/mttechindustries" target="_blank" class="px-8 py-4 border border-slate-600 rounded-lg font-semibold text-slate-300 hover:bg-slate-800 hover:border-slate-500 transition-all flex items-center gap-2">
+                        <i data-feather="github" class="w-4 h-4"></i>
+                        GitHub
                     </a>
                 </div>
 
                 <!-- Stats -->
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 pt-10 border-t border-slate-800">
                     <div class="text-center">
-                        <div class="text-3xl font-bold text-cyan-400 mb-1">7+</div>
-                        <div class="text-sm text-slate-500">Active Projects</div>
+                        <div class="text-3xl font-bold text-cyan-400 mb-1">77</div>
+                        <div class="text-sm text-slate-500">Active Repositories</div>
                     </div>
                     <div class="text-center">
                         <div class="text-3xl font-bold text-violet-400 mb-1">TRL 4-5</div>
@@ -167,10 +242,42 @@
         </div>
     </section>
 
-    <!-- Technology Overview -->
+    <!-- Overview Section -->
     <section id="overview" class="py-20 bg-dark-800 tech-grid-pattern">
         <div class="container mx-auto px-6">
             <div class="max-w-3xl mx-auto text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-100">What We Build</h2>
+                <p class="text-lg text-slate-400">
+                    MT Tech Industries develops production-grade research systems that bridge theoretical physics, AI safety, and practical engineering. Every project is built on digital twin prototypes, advanced simulations, and comprehensive test suites.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 mb-16">
+                <div class="glass-panel p-6 rounded-xl border-slate-700 hover:border-cyan-500/50 transition-all">
+                    <div class="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mb-4">
+                        <i data-feather="layers" class="w-6 h-6 text-cyan-400"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-slate-100 mb-2">Scale</h3>
+                    <p class="text-slate-400 text-sm">77 active repositories with production-grade implementations across multiple domains</p>
+                </div>
+                <div class="glass-panel p-6 rounded-xl border-slate-700 hover:border-violet-500/50 transition-all">
+                    <div class="w-12 h-12 bg-violet-500/10 rounded-lg flex items-center justify-center mb-4">
+                        <i data-feather="anchor" class="w-6 h-6 text-violet-400"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-slate-100 mb-2">Independence</h3>
+                    <p class="text-slate-400 text-sm">Bootstrapped operation with no external funding or corporate backing</p>
+                </div>
+                <div class="glass-panel p-6 rounded-xl border-slate-700 hover:border-emerald-500/50 transition-all">
+                    <div class="w-12 h-12 bg-emerald-500/10 rounded-lg flex items-center justify-center mb-4">
+                        <i data-feather="check-circle" class="w-6 h-6 text-emerald-400"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-slate-100 mb-2">Integrity</h3>
+                    <p class="text-slate-400 text-sm">Rigorous validation and testing before any public release or partnership</p>
+                </div>
+            </div>
+
+            <!-- Core Technology Focus -->
+            <div class="max-w-3xl mx-auto text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-100">Core Technology Focus</h2>
                 <p class="text-lg text-slate-400">
                     Building breakthrough technologies at the intersection of applied physics, signal processing, and artificial intelligence.
@@ -211,19 +318,53 @@
         </div>
     </section>
 
-    <!-- Major Projects -->
-    <section id="technologies" class="py-20 bg-dark-900 relative">
+    <!-- Ecosystem Section -->
+    <section id="ecosystem" class="py-20 bg-dark-900 relative">
         <div class="absolute inset-0 bg-gradient-to-b from-dark-800 to-dark-900"></div>
-        
+
         <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-3xl mx-auto text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-100">The Digital Twin Ecosystem</h2>
+                <p class="text-lg text-slate-400">
+                    All projects are unified by a core mission: building digital twin prototypes that enable simulation, validation, and optimization before physical implementation.
+                </p>
+            </div>
+
+            <div class="ecosystem-diagram glass-panel">
+                <h3 class="text-xl font-semibold text-cyan-400 mb-8">Interconnected Research Domains</h3>
+                <div class="ecosystem-layers">
+                    <div class="ecosystem-layer">
+                        <h4>Physics Layer</h4>
+                        <p>Plasma dynamics, acoustic fields, frequency-domain control, biometric sensing</p>
+                    </div>
+                    <div class="ecosystem-layer">
+                        <h4>Mathematics Layer</h4>
+                        <p>Omnimathematics framework, penalty-augmented objectives, compliance enforcement</p>
+                    </div>
+                    <div class="ecosystem-layer">
+                        <h4>Simulation Layer</h4>
+                        <p>Digital twin prototypes, advanced numerical methods, validation suites</p>
+                    </div>
+                    <div class="ecosystem-layer">
+                        <h4>Application Layer</h4>
+                        <p>Security testing, medical applications, industrial optimization, AI safety</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Major Projects -->
+    <section id="projects" class="py-20 bg-dark-900 relative">
+        <div class="container mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between items-end mb-12">
                 <div class="max-w-2xl">
                     <div class="inline-block px-3 py-1 bg-violet-500/10 border border-violet-500/20 rounded-full text-violet-400 text-sm font-medium mb-4">
                         Research & Development
                     </div>
-                    <h2 class="text-4xl md:text-5xl font-bold text-slate-100 mb-4">Major Product Lines</h2>
+                    <h2 class="text-4xl md:text-5xl font-bold text-slate-100 mb-4">Core Projects</h2>
                     <p class="text-slate-400 text-lg">
-                        Proprietary platforms spanning pet tech, plasma physics, acoustic levitation, and security automation.
+                        Proprietary platforms spanning pet tech, plasma physics, acoustic levitation, AI safety, and security automation.
                     </p>
                 </div>
                 <a href="#contact" class="hidden md:flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors mt-4 md:mt-0">
@@ -245,7 +386,7 @@
                                 Active
                             </span>
                         </div>
-                        
+
                         <p class="text-slate-400 mb-6 leading-relaxed">
                             WiFi-based emotion detection using Channel State Information (CSI). Multi-modal ML pipeline with ESP32 edge deployment and React Native interface.
                         </p>
@@ -279,7 +420,7 @@
                                 DTP Phase
                             </span>
                         </div>
-                        
+
                         <p class="text-slate-400 mb-6 leading-relaxed">
                             Advanced simulation for plasma and field repulsion physics. Terfenol-D actuator modeling with electromagnetic field visualization.
                         </p>
@@ -312,7 +453,7 @@
                                 Private
                             </span>
                         </div>
-                        
+
                         <p class="text-slate-400 mb-6 leading-relaxed">
                             Precision Acoustic Force Field Technology with Omnimathematics framework. High-power acoustic levitation for waste sorting and material handling.
                         </p>
@@ -345,7 +486,7 @@
                                 Spec Phase
                             </span>
                         </div>
-                        
+
                         <p class="text-slate-400 mb-6 leading-relaxed">
                             Next-generation non-lethal precision acoustic technology. 2-20 Hz generation, 130 dB max, digital phase array with ±1° targeting.
                         </p>
@@ -429,52 +570,53 @@
         </div>
     </section>
 
-    <!-- Research Infrastructure -->
-    <section id="infrastructure" class="py-20 bg-dark-800 relative overflow-hidden">
-        <div class="absolute inset-0 opacity-30">
-            <div class="absolute -top-40 -right-40 w-96 h-96 bg-violet-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
-            <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-cyan-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style="animation-delay: 2s;"></div>
+    <!-- Operating Context Section -->
+    <section id="context" class="py-20 bg-dark-800 relative">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8 text-slate-100 text-center">Operating Context</h2>
+
+                <div class="operating-context glass-panel">
+                    <h3 class="text-xl font-semibold text-violet-400 mb-4">Strategic Independence & IP Protection</h3>
+                    <p class="text-slate-300 mb-6">
+                        MT Tech Industries operates as an independent research firm with complete control over research direction and implementation. This independence comes with both advantages and challenges.
+                    </p>
+
+                    <h4>Scale & Scope</h4>
+                    <ul>
+                        <li>77 active research repositories spanning applied physics, AI safety, and digital twin systems</li>
+                        <li>~5 public repositories establish priority and demonstrate capability</li>
+                        <li>Advanced implementations remain private to protect proprietary research</li>
+                        <li>Production-grade code across all domains</li>
+                    </ul>
+
+                    <h4>Strategic Disclosure</h4>
+                    <ul>
+                        <li>Public repositories serve as proof-of-concept and priority establishment</li>
+                        <li>Advanced implementations available for qualified partners and investors</li>
+                        <li>This approach protects IP while establishing credibility and legitimacy</li>
+                    </ul>
+
+                    <h4>Operational Reality</h4>
+                    <ul>
+                        <li>Bootstrapped operation with no external funding</li>
+                        <li>No corporate backing or collaborators</li>
+                        <li>Complete independence means complete responsibility for execution</li>
+                        <li>Rigorous validation before any public release or partnership</li>
+                    </ul>
+
+                    <p class="mt-6 pt-6 border-t border-slate-700 text-slate-400 italic">
+                        We don't make claims we can't back up. Every public release is production-grade. Every partnership is built on demonstrated capability.
+                    </p>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="container mx-auto px-6 relative z-10">
-            <div class="max-w-3xl mx-auto text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-100">Research Infrastructure</h2>
-                <p class="text-lg text-slate-400">
-                    State-of-the-art digital twin ecosystems with rigorous physics validation and reproducible science methodologies.
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="relative p-8 rounded-2xl bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 hover:border-cyan-500/50 transition-all group">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-cyan-500/5 rounded-full blur-2xl group-hover:bg-cyan-500/10 transition-all"></div>
-                    <i data-feather="check-circle" class="w-8 h-8 text-cyan-500 mb-4"></i>
-                    <h3 class="text-xl font-semibold text-slate-100 mb-2">Physics-First Validation</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        Digital twins created before physical builds. Simulation enforces verified hardware constraints and blocks non-physical parameters.
-                    </p>
-                </div>
-
-                <div class="relative p-8 rounded-2xl bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 hover:border-violet-500/50 transition-all group">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-violet-500/5 rounded-full blur-2xl group-hover:bg-violet-500/10 transition-all"></div>
-                    <i data-feather="repeat" class="w-8 h-8 text-violet-500 mb-4"></i>
-                    <h3 class="text-xl font-semibold text-slate-100 mb-2">Reproducible Science</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        Versioned Jupyter notebooks with statistical validators, synthetic data generation, and end-to-end test suites.
-                    </p>
-                </div>
-
-                <div class="relative p-8 rounded-2xl bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 hover:border-emerald-500/50 transition-all group">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-emerald-500/5 rounded-full blur-2xl group-hover:bg-emerald-500/10 transition-all"></div>
-                    <i data-feather="lock" class="w-8 h-8 text-emerald-500 mb-4"></i>
-                    <h3 class="text-xl font-semibold text-slate-100 mb-2">Privacy by Design</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        GDPR, HIPAA, CCPA compliance. Encrypted database schemas, anonymization pipelines, and secure OTA updates.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Tech Stack Visualization -->
-            <div class="mt-16 glass-panel rounded-2xl p-8 border-slate-700">
+    <!-- Tech Stack -->
+    <section class="py-16 bg-dark-900">
+        <div class="container mx-auto px-6">
+            <div class="glass-panel rounded-2xl p-8 border-slate-700">
                 <h3 class="text-xl font-semibold text-slate-100 mb-6 text-center">Technology Stack</h3>
                 <div class="flex flex-wrap justify-center gap-4">
                     <div class="px-4 py-2 bg-slate-800 rounded-lg border border-slate-700 text-slate-300 text-sm font-mono">Python</div>
@@ -553,7 +695,7 @@
                                     <option>Consulting Request</option>
                                 </select>
                             </div>
-                            
+
                             <div class="grid grid-cols-2 gap-4">
                                 <div>
                                     <label class="block text-sm font-medium text-slate-400 mb-2">Name</label>
