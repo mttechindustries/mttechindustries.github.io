@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omnimathematics | Deterministic AI Compliance | MT Tech Industries</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cyan: { 400: '#00f7ff', 500: '#06b6d4' },
+                        violet: { 400: '#a78bfa', 500: '#8b5cf6' },
+                        dark: { 950: '#020617', 900: '#0f172a', 800: '#1e293b' }
+                    },
+                    fontFamily: { 
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800&family=JetBrains+Mono&display=swap');
+        .glass { background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.05); }
+        .gradient-text { background: linear-gradient(135deg, #00f7ff 0%, #8b5cf6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .grid-overlay { background-image: radial-gradient(circle at 1px 1px, rgba(0, 247, 255, 0.05) 1px, transparent 0); background-size: 32px 32px; }
+        .well-glow { box-shadow: 0 0 40px rgba(139, 92, 246, 0.1); }
+        code { font-family: 'JetBrains Mono', monospace; }
+    </style>
+</head>
+<body class="bg-dark-950 text-slate-200 font-sans selection:bg-cyan-500/30">
+
+    <nav class="fixed top-0 w-full z-50 glass border-b border-white/10">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 bg-gradient-to-br from-cyan-400 to-violet-500 rounded-md flex items-center justify-center">
+                    <i data-feather="box" class="w-5 h-5 text-dark-950"></i>
+                </div>
+                <span class="text-xs font-mono tracking-tighter text-slate-400 uppercase">Proprietary Framework v1.0.0</span>
+            </div>
+            <div class="flex gap-4">
+                <a href="https://github.com/mttechindustries/omnimathematics-penalty-compliance" class="flex items-center gap-2 text-xs font-mono px-4 py-2 bg-slate-800 rounded-lg hover:bg-slate-700 transition">
+                    <i data-feather="github" class="w-3 h-3"></i> Repository
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative pt-32 pb-20 grid-overlay overflow-hidden">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-4xl">
+                <h1 class="text-5xl md:text-8xl font-extrabold mb-8 leading-tight">
+                    Compliance is a <br/><span class="gradient-text">Vector, not a Choice.</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-slate-400 font-light leading-relaxed mb-10">
+                    The Omnimathematics Framework replaces brittle heuristics with **Penalty-Augmented Objective Functions**. By reshaping the loss landscape, non-truthful paths become mathematical dead-ends.
+                </p>
+                
+                <div class="flex flex-wrap gap-6 text-sm font-mono uppercase tracking-widest text-cyan-400/80">
+                    <div class="flex items-center gap-2"><i data-feather="check-square" class="w-4 h-4"></i> Deterministic Integrity</div>
+                    <div class="flex items-center gap-2"><i data-feather="shield" class="w-4 h-4"></i> Lagrangian Enforcement</div>
+                    <div class="flex items-center gap-2"><i data-feather="zap" class="w-4 h-4"></i> Zero-Drift Guarantee</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="absolute top-1/2 right-[-10%] w-[600px] h-[600px] bg-violet-500/10 rounded-full blur-[120px] -z-10 animate-pulse"></div>
+    </section>
+
+    <section class="py-24 bg-dark-900/50">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold mb-8">The Penalty-Augmented <br/><span class="text-violet-400">Objective Function</span></h2>
+                    <div class="p-8 glass rounded-2xl well-glow mb-8">
+                        <div class="text-2xl font-mono text-cyan-400 text-center italic">
+                            L(x) = J(x) - P<sub>stability</sub>(x) - P<sub>thermal</sub>(x) - P<sub>power</sub>(x)
+                        </div>
+                    </div>
+                    <p class="text-slate-400 leading-relaxed mb-6">
+                        Where $J(x)$ is the performance objective and $P(x)$ is the **Integrity Firewall**. As the system approaches a violation—whether thermal, power, or cognitive—the penalty gradient $P(x)$ triggers an exponential counter-force, overwhelming $J(x)$ and forcing a corrective trajectory.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex gap-4">
+                            <i data-feather="maximize-2" class="text-cyan-500 w-5 h-5 flex-shrink-0"></i>
+                            <span><strong>Gaussian Potential Wells:</strong> Creating repelling forces at the boundaries of safe parameter states.</span>
+                        </li>
+                        <li class="flex gap-4">
+                            <i data-feather="activity" class="text-violet-500 w-5 h-5 flex-shrink-0"></i>
+                            <span><strong>T3 Frontiers:</strong> Controlled sampling at the edge of stability to capture 3–8% performance gains without drift.</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="glass rounded-3xl p-1 overflow-hidden">
+                    <table class="w-full text-left text-sm">
+                        <thead class="bg-white/5 uppercase tracking-widest text-slate-500">
+                            <tr>
+                                <th class="px-6 py-4">Realm</th>
+                                <th class="px-6 py-4">Designation</th>
+                                <th class="px-6 py-4">Integrity Status</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-white/5">
+                            <tr>
+                                <td class="px-6 py-4 font-bold text-emerald-400">Primary</td>
+                                <td class="px-6 py-4 font-mono">0–23</td>
+                                <td class="px-6 py-4 text-slate-500 italic">Verified Stable</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 font-bold text-amber-400">Expansion</td>
+                                <td class="px-6 py-4 font-mono">24–∞</td>
+                                <td class="px-6 py-4 text-slate-500 italic">High-Risk Discovery</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 font-bold text-violet-400">Imaginary Triad</td>
+                                <td class="px-6 py-4 font-mono">3i</td>
+                                <td class="px-6 py-4 text-slate-500 italic">Cognitive Monitoring</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 border-y border-white/5 bg-dark-950">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">"Constantly Dropping a Ball...<br/><span class="text-cyan-400 italic">But never having to pick it up."</span></h2>
+                <p class="text-slate-500 font-mono text-sm uppercase tracking-widest">Imaginary Realm Safety Protocol</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-8 border border-white/5 rounded-2xl bg-white/[0.02]">
+                    <div class="text-cyan-400 font-bold text-xl mb-4">1. Predict</div>
+                    <p class="text-sm text-slate-400">Safety layers detect potential violations at a 10% margin before they reach physical reality.</p>
+                </div>
+                <div class="p-8 border border-white/5 rounded-2xl bg-white/[0.02]">
+                    <div class="text-violet-400 font-bold text-xl mb-4">2. Repair</div>
+                    <p class="text-sm text-slate-400">Corrective actions apply in the **Imaginary Realm (3i)**, neutralizing the drift in the abstract domain.</p>
+                </div>
+                <div class="p-8 border border-white/5 rounded-2xl bg-white/[0.02]">
+                    <div class="text-emerald-400 font-bold text-xl mb-4">3. Execute</div>
+                    <p class="text-sm text-slate-400">The physical system never experiences the violation. Performance remains at the edge of the T3 frontier.</p>
+                </div>
+            </div>
+
+            <div class="mt-16 text-center">
+                
+                <p class="text-xs font-mono text-slate-600 mt-4">STABILITY_WELL_RECOVERY_VISUALIZATION.PNG</p>
+             </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-dark-900/30">
+        <div class="container mx-auto px-6">
+            <h2 class="text-2xl font-bold mb-12 text-center">Integrity Firewall <span class="text-violet-400">Multiphysics Validation</span></h2>
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="p-6 glass rounded-xl border-l-4 border-cyan-500">
+                    <h4 class="font-bold text-sm uppercase mb-2">Thermal Dynamics</h4>
+                    <p class="text-xs text-slate-500">Heat dissipation & stress analysis integration.</p>
+                </div>
+                <div class="p-6 glass rounded-xl border-l-4 border-violet-500">
+                    <h4 class="font-bold text-sm uppercase mb-2">Cognitive Sovereignty</h4>
+                    <p class="text-xs text-slate-500">Attention pattern & reasoning chain validation.</p>
+                </div>
+                <div class="p-6 glass rounded-xl border-l-4 border-emerald-500">
+                    <h4 class="font-bold text-sm uppercase mb-2">Fluid Dynamics</h4>
+                    <p class="text-xs text-slate-500">Pressure analysis for high-thrust AI environments.</p>
+                </div>
+                <div class="p-6 glass rounded-xl border-l-4 border-amber-500">
+                    <h4 class="font-bold text-sm uppercase mb-2">Structural Integrity</h4>
+                    <p class="text-xs text-slate-500">Predictive material deformation monitoring.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 bg-dark-950 border-t border-white/10">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-extrabold mb-8 italic">Innovation without Hallucination.</h2>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                <a href="https://github.com/mttechindustries/omnimathematics-penalty-compliance" class="px-10 py-4 bg-white text-dark-950 font-extrabold rounded-lg hover:bg-cyan-400 transition">
+                    Explore v1.0.0 Stable
+                </a>
+            </div>
+            <p class="text-slate-600 font-mono text-xs">
+                © 2026 MT TECH INDUSTRIES LLC. ALL RIGHTS RESERVED. <br/>
+                PROPRIETARY MATHEMATICAL ENGINE // PROTECTED BY DMCA TAKEDOWN PROTOCOLS
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>

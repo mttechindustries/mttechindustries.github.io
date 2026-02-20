@@ -3,625 +3,215 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MT Tech Industries LLC | Digital Twin Prototypes & Advanced Simulations</title>
-    <meta name="description" content="MT Tech Industries - Production-grade implementations in frequency-domain control, biometric sensing, plasma dynamics, and mathematical compliance frameworks.">
+    <title>MT Tech Industries LLC | Digital Twin Prototypes & Advanced Physics</title>
+    <meta name="description" content="Production-grade implementations in frequency-domain control, biometric sensing, plasma dynamics, and mathematical compliance frameworks.">
     
-    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
     
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        primary: {
-                            50: '#f0f9ff',
-                            100: '#e0f2fe',
-                            500: '#0ea5e9',
-                            600: '#0284c7',
-                            900: '#0c4a6e',
-                        },
-                        accent: {
-                            500: '#8b5cf6',
-                            600: '#7c3aed',
-                        },
-                        dark: {
-                            900: '#0f172a',
-                            800: '#1e293b',
-                            700: '#334155',
-                        }
+                        primary: { 500: '#0ea5e9', 600: '#0284c7' },
+                        accent: { 500: '#8b5cf6', 600: '#7c3aed' },
+                        dark: { 900: '#0f172a', 800: '#1e293b', 700: '#334155' }
                     },
-                    fontFamily: {
-                        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                    fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'gradient': 'gradient 8s linear infinite',
+                    },
+                    keyframes: {
+                        float: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-20px)' } },
+                        gradient: { '0%, 100%': { backgroundPosition: '0% 50%' }, '50%': { backgroundPosition: '100% 50%' } }
                     }
                 }
             }
-        };
+        }
     </script>
+    
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            color: #e2e8f0;
-            background-color: #0f172a;
-            overflow-x: hidden;
-        }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0c4a6e 100%);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 20% 50%, rgba(14, 165, 233, 0.1) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
-            pointer-events: none;
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            text-align: center;
-            max-width: 800px;
-        }
-        
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            margin-bottom: 1.5rem;
-            background: linear-gradient(135deg, #0ea5e9 0%, #8b5cf6 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .hero p {
-            font-size: 1.25rem;
-            color: #cbd5e1;
-            margin-bottom: 2rem;
-            line-height: 1.8;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            padding: 12px 32px;
-            background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            margin: 0 10px;
-        }
-        
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(14, 165, 233, 0.3);
-        }
-        
-        .cta-button.secondary {
-            background: transparent;
-            border: 2px solid #0ea5e9;
-        }
-        
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(15, 23, 42, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            border-bottom: 1px solid rgba(14, 165, 233, 0.2);
-        }
-        
-        nav .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 20px;
-        }
-        
-        nav a {
-            color: #e2e8f0;
-            text-decoration: none;
-            margin: 0 20px;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-        
-        nav a:hover {
-            color: #0ea5e9;
-        }
-        
-        /* Section Styling */
-        section {
-            padding: 80px 0;
-            border-top: 1px solid rgba(14, 165, 233, 0.1);
-        }
-        
-        section h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 3rem;
-            text-align: center;
-            background: linear-gradient(135deg, #0ea5e9 0%, #8b5cf6 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        /* Project Cards */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        
-        .project-card {
-            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
-            border: 1px solid rgba(14, 165, 233, 0.2);
-            border-radius: 12px;
-            padding: 2rem;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            cursor: pointer;
-        }
-        
-        .project-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(14, 165, 233, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        
-        .project-card:hover {
-            transform: translateY(-8px);
-            border-color: rgba(14, 165, 233, 0.5);
-            box-shadow: 0 20px 40px rgba(14, 165, 233, 0.2);
-        }
-        
-        .project-card:hover::before {
-            opacity: 1;
-        }
-        
-        .project-card-content {
-            position: relative;
-            z-index: 1;
-        }
-        
-        .project-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-            color: #0ea5e9;
-        }
-        
-        .project-card .category {
-            font-size: 0.85rem;
-            color: #8b5cf6;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        .project-card p {
-            color: #cbd5e1;
-            margin-bottom: 1rem;
-            line-height: 1.7;
-        }
-        
-        .project-card .details {
-            font-size: 0.9rem;
-            color: #94a3b8;
-            margin: 1rem 0;
-        }
-        
-        .project-card .details strong {
-            color: #0ea5e9;
-        }
-        
-        .project-card .learn-more {
-            display: inline-block;
-            margin-top: 1rem;
-            color: #0ea5e9;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-        
-        .project-card .learn-more:hover {
-            color: #8b5cf6;
-        }
-        
-        /* Ecosystem Section */
-        .ecosystem-diagram {
-            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
-            border: 1px solid rgba(14, 165, 233, 0.2);
-            border-radius: 12px;
-            padding: 3rem;
-            margin: 3rem 0;
-            text-align: center;
-        }
-        
-        .ecosystem-diagram h3 {
-            color: #0ea5e9;
-            margin-bottom: 2rem;
-            font-size: 1.5rem;
-        }
-        
-        .ecosystem-layers {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        
-        .ecosystem-layer {
-            background: rgba(15, 23, 42, 0.5);
-            border: 1px solid rgba(139, 92, 246, 0.3);
-            border-radius: 8px;
-            padding: 1.5rem;
-        }
-        
-        .ecosystem-layer h4 {
-            color: #8b5cf6;
-            margin-bottom: 0.5rem;
-        }
-        
-        .ecosystem-layer p {
-            font-size: 0.9rem;
-            color: #cbd5e1;
-        }
-        
-        /* Operating Context */
-        .operating-context {
-            background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(14, 165, 233, 0.1) 100%);
-            border: 1px solid rgba(139, 92, 246, 0.3);
-            border-radius: 12px;
-            padding: 2rem;
-            margin: 3rem 0;
-        }
-        
-        .operating-context h3 {
-            color: #8b5cf6;
-            margin-bottom: 1rem;
-        }
-        
-        .operating-context p {
-            color: #cbd5e1;
-            margin-bottom: 1rem;
-            line-height: 1.8;
-        }
-        
-        .operating-context ul {
-            list-style: none;
-            margin: 1rem 0;
-        }
-        
-        .operating-context li {
-            color: #cbd5e1;
-            margin: 0.5rem 0;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-        
-        .operating-context li::before {
-            content: '▸';
-            position: absolute;
-            left: 0;
-            color: #0ea5e9;
-        }
-        
-        /* Footer */
-        footer {
-            background: #0c1117;
-            border-top: 1px solid rgba(14, 165, 233, 0.1);
-            padding: 3rem 0;
-            text-align: center;
-            color: #94a3b8;
-        }
-        
-        footer a {
-            color: #0ea5e9;
-            text-decoration: none;
-        }
-        
-        footer a:hover {
-            text-decoration: underline;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        .glass-panel { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .hero-gradient { background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%); }
+        .tech-grid { background-image: radial-gradient(circle at 1px 1px, rgba(59, 130, 246, 0.1) 1px, transparent 0); background-size: 40px 40px; }
     </style>
 </head>
-<body>
-    <!-- Navigation -->
-    <nav>
-        <div class="container">
-            <div style="font-weight: 700; font-size: 1.25rem; color: #0ea5e9;">MT Tech Industries</div>
-            <div>
-                <a href="#overview">Overview</a>
-                <a href="#ecosystem">Ecosystem</a>
-                <a href="#projects">Projects</a>
-                <a href="#context">Context</a>
-                <a href="#nda-access">NDA Access</a>
-                <a href="#contact">Contact</a>
+<body class="bg-dark-900 text-slate-100 font-sans antialiased overflow-x-hidden">
+
+    <nav class="fixed top-0 w-full z-50 glass-panel border-b border-white/5">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-violet-500">MT Tech Industries</div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-300">
+                <a href="#overview" class="hover:text-cyan-400 transition">Overview</a>
+                <a href="#projects" class="hover:text-cyan-400 transition">Core Projects</a>
+                <a href="#infrastructure" class="hover:text-cyan-400 transition">Infrastructure</a>
+                <a href="#nda-access" class="hover:text-violet-400 transition">NDA Access</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Digital Twin Prototypes & Advanced Simulations</h1>
-            <p>Production-grade implementations in frequency-domain control, biometric sensing, plasma dynamics, and mathematical compliance frameworks. Select public repositories establish prior art; advanced implementations available for qualified partners.</p>
-            <div>
-                <a href="#projects" class="cta-button">Explore Projects</a>
-                <a href="https://github.com/mttechindustries" class="cta-button secondary">GitHub</a>
+    <section class="relative min-h-screen flex items-center justify-center hero-gradient overflow-hidden pt-20">
+        <div class="absolute inset-0 opacity-20 tech-grid"></div>
+        <div class="relative z-10 container mx-auto px-6 text-center">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800/50 border border-slate-700 mb-8 animate-pulse-slow">
+                <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                <span class="text-xs font-mono uppercase tracking-widest text-slate-300">System Status: Production-Ready Implementations</span>
             </div>
-        </div>
-    </section>
-
-    <!-- Overview Section -->
-    <section id="overview">
-        <div class="container">
-            <h2>What We Build</h2>
-            <p style="text-align: center; color: #cbd5e1; max-width: 800px; margin: 0 auto 3rem;">
-                MT Tech Industries develops production-grade research systems that bridge theoretical physics, AI safety, and practical engineering. Every project is built on digital twin prototypes, advanced simulations, and comprehensive test suites.
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
+                Digital Twin <span class="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-violet-600 animate-gradient bg-300%">Prototypes</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-slate-400 mb-10 max-w-3xl mx-auto leading-relaxed">
+                Independent R&D in frequency-domain control, biometric sensing, and plasma dynamics. Bridging theoretical physics with AI-driven compliance.
             </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#projects" class="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-lg font-bold hover:scale-105 transition shadow-lg shadow-cyan-500/20">Explore Projects</a>
+                <a href="https://github.com/mttechindustries" class="px-8 py-4 border border-slate-700 rounded-lg font-bold hover:bg-slate-800 transition">View Prior Art (GitHub)</a>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 pt-10 border-t border-white/5">
+                <div><div class="text-3xl font-bold text-cyan-400">TRL 4-5</div><div class="text-xs uppercase tracking-widest text-slate-500">Readiness Level</div></div>
+                <div><div class="text-3xl font-bold text-violet-400">100%</div><div class="text-xs uppercase tracking-widest text-slate-500">Bootstrapped</div></div>
+                <div><div class="text-3xl font-bold text-blue-400">Physics</div><div class="text-xs uppercase tracking-widest text-slate-500">Validation First</div></div>
+                <div><div class="text-3xl font-bold text-emerald-400">Proprietary</div><div class="text-xs uppercase tracking-widest text-slate-500">IP Protection</div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="overview" class="py-24 bg-dark-800 relative">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold mb-6">Strategic Independence & <span class="text-cyan-400">Integrity</span></h2>
+                    <p class="text-slate-400 text-lg mb-6 leading-relaxed">
+                        MT Tech Industries operates as a self-funded research firm. We don't make claims we can't back up with simulation data. Every public repository serves as a priority establishment; our advanced implementations remain private to maintain strategic IP control.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3 text-slate-300">
+                            <i data-feather="check-circle" class="text-emerald-500 mt-1"></i>
+                            <span>Comprehensive digital twin environments for all hardware.</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-slate-300">
+                            <i data-feather="check-circle" class="text-emerald-500 mt-1"></i>
+                            <span>Penalty-augmented mathematical objectives for AI safety.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="glass-panel p-8 rounded-2xl border-cyan-500/20">
+                    <h3 class="text-xl font-bold mb-6 text-violet-400 uppercase tracking-widest">Ecosystem Layers</h3>
+                    <div class="space-y-4">
+                        <div class="p-4 bg-slate-900/50 rounded-lg border border-white/5">
+                            <h4 class="font-bold text-cyan-400">Physics Layer</h4>
+                            <p class="text-sm text-slate-500">Plasma dynamics & acoustic field manipulation.</p>
+                        </div>
+                        <div class="p-4 bg-slate-900/50 rounded-lg border border-white/5">
+                            <h4 class="font-bold text-cyan-400">Mathematics Layer</h4>
+                            <p class="text-sm text-slate-500">Omnimathematics compliance frameworks.</p>
+                        </div>
+                        <div class="p-4 bg-slate-900/50 rounded-lg border border-white/5">
+                            <h4 class="font-bold text-cyan-400">Simulation Layer</h4>
+                            <p class="text-sm text-slate-500">Monte Carlo validation & parameter sweep suites.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-24 bg-dark-900 tech-grid">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">Core <span class="text-violet-500">Product Lines</span></h2>
             
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem;">
-                <div style="background: linear-gradient(135deg, #1e293b 0%, #334155 100%); border: 1px solid rgba(14, 165, 233, 0.2); border-radius: 8px; padding: 1.5rem;">
-                    <h4 style="color: #0ea5e9; margin-bottom: 0.5rem;">Scale</h4>
-                    <p style="color: #cbd5e1;">Substantial portfolio of production-grade implementations across multiple domains</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="glass-panel p-8 rounded-2xl hover:border-cyan-500/50 transition-all group">
+                    <div class="text-xs font-mono text-cyan-500 mb-2">AI SAFETY & MATH</div>
+                    <h3 class="text-2xl font-bold mb-4">Omnimathematics</h3>
+                    <p class="text-slate-400 text-sm mb-6">Mathematical enforcement of AI compliance. Replaces heuristic constraints with penalty-augmented objective functions.</p>
+                    <div class="border-t border-white/5 pt-4 flex justify-between items-center">
+                        <span class="text-xs font-bold text-slate-500 italic">Gradient Compliance</span>
+                        <a href="#" class="text-cyan-400 hover:text-white transition"><i data-feather="arrow-right"></i></a>
+                    </div>
                 </div>
-                <div style="background: linear-gradient(135deg, #1e293b 0%, #334155 100%); border: 1px solid rgba(14, 165, 233, 0.2); border-radius: 8px; padding: 1.5rem;">
-                    <h4 style="color: #0ea5e9; margin-bottom: 0.5rem;">Independence</h4>
-                    <p style="color: #cbd5e1;">Bootstrapped operation with no external funding or corporate backing</p>
+
+                <div class="glass-panel p-8 rounded-2xl hover:border-violet-500/50 transition-all group">
+                    <div class="text-xs font-mono text-violet-500 mb-2">ACOUSTIC ENGINEERING</div>
+                    <h3 class="text-2xl font-bold mb-4">PAFFT</h3>
+                    <p class="text-slate-400 text-sm mb-6">Parametric Acoustic Force Field Tech. Precision levitation and non-contact manipulation via field shaping.</p>
+                    <div class="border-t border-white/5 pt-4 flex justify-between items-center">
+                        <span class="text-xs font-bold text-slate-500 italic">Pressure: ≤55 kPa</span>
+                        <a href="#" class="text-violet-400 hover:text-white transition"><i data-feather="arrow-right"></i></a>
+                    </div>
                 </div>
-                <div style="background: linear-gradient(135deg, #1e293b 0%, #334155 100%); border: 1px solid rgba(14, 165, 233, 0.2); border-radius: 8px; padding: 1.5rem;">
-                    <h4 style="color: #0ea5e9; margin-bottom: 0.5rem;">Integrity</h4>
-                    <p style="color: #cbd5e1;">Rigorous validation and testing before any public release or partnership</p>
+
+                <div class="glass-panel p-8 rounded-2xl hover:border-emerald-500/50 transition-all group">
+                    <div class="text-xs font-mono text-emerald-500 mb-2">BIOMETRIC SENSING</div>
+                    <h3 class="text-2xl font-bold mb-4">WoofWizeX-FRS</h3>
+                    <p class="text-slate-400 text-sm mb-6">Non-invasive emotion detection using Wi-Fi CSI analysis. Passive sensing without cameras or wearables.</p>
+                    <div class="border-t border-white/5 pt-4 flex justify-between items-center">
+                        <span class="text-xs font-bold text-slate-500 italic">Edge ML / ESP32</span>
+                        <a href="#" class="text-emerald-400 hover:text-white transition"><i data-feather="arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="glass-panel p-8 rounded-2xl hover:border-blue-500/50 transition-all group">
+                    <div class="text-xs font-mono text-blue-500 mb-2">PLASMA PHYSICS</div>
+                    <h3 class="text-2xl font-bold mb-4">PAID-FR 4.0</h3>
+                    <p class="text-slate-400 text-sm mb-6">AI-driven plasma field design and behavior prediction for advanced manufacturing and energy systems.</p>
+                    <div class="border-t border-white/5 pt-4 flex justify-between items-center">
+                        <span class="text-xs font-bold text-slate-500 italic">Terfenol-D Modeling</span>
+                        <a href="#" class="text-blue-400 hover:text-white transition"><i data-feather="arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="glass-panel p-8 rounded-2xl hover:border-rose-500/50 transition-all group">
+                    <div class="text-xs font-mono text-rose-500 mb-2">NON-LETHAL SYSTEMS</div>
+                    <h3 class="text-2xl font-bold mb-4">BoloBeam Mk II</h3>
+                    <p class="text-slate-400 text-sm mb-6">Directed infrasound energy for temporary incapacitation. Digital phase array with ±1° targeting.</p>
+                    <div class="border-t border-white/5 pt-4 flex justify-between items-center">
+                        <span class="text-xs font-bold text-slate-500 italic">130 dB / 2-20 Hz</span>
+                        <a href="#" class="text-rose-400 hover:text-white transition"><i data-feather="arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="glass-panel p-8 rounded-2xl hover:border-amber-500/50 transition-all group">
+                    <div class="text-xs font-mono text-amber-500 mb-2">SECURITY & TESTING</div>
+                    <h3 class="text-2xl font-bold mb-4">OmniX Suite</h3>
+                    <p class="text-slate-400 text-sm mb-6">Autonomous security vulnerability assessment combining standard methods with novel proprietary hooks.</p>
+                    <div class="border-t border-white/5 pt-4 flex justify-between items-center">
+                        <span class="text-xs font-bold text-slate-500 italic">IP-Hardening Focus</span>
+                        <a href="#" class="text-amber-400 hover:text-white transition"><i data-feather="arrow-right"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Ecosystem Section -->
-    <section id="ecosystem">
-        <div class="container">
-            <h2>The Digital Twin Ecosystem</h2>
-            <p style="text-align: center; color: #cbd5e1; max-width: 800px; margin: 0 auto 2rem;">
-                All projects are unified by a core mission: building digital twin prototypes that enable simulation, validation, and optimization before physical implementation.
-            </p>
+    <section id="nda-access" class="py-24 bg-gradient-to-b from-dark-900 to-slate-900 border-t border-white/5">
+        <div class="container mx-auto px-6 max-w-4xl text-center">
+            <h2 class="text-3xl font-bold mb-6">Validation & <span class="text-violet-400">Simulation Data</span></h2>
+            <p class="text-slate-400 mb-10">Comprehensive parameter sweeps, Jupyter validation results, and production benchmarks are available for qualified partners and investors under strict NDA.</p>
             
-            <div class="ecosystem-diagram">
-                <h3>Interconnected Research Domains</h3>
-                <div class="ecosystem-layers">
-                    <div class="ecosystem-layer">
-                        <h4>Physics Layer</h4>
-                        <p>Plasma dynamics, acoustic fields, frequency-domain control, biometric sensing</p>
-                    </div>
-                    <div class="ecosystem-layer">
-                        <h4>Mathematics Layer</h4>
-                        <p>Omnimathematics framework, penalty-augmented objectives, compliance enforcement</p>
-                    </div>
-                    <div class="ecosystem-layer">
-                        <h4>Simulation Layer</h4>
-                        <p>Digital twin prototypes, advanced numerical methods, validation suites</p>
-                    </div>
-                    <div class="ecosystem-layer">
-                        <h4>Application Layer</h4>
-                        <p>Security testing, medical applications, industrial optimization, AI safety</p>
-                    </div>
-                </div>
+            <div class="grid md:grid-cols-3 gap-4 mb-12">
+                <div class="p-4 bg-slate-800/50 rounded border border-white/5 text-xs text-slate-400">Digital Twin Results</div>
+                <div class="p-4 bg-slate-800/50 rounded border border-white/5 text-xs text-slate-400">Verification Frameworks</div>
+                <div class="p-4 bg-slate-800/50 rounded border border-white/5 text-xs text-slate-400">Architecture Deep-Dives</div>
             </div>
+
+            <a href="#" class="inline-block px-10 py-5 bg-white text-dark-900 font-bold rounded-lg hover:bg-cyan-400 hover:scale-105 transition">Request NDA Access</a>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <div class="container">
-            <h2>Core Projects</h2>
-            
-            <div class="projects-grid">
-                <!-- Omnimathematics -->
-                <div class="project-card" onclick="window.location.href='projects/omnimath.html'">
-                    <div class="project-card-content">
-                        <div class="category">AI Safety & Mathematics</div>
-                        <h3>Omnimathematics</h3>
-                        <p><strong>Penalty-Compliance Framework</strong></p>
-                        <p>Mathematical enforcement of AI compliance and truthfulness. Replaces brittle heuristic constraints with penalty-augmented objective functions.</p>
-                        <div class="details">
-                            <strong>Core Innovation:</strong> Compliance as gradient of least resistance. Non-truthful paths become mathematical dead-ends.
-                        </div>
-                        <a href="projects/omnimath.html" class="learn-more">Learn More →</a>
-                    </div>
-                </div>
-
-                <!-- PAFFT -->
-                <div class="project-card" onclick="window.location.href='projects/pafft.html'">
-                    <div class="project-card-content">
-                        <div class="category">Acoustic Engineering</div>
-                        <h3>PAFFT</h3>
-                        <p><strong>Parametric Acoustic Force Field Technology</strong></p>
-                        <p>Controlled acoustic force field generation and manipulation. Precision acoustic levitation and non-contact manipulation through parametric wave generation.</p>
-                        <div class="details">
-                            <strong>Capability:</strong> Precision acoustic field shaping for manufacturing, materials handling, and medical applications.
-                        </div>
-                        <a href="projects/pafft.html" class="learn-more">Learn More →</a>
-                    </div>
-                </div>
-
-                <!-- PAID -->
-                <div class="project-card" onclick="window.location.href='projects/paid-fr.html'">
-                    <div class="project-card-content">
-                        <div class="category">Plasma Physics</div>
-                        <h3>PAID</h3>
-                        <p><strong>Plasma AI Design</strong></p>
-                        <p>Controlled plasma field generation and manipulation through AI-driven optimization. Precision plasma behavior prediction and real-time control.</p>
-                        <div class="details">
-                            <strong>Applications:</strong> Advanced manufacturing, energy systems, directed energy applications.
-                        </div>
-                        <a href="projects/paid-fr.html" class="learn-more">Learn More →</a>
-                    </div>
-                </div>
-
-                <!-- WoofWizeX-FRS -->
-                <div class="project-card" onclick="window.location.href='projects/woofwizex-frs.html'">
-                    <div class="project-card-content">
-                        <div class="category">Biometric Sensing</div>
-                        <h3>WoofWizeX-FRS</h3>
-                        <p><strong>Field-Respectful Sensing</strong></p>
-                        <p>Real-time biometric sensing and emotion detection through Wi-Fi CSI analysis. Non-invasive, passive detection without cameras, microphones, or wearables.</p>
-                        <div class="details">
-                            <strong>Impact:</strong> Veterinary care, animal welfare monitoring, behavioral research.
-                        </div>
-                        <a href="projects/woofwizex-frs.html" class="learn-more">Learn More →</a>
-                    </div>
-                </div>
-
-                <!-- Bolobeam -->
-                <div class="project-card" onclick="window.location.href='projects/bolobeam.html'">
-                    <div class="project-card-content">
-                        <div class="category">Non-Lethal Systems</div>
-                        <h3>Bolobeam</h3>
-                        <p><strong>Non-Lethal Acoustic Incapacitation</strong></p>
-                        <p>Directed acoustic energy for temporary incapacitation. First system to exceed effectiveness of existing non-lethal options.</p>
-                        <div class="details">
-                            <strong>Applications:</strong> Law enforcement, military, security, crowd management.
-                        </div>
-                        <a href="projects/bolobeam.html" class="learn-more">Learn More →</a>
-                    </div>
-                </div>
-
-                <!-- OmniX -->
-                <div class="project-card" onclick="window.location.href='projects/omnix.html'">
-                    <div class="project-card-content">
-                        <div class="category">Security & Testing</div>
-                        <h3>OmniX</h3>
-                        <p><strong>Security Testing Suite</strong></p>
-                        <p>Comprehensive security vulnerability assessment combining standard methods with novel proprietary techniques.</p>
-                        <div class="details">
-                            <strong>Impact:</strong> Enterprise security, infrastructure hardening, threat assessment.
-                        </div>
-                        <a href="projects/omnix.html" class="learn-more">Learn More →</a>
-                    </div>
-                </div>
+    <footer class="py-12 bg-dark-950 border-t border-white/5">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-slate-500 mb-4">&copy; 2026 MT Tech Industries LLC. All rights reserved. | Portage, MI</p>
+            <div class="flex justify-center space-x-6 text-sm text-slate-400 font-mono">
+                <a href="#" class="hover:text-cyan-400 transition">GitHub</a>
+                <a href="#" class="hover:text-cyan-400 transition">Security.txt</a>
+                <a href="#" class="hover:text-cyan-400 transition">IP Policy</a>
             </div>
-        </div>
-    </section>
-
-    <!-- Operating Context Section -->
-    <section id="context">
-        <div class="container">
-            <h2>Operating Context</h2>
-
-            <div class="operating-context">
-                <h3>Strategic Independence & IP Protection</h3>
-                <p>MT Tech Industries operates as an independent research firm with complete control over research direction and implementation. This independence comes with both advantages and challenges.</p>
-
-                <h4 style="color: #0ea5e9; margin-top: 1.5rem; margin-bottom: 0.5rem;">Scale & Scope</h4>
-                <ul>
-                    <li>Substantial portfolio of research repositories spanning applied physics, AI safety, and digital twin systems</li>
-                    <li>Select public repositories establish priority and demonstrate capability</li>
-                    <li>Advanced implementations remain private to protect proprietary research</li>
-                    <li>Production-grade code across all domains</li>
-                </ul>
-
-                <h4 style="color: #0ea5e9; margin-top: 1.5rem; margin-bottom: 0.5rem;">Strategic Disclosure</h4>
-                <ul>
-                    <li>Public repositories serve as proof-of-concept and priority establishment</li>
-                    <li>Advanced implementations available for qualified partners and investors under NDA</li>
-                    <li>This approach protects IP while establishing credibility and legitimacy</li>
-                </ul>
-
-                <h4 style="color: #0ea5e9; margin-top: 1.5rem; margin-bottom: 0.5rem;">Operational Reality</h4>
-                <ul>
-                    <li>Bootstrapped operation with no external funding</li>
-                    <li>No corporate backing or collaborators</li>
-                    <li>Complete independence means complete responsibility for execution</li>
-                    <li>Rigorous validation before any public release or partnership</li>
-                </ul>
-
-                <p style="margin-top: 1.5rem; font-style: italic; color: #94a3b8;">
-                    We don't make claims we can't back up. Every public release is production-grade. Every partnership is built on demonstrated capability.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <h2>Get In Touch</h2>
-            <p style="text-align: center; color: #cbd5e1; max-width: 800px; margin: 0 auto 2rem;">
-                Interested in partnerships, collaborations, or technical discussions? Reach out to discuss how our research can support your needs.
-            </p>
-            <div style="text-align: center;">
-                <a href="https://github.com/mttechindustries" class="cta-button">GitHub</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- NDA Access Section -->
-    <section id="nda-access" style="background: linear-gradient(135deg, rgba(14, 165, 233, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%); border-top: 1px solid rgba(14, 165, 233, 0.1); border-bottom: 1px solid rgba(139, 92, 246, 0.1);">
-        <div class="container">
-            <h2>Validation & Simulation Data</h2>
-            <p style="text-align: center; color: #cbd5e1; max-width: 800px; margin: 0 auto 2rem;">
-                Comprehensive simulation data, validation results, and performance benchmarks are available for qualified partners and investors under NDA.
-            </p>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem; max-width: 900px; margin-left: auto; margin-right: auto;">
-                <div style="background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(14, 165, 233, 0.2); border-radius: 8px; padding: 1.5rem;">
-                    <h4 style="color: #0ea5e9; margin-bottom: 0.75rem;">Digital Twin Results</h4>
-                    <p style="color: #94a3b8; font-size: 0.9rem;">Simulation outputs, parameter sweeps, and validation against analytical benchmarks</p>
-                </div>
-                <div style="background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(14, 165, 233, 0.2); border-radius: 8px; padding: 1.5rem;">
-                    <h4 style="color: #0ea5e9; margin-bottom: 0.75rem;">Test Suites</h4>
-                    <p style="color: #94a3b8; font-size: 0.9rem;">Comprehensive test frameworks and reproducibility documentation</p>
-                </div>
-                <div style="background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(14, 165, 233, 0.2); border-radius: 8px; padding: 1.5rem;">
-                    <h4 style="color: #0ea5e9; margin-bottom: 0.75rem;">Technical Deep-Dives</h4>
-                    <p style="color: #94a3b8; font-size: 0.9rem;">Architecture documentation and implementation details under NDA</p>
-                </div>
-            </div>
-            
-            <div style="text-align: center; margin-top: 2.5rem;">
-                <a href="nda_form.html" class="cta-button">Request NDA Access</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 MT Tech Industries LLC. All rights reserved.</p>
-            <p style="margin-top: 1rem; font-size: 0.9rem;">
-                <a href="https://github.com/mttechindustries">GitHub</a> | 
-                <a href="https://github.com/mttechindustries/Omnimathematics-Penalty-Compliance">Omnimathematics Repository</a>
-            </p>
         </div>
     </footer>
 
