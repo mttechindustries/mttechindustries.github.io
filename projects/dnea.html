@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNEA | MT Tech Industries</title>
+    <meta name="description" content="DNEA - Directional Noise-Embedded Audio. Proprietary system for embedding and delivering audio content within directional noise fields using ultrasonic parametric techniques and infrasound entrainment.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #e2e8f0; background-color: #0f172a; overflow-x: hidden; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        nav { position: fixed; top: 0; width: 100%; background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(10px); z-index: 1000; border-bottom: 1px solid rgba(139, 92, 246, 0.2); }
+        nav .container { display: flex; justify-content: space-between; align-items: center; padding: 1rem 20px; }
+        nav a { color: #e2e8f0; text-decoration: none; margin: 0 20px; font-weight: 500; transition: color 0.3s ease; }
+        nav a:hover { color: #8b5cf6; }
+        .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #2e1065 100%); position: relative; overflow: hidden; }
+        .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at 20% 50%, rgba(139, 92, 246, 0.12) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(99, 102, 241, 0.1) 0%, transparent 50%); pointer-events: none; }
+        .hero-content { position: relative; z-index: 1; text-align: center; max-width: 900px; }
+        .hero h1 { font-size: 4rem; font-weight: 800; margin-bottom: 1rem; background: linear-gradient(135deg, #a78bfa 0%, #6366f1 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .hero .subtitle { font-size: 1.5rem; color: #a78bfa; font-weight: 600; margin-bottom: 2rem; }
+        .hero p { font-size: 1.25rem; color: #cbd5e1; margin-bottom: 2rem; line-height: 1.8; }
+        .cta-button { display: inline-block; padding: 12px 32px; background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%); color: white; text-decoration: none; border-radius: 8px; font-weight: 600; transition: all 0.3s ease; margin: 0 10px; }
+        .cta-button:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3); }
+        .cta-button.secondary { background: transparent; border: 2px solid #8b5cf6; }
+        section { padding: 80px 0; border-top: 1px solid rgba(139, 92, 246, 0.1); }
+        section h2 { font-size: 2.5rem; font-weight: 700; margin-bottom: 3rem; text-align: center; background: linear-gradient(135deg, #a78bfa 0%, #6366f1 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .content-card { background: linear-gradient(135deg, #1e293b 0%, #1e1b4b 100%); border: 1px solid rgba(139, 92, 246, 0.2); border-radius: 12px; padding: 2rem; margin: 2rem 0; }
+        .content-card h3 { color: #a78bfa; margin-bottom: 1rem; font-size: 1.5rem; }
+        .content-card p { color: #cbd5e1; margin-bottom: 1rem; line-height: 1.8; }
+        .content-card ul { list-style: none; margin: 1rem 0; }
+        .content-card li { color: #cbd5e1; margin: 0.5rem 0; padding-left: 1.5rem; position: relative; }
+        .content-card li::before { content: '▸'; position: absolute; left: 0; color: #a78bfa; }
+        .highlight-box { background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(99, 102, 241, 0.1) 100%); border: 1px solid rgba(139, 92, 246, 0.3); border-radius: 8px; padding: 1.5rem; margin: 2rem 0; }
+        .highlight-box h4 { color: #a78bfa; margin-bottom: 0.5rem; }
+        .highlight-box p { color: #cbd5e1; }
+        .two-column { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0; }
+        @media (max-width: 768px) { .two-column { grid-template-columns: 1fr; } .hero h1 { font-size: 2.5rem; } }
+        .prior-art-badge { display: inline-block; background: rgba(139, 92, 246, 0.2); border: 1px solid rgba(139, 92, 246, 0.5); border-radius: 6px; padding: 4px 12px; font-size: 0.8rem; font-weight: 600; color: #a78bfa; margin-bottom: 1rem; letter-spacing: 0.05em; }
+        footer { background: #0c1117; border-top: 1px solid rgba(139, 92, 246, 0.1); padding: 3rem 0; text-align: center; color: #94a3b8; }
+        footer a { color: #a78bfa; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div style="font-weight: 700; font-size: 1.25rem;">
+                <a href="../index.html" style="color: #a78bfa; text-decoration: none;">MT Tech Industries</a>
+            </div>
+            <div>
+                <a href="../index.html">Home</a>
+                <a href="../index.html#projects">Projects</a>
+                <a href="../index.html#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="prior-art-badge">PRIOR ART ESTABLISHED: MAY 24, 2025</div>
+            <h1>DNEA</h1>
+            <div class="subtitle">Directional Noise-Embedded Audio</div>
+            <p>A proprietary framework for embedding, encoding, and delivering audio content within directional noise fields. Combines ultrasonic parametric delivery, infrasound entrainment, and psychoacoustic masking for precision spatial audio targeting without perceptible signal presence.</p>
+            <div>
+                <a href="../index.html#contact" class="cta-button">Contact for Details</a>
+                <a href="../index.html" class="cta-button secondary">Back to Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>Core Technology</h2>
+            <div class="content-card">
+                <h3>Parametric Directional Audio Embedding</h3>
+                <p>DNEA enables audio content to be embedded within ambient noise and delivered with spatial precision to defined target zones — without the content being perceptible outside that zone or detectable as conventional audio signal. The system exploits the physics of ultrasonic heterodyning and infrasound interference to create audio that only coherently decodes within a defined acoustic radius.</p>
+                <div class="two-column">
+                    <div>
+                        <h4 style="color: #a78bfa; margin-bottom: 1rem;">Delivery Mechanisms</h4>
+                        <ul>
+                            <li>Ultrasonic heterodyning (parametric speakers)</li>
+                            <li>Phased transducer arrays for spatial targeting</li>
+                            <li>Infrasound carrier layers (10–19 Hz)</li>
+                            <li>Binaural beat embedding (theta/gamma frequency pairing)</li>
+                            <li>Sparse spectral masking within ambient noise</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="color: #6366f1; margin-bottom: 1rem;">Signal Architecture</h4>
+                        <ul>
+                            <li>Phase-inverted subliminal encoding</li>
+                            <li>Time-stretched syllable delivery</li>
+                            <li>Theta-gamma coupling (4–8 Hz / 40 Hz)</li>
+                            <li>Real-time biometric adaptive feedback</li>
+                            <li>Error-correction for signal integrity under noise</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h3>Frequency Layer Architecture</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+                    <div class="highlight-box">
+                        <h4>Infrasound Layer (10–19 Hz)</h4>
+                        <p>Physiological priming — slowed heart rate, cortisol reduction, alpha/theta brainwave entrainment via interference patterns.</p>
+                    </div>
+                    <div class="highlight-box">
+                        <h4>Theta Band (4–8 Hz)</h4>
+                        <p>Memory consolidation targeting. Audio cues delivered in 0.5–1 second bursts synced to detected theta peaks during NREM sleep stages.</p>
+                    </div>
+                    <div class="highlight-box">
+                        <h4>Gamma Overlay (40 Hz)</h4>
+                        <p>Synaptic plasticity enhancement. Synchronized auditory pulses overlaid on theta peaks to amplify retention response.</p>
+                    </div>
+                    <div class="highlight-box">
+                        <h4>Ultrasonic Carrier (&gt;20 kHz)</h4>
+                        <p>Heterodyned parametric delivery — signal only becomes audible as the ultrasonic carriers interact within the target zone.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>Applications</h2>
+            <div class="content-card">
+                <h3>Cognitive Enhancement — EasyZz LinguaFlow</h3>
+                <p>DNEA serves as the delivery backbone of the EasyZz sleep-learning platform. Content is embedded into sleep-safe ambient audio and delivered during detected NREM phases via under-mattress transducers or acoustic pillow arrays, bypassing conscious awareness while engaging memory consolidation processes.</p>
+                <div class="two-column">
+                    <div class="highlight-box">
+                        <h4>Sleep-Phase Delivery</h4>
+                        <p>Phase-locked audio cues delivered to sleeping subjects during verified theta windows. Vocabulary, patterns, and structured knowledge reinforced without waking.</p>
+                    </div>
+                    <div class="highlight-box">
+                        <h4>Biometric Adaptation</h4>
+                        <p>Real-time EEG and heart rate feedback adjusts audio intensity and timing, maximizing retention while preventing sleep disruption.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="content-card">
+                <h3>Wellness & Spatial Audio Targeting</h3>
+                <p>Positive DNEA applies the same directional embedding framework to ambient wellness delivery — calming affirmations and psychoacoustic content embedded in pink noise and beamed to precise spatial zones (desk, bed, workspace). Coherent decoding only within a 2-meter target radius.</p>
+                <div class="two-column">
+                    <div class="highlight-box">
+                        <h4>Precision Zone Delivery</h4>
+                        <p>Audio only coherently resolves within defined acoustic target zones. Outside those zones, only ambient noise is present — no perceptible signal leakage.</p>
+                    </div>
+                    <div class="highlight-box">
+                        <h4>Consent-Based Operation</h4>
+                        <p>System architecture includes transparency mode and opt-in consent layers to ensure ethical deployment in wellness and enterprise contexts.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>IP & Prior Art</h2>
+            <div class="content-card">
+                <h3>Verified Origination — May 24, 2025</h3>
+                <p>DNEA was conceived and documented by Marc Tuinier / MT Tech Industries LLC with initial commit history timestamped May 24, 2025. The comprehensive technical treatise and system architecture predate any known comparable public disclosure. DNEA is the foundational delivery technology underlying the EasyZz platform (also created May 24, 2025), establishing an unbroken development chain from core technology to commercial application.</p>
+                <div class="two-column">
+                    <div class="highlight-box">
+                        <h4>Documented Prior Art</h4>
+                        <p>Git commit history, technical treatise, and application-layer implementations all timestamped May 2025. Cryptographically verifiable chain of custody via GitHub repository forensics.</p>
+                    </div>
+                    <div class="highlight-box">
+                        <h4>Patent Candidacy</h4>
+                        <p>"Method of Phase-Locked Memory Reinforcement Using Subliminal Acoustic Entrainment" — utility and design patent candidates covering the embedding algorithm, hardware delivery system, and biometric adaptive feedback loop.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 MT Tech Industries LLC. All rights reserved.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #64748b;">Original work established May 24, 2025. All IP owned exclusively by Marc Tuinier / MT Tech Industries LLC.</p>
+            <p style="margin-top: 1rem; font-size: 0.9rem;">
+                <a href="https://github.com/mttechindustries/DNEA">GitHub</a> |
+                <a href="../index.html">Back to Main Site</a>
+            </p>
+        </div>
+    </footer>
+    <script>feather.replace();</script>
+</body>
+</html>

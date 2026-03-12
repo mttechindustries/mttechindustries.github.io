@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E_Harvest | MT Tech Industries</title>
+    <meta name="description" content="E_Harvest - Multi-modal ambient energy harvesting using enhanced Galfenol magnetostrictive materials. Simultaneous vibration, pressure-gradient, thermal, and solar energy capture from orthogonal sources.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #e2e8f0; background-color: #0f172a; overflow-x: hidden; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        nav { position: fixed; top: 0; width: 100%; background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(10px); z-index: 1000; border-bottom: 1px solid rgba(16, 185, 129, 0.2); }
+        nav .container { display: flex; justify-content: space-between; align-items: center; padding: 1rem 20px; }
+        nav a { color: #e2e8f0; text-decoration: none; margin: 0 20px; font-weight: 500; transition: color 0.3s ease; }
+        nav a:hover { color: #10b981; }
+        .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #0f172a 0%, #0c2a1e 50%, #052e16 100%); position: relative; overflow: hidden; }
+        .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at 20% 50%, rgba(16, 185, 129, 0.1) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(6, 182, 212, 0.08) 0%, transparent 50%); pointer-events: none; }
+        .hero-content { position: relative; z-index: 1; text-align: center; max-width: 900px; }
+        .hero h1 { font-size: 4rem; font-weight: 800; margin-bottom: 1rem; background: linear-gradient(135deg, #34d399 0%, #06b6d4 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .hero .subtitle { font-size: 1.5rem; color: #34d399; font-weight: 600; margin-bottom: 2rem; }
+        .hero p { font-size: 1.25rem; color: #cbd5e1; margin-bottom: 2rem; line-height: 1.8; }
+        .cta-button { display: inline-block; padding: 12px 32px; background: linear-gradient(135deg, #059669 0%, #0891b2 100%); color: white; text-decoration: none; border-radius: 8px; font-weight: 600; transition: all 0.3s ease; margin: 0 10px; }
+        .cta-button:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3); }
+        .cta-button.secondary { background: transparent; border: 2px solid #10b981; }
+        section { padding: 80px 0; border-top: 1px solid rgba(16, 185, 129, 0.1); }
+        section h2 { font-size: 2.5rem; font-weight: 700; margin-bottom: 3rem; text-align: center; background: linear-gradient(135deg, #34d399 0%, #06b6d4 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .content-card { background: linear-gradient(135deg, #1e293b 0%, #0c2a1e 100%); border: 1px solid rgba(16, 185, 129, 0.2); border-radius: 12px; padding: 2rem; margin: 2rem 0; }
+        .content-card h3 { color: #34d399; margin-bottom: 1rem; font-size: 1.5rem; }
+        .content-card p { color: #cbd5e1; margin-bottom: 1rem; line-height: 1.8; }
+        .content-card ul { list-style: none; margin: 1rem 0; }
+        .content-card li { color: #cbd5e1; margin: 0.5rem 0; padding-left: 1.5rem; position: relative; }
+        .content-card li::before { content: '▸'; position: absolute; left: 0; color: #34d399; }
+        .highlight-box { background: linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(6, 182, 212, 0.08) 100%); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 8px; padding: 1.5rem; margin: 1rem 0; }
+        .highlight-box h4 { color: #34d399; margin-bottom: 0.5rem; }
+        .highlight-box p { color: #cbd5e1; }
+        .metric { text-align: center; padding: 1.5rem; }
+        .metric .value { font-size: 2.5rem; font-weight: 800; color: #34d399; }
+        .metric .label { font-size: 0.85rem; color: #64748b; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0.25rem; }
+        .two-column { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0; }
+        @media (max-width: 768px) { .two-column { grid-template-columns: 1fr; } .hero h1 { font-size: 2.5rem; } }
+        .prior-art-badge { display: inline-block; background: rgba(16, 185, 129, 0.2); border: 1px solid rgba(16, 185, 129, 0.5); border-radius: 6px; padding: 4px 12px; font-size: 0.8rem; font-weight: 600; color: #34d399; margin-bottom: 1rem; letter-spacing: 0.05em; }
+        footer { background: #0c1117; border-top: 1px solid rgba(16, 185, 129, 0.1); padding: 3rem 0; text-align: center; color: #94a3b8; }
+        footer a { color: #34d399; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div style="font-weight: 700; font-size: 1.25rem;">
+                <a href="../index.html" style="color: #34d399; text-decoration: none;">MT Tech Industries</a>
+            </div>
+            <div>
+                <a href="../index.html">Home</a>
+                <a href="../index.html#projects">Projects</a>
+                <a href="../index.html#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="prior-art-badge">PRIOR ART ESTABLISHED: JUNE 21, 2025</div>
+            <h1>E_Harvest</h1>
+            <div class="subtitle">Multi-Modal Ambient Energy Harvesting</div>
+            <p>A breakthrough energy harvesting architecture using enhanced Galfenol (Fe-Ga) magnetostrictive materials to simultaneously capture energy from orthogonal ambient sources — vibration, atmospheric pressure gradients, thermal differentials, and solar — without source competition.</p>
+            <div>
+                <a href="../index.html#contact" class="cta-button">Contact for Details</a>
+                <a href="../index.html" class="cta-button secondary">Back to Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>Core Innovation</h2>
+            <div class="content-card">
+                <h3>Enhanced Galfenol Magnetostrictive Architecture</h3>
+                <p>E_Harvest centers on a proprietary processing breakthrough for Galfenol (Fe₀.₈₂Ga₀.₁₈) — achieving 4,500 ppm strain, 3× the performance of conventional Terfenol-D (1,500 ppm baseline). The enhanced material operates across a dramatically wider temperature range and introduces a ductility transformation that makes large-scale deployment practical for the first time.</p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+                    <div class="metric">
+                        <div class="value">4,500</div>
+                        <div class="label">ppm strain (vs 1,500 Terfenol-D)</div>
+                    </div>
+                    <div class="metric">
+                        <div class="value">3×</div>
+                        <div class="label">performance improvement</div>
+                    </div>
+                    <div class="metric">
+                        <div class="value">−40°C to 150°C</div>
+                        <div class="label">operating range (vs −10 to 80°C)</div>
+                    </div>
+                    <div class="metric">
+                        <div class="value">50%</div>
+                        <div class="label">bias field power reduction</div>
+                    </div>
+                    <div class="metric">
+                        <div class="value">0.92</div>
+                        <div class="label">pressure-to-strain coupling coefficient</div>
+                    </div>
+                    <div class="metric">
+                        <div class="value">9.5×</div>
+                        <div class="label">ductility factor improvement</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>Orthogonal Energy Source Architecture</h2>
+            <div class="content-card">
+                <h3>Simultaneous Non-Competing Capture</h3>
+                <p>The key insight of E_Harvest is that ambient energy sources — vibration, pressure gradient, thermal, and solar — operate at different frequencies and physical mechanisms. They are orthogonal: capturing one does not diminish the others. E_Harvest's architecture harvests all four simultaneously from a single integrated system.</p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+                    <div class="highlight-box">
+                        <h4>Vibration Harvesting (1–2,000 Hz)</h4>
+                        <p>Power density: 1.2 W/cm³ at 75% efficiency. Magnetostrictive conversion from structural vibration, machinery, traffic, and acoustic sources.</p>
+                    </div>
+                    <div class="highlight-box">
+                        <h4>Pressure Gradient (100–10,000 Pa)</h4>
+                        <p>Exploits atmospheric pressure differentials across altitude changes (~12 kPa per 1,000m). Passive capture from building ventilation, wind, and barometric fluctuation.</p>
+                    </div>
+                    <div class="highlight-box">
+                        <h4>Thermal Differential (5–50°C ΔT)</h4>
+                        <p>8% thermoelectric baseline efficiency, enhanced by Galfenol's expanded temperature operating range. Captures waste heat from machinery, sunlight, and environmental gradients.</p>
+                    </div>
+                    <div class="highlight-box">
+                        <h4>Solar (1,000 W/m² irradiance)</h4>
+                        <p>35% efficiency perovskite cell integration. Complementary to other sources — operates when vibration and pressure sources are quiescent.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>Technical Architecture</h2>
+            <div class="content-card">
+                <h3>Magnetostrictive Energy Conversion Model</h3>
+                <p>The core power equation driving E_Harvest's vibration harvesting: <code style="color: #34d399; background: rgba(16,185,129,0.1); padding: 2px 6px; border-radius: 4px;">P = 0.5 × E × ε² × f</code> where E is elastic modulus, ε is magnetostrictive strain, and f is frequency. Enhanced Galfenol's 3× strain improvement directly translates to a 9× power density advantage over Terfenol-D-based systems at equivalent frequency.</p>
+                <div class="two-column">
+                    <div>
+                        <h4 style="color: #34d399; margin-bottom: 1rem;">Material Advantages</h4>
+                        <ul>
+                            <li>Ductile — survives high-cycle fatigue loading</li>
+                            <li>Wider temperature range enables harsh environments</li>
+                            <li>Reduced bias field requirement cuts power overhead by 50%</li>
+                            <li>Fe-Ga composition tunable for target frequency ranges</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="color: #06b6d4; margin-bottom: 1rem;">System Integration</h4>
+                        <ul>
+                            <li>Single harvester captures all four source types</li>
+                            <li>Power management for orthogonal source conditioning</li>
+                            <li>Adaptive impedance matching per source type</li>
+                            <li>Real-time optimization of harvest balance</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>Applications & IP</h2>
+            <div class="content-card">
+                <h3>Deployment Scenarios</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+                    <div class="highlight-box">
+                        <h4>IoT & Sensor Networks</h4>
+                        <p>Self-powered environmental sensors, structural health monitors, and wireless nodes that harvest from ambient infrastructure vibration.</p>
+                    </div>
+                    <div class="highlight-box">
+                        <h4>Industrial Infrastructure</h4>
+                        <p>Energy recovery from manufacturing equipment, HVAC systems, and pipelines — turning operational vibration into usable power.</p>
+                    </div>
+                    <div class="highlight-box">
+                        <h4>Wearable & Implantable</h4>
+                        <p>Body-heat and motion harvesting for medical devices and wearables using the ductile, biocompatible Galfenol formulation.</p>
+                    </div>
+                    <div class="highlight-box">
+                        <h4>Remote & Off-Grid</h4>
+                        <p>Autonomous power for remote monitoring stations exploiting altitude pressure gradients, wind vibration, and solar simultaneously.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="content-card">
+                <h3>Verified Prior Art — June 21, 2025</h3>
+                <p>E_Harvest was originated and documented by Marc Tuinier / MT Tech Industries LLC with git commit history timestamped June 21, 2025. The Galfenol processing breakthrough, multi-modal orthogonal architecture, and pressure-to-strain coupling methodology constitute proprietary IP. Full technical specifications with validated physics models are maintained in the private repository with cryptographically verifiable timestamps.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 MT Tech Industries LLC. All rights reserved.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #64748b;">Original work established June 21, 2025. All IP owned exclusively by Marc Tuinier / MT Tech Industries LLC.</p>
+            <p style="margin-top: 1rem; font-size: 0.9rem;">
+                <a href="https://github.com/mttechindustries/E_Harvest">GitHub</a> |
+                <a href="../index.html">Back to Main Site</a>
+            </p>
+        </div>
+    </footer>
+    <script>feather.replace();</script>
+</body>
+</html>
