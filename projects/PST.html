@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Polyvalent Stability Theory (PST) | MT Tech Industries LLC</title>
+  <meta
+    name="description"
+    content="Polyvalent Stability Theory (PST) is a cross-domain stability framework developed by MT Tech Industries LLC for evaluating adversarial and systemic instability across complex systems."
+  />
+  <meta name="robots" content="index,follow" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: { 400: "#38bdf8", 500: "#0ea5e9", 600: "#0284c7" },
+            accent: { 400: "#a78bfa", 500: "#8b5cf6", 600: "#7c3aed" },
+            dark: { 950: "#020617", 900: "#0f172a", 800: "#1e293b", 700: "#334155" }
+          },
+          fontFamily: {
+            sans: ["Inter", "system-ui", "sans-serif"]
+          },
+          boxShadow: {
+            glow: "0 0 0 1px rgba(56,189,248,0.12), 0 20px 60px rgba(2,132,199,0.18)"
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+    body { background: #020617; }
+
+    .glass-panel {
+      background: rgba(15, 23, 42, 0.72);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .hero-gradient {
+      background:
+        radial-gradient(circle at 20% 20%, rgba(14, 165, 233, 0.16), transparent 28%),
+        radial-gradient(circle at 85% 15%, rgba(139, 92, 246, 0.16), transparent 24%),
+        linear-gradient(135deg, #020617 0%, #0f172a 46%, #111827 100%);
+    }
+
+    .grid-pattern {
+      background-image: radial-gradient(circle at 1px 1px, rgba(148, 163, 184, 0.12) 1px, transparent 0);
+      background-size: 34px 34px;
+    }
+
+    .text-gradient {
+      background: linear-gradient(135deg, #67e8f9 0%, #60a5fa 35%, #a78bfa 70%, #c084fc 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .card-hover {
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .card-hover:hover {
+      transform: translateY(-6px);
+      border-color: rgba(56, 189, 248, 0.35);
+      box-shadow: 0 0 0 1px rgba(56,189,248,0.10), 0 20px 60px rgba(2,132,199,0.14);
+    }
+  </style>
+</head>
+<body class="bg-dark-950 text-slate-100 font-sans antialiased overflow-x-hidden">
+  <script src="components/navbar.js"></script>
+  <mt-nav></mt-nav>
+
+  <!-- HERO -->
+  <section class="relative overflow-hidden hero-gradient pt-28 pb-24">
+    <div class="absolute inset-0 grid-pattern opacity-30"></div>
+
+    <div class="relative z-10 container mx-auto px-6">
+      <div class="max-w-6xl mx-auto">
+        <div class="max-w-4xl">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-panel border-slate-700/60 mb-8">
+            <i data-feather="layers" class="w-4 h-4 text-cyan-400"></i>
+            <span class="text-xs md:text-sm font-semibold tracking-[0.18em] uppercase text-slate-300">
+              MT Tech Industries LLC • Patent-Filed Framework
+            </span>
+          </div>
+
+          <div class="flex flex-wrap gap-3 mb-6">
+            <span class="px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 text-xs font-bold uppercase tracking-[0.18em]">
+              Non-Provisional
+            </span>
+            <span class="px-3 py-1 rounded-full bg-slate-900/70 border border-slate-700 text-slate-300 text-xs font-bold uppercase tracking-[0.18em]">
+              Polyvalent Stability Theory
+            </span>
+          </div>
+
+          <h1 class="text-5xl md:text-7xl font-black leading-[0.95] mb-6">
+            <span class="text-gradient">Polyvalent</span><br />
+            Stability Theory
+          </h1>
+
+          <p class="text-lg md:text-2xl text-slate-400 leading-relaxed max-w-3xl mb-10">
+            A cross-domain framework for evaluating whether complex systems remain stable under disturbance,
+            manipulation, or adversarial pressure — across AI, control systems, simulation environments, and
+            hybrid technical architectures.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#problem" class="px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-600 to-blue-600 font-bold text-white hover:scale-105 transition-all">
+              Why It Matters
+            </a>
+            <a href="secure-access.html" class="px-8 py-4 rounded-xl border border-slate-700 bg-slate-900/50 font-bold text-slate-200 hover:bg-slate-800 transition-all">
+              Request Protected Review
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STRIP -->
+  <section class="py-16 bg-dark-900 border-t border-white/5">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <div class="grid md:grid-cols-4 gap-4">
+        <div class="glass-panel rounded-2xl p-5 border-slate-800/80">
+          <div class="text-2xl font-black text-cyan-400 mb-1">AI</div>
+          <div class="text-xs uppercase tracking-[0.18em] text-slate-500">Adversarial Robustness</div>
+        </div>
+        <div class="glass-panel rounded-2xl p-5 border-slate-800/80">
+          <div class="text-2xl font-black text-violet-400 mb-1">Control</div>
+          <div class="text-xs uppercase tracking-[0.18em] text-slate-500">Dynamic System Stability</div>
+        </div>
+        <div class="glass-panel rounded-2xl p-5 border-slate-800/80">
+          <div class="text-2xl font-black text-emerald-400 mb-1">Hybrid</div>
+          <div class="text-xs uppercase tracking-[0.18em] text-slate-500">Verification Architecture</div>
+        </div>
+        <div class="glass-panel rounded-2xl p-5 border-slate-800/80">
+          <div class="text-2xl font-black text-blue-400 mb-1">PST</div>
+          <div class="text-xs uppercase tracking-[0.18em] text-slate-500">Shared Stability Logic</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+  <section id="problem" class="py-24 bg-slate-950 border-t border-white/5">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <div class="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-start">
+        <div>
+          <div class="text-sm uppercase tracking-[0.18em] text-cyan-400 font-semibold mb-3">The Problem</div>
+          <h2 class="text-3xl md:text-5xl font-black mb-6">Modern Systems Break in Fragmented Ways</h2>
+          <p class="text-lg text-slate-400 leading-relaxed mb-6">
+            AI systems, autonomous machines, simulation environments, and industrial control systems are all exposed
+            to disturbance, manipulation, and instability — but they are usually analyzed through separate methods,
+            separate vocabularies, and separate defensive disciplines.
+          </p>
+          <p class="text-slate-500 leading-relaxed">
+            That fragmentation becomes a liability when systems are increasingly hybrid, interconnected, and exposed
+            to adversarial conditions. A local fix in one domain does not automatically translate into systemic stability
+            across the full stack.
+          </p>
+        </div>
+
+        <div class="glass-panel rounded-3xl p-8 border border-slate-800/70 shadow-glow">
+          <div class="text-sm uppercase tracking-[0.18em] text-slate-500 font-semibold mb-4">What Existing Approaches Miss</div>
+          <div class="space-y-4 text-sm text-slate-300">
+            <div class="rounded-2xl bg-slate-950/70 border border-slate-800 p-4">Domain-specific analysis that does not transfer cleanly</div>
+            <div class="rounded-2xl bg-slate-950/70 border border-slate-800 p-4">Adversarial effects treated separately from nominal dynamics</div>
+            <div class="rounded-2xl bg-slate-950/70 border border-slate-800 p-4">Verification methods that do not scale across system types</div>
+            <div class="rounded-2xl bg-slate-950/70 border border-slate-800 p-4">Late detection instead of structural pre-deployment review</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSIGHT -->
+  <section class="py-24 bg-dark-900 border-t border-white/5">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <div class="max-w-4xl mx-auto text-center mb-16">
+        <div class="text-sm uppercase tracking-[0.18em] text-violet-400 font-semibold mb-3">Strategic Insight</div>
+        <h2 class="text-3xl md:text-5xl font-black mb-6">Shared Stability Mathematics Instead of Isolated Rules</h2>
+        <p class="text-lg text-slate-400 leading-relaxed">
+          Polyvalent Stability Theory introduces a way to evaluate whether destabilizing influence remains bounded
+          relative to intended system dynamics — regardless of whether that influence appears in AI models, control
+          systems, or other complex technical architectures.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="glass-panel rounded-2xl p-8 border-slate-800/70 card-hover">
+          <div class="w-12 h-12 rounded-2xl bg-cyan-500/10 flex items-center justify-center mb-5">
+            <i data-feather="activity" class="w-6 h-6 text-cyan-400"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Unified Evaluation</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Stability can be evaluated through a shared structure rather than siloed domain-specific heuristics.
+          </p>
+        </div>
+
+        <div class="glass-panel rounded-2xl p-8 border-slate-800/70 card-hover">
+          <div class="w-12 h-12 rounded-2xl bg-violet-500/10 flex items-center justify-center mb-5">
+            <i data-feather="shuffle" class="w-6 h-6 text-violet-400"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Cross-Domain Transfer</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Instability analysis can move across heterogeneous systems instead of being trapped in one technical lane.
+          </p>
+        </div>
+
+        <div class="glass-panel rounded-2xl p-8 border-slate-800/70 card-hover">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 flex items-center justify-center mb-5">
+            <i data-feather="shield" class="w-6 h-6 text-emerald-400"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Defensive Structure</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Adversarial pressure can be analyzed as a destabilizing force within the same mathematical framework.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAPABILITY -->
+  <section class="py-24 bg-slate-950 border-t border-white/5">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="text-sm uppercase tracking-[0.18em] text-cyan-400 font-semibold mb-3">What PST Enables</div>
+        <h2 class="text-3xl md:text-5xl font-black mb-5">Why Anyone Beyond the Inventor Should Care</h2>
+        <p class="text-lg text-slate-400 leading-relaxed">
+          PST matters because it changes how resilience and vulnerability are evaluated in complex systems that must remain trustworthy under pressure.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
+        <div class="glass-panel rounded-2xl p-7 border-slate-800/70 card-hover">
+          <div class="w-12 h-12 rounded-2xl bg-cyan-500/10 flex items-center justify-center mb-5">
+            <i data-feather="search" class="w-6 h-6 text-cyan-400"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Cross-Domain Verification</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Systems can be evaluated for resilience using a common logic across computational and physical environments.
+          </p>
+        </div>
+
+        <div class="glass-panel rounded-2xl p-7 border-slate-800/70 card-hover">
+          <div class="w-12 h-12 rounded-2xl bg-violet-500/10 flex items-center justify-center mb-5">
+            <i data-feather="lock" class="w-6 h-6 text-violet-400"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Adversarial Defense</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Destabilizing inputs can be measured in relation to system integrity before they become catastrophic outcomes.
+          </p>
+        </div>
+
+        <div class="glass-panel rounded-2xl p-7 border-slate-800/70 card-hover">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 flex items-center justify-center mb-5">
+            <i data-feather="check-circle" class="w-6 h-6 text-emerald-400"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Hybrid Certification</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Multiple verification methods can be combined into stronger certification workflows for high-integrity systems.
+          </p>
+        </div>
+
+        <div class="glass-panel rounded-2xl p-7 border-slate-800/70 card-hover">
+          <div class="w-12 h-12 rounded-2xl bg-blue-500/10 flex items-center justify-center mb-5">
+            <i data-feather="cpu" class="w-6 h-6 text-blue-400"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Pre-Deployment Insight</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Vulnerability can be reviewed structurally before release rather than only after instability is observed in the field.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPLICATIONS -->
+  <section class="py-24 bg-dark-900 border-t border-white/5">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <div class="grid lg:grid-cols-2 gap-8">
+        <div class="glass-panel rounded-3xl p-8 border border-slate-800/70">
+          <div class="text-sm uppercase tracking-[0.18em] text-cyan-400 font-semibold mb-3">Application Scope</div>
+          <h2 class="text-3xl font-black mb-5">Positioned for High-Integrity Technical Systems</h2>
+          <ul class="space-y-4 text-slate-400 leading-relaxed">
+            <li>Artificial intelligence safety and robustness</li>
+            <li>Autonomous systems and control architectures</li>
+            <li>Digital twin validation environments</li>
+            <li>Adversarial analysis and system hardening</li>
+            <li>Complex infrastructure and verification workflows</li>
+          </ul>
+        </div>
+
+        <div class="glass-panel rounded-3xl p-8 border border-slate-800/70">
+          <div class="text-sm uppercase tracking-[0.18em] text-violet-400 font-semibold mb-3">Protection and Disclosure</div>
+          <h2 class="text-3xl font-black mb-5">Public Positioning, Protected Depth</h2>
+          <p class="text-slate-400 leading-relaxed mb-4">
+            This page presents the significance and strategic positioning of the filing without exposing implementation-sensitive derivations, internal verification workflows, or deeper architecture packages.
+          </p>
+          <p class="text-slate-500 leading-relaxed">
+            Qualified parties may request protected review for diligence, collaboration, licensing, legal assessment, or technical evaluation.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24 bg-slate-950 border-t border-white/5">
+    <div class="container mx-auto px-6 max-w-5xl text-center">
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-panel border-slate-700/60 mb-6">
+        <i data-feather="mail" class="w-4 h-4 text-cyan-400"></i>
+        <span class="text-xs md:text-sm font-semibold tracking-[0.18em] uppercase text-slate-300">PST Inquiry Channel</span>
+      </div>
+
+      <h2 class="text-3xl md:text-5xl font-black mb-5">Review, Licensing, and Technical Inquiry</h2>
+      <p class="text-lg text-slate-400 max-w-3xl mx-auto leading-relaxed mb-10">
+        For legal review, diligence, licensing, or protected technical discussion related to Polyvalent Stability Theory, contact MT Tech Industries LLC directly.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="mailto:research@mttechindustries.com?subject=PST%20Patent%20Inquiry"
+          class="px-10 py-5 rounded-xl bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-black hover:from-cyan-500 hover:to-blue-500 transition-all hover:scale-105"
+        >
+          Email PST Inquiry
+        </a>
+        <a
+          href="secure-access.html"
+          class="px-10 py-5 rounded-xl border border-slate-700 text-slate-200 font-black hover:bg-slate-800 transition-all"
+        >
+          Request Protected Access
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <script src="components/footer.js"></script>
+  <mt-footer></mt-footer>
+  <script>feather.replace();</script>
+</body>
+</html>
