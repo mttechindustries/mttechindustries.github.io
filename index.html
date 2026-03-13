@@ -1,222 +1,217 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MT Tech Industries LLC | Digital Twin Prototypes & Advanced Physics</title>
-    <meta name="description" content="Production-grade implementations in frequency-domain control, biometric sensing, plasma dynamics, and mathematical compliance frameworks.">
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: { 500: '#0ea5e9', 600: '#0284c7' },
-                        accent: { 500: '#8b5cf6', 600: '#7c3aed' },
-                        dark: { 900: '#0f172a', 800: '#1e293b', 700: '#334155' }
-                    },
-                    fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
-                    animation: {
-                        'float': 'float 6s ease-in-out infinite',
-                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                        'gradient': 'gradient 8s linear infinite',
-                    },
-                    keyframes: {
-                        float: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-20px)' } },
-                        gradient: { '0%, 100%': { backgroundPosition: '0% 50%' }, '50%': { backgroundPosition: '100% 50%' } }
-                    }
-                }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MT Tech Industries | Patent-Pending Applied Physics + AI Research</title>
+  <meta
+    name="description"
+    content="MT Tech Industries is an independent R&D lab developing patent-pending frameworks in pre-physical optimization, cross-domain stability verification, digital twins, and intelligent sensing."
+  />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            base: {
+              950: '#020617',
+              900: '#0b1120',
+              800: '#111827',
+              700: '#1f2937'
+            },
+            brand: {
+              cyan: '#22d3ee',
+              blue: '#3b82f6',
+              violet: '#8b5cf6',
+              text: '#e2e8f0',
+              muted: '#94a3b8'
             }
+          },
+          boxShadow: {
+            glow: '0 0 0 1px rgba(34,211,238,0.2), 0 20px 50px rgba(2,6,23,0.55)'
+          }
         }
-    </script>
-    
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
-        .glass-panel { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
-        .hero-gradient { background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%); }
-        .tech-grid { background-image: radial-gradient(circle at 1px 1px, rgba(59, 130, 246, 0.1) 1px, transparent 0); background-size: 40px 40px; }
-    </style>
+      }
+    };
+  </script>
+  <style>
+    .hero-grid {
+      background-image:
+        radial-gradient(circle at 15% 15%, rgba(34, 211, 238, 0.15), transparent 35%),
+        radial-gradient(circle at 85% 5%, rgba(139, 92, 246, 0.14), transparent 35%),
+        linear-gradient(rgba(30, 41, 59, 0.15) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(30, 41, 59, 0.15) 1px, transparent 1px);
+      background-size: auto, auto, 40px 40px, 40px 40px;
+      background-position: center;
+    }
+  </style>
 </head>
-<body class="bg-dark-900 text-slate-100 font-sans antialiased overflow-x-hidden">
-
-    <nav class="fixed top-0 w-full z-50 glass-panel border-b border-white/5">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-violet-500">MT Tech Industries</div>
-            <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-300">
-                <a href="#overview" class="hover:text-cyan-400 transition">Overview</a>
-                <a href="#projects" class="hover:text-cyan-400 transition">Core Projects</a>
-                <a href="#infrastructure" class="hover:text-cyan-400 transition">Infrastructure</a>
-                <a href="#nda-access" class="hover:text-violet-400 transition">NDA Access</a>
-            </div>
-        </div>
+<body class="bg-base-950 text-brand-text antialiased">
+  <header class="sticky top-0 z-50 border-b border-slate-800/80 bg-base-950/85 backdrop-blur-xl">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="MT-Tech-Industries.png" alt="MT Tech Industries logo" class="h-9 w-9 rounded-md object-contain" />
+        <span class="text-sm font-semibold tracking-wide sm:text-base">MT Tech Industries</span>
+      </a>
+      <div class="hidden items-center gap-6 text-sm text-brand-muted md:flex">
+        <a href="#overview" class="transition hover:text-brand-cyan">Overview</a>
+        <a href="#patents" class="transition hover:text-brand-cyan">Patent-Pending</a>
+        <a href="#projects" class="transition hover:text-brand-cyan">Projects</a>
+        <a href="#fit" class="transition hover:text-brand-cyan">Who We Work With</a>
+        <a href="#contact" class="transition hover:text-brand-cyan">Contact</a>
+      </div>
+      <a href="nda_form.html" class="rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500 px-4 py-2 text-xs font-semibold text-slate-950 shadow-lg shadow-cyan-500/20 transition hover:brightness-110 sm:text-sm">Request NDA</a>
     </nav>
+  </header>
 
-    <section class="relative min-h-screen flex items-center justify-center hero-gradient overflow-hidden pt-20">
-        <div class="absolute inset-0 opacity-20 tech-grid"></div>
-        <div class="relative z-10 container mx-auto px-6 text-center">
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800/50 border border-slate-700 mb-8 animate-pulse-slow">
-                <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-                <span class="text-xs font-mono uppercase tracking-widest text-slate-300">System Status: Production-Ready Implementations</span>
-            </div>
-            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
-                Digital Twin <span class="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-violet-600 animate-gradient bg-300%">Prototypes</span>
-            </h1>
-            <p class="text-xl md:text-2xl text-slate-400 mb-10 max-w-3xl mx-auto leading-relaxed">
-                Independent R&D in frequency-domain control, biometric sensing, and plasma dynamics. Bridging theoretical physics with AI-driven compliance.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#projects" class="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-lg font-bold hover:scale-105 transition shadow-lg shadow-cyan-500/20">Explore Projects</a>
-                <a href="https://github.com/mttechindustries" class="px-8 py-4 border border-slate-700 rounded-lg font-bold hover:bg-slate-800 transition">View Prior Art (GitHub)</a>
-            </div>
-
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 pt-10 border-t border-white/5">
-                <div><div class="text-3xl font-bold text-cyan-400">TRL 4-5</div><div class="text-xs uppercase tracking-widest text-slate-500">Readiness Level</div></div>
-                <div><div class="text-3xl font-bold text-violet-400">100%</div><div class="text-xs uppercase tracking-widest text-slate-500">Bootstrapped</div></div>
-                <div><div class="text-3xl font-bold text-blue-400">Physics</div><div class="text-xs uppercase tracking-widest text-slate-500">Validation First</div></div>
-                <div><div class="text-3xl font-bold text-emerald-400">Proprietary</div><div class="text-xs uppercase tracking-widest text-slate-500">IP Protection</div></div>
-            </div>
+  <main>
+    <section class="hero-grid relative overflow-hidden border-b border-slate-800 pt-20 pb-24 sm:pt-28 sm:pb-28">
+      <div class="mx-auto max-w-7xl px-6">
+        <div class="max-w-4xl">
+          <p class="mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-500/35 bg-emerald-500/10 px-4 py-2 text-xs font-medium uppercase tracking-wider text-emerald-300">
+            <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
+            Independent R&D Lab · Michigan, USA
+          </p>
+          <h1 class="text-4xl font-black leading-tight sm:text-5xl lg:text-6xl">
+            Applied physics and AI systems
+            <span class="bg-gradient-to-r from-cyan-300 via-blue-400 to-violet-400 bg-clip-text text-transparent">built for real-world stability</span>
+          </h1>
+          <p class="mt-6 max-w-3xl text-lg leading-relaxed text-brand-muted sm:text-xl">
+            We develop patent-pending frameworks that stress-test instability before deployment, validate through digital twins, and translate advanced mathematics into practical engineering outcomes.
+          </p>
+          <div class="mt-9 flex flex-wrap gap-4">
+            <a href="#projects" class="rounded-lg bg-cyan-500 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-400">Explore active projects</a>
+            <a href="https://github.com/mttechindustries" class="rounded-lg border border-slate-700 px-6 py-3 text-sm font-semibold text-brand-text transition hover:border-cyan-400/60">Public repositories</a>
+          </div>
+          <div class="mt-10 grid max-w-3xl grid-cols-2 gap-4 text-sm text-brand-muted sm:grid-cols-4">
+            <div class="rounded-xl border border-slate-800 bg-base-900/70 p-4"><p class="text-xl font-bold text-cyan-300">2</p><p>Distinct patent tracks</p></div>
+            <div class="rounded-xl border border-slate-800 bg-base-900/70 p-4"><p class="text-xl font-bold text-violet-300">11</p><p>Public project pages</p></div>
+            <div class="rounded-xl border border-slate-800 bg-base-900/70 p-4"><p class="text-xl font-bold text-blue-300">Multiphysics</p><p>Validation philosophy</p></div>
+            <div class="rounded-xl border border-slate-800 bg-base-900/70 p-4"><p class="text-xl font-bold text-emerald-300">NDA</p><p>Controlled deep-dive access</p></div>
+          </div>
         </div>
+      </div>
     </section>
 
-    <section id="overview" class="py-24 bg-dark-800 relative">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-16 items-center">
-                <div>
-                    <h2 class="text-4xl font-bold mb-6">Strategic Independence & <span class="text-cyan-400">Integrity</span></h2>
-                    <p class="text-slate-400 text-lg mb-6 leading-relaxed">
-                        MT Tech Industries operates as a self-funded research firm. We don't make claims we can't back up with simulation data. Every public repository serves as a priority establishment; our advanced implementations remain private to maintain strategic IP control.
-                    </p>
-                    <ul class="space-y-4">
-                        <li class="flex items-start gap-3 text-slate-300">
-                            <i data-feather="check-circle" class="text-emerald-500 mt-1"></i>
-                            <span>Comprehensive digital twin environments for all hardware.</span>
-                        </li>
-                        <li class="flex items-start gap-3 text-slate-300">
-                            <i data-feather="check-circle" class="text-emerald-500 mt-1"></i>
-                            <span>Penalty-augmented mathematical objectives for AI safety.</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="glass-panel p-8 rounded-2xl border-cyan-500/20">
-                    <h3 class="text-xl font-bold mb-6 text-violet-400 uppercase tracking-widest">Ecosystem Layers</h3>
-                    <div class="space-y-4">
-                        <div class="p-4 bg-slate-900/50 rounded-lg border border-white/5">
-                            <h4 class="font-bold text-cyan-400">Physics Layer</h4>
-                            <p class="text-sm text-slate-500">Plasma dynamics & acoustic field manipulation.</p>
-                        </div>
-                        <div class="p-4 bg-slate-900/50 rounded-lg border border-white/5">
-                            <h4 class="font-bold text-cyan-400">Mathematics Layer</h4>
-                            <p class="text-sm text-slate-500">Omnimathematics compliance frameworks.</p>
-                        </div>
-                        <div class="p-4 bg-slate-900/50 rounded-lg border border-white/5">
-                            <h4 class="font-bold text-cyan-400">Simulation Layer</h4>
-                            <p class="text-sm text-slate-500">Monte Carlo validation & parameter sweep suites.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section id="overview" class="border-b border-slate-800 bg-base-900 py-20">
+      <div class="mx-auto max-w-7xl px-6">
+        <div class="mb-10 max-w-3xl">
+          <h2 class="text-3xl font-bold sm:text-4xl">A clearer public narrative</h2>
+          <p class="mt-4 text-brand-muted">This homepage is intentionally written for people first: researchers, evaluators, and serious partners. Public pages explain what each system does, while implementation-sensitive details remain in controlled channels.</p>
         </div>
+        <div class="grid gap-6 md:grid-cols-3">
+          <article class="rounded-2xl border border-slate-800 bg-base-800 p-6 shadow-glow">
+            <h3 class="mb-2 text-lg font-semibold">Pre-physical optimization</h3>
+            <p class="text-sm leading-7 text-brand-muted">We allow instability to emerge in non-physical modeling environments, then recover to viable states before any real-world transition.</p>
+          </article>
+          <article class="rounded-2xl border border-slate-800 bg-base-800 p-6 shadow-glow">
+            <h3 class="mb-2 text-lg font-semibold">Cross-domain stability verification</h3>
+            <p class="text-sm leading-7 text-brand-muted">We evaluate adversarial and physical disturbances under a unified stability lens, helping bridge AI security with control-system reliability.</p>
+          </article>
+          <article class="rounded-2xl border border-slate-800 bg-base-800 p-6 shadow-glow">
+            <h3 class="mb-2 text-lg font-semibold">Research-to-implementation pathway</h3>
+            <p class="text-sm leading-7 text-brand-muted">Our process moves from theory and simulation to constrained deployment with measurable checks, documentation, and governance.</p>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <section id="projects" class="py-24 bg-dark-900 tech-grid">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-16">Core <span class="text-violet-500">Product Lines</span></h2>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="glass-panel p-8 rounded-2xl hover:border-cyan-500/50 transition-all group">
-                    <div class="text-xs font-mono text-cyan-500 mb-2">AI SAFETY & MATH</div>
-                    <h3 class="text-2xl font-bold mb-4">Omnimathematics</h3>
-                    <p class="text-slate-400 text-sm mb-6">Mathematical enforcement of AI compliance. Replaces heuristic constraints with penalty-augmented objective functions.</p>
-                    <div class="border-t border-white/5 pt-4 flex justify-between items-center">
-                        <span class="text-xs font-bold text-slate-500 italic">Gradient Compliance</span>
-                        <a href="#" class="text-cyan-400 hover:text-white transition"><i data-feather="arrow-right"></i></a>
-                    </div>
-                </div>
-
-                <div class="glass-panel p-8 rounded-2xl hover:border-violet-500/50 transition-all group">
-                    <div class="text-xs font-mono text-violet-500 mb-2">ACOUSTIC ENGINEERING</div>
-                    <h3 class="text-2xl font-bold mb-4">PAFFT</h3>
-                    <p class="text-slate-400 text-sm mb-6">Parametric Acoustic Force Field Tech. Precision levitation and non-contact manipulation via field shaping.</p>
-                    <div class="border-t border-white/5 pt-4 flex justify-between items-center">
-                        <span class="text-xs font-bold text-slate-500 italic">Pressure: ≤55 kPa</span>
-                        <a href="#" class="text-violet-400 hover:text-white transition"><i data-feather="arrow-right"></i></a>
-                    </div>
-                </div>
-
-                <div class="glass-panel p-8 rounded-2xl hover:border-emerald-500/50 transition-all group">
-                    <div class="text-xs font-mono text-emerald-500 mb-2">BIOMETRIC SENSING</div>
-                    <h3 class="text-2xl font-bold mb-4">WoofWizeX-FRS</h3>
-                    <p class="text-slate-400 text-sm mb-6">Non-invasive emotion detection using Wi-Fi CSI analysis. Passive sensing without cameras or wearables.</p>
-                    <div class="border-t border-white/5 pt-4 flex justify-between items-center">
-                        <span class="text-xs font-bold text-slate-500 italic">Edge ML / ESP32</span>
-                        <a href="#" class="text-emerald-400 hover:text-white transition"><i data-feather="arrow-right"></i></a>
-                    </div>
-                </div>
-
-                <div class="glass-panel p-8 rounded-2xl hover:border-blue-500/50 transition-all group">
-                    <div class="text-xs font-mono text-blue-500 mb-2">PLASMA PHYSICS</div>
-                    <h3 class="text-2xl font-bold mb-4">PAID-FR 4.0</h3>
-                    <p class="text-slate-400 text-sm mb-6">AI-driven plasma field design and behavior prediction for advanced manufacturing and energy systems.</p>
-                    <div class="border-t border-white/5 pt-4 flex justify-between items-center">
-                        <span class="text-xs font-bold text-slate-500 italic">Terfenol-D Modeling</span>
-                        <a href="#" class="text-blue-400 hover:text-white transition"><i data-feather="arrow-right"></i></a>
-                    </div>
-                </div>
-
-                <div class="glass-panel p-8 rounded-2xl hover:border-rose-500/50 transition-all group">
-                    <div class="text-xs font-mono text-rose-500 mb-2">NON-LETHAL SYSTEMS</div>
-                    <h3 class="text-2xl font-bold mb-4">BoloBeam Mk II</h3>
-                    <p class="text-slate-400 text-sm mb-6">Directed infrasound energy for temporary incapacitation. Digital phase array with ±1° targeting.</p>
-                    <div class="border-t border-white/5 pt-4 flex justify-between items-center">
-                        <span class="text-xs font-bold text-slate-500 italic">130 dB / 2-20 Hz</span>
-                        <a href="#" class="text-rose-400 hover:text-white transition"><i data-feather="arrow-right"></i></a>
-                    </div>
-                </div>
-
-                <div class="glass-panel p-8 rounded-2xl hover:border-amber-500/50 transition-all group">
-                    <div class="text-xs font-mono text-amber-500 mb-2">SECURITY & TESTING</div>
-                    <h3 class="text-2xl font-bold mb-4">OmniX Suite</h3>
-                    <p class="text-slate-400 text-sm mb-6">Autonomous security vulnerability assessment combining standard methods with novel proprietary hooks.</p>
-                    <div class="border-t border-white/5 pt-4 flex justify-between items-center">
-                        <span class="text-xs font-bold text-slate-500 italic">IP-Hardening Focus</span>
-                        <a href="#" class="text-amber-400 hover:text-white transition"><i data-feather="arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
+    <section id="patents" class="py-20">
+      <div class="mx-auto max-w-7xl px-6">
+        <div class="mb-10 max-w-4xl">
+          <h2 class="text-3xl font-bold sm:text-4xl">Two separate patent-pending foundations</h2>
+          <p class="mt-4 text-brand-muted">We communicate these tracks at an architecture level in public. Detailed implementations, benchmarks, and reduction-to-practice materials are released selectively and responsibly.</p>
         </div>
+        <div class="grid gap-6 md:grid-cols-2">
+          <article class="rounded-2xl border border-slate-800 bg-base-900 p-7">
+            <p class="mb-2 text-xs font-semibold uppercase tracking-wider text-cyan-300">Track 01</p>
+            <h3 class="text-xl font-semibold">Pre-Physical Expansion & Gaussian Well Stabilization</h3>
+            <p class="mt-3 text-sm leading-7 text-brand-muted">A framework for exploring divergent states in non-physical realms, guiding recovery toward viable optima, and gating transition to physical realization only after passing validation.</p>
+          </article>
+          <article class="rounded-2xl border border-slate-800 bg-base-900 p-7">
+            <p class="mb-2 text-xs font-semibold uppercase tracking-wider text-violet-300">Track 02</p>
+            <h3 class="text-xl font-semibold">Polyvalent Stability Theory (PST)</h3>
+            <p class="mt-3 text-sm leading-7 text-brand-muted">A unified approach to adversarial and control-system stability analysis using shared criteria, cross-domain reasoning, and hybrid verification methods.</p>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <section id="nda-access" class="py-24 bg-gradient-to-b from-dark-900 to-slate-900 border-t border-white/5">
-        <div class="container mx-auto px-6 max-w-4xl text-center">
-            <h2 class="text-3xl font-bold mb-6">Validation & <span class="text-violet-400">Simulation Data</span></h2>
-            <p class="text-slate-400 mb-10">Comprehensive parameter sweeps, Jupyter validation results, and production benchmarks are available for qualified partners and investors under strict NDA.</p>
-            
-            <div class="grid md:grid-cols-3 gap-4 mb-12">
-                <div class="p-4 bg-slate-800/50 rounded border border-white/5 text-xs text-slate-400">Digital Twin Results</div>
-                <div class="p-4 bg-slate-800/50 rounded border border-white/5 text-xs text-slate-400">Verification Frameworks</div>
-                <div class="p-4 bg-slate-800/50 rounded border border-white/5 text-xs text-slate-400">Architecture Deep-Dives</div>
-            </div>
-
-            <a href="#" class="inline-block px-10 py-5 bg-white text-dark-900 font-bold rounded-lg hover:bg-cyan-400 hover:scale-105 transition">Request NDA Access</a>
+    <section id="projects" class="border-y border-slate-800 bg-base-900 py-20">
+      <div class="mx-auto max-w-7xl px-6">
+        <div class="mb-8 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <h2 class="text-3xl font-bold sm:text-4xl">Research project index</h2>
+            <p class="mt-2 text-brand-muted">One place to access every active public page.</p>
+          </div>
+          <a href="nda_form.html" class="text-sm font-semibold text-cyan-300 transition hover:text-cyan-200">Request full technical packet under NDA →</a>
         </div>
+        <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          <a href="projects/pre-physical.html" class="group rounded-xl border border-slate-800 bg-base-800 p-5 transition hover:border-cyan-400/60"><h3 class="font-semibold group-hover:text-cyan-300">Pre-Physical Expansion Framework</h3><p class="mt-2 text-sm text-brand-muted">Optimization before physical realization in controlled expansion realms.</p></a>
+          <a href="projects/PST.html" class="group rounded-xl border border-slate-800 bg-base-800 p-5 transition hover:border-cyan-400/60"><h3 class="font-semibold group-hover:text-cyan-300">Polyvalent Stability Theory (PST)</h3><p class="mt-2 text-sm text-brand-muted">Unified cross-domain adversarial and system stability verification.</p></a>
+          <a href="projects/paid-fr.html" class="group rounded-xl border border-slate-800 bg-base-800 p-5 transition hover:border-cyan-400/60"><h3 class="font-semibold group-hover:text-cyan-300">PAID-FR 4.0</h3><p class="mt-2 text-sm text-brand-muted">Plasma-focused digital twin and stability optimization workstream.</p></a>
+          <a href="projects/omnimath.html" class="group rounded-xl border border-slate-800 bg-base-800 p-5 transition hover:border-cyan-400/60"><h3 class="font-semibold group-hover:text-cyan-300">Omnimathematics</h3><p class="mt-2 text-sm text-brand-muted">Core mathematical infrastructure and optimization mechanics.</p></a>
+          <a href="projects/woofwizex-frs.html" class="group rounded-xl border border-slate-800 bg-base-800 p-5 transition hover:border-cyan-400/60"><h3 class="font-semibold group-hover:text-cyan-300">WoofWizeX-FRS</h3><p class="mt-2 text-sm text-brand-muted">Signal intelligence for animal emotion/health interpretation.</p></a>
+          <a href="projects/bolobeam.html" class="group rounded-xl border border-slate-800 bg-base-800 p-5 transition hover:border-cyan-400/60"><h3 class="font-semibold group-hover:text-cyan-300">BoloBeam Mk. II</h3><p class="mt-2 text-sm text-brand-muted">Precision low-frequency acoustic systems and control methods.</p></a>
+          <a href="projects/omnix.html" class="group rounded-xl border border-slate-800 bg-base-800 p-5 transition hover:border-cyan-400/60"><h3 class="font-semibold group-hover:text-cyan-300">OmniX</h3><p class="mt-2 text-sm text-brand-muted">AI security and cognitive integrity architecture research.</p></a>
+          <a href="projects/dnea.html" class="group rounded-xl border border-slate-800 bg-base-800 p-5 transition hover:border-cyan-400/60"><h3 class="font-semibold group-hover:text-cyan-300">DNEA</h3><p class="mt-2 text-sm text-brand-muted">Advanced systems analysis in constrained operational domains.</p></a>
+          <a href="projects/thefreq.html" class="group rounded-xl border border-slate-800 bg-base-800 p-5 transition hover:border-cyan-400/60"><h3 class="font-semibold group-hover:text-cyan-300">theFreq</h3><p class="mt-2 text-sm text-brand-muted">Frequency-domain tooling and practical control primitives.</p></a>
+          <a href="projects/platform.html" class="group rounded-xl border border-slate-800 bg-base-800 p-5 transition hover:border-cyan-400/60"><h3 class="font-semibold group-hover:text-cyan-300">Technology Platform</h3><p class="mt-2 text-sm text-brand-muted">Integration layer connecting research, simulation, and deployment.</p></a>
+          <a href="projects/aigent.html" class="group rounded-xl border border-slate-800 bg-base-800 p-5 transition hover:border-cyan-400/60"><h3 class="font-semibold group-hover:text-cyan-300">aiGENT Cognitive Security</h3><p class="mt-2 text-sm text-brand-muted">Agentic AI workflows with stability and security boundaries.</p></a>
+        </div>
+      </div>
     </section>
 
-    <footer class="py-12 bg-dark-950 border-t border-white/5">
-        <div class="container mx-auto px-6 text-center">
-            <p class="text-slate-500 mb-4">&copy; 2026 MT Tech Industries LLC. All rights reserved. | Portage, MI</p>
-            <div class="flex justify-center space-x-6 text-sm text-slate-400 font-mono">
-                <a href="#" class="hover:text-cyan-400 transition">GitHub</a>
-                <a href="#" class="hover:text-cyan-400 transition">Security.txt</a>
-                <a href="#" class="hover:text-cyan-400 transition">IP Policy</a>
-            </div>
-        </div>
-    </footer>
+    <section id="fit" class="py-20">
+      <div class="mx-auto grid max-w-7xl gap-8 px-6 md:grid-cols-2">
+        <article class="rounded-2xl border border-slate-800 bg-base-900 p-7">
+          <h2 class="text-2xl font-bold">Who we work with</h2>
+          <ul class="mt-4 space-y-3 text-sm leading-7 text-brand-muted">
+            <li>• Research groups evaluating novel optimization and stability models.</li>
+            <li>• Academic collaborators interested in reproducible multiphysics workflows.</li>
+            <li>• Strategic partners seeking rigorous technical diligence before integration.</li>
+          </ul>
+        </article>
+        <article class="rounded-2xl border border-slate-800 bg-base-900 p-7">
+          <h2 class="text-2xl font-bold">Disclosure and access model</h2>
+          <p class="mt-4 text-sm leading-7 text-brand-muted">Public content is architecture-level by design. Implementation-sensitive details, benchmarks, and package-level documentation are shared under NDA for qualified collaboration and review.</p>
+          <a href="nda_form.html" class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-cyan-300 hover:text-cyan-200">Start NDA access workflow <i data-feather="arrow-right" class="h-4 w-4"></i></a>
+        </article>
+      </div>
+    </section>
 
-    <script>
-        feather.replace();
-    </script>
+    <section id="contact" class="border-t border-slate-800 bg-base-900 py-20">
+      <div class="mx-auto max-w-7xl px-6">
+        <div class="grid gap-8 md:grid-cols-2">
+          <div>
+            <h2 class="text-3xl font-bold sm:text-4xl">Connect</h2>
+            <p class="mt-4 text-brand-muted">For research collaboration, technical evaluation, or strategic partnership discussions.</p>
+            <ul class="mt-6 space-y-3 text-sm text-brand-muted">
+              <li><strong class="text-brand-text">General:</strong> info@mttechindustries.com</li>
+              <li><strong class="text-brand-text">Founder:</strong> Marc@mttechindustries.com</li>
+              <li><strong class="text-brand-text">NDA access:</strong> via the request form.</li>
+            </ul>
+          </div>
+          <div class="rounded-2xl border border-slate-800 bg-base-800 p-7">
+            <h3 class="text-lg font-semibold">Quick links</h3>
+            <div class="mt-5 grid gap-3 text-sm">
+              <a class="rounded-lg border border-slate-700 px-4 py-3 transition hover:border-cyan-400/60" href="nda_form.html">Request NDA access</a>
+              <a class="rounded-lg border border-slate-700 px-4 py-3 transition hover:border-cyan-400/60" href="ip-protection.md">IP protection & disclosure</a>
+              <a class="rounded-lg border border-slate-700 px-4 py-3 transition hover:border-cyan-400/60" href="privacy-policy.html">Privacy policy</a>
+              <a class="rounded-lg border border-slate-700 px-4 py-3 transition hover:border-cyan-400/60" href="terms-of-service.html">Terms of service</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-slate-800 py-8 text-center text-sm text-brand-muted">
+    <p>© 2026 MT Tech Industries LLC. All rights reserved.</p>
+  </footer>
+
+  <script>feather.replace();</script>
 </body>
 </html>

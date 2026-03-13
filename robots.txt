@@ -1,8 +1,6 @@
 User-agent: *
-Disallow: /projects/
-Disallow: /*.js$
-Disallow: /*.css$
-Crawl-delay: 10
+Allow: /
+Crawl-delay: 5
 
 User-agent: GPTBot
 Disallow: /
