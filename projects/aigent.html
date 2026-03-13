@@ -1,371 +1,80 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>aiGENT Cognitive Security | MT Tech Industries</title>
-    <meta name="description" content="Enterprise AI security platform with real-time cognitive state monitoring and automated threat detection.">
-    
-    <link rel="stylesheet" href="../style.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: {
-                            50: '#f0f9ff',
-                            100: '#e0f2fe',
-                            500: '#0ea5e9',
-                            600: '#0284c7',
-                            900: '#0c4a6e',
-                        },
-                        accent: {
-                            500: '#8b5cf6',
-                            600: '#7c3aed',
-                        },
-                        dark: {
-                            900: '#0f172a',
-                            800: '#1e293b',
-                            700: '#334155',
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
-    
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-        
-        .glass-panel {
-            background: rgba(30, 41, 59, 0.7);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .tech-grid-pattern {
-            background-image: radial-gradient(circle at 1px 1px, rgba(59, 130, 246, 0.15) 1px, transparent 0);
-            background-size: 40px 40px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>aiGENT — Cognitive Security System | MT Tech Industries LLC</title>
+  <meta name="description" content="aiGENT: AI-augmented cognitive security system. Protected intellectual property of MT Tech Industries LLC." />
+  <meta name="robots" content="index,follow" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: { dark: { 950: '#020617', 900: '#0f172a', 800: '#1e293b', 700: '#334155' } },
+        fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] }
+      }}
+    };
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+    body { background: #020617; }
+    .glass-panel { background: rgba(15,23,42,.72); backdrop-filter: blur(14px); border: 1px solid rgba(255,255,255,.08); }
+    .hero-gradient {
+      background:
+        radial-gradient(circle at 20% 20%, rgba(14,165,233,.16), transparent 30%),
+        radial-gradient(circle at 80% 15%, rgba(99,102,241,.14), transparent 26%),
+        linear-gradient(135deg, #020617 0%, #0f172a 46%, #111827 100%);
+    }
+    .grid-pattern { background-image: radial-gradient(circle at 1px 1px, rgba(148,163,184,.12) 1px, transparent 0); background-size: 34px 34px; }
+    .text-gradient { background: linear-gradient(135deg, #38bdf8 0%, #0ea5e9 40%, #6366f1 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  </style>
 </head>
-<body class="bg-dark-900 text-slate-100 font-sans antialiased overflow-x-hidden">
+<body class="text-slate-100 font-sans antialiased overflow-x-hidden">
+  <script src="../components/navbar.js"></script>
+  <mt-nav></mt-nav>
 
-    <!-- Navigation Component -->
-    <script src="../components/navbar.js"></script>
-    <mt-nav></mt-nav>
-
-    <!-- Project Hero Section -->
-    <section class="relative min-h-screen flex items-center justify-center hero-gradient overflow-hidden" style="background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);">
-        <div class="absolute inset-0 opacity-30">
-            <div class="absolute -top-40 -right-40 w-96 h-96 bg-blue-700 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
-            <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-cyan-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style="animation-delay: 2s;"></div>
+  <section class="hero-gradient relative overflow-hidden pt-28 pb-24 min-h-screen flex items-center">
+    <div class="absolute inset-0 grid-pattern opacity-30"></div>
+    <div class="relative z-10 container mx-auto px-6 max-w-4xl text-center">
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-panel mb-8">
+        <i data-feather="lock" class="w-4 h-4 text-cyan-400"></i>
+        <span class="text-xs font-semibold uppercase tracking-widest text-slate-300">MT Tech Industries LLC • Protected Research</span>
+      </div>
+      <div class="flex flex-wrap gap-3 mb-8 justify-center">
+        <span class="px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 text-xs font-bold uppercase tracking-widest">IP Protected</span>
+        <span class="px-3 py-1 rounded-full bg-slate-900/70 border border-slate-700 text-slate-300 text-xs font-bold uppercase tracking-widest">Cognitive Security</span>
+      </div>
+      <h1 class="text-6xl md:text-8xl font-black leading-[0.95] mb-6">
+        <span class="text-gradient">aiGENT</span>
+      </h1>
+      <p class="text-xl text-slate-300 font-semibold mb-4">Cognitive Security System</p>
+      <p class="text-lg text-slate-400 leading-relaxed max-w-2xl mx-auto mb-12">
+        An AI-augmented cognitive security system. Architecture, methodology, and implementation are protected intellectual property of MT Tech Industries LLC. Technical details available under controlled disclosure.
+      </p>
+      <div class="glass-panel rounded-3xl p-10 max-w-xl mx-auto mb-10">
+        <i data-feather="shield" class="w-12 h-12 text-cyan-400 mx-auto mb-5"></i>
+        <h2 class="text-xl font-black mb-3">Protected IP — NDA Required</h2>
+        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+          Qualified partners, investors, and strategic collaborators may request a protected technical review. All disclosures are handled under mutual NDA.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-3 justify-center">
+          <a href="../nda_form.html"
+             class="px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-600 to-indigo-600 text-white font-black hover:scale-105 transition-all">
+            Request Protected Review
+          </a>
+          <a href="mailto:research@mttechindustries.com?subject=aiGENT%20Inquiry"
+             class="px-8 py-4 rounded-xl border border-slate-700 text-slate-200 font-black hover:bg-slate-800 transition-all">
+            Email Inquiry
+          </a>
         </div>
-
-        <div class="relative z-10 container mx-auto px-6 py-20">
-            <div class="max-w-4xl mx-auto text-center">
-                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800/50 border border-slate-700 mb-8">
-                    <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
-                    <span class="text-sm font-medium text-slate-300">Enterprise Ready</span>
-                </div>
-                
-                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-500">
-                        aiGENT Cognitive Security
-                    </span>
-                    <br />
-                    <span class="text-slate-100 text-2xl md:text-3xl font-normal">Enterprise AI Security Platform</span>
-                </h1>
-                
-                <p class="text-lg md:text-xl text-slate-400 mb-10 max-w-3xl mx-auto leading-relaxed">
-                    Enterprise-grade AI security with real-time cognitive state monitoring, automated threat detection, and multi-agent collaborative analysis.
-                </p>
-                
-                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                    <a href="#overview" class="group relative px-8 py-4 bg-gradient-to-r from-blue-700 to-cyan-600 rounded-lg font-semibold text-white overflow-hidden transition-all hover:scale-105 hover:shadow-2xl hover:shadow-blue-600/25">
-                        <span class="relative z-10 flex items-center gap-2">
-                            Explore Features
-                            <i data-feather="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
-                        </span>
-                        <div class="absolute inset-0 bg-gradient-to-r from-cyan-600 to-blue-700 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    </a>
-                    <a href="#contact" target="_blank" class="px-8 py-4 border border-slate-600 rounded-lg font-semibold text-slate-300 hover:bg-slate-800 hover:border-slate-500 transition-all flex items-center gap-2">
-                        <i data-feather="github" class="w-4 h-4"></i>
-                        View Research
-                    </a>
-                    <a href="../#contact" class="px-8 py-4 border border-slate-600 rounded-lg font-semibold text-slate-300 hover:bg-slate-800 hover:border-slate-500 transition-all">
-                        Contact Us
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Project Overview -->
-    <section id="overview" class="py-20 bg-dark-800">
-        <div class="container mx-auto px-6">
-            <div class="max-w-5xl mx-auto">
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <h2 class="text-3xl font-bold mb-4 text-slate-100">Cognitive Security Platform</h2>
-                        <p class="text-slate-400 mb-6 leading-relaxed">
-                            aiGENT provides enterprise-grade AI security through real-time cognitive state monitoring, automated threat detection, and multi-agent collaborative analysis for mission-critical deployments.
-                        </p>
-                        <p class="text-slate-400 mb-6 leading-relaxed">
-                            Built on mathematical rigor and zero-trust architecture, aiGENT protects AI systems from sophisticated attacks while maintaining compliance with FIPS 140-2, SOC 2, and ISO 27001 standards.
-                        </p>
-                        
-                        <div class="space-y-4">
-                            <div class="flex items-start gap-3">
-                                <div class="w-6 h-6 rounded-full bg-blue-600/10 flex items-center justify-center flex-shrink-0 mt-1">
-                                    <i data-feather="check" class="w-4 h-4 text-blue-400"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-slate-200">Multi-algorithm Support</h4>
-                                    <p class="text-slate-400 text-sm">8+ optimization algorithms available</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start gap-3">
-                                <div class="w-6 h-6 rounded-full bg-blue-600/10 flex items-center justify-center flex-shrink-0 mt-1">
-                                    <i data-feather="check" class="w-4 h-4 text-blue-400"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-slate-200">Adaptive Selection</h4>
-                                    <p class="text-slate-400 text-sm">Intelligent algorithm choice based on problem characteristics</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start gap-3">
-                                <div class="w-6 h-6 rounded-full bg-blue-600/10 flex items-center justify-center flex-shrink-0 mt-1">
-                                    <i data-feather="check" class="w-4 h-4 text-blue-400"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-slate-200">Cross-domain</h4>
-                                    <p class="text-slate-400 text-sm">Applicable to multiple problem domains</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="glass-panel p-8 rounded-2xl border-slate-700">
-                        <h3 class="text-xl font-semibold mb-4 text-slate-100">Technical Specifications</h3>
-                        
-                        <div class="space-y-4">
-                            <div>
-                                <div class="flex justify-between mb-1">
-                                    <span class="text-slate-400">Algorithms</span>
-                                    <span class="text-slate-200">8+</span>
-                                </div>
-                                <div class="w-full bg-slate-700 rounded-full h-2">
-                                    <div class="bg-blue-600 h-2 rounded-full" style="width: 100%"></div>
-                                </div>
-                            </div>
-                            
-                            <div>
-                                <div class="flex justify-between mb-1">
-                                    <span class="text-slate-400">Problem Types</span>
-                                    <span class="text-slate-200">Mixed</span>
-                                </div>
-                                <div class="w-full bg-slate-700 rounded-full h-2">
-                                    <div class="bg-cyan-500 h-2 rounded-full" style="width: 90%"></div>
-                                </div>
-                            </div>
-                            
-                            <div>
-                                <div class="flex justify-between mb-1">
-                                    <span class="text-slate-400">Performance</span>
-                                    <span class="text-slate-200">Optimized</span>
-                                </div>
-                                <div class="w-full bg-slate-700 rounded-full h-2">
-                                    <div class="bg-orange-500 h-2 rounded-full" style="width: 95%"></div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="mt-6 pt-6 border-t border-slate-700">
-                            <h4 class="font-semibold text-slate-200 mb-3">Technology Stack</h4>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs">Python</span>
-                                <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs">NumPy</span>
-                                <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs">SciPy</span>
-                                <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs">JAX</span>
-                                <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs">Cython</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Algorithms -->
-    <section class="py-20 bg-dark-900">
-        <div class="container mx-auto px-6">
-            <div class="max-w-3xl mx-auto text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-100">Supported Algorithms</h2>
-                <p class="text-lg text-slate-400">
-                    Comprehensive optimization toolkit for diverse problem-solving needs
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="glass-panel p-6 rounded-xl border-slate-700">
-                    <div class="w-10 h-10 bg-blue-600/10 rounded-lg flex items-center justify-center mb-4 mx-auto">
-                        <i data-feather="activity" class="w-5 h-5 text-blue-400"></i>
-                    </div>
-                    <h3 class="text-lg font-semibold mb-2 text-slate-100 text-center">Genetic Algorithm</h3>
-                    <p class="text-slate-400 text-sm text-center">Evolutionary optimization approach</p>
-                </div>
-
-                <div class="glass-panel p-6 rounded-xl border-slate-700">
-                    <div class="w-10 h-10 bg-blue-600/10 rounded-lg flex items-center justify-center mb-4 mx-auto">
-                        <i data-feather="zap" class="w-5 h-5 text-blue-400"></i>
-                    </div>
-                    <h3 class="text-lg font-semibold mb-2 text-slate-100 text-center">Simulated Annealing</h3>
-                    <p class="text-slate-400 text-sm text-center">Probabilistic technique for global optimization</p>
-                </div>
-
-                <div class="glass-panel p-6 rounded-xl border-slate-700">
-                    <div class="w-10 h-10 bg-blue-600/10 rounded-lg flex items-center justify-center mb-4 mx-auto">
-                        <i data-feather="trending-up" class="w-5 h-5 text-blue-400"></i>
-                    </div>
-                    <h3 class="text-lg font-semibold mb-2 text-slate-100 text-center">Gradient Descent</h3>
-                    <p class="text-slate-400 text-sm text-center">First-order iterative optimization algorithm</p>
-                </div>
-
-                <div class="glass-panel p-6 rounded-xl border-slate-700">
-                    <div class="w-10 h-10 bg-blue-600/10 rounded-lg flex items-center justify-center mb-4 mx-auto">
-                        <i data-feather="pie-chart" class="w-5 h-5 text-blue-400"></i>
-                    </div>
-                    <h3 class="text-lg font-semibold mb-2 text-slate-100 text-center">Particle Swarm</h3>
-                    <p class="text-slate-400 text-sm text-center">Population-based stochastic optimization</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Applications -->
-    <section class="py-20 bg-dark-800">
-        <div class="container mx-auto px-6">
-            <div class="max-w-3xl mx-auto text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-100">Applications</h2>
-                <p class="text-lg text-slate-400">
-                    Versatile engine applicable across multiple domains and industries
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="glass-panel p-8 rounded-2xl border-slate-700">
-                    <h3 class="text-xl font-semibold mb-4 text-slate-100">Engineering Design</h3>
-                    <p class="text-slate-400 mb-4">
-                        Optimize complex engineering systems and components for performance, cost, and reliability.
-                    </p>
-                    <ul class="space-y-2 text-slate-400">
-                        <li class="flex items-start gap-2">
-                            <i data-feather="check-circle" class="w-4 h-4 text-green-400 flex-shrink-0 mt-1"></i>
-                            <span>Structural optimization</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <i data-feather="check-circle" class="w-4 h-4 text-green-400 flex-shrink-0 mt-1"></i>
-                            <span>Thermal systems</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <i data-feather="check-circle" class="w-4 h-4 text-green-400 flex-shrink-0 mt-1"></i>
-                            <span>Fluid dynamics</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="glass-panel p-8 rounded-2xl border-slate-700">
-                    <h3 class="text-xl font-semibold mb-4 text-slate-100">Financial Modeling</h3>
-                    <p class="text-slate-400 mb-4">
-                        Portfolio optimization, risk analysis, and algorithmic trading strategy development.
-                    </p>
-                    <ul class="space-y-2 text-slate-400">
-                        <li class="flex items-start gap-2">
-                            <i data-feather="check-circle" class="w-4 h-4 text-green-400 flex-shrink-0 mt-1"></i>
-                            <span>Portfolio optimization</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <i data-feather="check-circle" class="w-4 h-4 text-green-400 flex-shrink-0 mt-1"></i>
-                            <span>Risk modeling</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <i data-feather="check-circle" class="w-4 h-4 text-green-400 flex-shrink-0 mt-1"></i>
-                            <span>Algorithmic trading</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="glass-panel p-8 rounded-2xl border-slate-700">
-                    <h3 class="text-xl font-semibold mb-4 text-slate-100">Research Applications</h3>
-                    <p class="text-slate-400 mb-4">
-                        Scientific computing, parameter estimation, and complex system modeling.
-                    </p>
-                    <ul class="space-y-2 text-slate-400">
-                        <li class="flex items-start gap-2">
-                            <i data-feather="check-circle" class="w-4 h-4 text-green-400 flex-shrink-0 mt-1"></i>
-                            <span>Data fitting</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <i data-feather="check-circle" class="w-4 h-4 text-green-400 flex-shrink-0 mt-1"></i>
-                            <span>Parameter estimation</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <i data-feather="check-circle" class="w-4 h-4 text-green-400 flex-shrink-0 mt-1"></i>
-                            <span>System identification</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact CTA -->
-    <section class="py-20 bg-gradient-to-br from-dark-800 to-dark-900">
-        <div class="container mx-auto px-6">
-            <div class="max-w-3xl mx-auto text-center">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-100">Interested in aiGENT Cognitive Security?</h2>
-                <p class="text-lg text-slate-400 mb-8">
-                    Contact our team to learn more about licensing, partnerships, or research collaborations.
-                </p>
-                <a href="../#contact" class="inline-block px-8 py-4 bg-gradient-to-r from-blue-700 to-cyan-600 rounded-lg font-semibold text-white hover:from-blue-600 hover:to-cyan-500 transition-all transform hover:scale-105">
-                    Get in Touch
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Investment Badge -->
-    <div class="py-12 bg-dark-900 border-t border-slate-800">
-        <div class="container mx-auto px-6">
-            <div class="max-w-3xl mx-auto text-center">
-                <p class="text-slate-400 text-sm mb-3">
-                    💼 This technology is available for licensing and investment
-                </p>
-                <a href="../#investment" class="text-cyan-400 hover:text-cyan-300 text-sm font-medium">
-                    Learn More →
-                </a>
-            </div>
-        </div>
+      </div>
     </div>
+  </section>
 
-    <!-- Footer Component -->
-    <script src="../components/footer.js"></script>
-    <mt-footer></mt-footer>
-
-    <!-- Scripts -->
-    <script src="../script.js"></script>
-    <script>feather.replace();</script>
-
+  <script src="../components/footer.js"></script>
+  <mt-footer></mt-footer>
+  <script>feather.replace();</script>
 </body>
 </html>

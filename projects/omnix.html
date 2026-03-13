@@ -1,563 +1,202 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OmniX | MT Tech Industries</title>
-    <meta name="description" content="OmniX - Advanced AI-powered security platform for comprehensive vulnerability assessment, bug bounty automation, and intelligent threat analysis.">
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            color: #e2e8f0;
-            background-color: #0f172a;
-            overflow-x: hidden;
-        }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(15, 23, 42, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            border-bottom: 1px solid rgba(14, 165, 233, 0.2);
-        }
-        
-        nav .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 20px;
-        }
-        
-        nav a {
-            color: #e2e8f0;
-            text-decoration: none;
-            margin: 0 20px;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-        
-        nav a:hover {
-            color: #0ea5e9;
-        }
-        
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0c4a6e 100%);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 20% 50%, rgba(239, 68, 68, 0.1) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 80%, rgba(14, 165, 233, 0.1) 0%, transparent 50%);
-            pointer-events: none;
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            text-align: center;
-            max-width: 900px;
-        }
-        
-        .hero h1 {
-            font-size: 4rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, #ef4444 0%, #0ea5e9 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .hero .subtitle {
-            font-size: 1.5rem;
-            color: #ef4444;
-            font-weight: 600;
-            margin-bottom: 2rem;
-        }
-        
-        .hero p {
-            font-size: 1.25rem;
-            color: #cbd5e1;
-            margin-bottom: 2rem;
-            line-height: 1.8;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            padding: 12px 32px;
-            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            margin: 0 10px;
-        }
-        
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(239, 68, 68, 0.3);
-        }
-        
-        .cta-button.secondary {
-            background: transparent;
-            border: 2px solid #ef4444;
-        }
-        
-        /* Section Styling */
-        section {
-            padding: 80px 0;
-            border-top: 1px solid rgba(239, 68, 68, 0.1);
-        }
-        
-        section h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 3rem;
-            text-align: center;
-            background: linear-gradient(135deg, #ef4444 0%, #0ea5e9 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        /* Content Cards */
-        .content-card {
-            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
-            border: 1px solid rgba(239, 68, 68, 0.2);
-            border-radius: 12px;
-            padding: 2rem;
-            margin: 2rem 0;
-        }
-        
-        .content-card h3 {
-            color: #ef4444;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-        
-        .content-card p {
-            color: #cbd5e1;
-            margin-bottom: 1rem;
-            line-height: 1.8;
-        }
-        
-        .content-card ul {
-            list-style: none;
-            margin: 1rem 0;
-        }
-        
-        .content-card li {
-            color: #cbd5e1;
-            margin: 0.5rem 0;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-        
-        .content-card li::before {
-            content: '▸';
-            position: absolute;
-            left: 0;
-            color: #ef4444;
-        }
-        
-        .highlight-box {
-            background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(14, 165, 233, 0.1) 100%);
-            border: 1px solid rgba(239, 68, 68, 0.3);
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin: 2rem 0;
-        }
-        
-        .highlight-box h4 {
-            color: #ef4444;
-            margin-bottom: 0.5rem;
-        }
-        
-        .highlight-box p {
-            color: #cbd5e1;
-            font-style: italic;
-        }
-        
-        /* Grid Layout */
-        .two-column {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-        
-        @media (max-width: 768px) {
-            .two-column {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        /* Footer */
-        footer {
-            background: #0c1117;
-            border-top: 1px solid rgba(239, 68, 68, 0.1);
-            padding: 3rem 0;
-            text-align: center;
-            color: #94a3b8;
-        }
-        
-        footer a {
-            color: #ef4444;
-            text-decoration: none;
-        }
-        
-        footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OmniX — AI-Augmented Security Platform | MT Tech Industries LLC</title>
+  <meta name="description" content="OmniX: AI-augmented security platform for vulnerability assessment, bug bounty automation, and cognitive integrity monitoring. MT Tech Industries LLC." />
+  <meta name="robots" content="index,follow" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: { dark: { 950: '#020617', 900: '#0f172a', 800: '#1e293b', 700: '#334155' } },
+        fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] }
+      }}
+    };
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+    body { background: #020617; }
+    .glass-panel { background: rgba(15,23,42,.72); backdrop-filter: blur(14px); border: 1px solid rgba(255,255,255,.08); }
+    .hero-gradient {
+      background:
+        radial-gradient(circle at 20% 20%, rgba(239,68,68,.14), transparent 30%),
+        radial-gradient(circle at 82% 12%, rgba(14,165,233,.14), transparent 26%),
+        linear-gradient(135deg, #020617 0%, #0f172a 46%, #111827 100%);
+    }
+    .grid-pattern { background-image: radial-gradient(circle at 1px 1px, rgba(148,163,184,.12) 1px, transparent 0); background-size: 34px 34px; }
+    .text-gradient { background: linear-gradient(135deg, #f87171 0%, #ef4444 35%, #0ea5e9 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .card-hover { transition: transform .25s ease, border-color .25s ease; }
+    .card-hover:hover { transform: translateY(-6px); border-color: rgba(239,68,68,.25); }
+  </style>
 </head>
-<body>
-    <!-- Navigation -->
-    <nav>
-        <div class="container">
-            <div style="font-weight: 700; font-size: 1.25rem; color: #ef4444;">
-                <a href="../index.html" style="color: #ef4444; text-decoration: none;">MT Tech Industries</a>
-            </div>
-            <div>
-                <a href="../index.html">Home</a>
-                <a href="https://github.com/mttechindustries/OmniX">GitHub</a>
-                <a href="../index.html#contact">Contact</a>
-            </div>
-        </div>
-    </nav>
+<body class="text-slate-100 font-sans antialiased overflow-x-hidden">
+  <script src="../components/navbar.js"></script>
+  <mt-nav></mt-nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>OmniX</h1>
-            <div class="subtitle">AI-Powered Security Platform</div>
-            <p>Advanced security platform for comprehensive vulnerability assessment, bug bounty automation, and intelligent threat analysis. Enterprise-grade architecture with cutting-edge AI agents.</p>
-            <div>
-                <a href="https://github.com/mttechindustries/OmniX" class="cta-button">View Repository</a>
-                <a href="../index.html" class="cta-button secondary">Back to Projects</a>
-            </div>
+  <!-- HERO -->
+  <section class="hero-gradient relative overflow-hidden pt-28 pb-24">
+    <div class="absolute inset-0 grid-pattern opacity-30"></div>
+    <div class="relative z-10 container mx-auto px-6 max-w-6xl">
+      <div class="max-w-4xl">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-panel mb-8">
+          <i data-feather="shield" class="w-4 h-4 text-red-400"></i>
+          <span class="text-xs font-semibold uppercase tracking-widest text-slate-300">MT Tech Industries LLC • Security Research</span>
         </div>
-    </section>
-
-    <!-- Mission Section -->
-    <section>
-        <div class="container">
-            <h2>Mission</h2>
-            
-            <div class="highlight-box">
-                <h4>Democratizing Advanced Security Intelligence</h4>
-                <p>To democratize advanced security intelligence by providing an AI-augmented platform that automates complex security workflows while maintaining human-level precision and adaptability.</p>
-            </div>
+        <div class="flex flex-wrap gap-3 mb-6">
+          <span class="px-3 py-1 rounded-full bg-red-500/10 border border-red-500/20 text-red-300 text-xs font-bold uppercase tracking-widest">AI-Augmented</span>
+          <span class="px-3 py-1 rounded-full bg-slate-900/70 border border-slate-700 text-slate-300 text-xs font-bold uppercase tracking-widest">Security Platform</span>
         </div>
-    </section>
-
-    <!-- Core Features Section -->
-    <section>
-        <div class="container">
-            <h2>Core Features</h2>
-            
-            <div class="content-card">
-                <h3>AI-Powered Security Agents</h3>
-                <p>Multi-agent system with specialized capabilities for comprehensive security analysis and testing.</p>
-                
-                <div class="two-column">
-                    <div>
-                        <h4 style="color: #ef4444; margin-bottom: 1rem;">Agent Capabilities</h4>
-                        <ul>
-                            <li>Multi-Agent System for specialized tasks</li>
-                            <li>Self-Debating Engine for false positive reduction</li>
-                            <li>Cognitive Architecture with memory and reasoning</li>
-                            <li>Adversarial Testing (AI vs AI)</li>
-                            <li>Adaptive learning capabilities</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 style="color: #0ea5e9; margin-bottom: 1rem;">Specialized Agents</h4>
-                        <ul>
-                            <li>Omni Agent (orchestration)</li>
-                            <li>Recon Agent (reconnaissance)</li>
-                            <li>Vulnerability Analysis Agent</li>
-                            <li>Exploitation Agent</li>
-                            <li>Reporting Agent</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="content-card">
-                <h3>Bug Bounty Automation</h3>
-                <p>Full integration with bug bounty platforms for automated vulnerability discovery and submission.</p>
-                
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem;">
-                    <div class="content-card">
-                        <h4 style="color: #ef4444;">HackerOne Integration</h4>
-                        <ul>
-                            <li>Full API integration</li>
-                            <li>Scope management</li>
-                            <li>Submission automation</li>
-                            <li>Program discovery</li>
-                        </ul>
-                    </div>
-                    <div class="content-card">
-                        <h4 style="color: #0ea5e9;">Intelligent Reporting</h4>
-                        <ul>
-                            <li>AI-generated vulnerability reports</li>
-                            <li>Executive summaries</li>
-                            <li>Professional-grade formatting</li>
-                            <li>Multi-perspective analysis</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="content-card">
-                <h3>Security Workflow Engine</h3>
-                <p>End-to-end security testing workflows with AI-enhanced vulnerability detection.</p>
-                
-                <div class="two-column">
-                    <div>
-                        <h4 style="color: #ef4444; margin-bottom: 1rem;">Workflow Capabilities</h4>
-                        <ul>
-                            <li>Pipeline Testing</li>
-                            <li>Vulnerability Analysis</li>
-                            <li>Exploitation Framework</li>
-                            <li>Reporting Engine</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 style="color: #0ea5e9; margin-bottom: 1rem;">Analysis Features</h4>
-                        <ul>
-                            <li>AI-enhanced detection</li>
-                            <li>Multiple vulnerability classes</li>
-                            <li>Safe exploitation testing</li>
-                            <li>Professional report generation</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+        <h1 class="text-5xl md:text-7xl font-black leading-[0.95] mb-6">
+          <span class="text-gradient">OmniX</span>
+        </h1>
+        <p class="text-lg md:text-xl text-slate-400 leading-relaxed max-w-3xl mb-10">
+          AI-augmented security platform for comprehensive vulnerability assessment, bug bounty automation, and cognitive integrity monitoring. Multi-agent architecture with specialized reconnaissance, analysis, exploitation, and reporting agents.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#overview" class="px-8 py-4 rounded-xl bg-gradient-to-r from-red-600 to-rose-600 font-bold text-white hover:scale-105 transition-all">Platform Overview</a>
+          <a href="../nda_form.html" class="px-8 py-4 rounded-xl border border-slate-700 bg-slate-900/50 font-bold text-slate-200 hover:bg-slate-800 transition-all">Request Protected Review</a>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Architecture Section -->
-    <section>
-        <div class="container">
-            <h2>Enterprise-Grade Architecture</h2>
-            
-            <div class="content-card">
-                <h3>Modular, Scalable Design</h3>
-                <p>Built with enterprise requirements in mind: modular components, horizontal scaling, secure authentication, and comprehensive data integrity.</p>
-                
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem;">
-                    <div class="content-card">
-                        <h4 style="color: #ef4444;">User Interface Layer</h4>
-                        <ul>
-                            <li>Web Dashboard</li>
-                            <li>CLI Interface</li>
-                            <li>API Gateway</li>
-                        </ul>
-                    </div>
-                    <div class="content-card">
-                        <h4 style="color: #0ea5e9;">Core System</h4>
-                        <ul>
-                            <li>AI Orchestrator</li>
-                            <li>Workflow Manager</li>
-                            <li>Auth Layer</li>
-                            <li>Cache System</li>
-                        </ul>
-                    </div>
-                    <div class="content-card">
-                        <h4 style="color: #8b5cf6;">Integration Layer</h4>
-                        <ul>
-                            <li>Bug Bounty Connectors</li>
-                            <li>Security Tools</li>
-                            <li>AI Providers</li>
-                            <li>External APIs</li>
-                        </ul>
-                    </div>
-                    <div class="content-card">
-                        <h4 style="color: #10b981;">Data Layer</h4>
-                        <ul>
-                            <li>Configuration</li>
-                            <li>Bug Bounty Data</li>
-                            <li>Scan Results</li>
-                            <li>Reports</li>
-                        </ul>
-                    </div>
-                </div>
+  <!-- STRIP -->
+  <section class="py-16 bg-slate-900 border-t border-white/5">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <div class="grid md:grid-cols-4 gap-4">
+        <div class="glass-panel rounded-2xl p-5">
+          <div class="text-2xl font-black text-red-400 mb-1">Multi-Agent</div>
+          <div class="text-xs uppercase tracking-widest text-slate-500">Orchestrated Security</div>
+        </div>
+        <div class="glass-panel rounded-2xl p-5">
+          <div class="text-2xl font-black text-cyan-400 mb-1">30+</div>
+          <div class="text-xs uppercase tracking-widest text-slate-500">Integrated Security Tools</div>
+        </div>
+        <div class="glass-panel rounded-2xl p-5">
+          <div class="text-2xl font-black text-violet-400 mb-1">Cognitive</div>
+          <div class="text-xs uppercase tracking-widest text-slate-500">Integrity Monitoring</div>
+        </div>
+        <div class="glass-panel rounded-2xl p-5">
+          <div class="text-2xl font-black text-emerald-400 mb-1">Omnimath</div>
+          <div class="text-xs uppercase tracking-widest text-slate-500">AI Compliance Backbone</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OVERVIEW -->
+  <section id="overview" class="py-24 bg-slate-950 border-t border-white/5">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <div class="grid lg:grid-cols-2 gap-10 items-start">
+        <div>
+          <div class="text-sm uppercase tracking-widest text-red-400 font-semibold mb-3">Platform Architecture</div>
+          <h2 class="text-3xl md:text-5xl font-black mb-6">AI-First Security Orchestration</h2>
+          <p class="text-lg text-slate-400 leading-relaxed mb-6">
+            OmniX operates through a coordinated multi-agent system: an Omni orchestration agent, a Recon agent for asset discovery, a Vulnerability Analysis agent, an Exploitation agent for controlled testing, and a Reporting agent that produces professional-grade findings.
+          </p>
+          <p class="text-slate-500 leading-relaxed">
+            Integrated with HackerOne and major bug bounty platforms. Cognitive integrity monitoring enforces ethical operation boundaries through the Omnimathematics penalty framework.
+          </p>
+        </div>
+        <div class="glass-panel rounded-3xl p-8 border border-slate-800/70">
+          <div class="text-sm uppercase tracking-widest text-slate-500 font-semibold mb-4">Agent Roles</div>
+          <div class="space-y-3 text-sm text-slate-300">
+            <div class="flex items-center gap-3 rounded-xl bg-slate-950/70 border border-slate-800 p-4">
+              <i data-feather="globe" class="w-4 h-4 text-red-400 flex-shrink-0"></i>Omni Agent — orchestration and workflow management
             </div>
-        </div>
-    </section>
-
-    <!-- Tool Integration Section -->
-    <section>
-        <div class="container">
-            <h2>Advanced Tool Integration</h2>
-            
-            <div class="content-card">
-                <h3>Comprehensive Security Toolkit</h3>
-                <p>Integration with industry-standard security tools and custom frameworks for complete coverage.</p>
-                
-                <div class="two-column">
-                    <div>
-                        <h4 style="color: #ef4444; margin-bottom: 1rem;">Asset Discovery</h4>
-                        <ul>
-                            <li>Amass integration</li>
-                            <li>Assetfinder</li>
-                            <li>Custom reconnaissance tools</li>
-                            <li>OSINT automation</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 style="color: #0ea5e9; margin-bottom: 1rem;">Vulnerability Scanning</h4>
-                        <ul>
-                            <li>Nuclei integration</li>
-                            <li>nuclei-templates</li>
-                            <li>Custom scanner integration</li>
-                            <li>Multi-class vulnerability detection</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="highlight-box">
-                    <h4>GitHub Gist Integration</h4>
-                    <p>Distributed caching and storage system for security data, tools, templates, payloads, and findings via GitHub Gists with intelligent chunking, Zstandard compression, rate-limited API access, hybrid processing strategies, and secure credential management.</p>
-                </div>
+            <div class="flex items-center gap-3 rounded-xl bg-slate-950/70 border border-slate-800 p-4">
+              <i data-feather="search" class="w-4 h-4 text-red-400 flex-shrink-0"></i>Recon Agent — asset discovery and OSINT
             </div>
-        </div>
-    </section>
-
-    <!-- Technical Stack Section -->
-    <section>
-        <div class="container">
-            <h2>Technical Stack</h2>
-            
-            <div class="content-card">
-                <h3>Production-Grade Technology</h3>
-                <p>Built with modern, enterprise-ready technologies for reliability, scalability, and performance.</p>
-                
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 2rem;">
-                    <div class="highlight-box">
-                        <h4>Python 3.9+</h4>
-                        <p>Core platform and AI agents</p>
-                    </div>
-                    <div class="highlight-box">
-                        <h4>Node.js 20+</h4>
-                        <p>Frontend development</p>
-                    </div>
-                    <div class="highlight-box">
-                        <h4>Go 1.21+</h4>
-                        <p>Security tools</p>
-                    </div>
-                    <div class="highlight-box">
-                        <h4>PostgreSQL 15+</h4>
-                        <p>Enterprise data storage</p>
-                    </div>
-                    <div class="highlight-box">
-                        <h4>Redis</h4>
-                        <p>Caching layer</p>
-                    </div>
-                </div>
+            <div class="flex items-center gap-3 rounded-xl bg-slate-950/70 border border-slate-800 p-4">
+              <i data-feather="alert-triangle" class="w-4 h-4 text-red-400 flex-shrink-0"></i>Vulnerability Analysis Agent
             </div>
-        </div>
-    </section>
-
-    <!-- Use Cases Section -->
-    <section>
-        <div class="container">
-            <h2>Use Cases & Applications</h2>
-            
-            <div class="content-card">
-                <h3>Target Audiences</h3>
-                <p>OmniX serves multiple security domains with specialized capabilities for each use case.</p>
-                
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem;">
-                    <div class="content-card">
-                        <h4 style="color: #ef4444;">Security Researchers</h4>
-                        <ul>
-                            <li>Advanced vulnerability research</li>
-                            <li>AI-assisted analysis</li>
-                            <li>Automated reconnaissance</li>
-                            <li>Professional reporting</li>
-                        </ul>
-                    </div>
-                    <div class="content-card">
-                        <h4 style="color: #0ea5e9;">Bug Bounty Hunters</h4>
-                        <ul>
-                            <li>Automated program discovery</li>
-                            <li>Scope management</li>
-                            <li>Submission automation</li>
-                            <li>Multi-platform integration</li>
-                        </ul>
-                    </div>
-                    <div class="content-card">
-                        <h4 style="color: #8b5cf6;">Enterprise Security Teams</h4>
-                        <ul>
-                            <li>Comprehensive vulnerability assessment</li>
-                            <li>Scalable architecture</li>
-                            <li>Enterprise authentication</li>
-                            <li>Data integrity and compliance</li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="flex items-center gap-3 rounded-xl bg-slate-950/70 border border-slate-800 p-4">
+              <i data-feather="terminal" class="w-4 h-4 text-red-400 flex-shrink-0"></i>Exploitation Agent — controlled scope testing
             </div>
-        </div>
-    </section>
-
-    <!-- Digital Twin Integration -->
-    <section>
-        <div class="container">
-            <h2>Digital Twin Integration</h2>
-            
-            <div class="content-card">
-                <h3>Part of the Unified Ecosystem</h3>
-                <p>OmniX integrates with the broader MT Tech Industries digital twin ecosystem, utilizing Omnimathematics for AI compliance enforcement and connecting with other security and analysis projects.</p>
-                
-                <div class="highlight-box">
-                    <h4>Cross-Project Integration</h4>
-                    <p>OmniX security capabilities complement the entire MT Tech portfolio, providing security validation for PAFFT acoustic systems, PAID plasma control, WoofWizeX sensing, and all other projects while utilizing Omnimathematics frameworks for ethical AI operation.</p>
-                </div>
+            <div class="flex items-center gap-3 rounded-xl bg-slate-950/70 border border-slate-800 p-4">
+              <i data-feather="file-text" class="w-4 h-4 text-red-400 flex-shrink-0"></i>Reporting Agent — AI-generated professional reports
             </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 MT Tech Industries LLC. All rights reserved.</p>
-            <p style="margin-top: 1rem; font-size: 0.9rem;">
-                <a href="https://github.com/mttechindustries">GitHub</a> | 
-                <a href="https://github.com/mttechindustries/OmniX">OmniX Repository</a> |
-                <a href="../index.html">Back to Main Site</a>
-            </p>
+  <!-- CAPABILITIES -->
+  <section class="py-24 bg-slate-900 border-t border-white/5">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="glass-panel rounded-2xl p-8 border-slate-800/70 card-hover">
+          <div class="w-12 h-12 rounded-2xl bg-red-500/10 flex items-center justify-center mb-5">
+            <i data-feather="zap" class="w-6 h-6 text-red-400"></i>
+          </div>
+          <h3 class="text-lg font-bold mb-3">Bug Bounty Automation</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">Full HackerOne API integration. Automated scope management, vulnerability discovery, and submission workflows for security researchers and enterprise teams.</p>
         </div>
-    </footer>
+        <div class="glass-panel rounded-2xl p-8 border-slate-800/70 card-hover">
+          <div class="w-12 h-12 rounded-2xl bg-cyan-500/10 flex items-center justify-center mb-5">
+            <i data-feather="tool" class="w-6 h-6 text-cyan-400"></i>
+          </div>
+          <h3 class="text-lg font-bold mb-3">Tool Integration</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">30+ integrated security tools including Amass, Assetfinder, Nuclei, and custom reconnaissance frameworks. GitHub Gist distributed caching with Zstandard compression.</p>
+        </div>
+        <div class="glass-panel rounded-2xl p-8 border-slate-800/70 card-hover">
+          <div class="w-12 h-12 rounded-2xl bg-violet-500/10 flex items-center justify-center mb-5">
+            <i data-feather="cpu" class="w-6 h-6 text-violet-400"></i>
+          </div>
+          <h3 class="text-lg font-bold mb-3">Cognitive Integrity</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">Omnimathematics penalty compliance enforces ethical operation boundaries. AI agents operate within defined scope constraints verified through mathematical compliance structures.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script>
-        feather.replace();
-    </script>
+  <!-- WHO -->
+  <section class="py-24 bg-slate-950 border-t border-white/5">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="glass-panel rounded-2xl p-7 border-slate-800/70">
+          <h3 class="text-base font-bold mb-3 text-red-300">Security Researchers</h3>
+          <p class="text-sm text-slate-400 leading-relaxed">AI-assisted vulnerability analysis, automated reconnaissance, and professional-grade report generation for independent researchers and teams.</p>
+        </div>
+        <div class="glass-panel rounded-2xl p-7 border-slate-800/70">
+          <h3 class="text-base font-bold mb-3 text-cyan-300">Bug Bounty Hunters</h3>
+          <p class="text-sm text-slate-400 leading-relaxed">Multi-platform integration, automated program discovery, intelligent scope management, and submission workflow automation.</p>
+        </div>
+        <div class="glass-panel rounded-2xl p-7 border-slate-800/70">
+          <h3 class="text-base font-bold mb-3 text-violet-300">Enterprise Security</h3>
+          <p class="text-sm text-slate-400 leading-relaxed">Scalable architecture, enterprise authentication, comprehensive audit logging, and integration with existing security infrastructure.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24 bg-slate-900 border-t border-white/5">
+    <div class="container mx-auto px-6 max-w-4xl text-center">
+      <h2 class="text-3xl md:text-5xl font-black mb-5">Research, Licensing, and Collaboration</h2>
+      <p class="text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed mb-10">
+        OmniX is available for licensing inquiry and strategic partnership discussion. Contact MT Tech Industries LLC directly.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="mailto:research@mttechindustries.com?subject=OmniX%20Inquiry"
+           class="px-10 py-5 rounded-xl bg-gradient-to-r from-red-600 to-rose-600 text-white font-black hover:scale-105 transition-all">
+          Email Inquiry
+        </a>
+        <a href="../nda_form.html"
+           class="px-10 py-5 rounded-xl border border-slate-700 text-slate-200 font-black hover:bg-slate-800 transition-all">
+          Request Protected Access
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <script src="../components/footer.js"></script>
+  <mt-footer></mt-footer>
+  <script>feather.replace();</script>
 </body>
 </html>

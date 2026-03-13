@@ -184,23 +184,91 @@
 
     <section id="contact" class="border-t border-slate-800 bg-base-900 py-20">
       <div class="mx-auto max-w-7xl px-6">
-        <div class="grid gap-8 md:grid-cols-2">
-          <div>
-            <h2 class="text-3xl font-bold sm:text-4xl">Connect</h2>
-            <p class="mt-4 text-brand-muted">For research collaboration, technical evaluation, or strategic partnership discussions.</p>
-            <ul class="mt-6 space-y-3 text-sm text-brand-muted">
-              <li><strong class="text-brand-text">General:</strong> info@mttechindustries.com</li>
-              <li><strong class="text-brand-text">Founder:</strong> Marc@mttechindustries.com</li>
-              <li><strong class="text-brand-text">NDA access:</strong> via the request form.</li>
-            </ul>
-          </div>
-          <div class="rounded-2xl border border-slate-800 bg-base-800 p-7">
-            <h3 class="text-lg font-semibold">Quick links</h3>
-            <div class="mt-5 grid gap-3 text-sm">
-              <a class="rounded-lg border border-slate-700 px-4 py-3 transition hover:border-cyan-400/60" href="nda_form.html">Request NDA access</a>
-              <a class="rounded-lg border border-slate-700 px-4 py-3 transition hover:border-cyan-400/60" href="ip-protection.md">IP protection & disclosure</a>
-              <a class="rounded-lg border border-slate-700 px-4 py-3 transition hover:border-cyan-400/60" href="privacy-policy.html">Privacy policy</a>
-              <a class="rounded-lg border border-slate-700 px-4 py-3 transition hover:border-cyan-400/60" href="terms-of-service.html">Terms of service</a>
+        <div class="mb-10 max-w-2xl">
+          <h2 class="text-3xl font-bold sm:text-4xl">Connect</h2>
+          <p class="mt-4 text-brand-muted">Research collaboration, technical evaluation, investment, or licensing inquiries. All messages go directly to Marc Tuinier.</p>
+        </div>
+        <div class="grid gap-10 md:grid-cols-2">
+          <!-- Contact Form -->
+          <form
+            action="https://formspree.io/f/xkoqblvz"
+            method="POST"
+            class="space-y-5"
+          >
+            <div>
+              <label for="name" class="mb-1 block text-sm font-medium text-brand-text">Name</label>
+              <input
+                id="name"
+                type="text"
+                name="name"
+                required
+                placeholder="Your name or organization"
+                class="w-full rounded-lg border border-slate-700 bg-base-800 px-4 py-3 text-sm text-brand-text placeholder-brand-muted focus:border-cyan-500 focus:outline-none focus:ring-1 focus:ring-cyan-500"
+              />
+            </div>
+            <div>
+              <label for="email" class="mb-1 block text-sm font-medium text-brand-text">Email</label>
+              <input
+                id="email"
+                type="email"
+                name="email"
+                required
+                placeholder="your@email.com"
+                class="w-full rounded-lg border border-slate-700 bg-base-800 px-4 py-3 text-sm text-brand-text placeholder-brand-muted focus:border-cyan-500 focus:outline-none focus:ring-1 focus:ring-cyan-500"
+              />
+            </div>
+            <div>
+              <label for="subject" class="mb-1 block text-sm font-medium text-brand-text">Reason for contact</label>
+              <select
+                id="subject"
+                name="subject"
+                class="w-full rounded-lg border border-slate-700 bg-base-800 px-4 py-3 text-sm text-brand-text focus:border-cyan-500 focus:outline-none focus:ring-1 focus:ring-cyan-500"
+              >
+                <option value="">Select one</option>
+                <option value="Investment / Partnership">Investment / Partnership</option>
+                <option value="Research Collaboration">Research Collaboration</option>
+                <option value="Licensing Inquiry">Licensing Inquiry</option>
+                <option value="NDA Request">NDA Request</option>
+                <option value="General Inquiry">General Inquiry</option>
+              </select>
+            </div>
+            <div>
+              <label for="message" class="mb-1 block text-sm font-medium text-brand-text">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+                placeholder="Describe what you're working on or what you're looking for."
+                class="w-full rounded-lg border border-slate-700 bg-base-800 px-4 py-3 text-sm text-brand-text placeholder-brand-muted focus:border-cyan-500 focus:outline-none focus:ring-1 focus:ring-cyan-500"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="w-full rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500 px-6 py-3 text-sm font-semibold text-slate-950 shadow-lg shadow-cyan-500/20 transition hover:brightness-110"
+            >
+              Send Message
+            </button>
+          </form>
+
+          <!-- Right column: contact info + links -->
+          <div class="space-y-6">
+            <div class="rounded-2xl border border-slate-800 bg-base-800 p-6">
+              <h3 class="text-base font-semibold">Direct contact</h3>
+              <ul class="mt-4 space-y-3 text-sm text-brand-muted">
+                <li><strong class="text-brand-text">General:</strong> info@mttechindustries.com</li>
+                <li><strong class="text-brand-text">Founder:</strong> Marc@mttechindustries.com</li>
+                <li><strong class="text-brand-text">Research / Licensing:</strong> research@mttechindustries.com</li>
+                <li><strong class="text-brand-text">Investors:</strong> investors@mttechindustries.com</li>
+              </ul>
+            </div>
+            <div class="rounded-2xl border border-slate-800 bg-base-800 p-6">
+              <h3 class="text-base font-semibold">Quick links</h3>
+              <div class="mt-4 grid gap-3 text-sm">
+                <a class="rounded-lg border border-slate-700 px-4 py-3 transition hover:border-cyan-400/60" href="nda_form.html">Request NDA access</a>
+                <a class="rounded-lg border border-slate-700 px-4 py-3 transition hover:border-cyan-400/60" href="privacy-policy.html">Privacy policy</a>
+                <a class="rounded-lg border border-slate-700 px-4 py-3 transition hover:border-cyan-400/60" href="terms-of-service.html">Terms of service</a>
+              </div>
             </div>
           </div>
         </div>

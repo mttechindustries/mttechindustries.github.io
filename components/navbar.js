@@ -1,67 +1,52 @@
-// Custom element for navigation bar
 class MtNav extends HTMLElement {
   connectedCallback() {
+    const inProjects = location.pathname.includes('/projects/');
+    const base = inProjects ? '../' : '';
+
     this.innerHTML = `
-      <nav class="fixed top-0 left-0 right-0 z-50 bg-dark-900/90 backdrop-blur-md border-b border-slate-800">
-        <div class="container mx-auto px-6 py-4">
-          <div class="flex items-center justify-between">
-            <a href="#" class="flex items-center gap-3">
-              <img src="../MT-Tech-Industries.png" alt="MT Tech Industries Logo" class="w-10 h-10 rounded-lg object-contain">
-              <span class="text-xl font-bold text-slate-100">MT Tech Industries</span>
+      <nav class="fixed top-0 left-0 right-0 z-50 border-b border-slate-800/80 bg-slate-950/90 backdrop-blur-xl">
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+          <a href="${base}index.html" class="flex items-center gap-3">
+            <img src="${base}MT-Tech-Industries.png" alt="MT Tech Industries" class="h-9 w-9 rounded-md object-contain" />
+            <span class="text-sm font-semibold tracking-wide text-slate-100 sm:text-base">MT Tech Industries</span>
+          </a>
+
+          <div class="hidden items-center gap-7 text-sm text-slate-400 md:flex">
+            <a href="${base}index.html#overview"  class="transition hover:text-cyan-400">Overview</a>
+            <a href="${base}index.html#patents"   class="transition hover:text-cyan-400">Patent-Pending</a>
+            <a href="${base}index.html#projects"  class="transition hover:text-cyan-400">Projects</a>
+            <a href="${base}index.html#fit"        class="transition hover:text-cyan-400">Who We Work With</a>
+            <a href="${base}index.html#contact"   class="transition hover:text-cyan-400">Contact</a>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <a href="${base}nda_form.html"
+               class="rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500 px-4 py-2 text-xs font-semibold text-slate-950 shadow-lg shadow-cyan-500/20 transition hover:brightness-110 sm:text-sm">
+              Request NDA
             </a>
-            
-            <div class="hidden md:flex items-center gap-8">
-              <a href="#overview" class="text-slate-300 hover:text-cyan-400 transition-colors">Overview</a>
-              <a href="#technologies" class="text-slate-300 hover:text-cyan-400 transition-colors">Technologies</a>
-              <a href="#infrastructure" class="text-slate-300 hover:text-cyan-400 transition-colors">Infrastructure</a>
-              <a href="#contact" class="text-slate-300 hover:text-cyan-400 transition-colors">Contact</a>
-            </div>
-            
-            <button id="mobile-menu-toggle" class="md:hidden text-slate-300">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            <button id="mt-mobile-toggle" class="md:hidden rounded-lg border border-slate-700 p-2 text-slate-300 hover:text-cyan-400 transition">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
               </svg>
             </button>
           </div>
-          
-          <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
-            <div class="flex flex-col gap-3">
-              <a href="#overview" class="text-slate-300 hover:text-cyan-400 transition-colors py-2">Overview</a>
-              <a href="#technologies" class="text-slate-300 hover:text-cyan-400 transition-colors py-2">Technologies</a>
-              <a href="#infrastructure" class="text-slate-300 hover:text-cyan-400 transition-colors py-2">Infrastructure</a>
-              <a href="#contact" class="text-slate-300 hover:text-cyan-400 transition-colors py-2">Contact</a>
-            </div>
+        </div>
+
+        <div id="mt-mobile-menu" class="hidden border-t border-slate-800 bg-slate-950/95 md:hidden">
+          <div class="flex flex-col gap-1 px-6 py-4 text-sm text-slate-400">
+            <a href="${base}index.html#overview"  class="py-2 transition hover:text-cyan-400">Overview</a>
+            <a href="${base}index.html#patents"   class="py-2 transition hover:text-cyan-400">Patent-Pending</a>
+            <a href="${base}index.html#projects"  class="py-2 transition hover:text-cyan-400">Projects</a>
+            <a href="${base}index.html#fit"        class="py-2 transition hover:text-cyan-400">Who We Work With</a>
+            <a href="${base}index.html#contact"   class="py-2 transition hover:text-cyan-400">Contact</a>
+            <a href="${base}nda_form.html"        class="mt-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500 px-4 py-2 text-center font-semibold text-slate-950">Request NDA</a>
           </div>
         </div>
       </nav>
     `;
-    
-    // Add mobile menu toggle functionality
-    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
-    
-    mobileMenuToggle.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-    
-    // Add smooth scrolling to navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-        
-        if (targetElement) {
-          window.scrollTo({
-            top: targetElement.offsetTop - 80,
-            behavior: 'smooth'
-          });
-          
-          // Close mobile menu if open
-          mobileMenu.classList.add('hidden');
-        }
-      });
+
+    document.getElementById('mt-mobile-toggle').addEventListener('click', () => {
+      document.getElementById('mt-mobile-menu').classList.toggle('hidden');
     });
   }
 }
