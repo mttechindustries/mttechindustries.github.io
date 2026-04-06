@@ -24,12 +24,30 @@ This is not a metaphor. It is a filed invention.
 - Filed: March 8, 2026
 - Inventor: Marc Tuinier — MT Tech Industries LLC
 - CPC Classification: G06N 20/00; G06F 21/55; G05B 13/04; G06N 3/08
+- Status: Active prosecution — Amendment filed April 2026, CIP prepared
 - Prior art established through cryptographically verified git commits, earliest dated June 3, 2025
 
-### Filed — U.S. Provisional Patent Application
+### Filed — U.S. Provisional Patent Applications
+
 **Pre-Physical Expansion and Gaussian Well Stabilization Framework: A System and Method for Permitting Instability, Divergence, and Optimization in Non-Physical Expansion Realms Prior to Physical Realization**
 - Application No. 63/999,270
 - Filed: March 7, 2026
+- Inventor: Marc Tuinier — MT Tech Industries LLC
+
+**Wireless Behavioral Monitoring System for Companion Animals Utilizing Ambient Field Sensing with Authenticated Activation, Privacy-Preserving Computation, and Longitudinal Behavioral Intelligence**
+- Application No. 64/029,363
+- Filed: April 4, 2026
+- Inventor: Marc Tuinier — MT Tech Industries LLC
+
+**Omnimathematics Unified Regulation System: Multi-Domain AI Compliance Architecture Through Penalty-Augmented Objective Functions, Cognitive Integrity Monitoring Via Imaginary Triad Surveillance, Imaginary Realm Auto-Repair Gating, and Multiphysics Compliance Enforcement**
+- Application No. 64/029,394
+- Filed: April 4, 2026
+- Inventor: Marc Tuinier — MT Tech Industries LLC
+
+**Polyvalent Excitation Framework: System and Method for Manifold-Valued Configuration Analysis, Spark-Like Radiant Propagation, Invariant Kernel Preservation Across Domain Projections, and Survivability-Gated Embodiment in Multi-Domain Computational Systems**
+- Application No. 64/030,975
+- Filed: April 6, 2026
+- Confirmation: 7920
 - Inventor: Marc Tuinier — MT Tech Industries LLC
 
 ---
@@ -54,12 +72,13 @@ AI reasoning modeled as a high-dimensional dynamical system with formal stabilit
 
 | Project | Domain | Status |
 |---------|--------|--------|
-| **PST Framework** | AI Security / Cross-Domain Stability | Patent Filed — Non-Provisional |
+| **PST Framework** | AI Security / Cross-Domain Stability | Patent Filed — Non-Provisional (Active Prosecution) |
 | **Pre-Physical Expansion** | Optimization / Stability Architecture | Patent Filed — Provisional |
+| **WoofWizeX-FRS** | Animal Behavioral Intelligence | Patent Filed — Provisional |
+| **OURS/OPC** | AI Compliance Architecture | Patent Filed — Provisional |
 | **Omnimathematics Engine** | Mathematical Infrastructure | Active Development |
 | **PAID-FR** | Plasma Propulsion Physics | First-Principles Research |
 | **PAFFT** | Acoustic Force Field Technology | Digital Twin — Simulation Verified |
-| **WoofWizeX-FRS** | Animal Behavioral Intelligence | Active Development |
 | **BoloBeam Mk. II** | Precision Infrasound | Research / Security Applications |
 | **DNEA** | Directional Noise-Embedded Audio | Research |
 | **ABBH** | Automated Bug Bounty | Security Tools Integration |
@@ -77,7 +96,7 @@ AI reasoning modeled as a high-dimensional dynamical system with formal stabilit
 
 ## Who Should Care
 
-**Investors and strategic partners** — Two USPTO patent filings covering mathematical frameworks with commercial applications across AI safety, autonomous systems, defense, and advanced propulsion. IP position covers both theoretical foundations and implementation architecture.
+**Investors and strategic partners** — **Five USPTO patent applications filed** covering mathematical frameworks with commercial applications across AI safety, autonomous systems, animal behavioral intelligence, compliance architecture, defense, and advanced propulsion. IP position covers both theoretical foundations and implementation architecture.
 
 **AI safety and alignment researchers** — Mathematically rigorous approaches to adversarial robustness, compliance enforcement, and cognitive stability monitoring with formal theorems and verifiable implementations.
 

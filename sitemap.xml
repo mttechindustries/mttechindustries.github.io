@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://mttechindustries.github.io/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://mttechindustries.github.io/investors.html</loc><changefreq>weekly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://mttechindustries.github.io/licensing.html</loc><changefreq>weekly</changefreq><priority>0.95</priority></url>
   <url><loc>https://mttechindustries.github.io/projects/pre-physical.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://mttechindustries.github.io/projects/PST.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://mttechindustries.github.io/projects/paid-fr.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://mttechindustries.github.io/projects/omnimath.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://mttechindustries.github.io/projects/woofwizex-frs.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mttechindustries.github.io/projects/ours.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mttechindustries.github.io/projects/pef.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://mttechindustries.github.io/projects/bolobeam.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://mttechindustries.github.io/projects/omnix.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://mttechindustries.github.io/projects/dnea.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
