@@ -1,120 +1,93 @@
 # MT Tech Industries LLC
 
-**Private research and development firm. Michigan, United States.**
+**Inventor-led R&D company. Michigan, United States.**
 
-MT Tech Industries LLC is an inventor-led R&D company translating fundamental breakthroughs in applied mathematics, AI stability theory, and applied physics into defensible commercial technology. Founded and operated by **Marc Tuinier**, sole inventor on all filed intellectual property.
+MT Tech Industries LLC maintains a private portfolio of live or near-live systems available for controlled demonstration, pilot deployment discussion, licensing review, or private technical evaluation. The company also maintains a filed intellectual-property backbone covering five verified U.S. patent-application lanes.
 
----
-
-## Why MT Tech Industries Matters
-
-Most technology companies build on top of existing frameworks. MT Tech Industries builds the frameworks.
-
-The core thesis: **adversarial instability in AI systems and physical system dynamics are mathematically isomorphic phenomena** — governed by the same stability structures, analyzable through the same mathematics, and defensible through the same unified framework.
-
-This is not a metaphor. It is a filed invention.
+Public materials describe the commercial surface and review pathway. Source code, implementation details, claim maps, sensitive validation records, and unfiled R&D mechanics remain private or NDA-gated.
 
 ---
 
-## Intellectual Property
+## Correct Public Taxonomy
 
-### Filed — U.S. Non-Provisional Patent Application
-**Polyvalent Stability Theory: A System and Method for Cross-Domain Adversarial Stability Verification, Game-Theoretic Defense with Parameter Solidification, and Hybrid Stability Certification**
-- Application No. 19/560,051
-- Filed: March 8, 2026
-- Inventor: Marc Tuinier — MT Tech Industries LLC
-- CPC Classification: G06N 20/00; G06F 21/55; G05B 13/04; G06N 3/08
-- Status: Active prosecution — Amendment filed April 2026, CIP prepared
-- Prior art established through cryptographically verified git commits, earliest dated June 3, 2025
+### 1. Live / License-Ready Private Systems
 
-### Filed — U.S. Provisional Patent Applications
+These systems are private product, tooling, or implementation lanes. They can be discussed through controlled demonstration, pilot framing, licensing review, or NDA-gated technical evaluation. They are not public source releases and are not automatically patent-filed unless separately listed in the filed bucket.
 
-**Pre-Physical Expansion and Gaussian Well Stabilization Framework: A System and Method for Permitting Instability, Divergence, and Optimization in Non-Physical Expansion Realms Prior to Physical Realization**
-- Application No. 63/999,270
-- Filed: March 7, 2026
-- Inventor: Marc Tuinier — MT Tech Industries LLC
+- **Market Sentinel** — private market-intelligence and anomaly/signal system.
+- **Omnimathematics Cognitive Dynamics** — cognitive-security tooling and triadic stability review.
+- **SeerSquared** — local-first signal-integrity and sensing-perturbation review system.
+- **Mobile Presence Mode** — real-time multi-sensor presence-detection utilities.
+- **Fieldstate** — projection-field, survivability-gate, validation-ledger, API/UI implementation lane.
+- **Omnimathematics Penalty Compliance Private / OPC Private** — private AI-compliance implementation using penalty-augmented objectives and integrity-control architecture.
+- **SIES** — PST-aligned simulation and detection framework with private technical review path.
+- **Sovereign Agent Runtime** — private governed-agent runtime for bounded autonomy, evidence records, continuity checks, and audit-ready execution.
 
-**Wireless Behavioral Monitoring System for Companion Animals Utilizing Ambient Field Sensing with Authenticated Activation, Privacy-Preserving Computation, and Longitudinal Behavioral Intelligence**
-- Application No. 64/029,363
-- Filed: April 4, 2026
-- Inventor: Marc Tuinier — MT Tech Industries LLC
+### 2. Filed / Patent-Pending IP Backbone
 
-**Omnimathematics Unified Regulation System: Multi-Domain AI Compliance Architecture Through Penalty-Augmented Objective Functions, Cognitive Integrity Monitoring Via Imaginary Triad Surveillance, Imaginary Realm Auto-Repair Gating, and Multiphysics Compliance Enforcement**
-- Application No. 64/029,394
-- Filed: April 4, 2026
-- Inventor: Marc Tuinier — MT Tech Industries LLC
+Filed / patent-pending language is limited to these lanes unless another filing is verified.
 
-**Polyvalent Excitation Framework: System and Method for Manifold-Valued Configuration Analysis, Spark-Like Radiant Propagation, Invariant Kernel Preservation Across Domain Projections, and Survivability-Gated Embodiment in Multi-Domain Computational Systems**
-- Application No. 64/030,975
-- Filed: April 6, 2026
-- Confirmation: 7920
-- Inventor: Marc Tuinier — MT Tech Industries LLC
+| Filed asset | Status |
+|---|---|
+| PST / Omnimathematics | U.S. Non-Provisional 19/560,051 |
+| Pre-Physical Expansion / Gaussian Wells | U.S. Provisional 63/999,270 |
+| WoofWizeX-FRS | U.S. Provisional 64/029,363 |
+| OURS / OPC | U.S. Provisional 64/029,394 |
+| PEF | U.S. Provisional 64/030,975 |
 
----
+Formal Patent Center status, deadlines, claim scope, and diligence details should be verified before reliance.
 
-## Core Technology
+### 3. Near-Product Patent-Filed System
 
-### Polyvalent Stability Theory (PST)
-A unified mathematical framework for evaluating whether complex systems remain stable under adversarial pressure — across AI models, autonomous control systems, simulation environments, and hybrid physical-computational architectures. PST treats adversarial attacks on neural networks and instabilities in physical control systems as isomorphic phenomena governed by a single stability criterion, enabling cross-domain verification, game-theoretic defense, and hybrid certification. **Patent filed. Non-provisional.**
+- **WoofWizeX-FRS** — lead patent-filed commercialization lane for controlled pilot, licensing, and technical-review conversations.
 
-### Omnimathematics
-The mathematical infrastructure underlying all MT Tech frameworks. Omnimathematics enforces compliance, stability, and physical integrity constraints through the fundamental structure of objective functions themselves — making non-compliant states structurally expensive rather than relying on heuristic rules. Underpins PST, the Pre-Physical framework, and all active research programs.
+### 4. Controlled Unfiled Advanced R&D
 
-### Pre-Physical Expansion Framework
-A deliberate inversion of conventional stability enforcement. Rather than blocking a system from entering unstable states, this framework guides controlled expansion into unstable, divergent, or adversarially deformed states within a non-physical domain — exhausts instability there — then permits only stabilized, converged optima to transition into deployment. Applied across AI behavioral enforcement, acoustic force field systems, plasma optimization, and federated learning security. **Patent filed. Provisional.**
+These are controlled unfiled advanced R&D lanes. Do not describe them as patent-filed, patent-protected, or protected IP unless filing support is verified.
 
-### Triadic Cognitive Stability
-AI reasoning modeled as a high-dimensional dynamical system with formal stability characterization, coherence measurement, and adversarial perturbation geometry. Reasoning failure is treated as a phase transition governed by a quantifiable order parameter, not merely output degradation. Covered under filed IP.
+- **PAFFT**
+- **PAID-FR**
+- **DNEA**
+
+### 5. Sensitive / Do-Not-Lead Publicly
+
+- **BoloBeam** — keep references minimal; route serious discussion to controlled review.
 
 ---
 
-## Active Research Programs
+## Operating Rules for Public Materials
 
-| Project | Domain | Status |
-|---------|--------|--------|
-| **PST Framework** | AI Security / Cross-Domain Stability | Patent Filed — Non-Provisional (Active Prosecution) |
-| **Pre-Physical Expansion** | Optimization / Stability Architecture | Patent Filed — Provisional |
-| **WoofWizeX-FRS** | Animal Behavioral Intelligence | Patent Filed — Provisional |
-| **OURS/OPC** | AI Compliance Architecture | Patent Filed — Provisional |
-| **Omnimathematics Engine** | Mathematical Infrastructure | Active Development |
-| **PAID-FR** | Plasma Propulsion Physics | First-Principles Research |
-| **PAFFT** | Acoustic Force Field Technology | Digital Twin — Simulation Verified |
-| **BoloBeam Mk. II** | Precision Infrasound | Research / Security Applications |
-| **DNEA** | Directional Noise-Embedded Audio | Research |
-| **ABBH** | Automated Bug Bounty | Security Tools Integration |
+- No filing claim without filing support.
+- No product-readiness claim without repo, README, package, test, demo, or source-context evidence.
+- No public exposure of sensitive mechanics.
+- Public pages are summary-level and do not define source authority.
+- Implementation-sensitive materials require NDA-gated review.
+- MT Tech Industries LLC retains ownership unless a written agreement says otherwise.
 
 ---
 
-## Research Methodology
+## Commercial Review Paths
 
-- **Physics-First Validation** — Digital twins built and validated before physical prototypes. Hardware constraints enforced at the model level.
-- **Anti-Circular Reasoning** — Performance targets are validation targets, not model inputs. Model construction precedes measurement comparison.
-- **Cryptographically Anchored Prior Art** — All original concepts dated through SHA-verified git commits.
-- **Penalty-Augmented Optimization** — Stability and integrity constraints enforced through objective function structure, not brittle rules.
+MT Tech is open to:
 
----
-
-## Who Should Care
-
-**Investors and strategic partners** — **Five USPTO patent applications filed** covering mathematical frameworks with commercial applications across AI safety, autonomous systems, animal behavioral intelligence, compliance architecture, defense, and advanced propulsion. IP position covers both theoretical foundations and implementation architecture.
-
-**AI safety and alignment researchers** — Mathematically rigorous approaches to adversarial robustness, compliance enforcement, and cognitive stability monitoring with formal theorems and verifiable implementations.
-
-**Defense and aerospace** — Cross-domain stability verification applicable to autonomous UAV control, GPS spoofing defense, federated learning security, and plasma propulsion research.
-
-**Technology licensees** — Frameworks available for licensing inquiry across applicable commercial domains.
-
-**Collaborators** — MT Tech Industries is a company of one. The research portfolio spans AI, physics, acoustics, signal processing, and security. The right collaboration partners will find open problems worth working on.
+- controlled demonstrations,
+- pilot discussions,
+- field-of-use licensing conversations,
+- portfolio licensing review,
+- sponsored R&D scoping,
+- investor diligence,
+- acquisition discussions,
+- NDA-gated technical review.
 
 ---
 
 ## Contact
 
-- **General Inquiries**: info@mttechindustries.com
-- **Research / Licensing**: research@mttechindustries.com
-- **Investor Relations**: investors@mttechindustries.com
-- **Website**: [mttechindustries.com](https://mttechindustries.com/)
+- **General Inquiries:** info@mttechindustries.com
+- **Research / Licensing:** research@mttechindustries.com
+- **Investor Relations:** investors@mttechindustries.com
+- **Website:** https://mttechindustries.com/
 
 ---
 
-© 2026 MT Tech Industries LLC. All Rights Reserved. All frameworks, formulations, and implementations are proprietary intellectual property of MT Tech Industries LLC. Patent Pending.
+© 2026 MT Tech Industries LLC. All Rights Reserved. Public materials are summary-level only. Frameworks, formulations, implementations, and supporting technical materials remain proprietary unless expressly released in writing.
