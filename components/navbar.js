@@ -12,11 +12,10 @@ class MtNav extends HTMLElement {
           </a>
 
           <div class="hidden items-center gap-7 text-sm text-slate-400 md:flex">
-            <a href="${base}index.html#overview"  class="transition hover:text-cyan-400">Overview</a>
-            <a href="${base}index.html#patents"   class="transition hover:text-cyan-400">Patent-Pending</a>
-            <a href="${base}index.html#projects"  class="transition hover:text-cyan-400">Projects</a>
-            <a href="${base}licensing.html"       class="transition hover:text-cyan-400">Licensing</a>
-            <a href="${base}investors.html"       class="transition hover:text-amber-400 font-semibold">Investors</a>
+            <a href="${base}index.html#projects" class="transition hover:text-cyan-400">Private Systems</a>
+            <a href="${base}index.html#patents"  class="transition hover:text-cyan-400">Filed IP</a>
+            <a href="${base}licensing.html"      class="transition hover:text-cyan-400">Licensing</a>
+            <a href="${base}investors.html"      class="transition hover:text-amber-400 font-semibold">Investors</a>
           </div>
 
           <div class="flex items-center gap-3">
@@ -34,12 +33,11 @@ class MtNav extends HTMLElement {
 
         <div id="mt-mobile-menu" class="hidden border-t border-slate-800 bg-slate-950/95 md:hidden">
           <div class="flex flex-col gap-1 px-6 py-4 text-sm text-slate-400">
-            <a href="${base}index.html#overview"  class="py-2 transition hover:text-cyan-400">Overview</a>
-            <a href="${base}index.html#patents"   class="py-2 transition hover:text-cyan-400">Patent-Pending</a>
-            <a href="${base}index.html#projects"  class="py-2 transition hover:text-cyan-400">Projects</a>
-            <a href="${base}licensing.html"       class="py-2 transition hover:text-cyan-400">Licensing</a>
-            <a href="${base}investors.html"       class="py-2 transition hover:text-amber-400 font-semibold">Investors</a>
-            <a href="${base}nda_form.html"        class="mt-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500 px-4 py-2 text-center font-semibold text-slate-950">Request NDA</a>
+            <a href="${base}index.html#projects" class="py-2 transition hover:text-cyan-400">Private Systems</a>
+            <a href="${base}index.html#patents"  class="py-2 transition hover:text-cyan-400">Filed IP</a>
+            <a href="${base}licensing.html"      class="py-2 transition hover:text-cyan-400">Licensing</a>
+            <a href="${base}investors.html"      class="py-2 transition hover:text-amber-400 font-semibold">Investors</a>
+            <a href="${base}nda_form.html"       class="mt-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500 px-4 py-2 text-center font-semibold text-slate-950">Request NDA</a>
           </div>
         </div>
       </nav>
