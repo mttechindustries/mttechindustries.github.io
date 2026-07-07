@@ -16,10 +16,10 @@ class MtFooter extends HTMLElement {
               </a>
               <p class="text-sm leading-7 text-slate-500">
                 Inventor-led R&D. Michigan, USA.<br>
-                Marc Tuinier — Sole inventor on all filed IP.
+                Marc Tuinier — sole inventor on all filed MT Tech IP.
               </p>
               <p class="mt-4 text-xs text-slate-600">
-                U.S. Patent App. No. 19/560,051 &amp; 63/999,270 — Patent Pending
+                Five filed U.S. patent applications — patent pending.
               </p>
             </div>
 
@@ -64,7 +64,7 @@ class MtFooter extends HTMLElement {
 
           <div class="border-t border-slate-800 pt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
             <p class="text-xs text-slate-600">
-              &copy; 2026 MT Tech Industries LLC. All Rights Reserved. All frameworks, formulations, and implementations are proprietary IP of MT Tech Industries LLC. Patent Pending.
+              &copy; 2026 MT Tech Industries LLC. All Rights Reserved. Public materials are summary-level only. Frameworks, formulations, implementations, and supporting technical materials remain proprietary unless expressly released in writing.
             </p>
             <a href="https://github.com/mttechindustries" target="_blank" rel="noopener"
                class="text-slate-600 hover:text-cyan-400 transition" aria-label="GitHub">
