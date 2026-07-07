@@ -6,120 +6,74 @@
   <title>Licensing | MT Tech Industries LLC</title>
   <meta name="description" content="Licensing and controlled technical review pathways for MT Tech Industries LLC private product systems and five verified filed U.S. patent-application lanes." />
   <meta name="robots" content="index,follow" />
-  <link rel="stylesheet" href="style.css" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/feather-icons"></script>
-  <script>
-    tailwind.config = {
-      theme: { extend: {
-        colors: { dark: { 950: '#020617', 900: '#0f172a', 800: '#1e293b', 700: '#334155' } },
-        fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] }
-      }}
-    };
-  </script>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
-    body { background: #020617; }
-    .glass-panel { background: rgba(15,23,42,.72); backdrop-filter: blur(14px); border: 1px solid rgba(255,255,255,.08); }
-    .hero-gradient { background: radial-gradient(circle at 15% 20%, rgba(14,165,233,.14), transparent 30%), radial-gradient(circle at 85% 15%, rgba(139,92,246,.12), transparent 28%), linear-gradient(135deg, #020617 0%, #0f172a 50%, #111827 100%); }
-    .grid-pattern { background-image: radial-gradient(circle at 1px 1px, rgba(148,163,184,.10) 1px, transparent 0); background-size: 34px 34px; }
-    .text-gradient { background: linear-gradient(135deg, #67e8f9 0%, #60a5fa 50%, #a78bfa 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
-    .card-hover { transition: transform .2s ease, border-color .2s ease; }
-    .card-hover:hover { transform: translateY(-4px); }
-  </style>
 </head>
-<body class="text-slate-100 font-sans antialiased overflow-x-hidden">
+<body class="bg-slate-950 text-slate-100 antialiased">
   <script src="components/navbar.js"></script>
   <mt-nav></mt-nav>
 
-  <section class="hero-gradient relative overflow-hidden pt-32 pb-20">
-    <div class="absolute inset-0 grid-pattern opacity-25"></div>
-    <div class="relative z-10 container mx-auto px-6 max-w-6xl">
-      <div class="max-w-4xl">
-        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-panel mb-8">
-          <i data-feather="briefcase" class="w-4 h-4 text-cyan-400"></i>
-          <span class="text-xs font-semibold uppercase tracking-widest text-slate-300">MT Tech Industries LLC — Licensing &amp; Controlled Review</span>
-        </div>
-        <h1 class="text-5xl md:text-7xl font-black leading-tight mb-6">
-          <span class="text-gradient">License the right layer</span><br />without collapsing the portfolio.
-        </h1>
-        <p class="text-xl text-slate-400 leading-relaxed max-w-4xl mb-10">
-          MT Tech Industries LLC separates private product systems, verified filed IP, near-product patent-filed assets, controlled unfiled advanced R&amp;D, and sensitive non-lead work. Licensing conversations start from the correct bucket.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a href="mailto:research@mttechindustries.com?subject=Licensing%20Inquiry" class="px-10 py-5 rounded-xl bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-black hover:scale-105 transition-all">Start Licensing Conversation</a>
-          <a href="nda_form.html" class="px-10 py-5 rounded-xl border border-slate-700 text-slate-200 font-black hover:bg-slate-800 transition-all">Request NDA + Technical Packet</a>
+  <main>
+    <section class="pt-32 pb-20 border-b border-slate-800">
+      <div class="mx-auto max-w-6xl px-6">
+        <p class="mb-6 inline-flex rounded-full border border-cyan-500/30 bg-cyan-500/10 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-cyan-300">Licensing and controlled review</p>
+        <h1 class="max-w-4xl text-5xl font-black leading-tight md:text-7xl">License the right MT Tech system through the right review path.</h1>
+        <p class="mt-6 max-w-3xl text-xl leading-relaxed text-slate-400">MT Tech Industries LLC separates private product systems from verified filed IP lanes. Public materials name the system and review path. Details are handled through controlled discussion or NDA-gated review.</p>
+        <div class="mt-9 flex flex-wrap gap-4">
+          <a href="mailto:research@mttechindustries.com?subject=Licensing%20Inquiry" class="rounded-xl bg-cyan-500 px-8 py-4 font-bold text-slate-950 hover:bg-cyan-400">Start licensing conversation</a>
+          <a href="nda_form.html" class="rounded-xl border border-slate-700 px-8 py-4 font-bold text-slate-200 hover:border-cyan-400">Request NDA packet</a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="py-20 bg-dark-900 border-t border-white/5">
-    <div class="container mx-auto px-6 max-w-6xl">
-      <div class="text-center mb-14">
-        <div class="text-sm uppercase tracking-widest text-cyan-400 font-semibold mb-3">Priority Licensing Surface</div>
-        <h2 class="text-3xl md:text-4xl font-black">Live / License-Ready Private Systems</h2>
-        <p class="text-slate-400 mt-4 max-w-3xl mx-auto">These private systems can be discussed through controlled demonstration, pilot scoping, licensing discussion, or private technical review. They are not public source releases and are not automatically patent-filed unless listed in the filed bucket.</p>
+    <section class="py-20 border-b border-slate-800 bg-slate-900/60">
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="mb-10 max-w-3xl">
+          <p class="mb-3 text-sm font-semibold uppercase tracking-wider text-cyan-300">Private product systems</p>
+          <h2 class="text-3xl font-black md:text-4xl">Available for controlled demonstration, pilot discussion, licensing review, or private technical evaluation.</h2>
+          <p class="mt-4 text-slate-400">These systems are not public source releases. They are private product and implementation lanes.</p>
+        </div>
+        <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+          <article class="rounded-2xl border border-slate-800 bg-slate-900 p-6"><h3 class="font-bold text-cyan-300">Market Sentinel</h3></article>
+          <article class="rounded-2xl border border-slate-800 bg-slate-900 p-6"><h3 class="font-bold text-violet-300">Omnimathematics Cognitive Dynamics</h3></article>
+          <article class="rounded-2xl border border-slate-800 bg-slate-900 p-6"><h3 class="font-bold text-emerald-300">SeerSquared</h3></article>
+          <article class="rounded-2xl border border-slate-800 bg-slate-900 p-6"><h3 class="font-bold text-blue-300">Mobile Presence Mode</h3></article>
+          <article class="rounded-2xl border border-slate-800 bg-slate-900 p-6"><h3 class="font-bold text-pink-300">Fieldstate</h3></article>
+          <article class="rounded-2xl border border-slate-800 bg-slate-900 p-6"><h3 class="font-bold text-amber-300">Penalty Compliance Private</h3></article>
+          <article class="rounded-2xl border border-slate-800 bg-slate-900 p-6"><h3 class="font-bold text-slate-200">SIES</h3></article>
+          <article class="rounded-2xl border border-slate-800 bg-slate-900 p-6"><h3 class="font-bold text-cyan-300">Sovereign Agent Runtime</h3><a href="projects/sovereign-agent-runtime.html" class="mt-4 inline-block text-sm font-semibold text-cyan-300 hover:text-cyan-200">View public-safe page →</a></article>
+        </div>
       </div>
-      <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
-        <article class="glass-panel rounded-2xl p-6 border-slate-800/70 card-hover"><h3 class="font-black text-cyan-300 mb-2">Market Sentinel</h3><p class="text-slate-400 text-sm leading-relaxed">Private market-intelligence and anomaly/signal system.</p></article>
-        <article class="glass-panel rounded-2xl p-6 border-slate-800/70 card-hover"><h3 class="font-black text-violet-300 mb-2">Omnimathematics Cognitive Dynamics</h3><p class="text-slate-400 text-sm leading-relaxed">Cognitive-security tooling and triadic stability review.</p></article>
-        <article class="glass-panel rounded-2xl p-6 border-slate-800/70 card-hover"><h3 class="font-black text-emerald-300 mb-2">SeerSquared</h3><p class="text-slate-400 text-sm leading-relaxed">Local-first signal-integrity and sensing-perturbation review system.</p></article>
-        <article class="glass-panel rounded-2xl p-6 border-slate-800/70 card-hover"><h3 class="font-black text-blue-300 mb-2">Mobile Presence Mode</h3><p class="text-slate-400 text-sm leading-relaxed">Real-time multi-sensor presence-detection utilities.</p></article>
-        <article class="glass-panel rounded-2xl p-6 border-slate-800/70 card-hover"><h3 class="font-black text-pink-300 mb-2">Fieldstate</h3><p class="text-slate-400 text-sm leading-relaxed">Projection-field, survivability-gate, and validation-ledger implementation lane.</p></article>
-        <article class="glass-panel rounded-2xl p-6 border-slate-800/70 card-hover"><h3 class="font-black text-amber-300 mb-2">OPC Private</h3><p class="text-slate-400 text-sm leading-relaxed">Private AI-compliance implementation using penalty-augmented objectives.</p></article>
-        <article class="glass-panel rounded-2xl p-6 border-slate-800/70 card-hover"><h3 class="font-black text-slate-200 mb-2">SIES</h3><p class="text-slate-400 text-sm leading-relaxed">PST-aligned simulation and detection framework with private technical review path.</p></article>
-        <article class="glass-panel rounded-2xl p-6 border-slate-800/70 card-hover"><h3 class="font-black text-cyan-300 mb-2">Sovereign Agent Runtime</h3><p class="text-slate-400 text-sm leading-relaxed">Private governed-agent runtime for bounded autonomy, receipts, continuity checks, and audit-ready execution.</p><a href="projects/sovereign-agent-runtime.html" class="mt-4 inline-block text-sm font-semibold text-cyan-300 hover:text-cyan-200">View public-safe page →</a></article>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="py-20 bg-slate-950 border-t border-white/5">
-    <div class="container mx-auto px-6 max-w-6xl">
-      <div class="text-center mb-14">
-        <div class="text-sm uppercase tracking-widest text-violet-400 font-semibold mb-3">Filed / Patent-Pending IP Backbone</div>
-        <h2 class="text-3xl md:text-4xl font-black">Filed language stays limited to verified filed lanes.</h2>
-        <p class="text-slate-400 mt-4 max-w-3xl mx-auto">These five lanes are the filed IP backbone. Other product systems, demonstrations, and unfiled R&amp;D should not be described as patent-filed unless filing support is verified.</p>
+    <section class="py-20 border-b border-slate-800">
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="mb-10 max-w-3xl">
+          <p class="mb-3 text-sm font-semibold uppercase tracking-wider text-violet-300">Filed / patent-pending IP backbone</p>
+          <h2 class="text-3xl font-black md:text-4xl">Filed language stays limited to verified filed lanes.</h2>
+          <p class="mt-4 text-slate-400">Other private systems should not be described as patent-filed unless filing support is verified.</p>
+        </div>
+        <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-5">
+          <article class="rounded-2xl border border-slate-800 bg-slate-900 p-6"><p class="text-xs uppercase tracking-wider text-violet-300">Non-provisional 19/560,051</p><h3 class="mt-2 font-bold">PST / Omnimathematics</h3></article>
+          <article class="rounded-2xl border border-slate-800 bg-slate-900 p-6"><p class="text-xs uppercase tracking-wider text-cyan-300">Provisional 63/999,270</p><h3 class="mt-2 font-bold">Pre-Physical / Gaussian Wells</h3></article>
+          <article class="rounded-2xl border border-slate-800 bg-slate-900 p-6"><p class="text-xs uppercase tracking-wider text-emerald-300">Provisional 64/029,363</p><h3 class="mt-2 font-bold">WoofWizeX-FRS</h3></article>
+          <article class="rounded-2xl border border-slate-800 bg-slate-900 p-6"><p class="text-xs uppercase tracking-wider text-amber-300">Provisional 64/029,394</p><h3 class="mt-2 font-bold">OURS / OPC</h3></article>
+          <article class="rounded-2xl border border-slate-800 bg-slate-900 p-6"><p class="text-xs uppercase tracking-wider text-pink-300">Provisional 64/030,975</p><h3 class="mt-2 font-bold">PEF</h3></article>
+        </div>
       </div>
-      <div class="grid md:grid-cols-2 xl:grid-cols-5 gap-6">
-        <article class="glass-panel rounded-2xl p-6 border-violet-500/20"><div class="text-xs uppercase tracking-widest text-violet-300 mb-2">Non-provisional 19/560,051</div><h3 class="font-black">PST / Omnimathematics</h3></article>
-        <article class="glass-panel rounded-2xl p-6 border-cyan-500/20"><div class="text-xs uppercase tracking-widest text-cyan-300 mb-2">Provisional 63/999,270</div><h3 class="font-black">Pre-Physical / Gaussian Wells</h3></article>
-        <article class="glass-panel rounded-2xl p-6 border-emerald-500/20"><div class="text-xs uppercase tracking-widest text-emerald-300 mb-2">Provisional 64/029,363</div><h3 class="font-black">WoofWizeX-FRS</h3></article>
-        <article class="glass-panel rounded-2xl p-6 border-amber-500/20"><div class="text-xs uppercase tracking-widest text-amber-300 mb-2">Provisional 64/029,394</div><h3 class="font-black">OURS / OPC</h3></article>
-        <article class="glass-panel rounded-2xl p-6 border-pink-500/20"><div class="text-xs uppercase tracking-widest text-pink-300 mb-2">Provisional 64/030,975</div><h3 class="font-black">PEF</h3></article>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="py-20 bg-dark-900 border-t border-white/5">
-    <div class="container mx-auto px-6 max-w-6xl">
-      <div class="grid lg:grid-cols-3 gap-6">
-        <article class="glass-panel rounded-3xl p-8 border-emerald-500/30 card-hover"><div class="text-sm uppercase tracking-widest text-emerald-300 font-semibold mb-3">Near-product patent-filed system</div><h2 class="text-3xl font-black mb-4">WoofWizeX-FRS</h2><p class="text-slate-400 text-sm leading-relaxed">Lead commercialization lane for controlled pilot, licensing, and technical-review conversations.</p></article>
-        <article class="glass-panel rounded-3xl p-8 border-slate-700 card-hover"><div class="text-sm uppercase tracking-widest text-slate-300 font-semibold mb-3">Controlled unfiled advanced R&amp;D</div><h2 class="text-3xl font-black mb-4">PAFFT · PAID-FR · DNEA</h2><p class="text-slate-400 text-sm leading-relaxed">Advanced research lanes. Do not call them patent-filed or patent-protected unless filing support is verified. Mechanics remain NDA-gated.</p></article>
-        <article class="glass-panel rounded-3xl p-8 border-red-500/25 card-hover"><div class="text-sm uppercase tracking-widest text-red-300 font-semibold mb-3">Sensitive / do not lead publicly</div><h2 class="text-3xl font-black mb-4">BoloBeam</h2><p class="text-slate-400 text-sm leading-relaxed">Keep references minimal. Route serious discussion to controlled review.</p></article>
+    <section class="py-20 bg-slate-900/60">
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="grid gap-6 md:grid-cols-4">
+          <div class="rounded-2xl border border-slate-800 bg-slate-900 p-6"><i data-feather="file-text" class="mb-4 h-6 w-6 text-cyan-300"></i><h3 class="font-bold">Field-of-use license</h3><p class="mt-3 text-sm text-slate-400">License a defined system or application area under written terms.</p></div>
+          <div class="rounded-2xl border border-slate-800 bg-slate-900 p-6"><i data-feather="layers" class="mb-4 h-6 w-6 text-violet-300"></i><h3 class="font-bold">Portfolio review</h3><p class="mt-3 text-sm text-slate-400">Review private systems and filed IP as distinct related layers.</p></div>
+          <div class="rounded-2xl border border-slate-800 bg-slate-900 p-6"><i data-feather="git-merge" class="mb-4 h-6 w-6 text-emerald-300"></i><h3 class="font-bold">Pilot / sponsored development</h3><p class="mt-3 text-sm text-slate-400">Scope a demo, validation packet, or domain-specific implementation.</p></div>
+          <div class="rounded-2xl border border-slate-800 bg-slate-900 p-6"><i data-feather="shield" class="mb-4 h-6 w-6 text-amber-300"></i><h3 class="font-bold">NDA technical review</h3><p class="mt-3 text-sm text-slate-400">Qualified parties can request deeper materials and diligence records.</p></div>
+        </div>
       </div>
-    </div>
-  </section>
-
-  <section class="py-20 bg-slate-950 border-t border-white/5">
-    <div class="container mx-auto px-6 max-w-6xl">
-      <div class="text-center mb-14"><div class="text-sm uppercase tracking-widest text-cyan-400 font-semibold mb-3">Commercial structures</div><h2 class="text-3xl md:text-4xl font-black">How discussion can proceed</h2></div>
-      <div class="grid md:grid-cols-4 gap-6">
-        <div class="glass-panel rounded-2xl p-7 border-slate-800/70 card-hover"><i data-feather="file-text" class="w-6 h-6 text-cyan-400 mb-5"></i><h3 class="text-lg font-bold mb-3">Field-of-use license</h3><p class="text-slate-400 text-sm leading-relaxed">License a defined system, lane, or application area under written terms.</p></div>
-        <div class="glass-panel rounded-2xl p-7 border-slate-800/70 card-hover"><i data-feather="layers" class="w-6 h-6 text-violet-400 mb-5"></i><h3 class="text-lg font-bold mb-3">Portfolio review</h3><p class="text-slate-400 text-sm leading-relaxed">Review filed IP, private systems, and controlled R&amp;D as distinct but related layers.</p></div>
-        <div class="glass-panel rounded-2xl p-7 border-slate-800/70 card-hover"><i data-feather="git-merge" class="w-6 h-6 text-emerald-400 mb-5"></i><h3 class="text-lg font-bold mb-3">Pilot / sponsored R&amp;D</h3><p class="text-slate-400 text-sm leading-relaxed">Scope a demo, validation packet, or domain-specific implementation without exposing source publicly.</p></div>
-        <div class="glass-panel rounded-2xl p-7 border-slate-800/70 card-hover"><i data-feather="shield" class="w-6 h-6 text-amber-400 mb-5"></i><h3 class="text-lg font-bold mb-3">NDA technical review</h3><p class="text-slate-400 text-sm leading-relaxed">Qualified parties can request deeper materials, source review, claim maps, or diligence records.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-20 bg-dark-900 border-t border-white/5">
-    <div class="container mx-auto px-6 max-w-4xl text-center">
-      <h2 class="text-3xl md:text-4xl font-black mb-5">Start with the correct bucket.</h2>
-      <p class="text-lg text-slate-400 max-w-2xl mx-auto mb-10">Send the system or IP lane of interest, intended use case, and whether the request is licensing, pilot, diligence, sponsored development, or investment review.</p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center"><a href="mailto:research@mttechindustries.com?subject=Licensing%20Inquiry" class="px-10 py-5 rounded-xl bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-black hover:scale-105 transition-all">research@mttechindustries.com</a><a href="nda_form.html" class="px-10 py-5 rounded-xl border border-slate-700 text-slate-200 font-black hover:bg-slate-800 transition-all">Request NDA + Technical Packet</a></div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <script src="components/footer.js"></script>
   <mt-footer></mt-footer>
