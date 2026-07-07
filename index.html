@@ -3,11 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MT Tech Industries | Five Filed Patent Applications — Applied Physics + AI Research</title>
-  <meta
-    name="description"
-    content="MT Tech Industries is an independent R&D lab with five filed USPTO patent applications covering frameworks in pre-physical optimization, cross-domain stability verification, behavioral intelligence, AI compliance architecture, and manifold-valued configuration analysis."
-  />
+  <title>MT Tech Industries | Private Product Systems + Filed IP Backbone</title>
+  <meta name="description" content="MT Tech Industries LLC maintains private product systems available for controlled demonstration, pilot discussion, licensing review, and NDA-gated technical evaluation, supported by five filed U.S. patent applications." />
+  <meta name="robots" content="index,follow" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/feather-icons"></script>
   <script>
@@ -15,23 +13,10 @@
       theme: {
         extend: {
           colors: {
-            base: {
-              950: '#020617',
-              900: '#0b1120',
-              800: '#111827',
-              700: '#1f2937'
-            },
-            brand: {
-              cyan: '#22d3ee',
-              blue: '#3b82f6',
-              violet: '#8b5cf6',
-              text: '#e2e8f0',
-              muted: '#94a3b8'
-            }
+            base: { 950: '#020617', 900: '#0b1120', 800: '#111827', 700: '#1f2937' },
+            brand: { cyan: '#22d3ee', blue: '#3b82f6', violet: '#8b5cf6', text: '#e2e8f0', muted: '#94a3b8' }
           },
-          boxShadow: {
-            glow: '0 0 0 1px rgba(34,211,238,0.2), 0 20px 50px rgba(2,6,23,0.55)'
-          }
+          boxShadow: { glow: '0 0 0 1px rgba(34,211,238,0.18), 0 24px 70px rgba(2,6,23,0.65)' }
         }
       }
     };
@@ -39,261 +24,127 @@
   <style>
     .hero-grid {
       background-image:
-        radial-gradient(circle at 15% 15%, rgba(34, 211, 238, 0.15), transparent 35%),
-        radial-gradient(circle at 85% 5%, rgba(139, 92, 246, 0.14), transparent 35%),
-        linear-gradient(rgba(30, 41, 59, 0.15) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(30, 41, 59, 0.15) 1px, transparent 1px);
-      background-size: auto, auto, 40px 40px, 40px 40px;
+        radial-gradient(circle at 15% 15%, rgba(34, 211, 238, 0.18), transparent 34%),
+        radial-gradient(circle at 85% 5%, rgba(139, 92, 246, 0.16), transparent 34%),
+        radial-gradient(circle at 70% 80%, rgba(16, 185, 129, 0.10), transparent 34%),
+        linear-gradient(rgba(30, 41, 59, 0.16) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(30, 41, 59, 0.16) 1px, transparent 1px);
+      background-size: auto, auto, auto, 40px 40px, 40px 40px;
       background-position: center;
     }
   </style>
 </head>
 <body class="bg-base-950 text-brand-text antialiased">
-  <header class="sticky top-0 z-50 border-b border-slate-800/80 bg-base-950/85 backdrop-blur-xl">
-    <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-      <a href="index.html" class="flex items-center gap-3">
-        <img src="MT-Tech-Industries.png" alt="MT Tech Industries logo" class="h-9 w-9 rounded-md object-contain" />
-        <span class="text-sm font-semibold tracking-wide sm:text-base">MT Tech Industries</span>
-      </a>
-      <div class="hidden items-center gap-6 text-sm text-brand-muted md:flex">
-        <a href="#overview" class="transition hover:text-brand-cyan">Overview</a>
-        <a href="#patents" class="transition hover:text-brand-cyan">Patent-Pending</a>
-        <a href="#projects" class="transition hover:text-brand-cyan">Projects</a>
-        <a href="#fit" class="transition hover:text-brand-cyan">Who We Work With</a>
-        <a href="#contact" class="transition hover:text-brand-cyan">Contact</a>
-      </div>
-      <a href="nda_form.html" class="rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500 px-4 py-2 text-xs font-semibold text-slate-950 shadow-lg shadow-cyan-500/20 transition hover:brightness-110 sm:text-sm">Request NDA</a>
-    </nav>
-  </header>
+  <script src="components/navbar.js"></script>
+  <mt-nav></mt-nav>
 
   <main>
-    <section class="hero-grid relative overflow-hidden border-b border-slate-800 pt-20 pb-24 sm:pt-28 sm:pb-28">
+    <section id="overview" class="hero-grid relative overflow-hidden border-b border-slate-800 pt-32 pb-24 sm:pt-36 sm:pb-28">
       <div class="mx-auto max-w-7xl px-6">
-        <div class="max-w-4xl">
-          <p class="mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-500/35 bg-emerald-500/10 px-4 py-2 text-xs font-medium uppercase tracking-wider text-emerald-300">
-            <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
-            Independent R&D Lab · Michigan, USA
+        <div class="max-w-5xl">
+          <p class="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-500/35 bg-cyan-500/10 px-4 py-2 text-xs font-medium uppercase tracking-wider text-cyan-300">
+            Private systems · Filed IP backbone · NDA-gated review
           </p>
-          <h1 class="text-4xl font-black leading-tight sm:text-5xl lg:text-6xl">
-            Applied physics and AI systems
-            <span class="bg-gradient-to-r from-cyan-300 via-blue-400 to-violet-400 bg-clip-text text-transparent">built for real-world stability</span>
+          <h1 class="text-4xl font-black leading-tight sm:text-5xl lg:text-7xl">
+            MT Tech Industries builds private product systems on top of a filed mathematical IP backbone.
           </h1>
-          <p class="mt-6 max-w-3xl text-lg leading-relaxed text-brand-muted sm:text-xl">
-            We develop patent-pending frameworks that stress-test instability before deployment, validate through digital twins, and translate advanced mathematics into practical engineering outcomes.
+          <p class="mt-6 max-w-4xl text-lg leading-relaxed text-brand-muted sm:text-xl">
+            MT Tech Industries LLC maintains a private portfolio of live or near-live systems available for controlled demonstration, pilot deployment, licensing discussion, or private technical review. Public materials describe the commercial surface and review pathway. Source code, implementation details, claim maps, sensitive validation records, and unfiled R&amp;D mechanics remain private or NDA-gated.
           </p>
           <div class="mt-9 flex flex-wrap gap-4">
-            <a href="#projects" class="rounded-lg bg-cyan-500 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-400">Explore active projects</a>
-            <a href="https://github.com/mttechindustries" class="rounded-lg border border-slate-700 px-6 py-3 text-sm font-semibold text-brand-text transition hover:border-cyan-400/60">Public repositories</a>
+            <a href="licensing.html" class="rounded-lg bg-cyan-500 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-400">Licensing pathways</a>
+            <a href="investors.html" class="rounded-lg border border-slate-700 px-6 py-3 text-sm font-semibold text-brand-text transition hover:border-amber-400/60">Investor overview</a>
+            <a href="nda_form.html" class="rounded-lg border border-slate-700 px-6 py-3 text-sm font-semibold text-brand-text transition hover:border-emerald-400/60">Request NDA packet</a>
           </div>
-          <div class="mt-10 grid max-w-xl grid-cols-2 gap-4 text-sm text-brand-muted">
-            <div class="rounded-xl border border-slate-800 bg-base-900/70 p-4"><p class="text-xl font-bold text-cyan-300">5</p><p>Filed patent applications</p></div>
-            <div class="rounded-xl border border-slate-800 bg-base-900/70 p-4"><p class="text-xl font-bold text-violet-300">11</p><p>Public project pages</p></div>
+          <div class="mt-10 grid max-w-4xl grid-cols-2 gap-4 text-sm text-brand-muted md:grid-cols-4">
+            <div class="rounded-xl border border-slate-800 bg-base-900/70 p-4"><p class="text-2xl font-bold text-cyan-300">8</p><p>Private systems</p></div>
+            <div class="rounded-xl border border-slate-800 bg-base-900/70 p-4"><p class="text-2xl font-bold text-violet-300">5</p><p>Filed IP lanes</p></div>
+            <div class="rounded-xl border border-slate-800 bg-base-900/70 p-4"><p class="text-2xl font-bold text-emerald-300">1</p><p>Near-product filed lead</p></div>
+            <div class="rounded-xl border border-slate-800 bg-base-900/70 p-4"><p class="text-2xl font-bold text-amber-300">NDA</p><p>Controlled review</p></div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="overview" class="border-b border-slate-800 bg-base-900 py-20">
-      <div class="mx-auto max-w-7xl px-6">
-        <div class="mb-10 max-w-3xl">
-          <h2 class="text-3xl font-bold sm:text-4xl">A clearer public narrative</h2>
-          <p class="mt-4 text-brand-muted">This homepage is intentionally written for people first: researchers, evaluators, and serious partners. Public pages explain what each system does, while implementation-sensitive details remain in controlled channels.</p>
-        </div>
-        <div class="grid gap-6 md:grid-cols-3">
-          <article class="rounded-2xl border border-slate-800 bg-base-800 p-6 shadow-glow">
-            <h3 class="mb-2 text-lg font-semibold">Pre-physical optimization</h3>
-            <p class="text-sm leading-7 text-brand-muted">We allow instability to emerge in non-physical modeling environments, then recover to viable states before any real-world transition.</p>
-          </article>
-          <article class="rounded-2xl border border-slate-800 bg-base-800 p-6 shadow-glow">
-            <h3 class="mb-2 text-lg font-semibold">Cross-domain stability verification</h3>
-            <p class="text-sm leading-7 text-brand-muted">We evaluate adversarial and physical disturbances under a unified stability lens, helping bridge AI security with control-system reliability.</p>
-          </article>
-          <article class="rounded-2xl border border-slate-800 bg-base-800 p-6 shadow-glow">
-            <h3 class="mb-2 text-lg font-semibold">Research-to-implementation pathway</h3>
-            <p class="text-sm leading-7 text-brand-muted">Our process moves from theory and simulation to constrained deployment with measurable checks, documentation, and governance.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="patents" class="py-20">
+    <section id="projects" class="border-b border-slate-800 bg-base-900 py-20">
       <div class="mx-auto max-w-7xl px-6">
         <div class="mb-10 max-w-4xl">
-          <h2 class="text-3xl font-bold sm:text-4xl">Five filed patent applications — foundational frameworks</h2>
-          <p class="mt-4 text-brand-muted">We communicate these tracks at an architecture level in public. Detailed implementations, benchmarks, and reduction-to-practice materials are released selectively and responsibly.</p>
-          <p class="mt-3 text-sm text-brand-muted">U.S. Provisional Applications 63/999,270 (March 7, 2026), 64/029,363 & 64/029,394 (April 4, 2026), 64/030,975 (April 6, 2026). U.S. Non-Provisional Application 19/560,051 (March 8, 2026). All verifiable at <a href="https://patentcenter.uspto.gov" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-2">USPTO Patent Center</a>.</p>
+          <p class="mb-3 text-sm font-semibold uppercase tracking-wider text-cyan-300">Live / License-Ready Private Systems</p>
+          <h2 class="text-3xl font-bold sm:text-4xl">Private systems are the commercial front door.</h2>
+          <p class="mt-4 text-brand-muted">
+            These systems are not public source releases. They are private product, tooling, or implementation lanes that can be discussed through controlled demonstration, pilot framing, licensing review, or NDA-gated technical evaluation.
+          </p>
         </div>
-        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-          <article class="rounded-2xl border border-slate-800 bg-base-900 p-7">
-            <p class="mb-2 text-xs font-semibold uppercase tracking-wider text-cyan-300">Track 01</p>
-            <h3 class="text-xl font-semibold">Pre-Physical Expansion & Gaussian Well Stabilization</h3>
-            <p class="mt-3 text-sm leading-7 text-brand-muted">A framework for exploring divergent states in non-physical realms, guiding recovery toward viable optima, and gating transition to physical realization only after passing validation.</p>
-          </article>
-          <article class="rounded-2xl border border-slate-800 bg-base-900 p-7">
-            <p class="mb-2 text-xs font-semibold uppercase tracking-wider text-violet-300">Track 02</p>
-            <h3 class="text-xl font-semibold">Polyvalent Stability Theory (PST)</h3>
-            <p class="mt-3 text-sm leading-7 text-brand-muted">A unified approach to adversarial and control-system stability analysis using shared criteria, cross-domain reasoning, and hybrid verification methods.</p>
-          </article>
-          <article class="rounded-2xl border border-slate-800 bg-base-900 p-7">
-            <p class="mb-2 text-xs font-semibold uppercase tracking-wider text-green-300">Track 03</p>
-            <h3 class="text-xl font-semibold">WoofWizeX-FRS Behavioral Intelligence</h3>
-            <p class="mt-3 text-sm leading-7 text-brand-muted">Wireless behavioral monitoring for companion animals using ambient field sensing, authenticated activation, and privacy-preserving computation architecture.</p>
-          </article>
-          <article class="rounded-2xl border border-slate-800 bg-base-900 p-7">
-            <p class="mb-2 text-xs font-semibold uppercase tracking-wider text-orange-300">Track 04</p>
-            <h3 class="text-xl font-semibold">Unified AI Compliance Architecture</h3>
-            <p class="mt-3 text-sm leading-7 text-brand-muted">Multi-domain AI compliance through penalty-augmented objectives, cognitive integrity monitoring, and imaginary realm auto-repair gating mechanisms.</p>
-          </article>
-          <article class="rounded-2xl border border-slate-800 bg-base-900 p-7">
-            <p class="mb-2 text-xs font-semibold uppercase tracking-wider text-pink-300">Track 05</p>
-            <h3 class="text-xl font-semibold">Polyvalent Excitation Framework (PEF)</h3>
-            <p class="mt-3 text-sm leading-7 text-brand-muted">Manifold-valued configuration analysis, spark-like radiant propagation, invariant kernel preservation across domain projections, and survivability-gated embodiment in multi-domain computational systems.</p>
-          </article>
+
+        <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          <article class="rounded-2xl border border-cyan-500/25 bg-base-800 p-6 shadow-glow"><h3 class="text-xl font-bold">Market Sentinel</h3><p class="mt-3 text-sm leading-7 text-brand-muted">Private market-intelligence and anomaly/signal system for controlled technical review.</p></article>
+          <article class="rounded-2xl border border-violet-500/25 bg-base-800 p-6 shadow-glow"><h3 class="text-xl font-bold">Omnimathematics Cognitive Dynamics</h3><p class="mt-3 text-sm leading-7 text-brand-muted">Cognitive-security tooling for adversarial probing, triadic stability review, and live analysis workflows.</p></article>
+          <article class="rounded-2xl border border-emerald-500/25 bg-base-800 p-6 shadow-glow"><h3 class="text-xl font-bold">SeerSquared</h3><p class="mt-3 text-sm leading-7 text-brand-muted">Local-first signal-integrity and sensing-perturbation review system.</p></article>
+          <article class="rounded-2xl border border-blue-500/25 bg-base-800 p-6 shadow-glow"><h3 class="text-xl font-bold">Mobile Presence Mode</h3><p class="mt-3 text-sm leading-7 text-brand-muted">Real-time multi-sensor presence-detection utilities for private review and controlled use cases.</p></article>
+          <article class="rounded-2xl border border-pink-500/25 bg-base-800 p-6 shadow-glow"><h3 class="text-xl font-bold">Fieldstate</h3><p class="mt-3 text-sm leading-7 text-brand-muted">Reference implementation for projection fields, survivability gates, validation ledgers, and reviewable interfaces.</p></article>
+          <article class="rounded-2xl border border-amber-500/25 bg-base-800 p-6 shadow-glow"><h3 class="text-xl font-bold">OPC Private</h3><p class="mt-3 text-sm leading-7 text-brand-muted">Private AI-compliance implementation using penalty-augmented objectives and integrity-control architecture.</p></article>
+          <article class="rounded-2xl border border-slate-600 bg-base-800 p-6 shadow-glow"><h3 class="text-xl font-bold">SIES</h3><p class="mt-3 text-sm leading-7 text-brand-muted">PST-aligned simulation and detection framework with private technical review path.</p></article>
+          <article class="rounded-2xl border border-cyan-500/25 bg-base-800 p-6 shadow-glow"><h3 class="text-xl font-bold">Sovereign Agent Runtime</h3><p class="mt-3 text-sm leading-7 text-brand-muted">Private governed-agent runtime for bounded autonomy, receipts, continuity checks, and audit-ready execution.</p><a href="projects/sovereign-agent-runtime.html" class="mt-4 inline-block text-sm font-semibold text-cyan-300 hover:text-cyan-200">View public-safe page →</a></article>
         </div>
       </div>
     </section>
 
-    <section id="projects" class="border-y border-slate-800 bg-base-900 py-20">
+    <section id="patents" class="border-b border-slate-800 py-20">
       <div class="mx-auto max-w-7xl px-6">
-        <div class="mb-8 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-          <div>
-            <h2 class="text-3xl font-bold sm:text-4xl">Research project index</h2>
-            <p class="mt-2 text-brand-muted">One place to access every active public page.</p>
-          </div>
-          <a href="nda_form.html" class="text-sm font-semibold text-cyan-300 transition hover:text-cyan-200">Request full technical packet under NDA →</a>
+        <div class="mb-10 max-w-4xl">
+          <p class="mb-3 text-sm font-semibold uppercase tracking-wider text-violet-300">Filed / Patent-Pending IP Backbone</p>
+          <h2 class="text-3xl font-bold sm:text-4xl">Filed language is limited to verified filed lanes.</h2>
+          <p class="mt-4 text-brand-muted">
+            Patent-pending language applies only to the five filed lanes below unless another filing is verified. Product systems and unfiled research are described separately.
+          </p>
         </div>
-        <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-          <a href="projects/pre-physical.html" class="group rounded-xl border border-slate-800 bg-base-800 p-5 transition hover:border-cyan-400/60"><h3 class="font-semibold group-hover:text-cyan-300">Pre-Physical Expansion Framework</h3><p class="mt-2 text-sm text-brand-muted">Optimization before physical realization in controlled expansion realms.</p></a>
-          <a href="projects/PST.html" class="group rounded-xl border border-slate-800 bg-base-800 p-5 transition hover:border-cyan-400/60"><h3 class="font-semibold group-hover:text-cyan-300">Polyvalent Stability Theory (PST)</h3><p class="mt-2 text-sm text-brand-muted">Unified cross-domain adversarial and system stability verification.</p></a>
-          <a href="projects/paid-fr.html" class="group rounded-xl border border-slate-800 bg-base-800 p-5 transition hover:border-cyan-400/60"><h3 class="font-semibold group-hover:text-cyan-300">PAID-FR 4.0</h3><p class="mt-2 text-sm text-brand-muted">Plasma-focused digital twin and stability optimization workstream.</p></a>
-          <a href="projects/omnimath.html" class="group rounded-xl border border-slate-800 bg-base-800 p-5 transition hover:border-cyan-400/60"><h3 class="font-semibold group-hover:text-cyan-300">Omnimathematics</h3><p class="mt-2 text-sm text-brand-muted">Core mathematical infrastructure and optimization mechanics.</p></a>
-          <a href="projects/ours.html" class="group rounded-xl border border-slate-800 bg-base-800 p-5 transition hover:border-amber-400/60"><h3 class="font-semibold group-hover:text-amber-300">OURS — AI Compliance Architecture</h3><p class="mt-2 text-sm text-brand-muted">Mathematical compliance enforcement that makes non-compliant AI behavior structurally expensive.</p></a>
-          <a href="projects/woofwizex-frs.html" class="group rounded-xl border border-slate-800 bg-base-800 p-5 transition hover:border-emerald-400/60"><h3 class="font-semibold group-hover:text-emerald-300">WoofWizeX-FRS</h3><p class="mt-2 text-sm text-brand-muted">Non-invasive animal behavioral intelligence through ambient field sensing.</p></a>
-          <a href="projects/pef.html" class="group rounded-xl border border-slate-800 bg-base-800 p-5 transition hover:border-pink-400/60"><h3 class="font-semibold group-hover:text-pink-300">Polyvalent Excitation Framework (PEF)</h3><p class="mt-2 text-sm text-brand-muted">Manifold-valued configuration analysis and survivability-gated embodiment.</p></a>
-          <a href="projects/bolobeam.html" class="group rounded-xl border border-slate-800 bg-base-800 p-5 transition hover:border-cyan-400/60"><h3 class="font-semibold group-hover:text-cyan-300">BoloBeam Mk. II</h3><p class="mt-2 text-sm text-brand-muted">Precision low-frequency acoustic systems and control methods.</p></a>
-          <a href="projects/omnix.html" class="group rounded-xl border border-slate-800 bg-base-800 p-5 transition hover:border-cyan-400/60"><h3 class="font-semibold group-hover:text-cyan-300">OmniX</h3><p class="mt-2 text-sm text-brand-muted">AI security and cognitive integrity architecture research.</p></a>
-          <a href="projects/dnea.html" class="group rounded-xl border border-slate-800 bg-base-800 p-5 transition hover:border-cyan-400/60"><h3 class="font-semibold group-hover:text-cyan-300">DNEA</h3><p class="mt-2 text-sm text-brand-muted">Advanced systems analysis in constrained operational domains.</p></a>
-          <a href="projects/thefreq.html" class="group rounded-xl border border-slate-800 bg-base-800 p-5 transition hover:border-cyan-400/60"><h3 class="font-semibold group-hover:text-cyan-300">theFreq</h3><p class="mt-2 text-sm text-brand-muted">Frequency-domain tooling and practical control primitives.</p></a>
-          <a href="projects/platform.html" class="group rounded-xl border border-slate-800 bg-base-800 p-5 transition hover:border-cyan-400/60"><h3 class="font-semibold group-hover:text-cyan-300">Technology Platform</h3><p class="mt-2 text-sm text-brand-muted">Integration layer connecting research, simulation, and deployment.</p></a>
-          <a href="projects/aigent.html" class="group rounded-xl border border-slate-800 bg-base-800 p-5 transition hover:border-cyan-400/60"><h3 class="font-semibold group-hover:text-cyan-300">aiGENT Cognitive Security</h3><p class="mt-2 text-sm text-brand-muted">Agentic AI workflows with stability and security boundaries.</p></a>
+        <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-5">
+          <article class="rounded-2xl border border-violet-500/25 bg-base-900 p-6"><p class="text-xs uppercase tracking-wider text-violet-300">Non-provisional 19/560,051</p><h3 class="mt-2 text-lg font-bold">PST / Omnimathematics</h3><p class="mt-3 text-sm text-brand-muted">Cross-domain adversarial stability and mathematical infrastructure.</p></article>
+          <article class="rounded-2xl border border-cyan-500/25 bg-base-900 p-6"><p class="text-xs uppercase tracking-wider text-cyan-300">Provisional 63/999,270</p><h3 class="mt-2 text-lg font-bold">Pre-Physical / Gaussian Wells</h3><p class="mt-3 text-sm text-brand-muted">Controlled non-physical expansion and stabilization framework.</p></article>
+          <article class="rounded-2xl border border-emerald-500/25 bg-base-900 p-6"><p class="text-xs uppercase tracking-wider text-emerald-300">Provisional 64/029,363</p><h3 class="mt-2 text-lg font-bold">WoofWizeX-FRS</h3><p class="mt-3 text-sm text-brand-muted">Near-product patent-filed companion-animal behavioral intelligence.</p></article>
+          <article class="rounded-2xl border border-amber-500/25 bg-base-900 p-6"><p class="text-xs uppercase tracking-wider text-amber-300">Provisional 64/029,394</p><h3 class="mt-2 text-lg font-bold">OURS / OPC</h3><p class="mt-3 text-sm text-brand-muted">Penalty-augmented AI compliance and control architecture.</p></article>
+          <article class="rounded-2xl border border-pink-500/25 bg-base-900 p-6"><p class="text-xs uppercase tracking-wider text-pink-300">Provisional 64/030,975</p><h3 class="mt-2 text-lg font-bold">PEF</h3><p class="mt-3 text-sm text-brand-muted">Manifold-valued configuration analysis and survivability-gated embodiment.</p></article>
         </div>
       </div>
     </section>
 
-    <section id="fit" class="py-20">
-      <div class="mx-auto grid max-w-7xl gap-8 px-6 md:grid-cols-2">
-        <article class="rounded-2xl border border-slate-800 bg-base-900 p-7">
-          <h2 class="text-2xl font-bold">Who we work with</h2>
-          <ul class="mt-4 space-y-3 text-sm leading-7 text-brand-muted">
-            <li>• Research groups evaluating novel optimization and stability models.</li>
-            <li>• Academic collaborators interested in reproducible multiphysics workflows.</li>
-            <li>• Strategic partners seeking rigorous technical diligence before integration.</li>
-          </ul>
-        </article>
-        <article class="rounded-2xl border border-slate-800 bg-base-900 p-7">
-          <h2 class="text-2xl font-bold">Disclosure and access model</h2>
-          <p class="mt-4 text-sm leading-7 text-brand-muted">Public content is architecture-level by design. Implementation-sensitive details, benchmarks, and package-level documentation are shared under NDA for qualified collaboration and review.</p>
-          <a href="nda_form.html" class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-cyan-300 hover:text-cyan-200">Start NDA access workflow <i data-feather="arrow-right" class="h-4 w-4"></i></a>
-        </article>
-      </div>
-    </section>
-
-    <section id="contact" class="border-t border-slate-800 bg-base-900 py-20">
+    <section class="border-b border-slate-800 bg-base-900 py-20">
       <div class="mx-auto max-w-7xl px-6">
-        <div class="mb-10 max-w-2xl">
-          <h2 class="text-3xl font-bold sm:text-4xl">Connect</h2>
-          <p class="mt-4 text-brand-muted">Research collaboration, technical evaluation, investment, or licensing inquiries. All messages go directly to Marc Tuinier.</p>
+        <div class="grid gap-8 lg:grid-cols-3">
+          <article class="rounded-3xl border border-emerald-500/30 bg-base-800 p-8 shadow-glow">
+            <p class="text-sm font-semibold uppercase tracking-wider text-emerald-300">Near-Product Patent-Filed System</p>
+            <h2 class="mt-3 text-3xl font-bold">WoofWizeX-FRS</h2>
+            <p class="mt-4 text-sm leading-7 text-brand-muted">The lead patent-filed commercialization lane. Suitable for controlled pilot, licensing, and technical-review conversations in vet tech, pet wellness, animal research, and adjacent analytics.</p>
+            <a href="projects/woofwizex-frs.html" class="mt-6 inline-block text-sm font-semibold text-emerald-300 hover:text-emerald-200">View public page →</a>
+          </article>
+          <article class="rounded-3xl border border-slate-700 bg-base-800 p-8 shadow-glow">
+            <p class="text-sm font-semibold uppercase tracking-wider text-slate-300">Controlled Unfiled Advanced R&amp;D</p>
+            <h2 class="mt-3 text-3xl font-bold">PAFFT · PAID-FR · DNEA</h2>
+            <p class="mt-4 text-sm leading-7 text-brand-muted">Advanced research lanes that should not be described as patent-filed or patent-protected unless filing support is verified. Public posture: controlled unfiled advanced R&amp;D with NDA-gated mechanics.</p>
+          </article>
+          <article class="rounded-3xl border border-red-500/25 bg-base-800 p-8 shadow-glow">
+            <p class="text-sm font-semibold uppercase tracking-wider text-red-300">Sensitive / Do Not Lead Publicly</p>
+            <h2 class="mt-3 text-3xl font-bold">BoloBeam</h2>
+            <p class="mt-4 text-sm leading-7 text-brand-muted">Not a public spearhead. Keep references minimal and route any serious discussion through controlled review.</p>
+          </article>
         </div>
-        <div class="grid gap-10 md:grid-cols-2">
-          <!-- Contact Form -->
-          <form
-            action="https://formspree.io/f/xkoqblvz"
-            method="POST"
-            class="space-y-5"
-          >
-            <div>
-              <label for="name" class="mb-1 block text-sm font-medium text-brand-text">Name</label>
-              <input
-                id="name"
-                type="text"
-                name="name"
-                required
-                placeholder="Your name or organization"
-                class="w-full rounded-lg border border-slate-700 bg-base-800 px-4 py-3 text-sm text-brand-text placeholder-brand-muted focus:border-cyan-500 focus:outline-none focus:ring-1 focus:ring-cyan-500"
-              />
-            </div>
-            <div>
-              <label for="email" class="mb-1 block text-sm font-medium text-brand-text">Email</label>
-              <input
-                id="email"
-                type="email"
-                name="email"
-                required
-                placeholder="your@email.com"
-                class="w-full rounded-lg border border-slate-700 bg-base-800 px-4 py-3 text-sm text-brand-text placeholder-brand-muted focus:border-cyan-500 focus:outline-none focus:ring-1 focus:ring-cyan-500"
-              />
-            </div>
-            <div>
-              <label for="subject" class="mb-1 block text-sm font-medium text-brand-text">Reason for contact</label>
-              <select
-                id="subject"
-                name="subject"
-                class="w-full rounded-lg border border-slate-700 bg-base-800 px-4 py-3 text-sm text-brand-text focus:border-cyan-500 focus:outline-none focus:ring-1 focus:ring-cyan-500"
-              >
-                <option value="">Select one</option>
-                <option value="Investment / Partnership">Investment / Partnership</option>
-                <option value="Research Collaboration">Research Collaboration</option>
-                <option value="Licensing Inquiry">Licensing Inquiry</option>
-                <option value="NDA Request">NDA Request</option>
-                <option value="General Inquiry">General Inquiry</option>
-              </select>
-            </div>
-            <div>
-              <label for="message" class="mb-1 block text-sm font-medium text-brand-text">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                rows="5"
-                required
-                placeholder="Describe what you're working on or what you're looking for."
-                class="w-full rounded-lg border border-slate-700 bg-base-800 px-4 py-3 text-sm text-brand-text placeholder-brand-muted focus:border-cyan-500 focus:outline-none focus:ring-1 focus:ring-cyan-500"
-              ></textarea>
-            </div>
-            <button
-              type="submit"
-              class="w-full rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500 px-6 py-3 text-sm font-semibold text-slate-950 shadow-lg shadow-cyan-500/20 transition hover:brightness-110"
-            >
-              Send Message
-            </button>
-          </form>
+      </div>
+    </section>
 
-          <!-- Right column: contact info + links -->
-          <div class="space-y-6">
-            <div class="rounded-2xl border border-slate-800 bg-base-800 p-6">
-              <h3 class="text-base font-semibold">Direct contact</h3>
-              <ul class="mt-4 space-y-3 text-sm text-brand-muted">
-                <li><strong class="text-brand-text">Founder:</strong> Marc@mttechindustries.com</li>
-                <li><strong class="text-brand-text">General:</strong> info@mttechindustries.com</li>
-              </ul>
-            </div>
-            <div class="rounded-2xl border border-slate-800 bg-base-800 p-6">
-              <h3 class="text-base font-semibold">Quick links</h3>
-              <div class="mt-4 grid gap-3 text-sm">
-                <a class="rounded-lg border border-slate-700 px-4 py-3 transition hover:border-cyan-400/60" href="nda_form.html">Request NDA access</a>
-                <a class="rounded-lg border border-slate-700 px-4 py-3 transition hover:border-cyan-400/60" href="privacy-policy.html">Privacy policy</a>
-                <a class="rounded-lg border border-slate-700 px-4 py-3 transition hover:border-cyan-400/60" href="terms-of-service.html">Terms of service</a>
-              </div>
-            </div>
-          </div>
+    <section class="bg-base-950 py-20">
+      <div class="mx-auto max-w-4xl px-6 text-center">
+        <h2 class="text-3xl font-bold sm:text-4xl">Review pathway</h2>
+        <p class="mx-auto mt-4 max-w-2xl text-brand-muted">Public pages explain commercial surface, not source authority. Qualified parties can request controlled review for demonstrations, licensing, diligence, pilot scoping, or technical evaluation.</p>
+        <div class="mt-8 flex flex-wrap justify-center gap-4">
+          <a href="nda_form.html" class="rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:brightness-110">Request NDA</a>
+          <a href="mailto:research@mttechindustries.com?subject=MT%20Tech%20Controlled%20Review" class="rounded-lg border border-slate-700 px-6 py-3 text-sm font-semibold text-brand-text transition hover:border-cyan-400/60">Start discussion</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="border-t border-slate-800 py-8 text-center text-sm text-brand-muted">
-    <p>© 2026 MT Tech Industries LLC. All rights reserved.</p>
-  </footer>
-
+  <script src="components/footer.js"></script>
+  <mt-footer></mt-footer>
   <script>feather.replace();</script>
 </body>
 </html>
