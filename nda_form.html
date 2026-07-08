@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Request Protected Review | MT Tech Industries LLC</title>
-  <meta name="description" content="Request a protected technical review of MT Tech Industries LLC intellectual property under mutual NDA." />
+  <title>Request Controlled Review | MT Tech Industries LLC</title>
+  <meta name="description" content="Request a controlled technical review of MT Tech Industries LLC private systems and filed IP under mutual NDA." />
   <meta name="robots" content="noindex,follow" />
   <link rel="stylesheet" href="style.css" />
   <script src="https://cdn.tailwindcss.com"></script>
@@ -21,28 +21,10 @@
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
     body { background: #020617; }
     .glass-panel { background: rgba(15,23,42,.72); backdrop-filter: blur(14px); border: 1px solid rgba(255,255,255,.08); }
-    .hero-gradient {
-      background:
-        radial-gradient(circle at 20% 20%, rgba(16,185,129,.12), transparent 30%),
-        radial-gradient(circle at 80% 15%, rgba(14,165,233,.10), transparent 26%),
-        linear-gradient(135deg, #020617 0%, #0f172a 100%);
-    }
+    .hero-gradient { background: radial-gradient(circle at 20% 20%, rgba(16,185,129,.12), transparent 30%), radial-gradient(circle at 80% 15%, rgba(14,165,233,.10), transparent 26%), linear-gradient(135deg, #020617 0%, #0f172a 100%); }
     .grid-pattern { background-image: radial-gradient(circle at 1px 1px, rgba(148,163,184,.12) 1px, transparent 0); background-size: 34px 34px; }
-    input, textarea, select {
-      background: rgba(15,23,42,.8);
-      border: 1px solid rgba(255,255,255,.1);
-      color: #f1f5f9;
-      border-radius: 0.75rem;
-      padding: 0.75rem 1rem;
-      width: 100%;
-      font-family: Inter, system-ui, sans-serif;
-      font-size: 0.9rem;
-      transition: border-color 0.2s;
-    }
-    input:focus, textarea:focus, select:focus {
-      outline: none;
-      border-color: rgba(16,185,129,.5);
-    }
+    input, textarea, select { background: rgba(15,23,42,.8); border: 1px solid rgba(255,255,255,.1); color: #f1f5f9; border-radius: 0.75rem; padding: 0.75rem 1rem; width: 100%; font-family: Inter, system-ui, sans-serif; font-size: 0.9rem; transition: border-color 0.2s; }
+    input:focus, textarea:focus, select:focus { outline: none; border-color: rgba(16,185,129,.5); }
     select option { background: #0f172a; }
     label { display: block; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: #94a3b8; margin-bottom: 0.4rem; }
   </style>
@@ -54,16 +36,13 @@
   <section class="hero-gradient relative overflow-hidden pt-28 pb-24">
     <div class="absolute inset-0 grid-pattern opacity-20"></div>
     <div class="relative z-10 container mx-auto px-6 max-w-3xl">
-
       <div class="text-center mb-12">
         <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-panel mb-6">
           <i data-feather="file-text" class="w-4 h-4 text-emerald-400"></i>
           <span class="text-xs font-semibold uppercase tracking-widest text-slate-300">MT Tech Industries LLC</span>
         </div>
-        <h1 class="text-4xl md:text-5xl font-black mb-4">Request Protected Review</h1>
-        <p class="text-lg text-slate-400 leading-relaxed max-w-xl mx-auto">
-          Protected technical reviews are available to qualified investors, partners, and research collaborators under mutual NDA. Complete the form below to initiate the process.
-        </p>
+        <h1 class="text-4xl md:text-5xl font-black mb-4">Request Controlled Review</h1>
+        <p class="text-lg text-slate-400 leading-relaxed max-w-xl mx-auto">Controlled technical reviews are available to qualified investors, partners, and research collaborators under mutual NDA.</p>
       </div>
 
       <div class="glass-panel rounded-3xl p-8 md:p-10">
@@ -71,25 +50,13 @@
           <input type="hidden" name="_subject" value="NDA Review Request — MT Tech Industries LLC" />
 
           <div class="grid md:grid-cols-2 gap-5 mb-5">
-            <div>
-              <label for="name">Full Name *</label>
-              <input type="text" id="name" name="name" required placeholder="Jane Smith" />
-            </div>
-            <div>
-              <label for="email">Email Address *</label>
-              <input type="email" id="email" name="email" required placeholder="jane@company.com" />
-            </div>
+            <div><label for="name">Full Name *</label><input type="text" id="name" name="name" required placeholder="Jane Smith" /></div>
+            <div><label for="email">Email Address *</label><input type="email" id="email" name="email" required placeholder="jane@company.com" /></div>
           </div>
 
           <div class="grid md:grid-cols-2 gap-5 mb-5">
-            <div>
-              <label for="organization">Organization / Company</label>
-              <input type="text" id="organization" name="organization" placeholder="Company Inc." />
-            </div>
-            <div>
-              <label for="role">Your Role / Title</label>
-              <input type="text" id="role" name="role" placeholder="CTO, Investor, Researcher..." />
-            </div>
+            <div><label for="organization">Organization / Company</label><input type="text" id="organization" name="organization" placeholder="Company Inc." /></div>
+            <div><label for="role">Your Role / Title</label><input type="text" id="role" name="role" placeholder="CTO, Investor, Researcher..." /></div>
           </div>
 
           <div class="mb-5">
@@ -99,6 +66,7 @@
               <option value="Investment">Investment / Funding</option>
               <option value="Partnership">Strategic Partnership</option>
               <option value="Licensing">Licensing</option>
+              <option value="Pilot Review">Pilot Review</option>
               <option value="Research Collaboration">Research Collaboration</option>
               <option value="Acquisition">Acquisition Discussion</option>
               <option value="Other">Other</option>
@@ -106,58 +74,32 @@
           </div>
 
           <div class="mb-5">
-            <label>Which Technology Areas Are You Interested In? *</label>
+            <label>Which Areas Are You Interested In? *</label>
             <div class="grid grid-cols-2 gap-2 mt-2">
-              <label class="flex items-center gap-2 cursor-pointer normal-case tracking-normal text-slate-300 text-sm font-normal">
-                <input type="checkbox" name="interest_pst" value="PST Framework" class="w-auto" style="width:auto;padding:0;border-radius:4px;" /> PST Framework (Patent Pending)
-              </label>
-              <label class="flex items-center gap-2 cursor-pointer normal-case tracking-normal text-slate-300 text-sm font-normal">
-                <input type="checkbox" name="interest_prephys" value="Pre-Physical Expansion" class="w-auto" style="width:auto;padding:0;border-radius:4px;" /> Pre-Physical Expansion (Provisional)
-              </label>
-              <label class="flex items-center gap-2 cursor-pointer normal-case tracking-normal text-slate-300 text-sm font-normal">
-                <input type="checkbox" name="interest_omnix" value="OmniX" class="w-auto" style="width:auto;padding:0;border-radius:4px;" /> OmniX Security Platform
-              </label>
-              <label class="flex items-center gap-2 cursor-pointer normal-case tracking-normal text-slate-300 text-sm font-normal">
-                <input type="checkbox" name="interest_woofwize" value="WoofWizeX-FRS" class="w-auto" style="width:auto;padding:0;border-radius:4px;" /> WoofWizeX-FRS
-              </label>
-              <label class="flex items-center gap-2 cursor-pointer normal-case tracking-normal text-slate-300 text-sm font-normal">
-                <input type="checkbox" name="interest_dnea" value="DNEA" class="w-auto" style="width:auto;padding:0;border-radius:4px;" /> DNEA / EasyZz
-              </label>
-              <label class="flex items-center gap-2 cursor-pointer normal-case tracking-normal text-slate-300 text-sm font-normal">
-                <input type="checkbox" name="interest_aigent" value="aiGENT" class="w-auto" style="width:auto;padding:0;border-radius:4px;" /> aiGENT
-              </label>
-              <label class="flex items-center gap-2 cursor-pointer normal-case tracking-normal text-slate-300 text-sm font-normal">
-                <input type="checkbox" name="interest_paidfr" value="PAID-FR" class="w-auto" style="width:auto;padding:0;border-radius:4px;" /> PAID-FR
-              </label>
-              <label class="flex items-center gap-2 cursor-pointer normal-case tracking-normal text-slate-300 text-sm font-normal">
-                <input type="checkbox" name="interest_bolobeam" value="BoloBeam" class="w-auto" style="width:auto;padding:0;border-radius:4px;" /> BoloBeam Mk. II
-              </label>
+              <label class="flex items-center gap-2 cursor-pointer normal-case tracking-normal text-slate-300 text-sm font-normal"><input type="checkbox" name="interest_private_systems" value="Private Product Systems" class="w-auto" style="width:auto;padding:0;border-radius:4px;" /> Private Product Systems</label>
+              <label class="flex items-center gap-2 cursor-pointer normal-case tracking-normal text-slate-300 text-sm font-normal"><input type="checkbox" name="interest_market_sentinel" value="Market Sentinel" class="w-auto" style="width:auto;padding:0;border-radius:4px;" /> Market Sentinel</label>
+              <label class="flex items-center gap-2 cursor-pointer normal-case tracking-normal text-slate-300 text-sm font-normal"><input type="checkbox" name="interest_cognitive_dynamics" value="Omnimathematics Cognitive Dynamics" class="w-auto" style="width:auto;padding:0;border-radius:4px;" /> Cognitive Dynamics</label>
+              <label class="flex items-center gap-2 cursor-pointer normal-case tracking-normal text-slate-300 text-sm font-normal"><input type="checkbox" name="interest_seer" value="SeerSquared" class="w-auto" style="width:auto;padding:0;border-radius:4px;" /> SeerSquared</label>
+              <label class="flex items-center gap-2 cursor-pointer normal-case tracking-normal text-slate-300 text-sm font-normal"><input type="checkbox" name="interest_mobile_presence" value="Mobile Presence Mode" class="w-auto" style="width:auto;padding:0;border-radius:4px;" /> Mobile Presence Mode</label>
+              <label class="flex items-center gap-2 cursor-pointer normal-case tracking-normal text-slate-300 text-sm font-normal"><input type="checkbox" name="interest_fieldstate" value="Fieldstate" class="w-auto" style="width:auto;padding:0;border-radius:4px;" /> Fieldstate</label>
+              <label class="flex items-center gap-2 cursor-pointer normal-case tracking-normal text-slate-300 text-sm font-normal"><input type="checkbox" name="interest_penalty_compliance" value="Penalty Compliance Private" class="w-auto" style="width:auto;padding:0;border-radius:4px;" /> Penalty Compliance Private</label>
+              <label class="flex items-center gap-2 cursor-pointer normal-case tracking-normal text-slate-300 text-sm font-normal"><input type="checkbox" name="interest_sies" value="SIES" class="w-auto" style="width:auto;padding:0;border-radius:4px;" /> SIES</label>
+              <label class="flex items-center gap-2 cursor-pointer normal-case tracking-normal text-slate-300 text-sm font-normal"><input type="checkbox" name="interest_runtime" value="Sovereign Agent Runtime" class="w-auto" style="width:auto;padding:0;border-radius:4px;" /> Sovereign Agent Runtime</label>
+              <label class="flex items-center gap-2 cursor-pointer normal-case tracking-normal text-slate-300 text-sm font-normal"><input type="checkbox" name="interest_filed_ip" value="Filed IP Backbone" class="w-auto" style="width:auto;padding:0;border-radius:4px;" /> Filed IP Backbone</label>
+              <label class="flex items-center gap-2 cursor-pointer normal-case tracking-normal text-slate-300 text-sm font-normal"><input type="checkbox" name="interest_woofwize" value="WoofWizeX-FRS" class="w-auto" style="width:auto;padding:0;border-radius:4px;" /> WoofWizeX-FRS</label>
             </div>
           </div>
 
-          <div class="mb-5">
-            <label for="message">Purpose of Review & Background *</label>
-            <textarea id="message" name="message" rows="5" required placeholder="Briefly describe your organization, your interest in MT Tech's work, and what you are looking to accomplish..."></textarea>
-          </div>
+          <div class="mb-5"><label for="message">Purpose of Review & Background *</label><textarea id="message" name="message" rows="5" required placeholder="Briefly describe your organization, your interest in MT Tech's work, and what you are looking to accomplish..."></textarea></div>
 
           <div class="mb-8">
-            <label class="flex items-start gap-3 cursor-pointer normal-case tracking-normal text-slate-400 text-sm font-normal leading-relaxed">
-              <input type="checkbox" name="nda_agreement" value="agreed" required class="w-auto mt-1 flex-shrink-0" style="width:auto;padding:0;border-radius:4px;" />
-              I understand that MT Tech Industries LLC will issue a mutual NDA prior to any technical disclosure. I agree to maintain confidentiality of any protected information shared and to use it solely for evaluating a potential business relationship.
-            </label>
+            <label class="flex items-start gap-3 cursor-pointer normal-case tracking-normal text-slate-400 text-sm font-normal leading-relaxed"><input type="checkbox" name="nda_agreement" value="agreed" required class="w-auto mt-1 flex-shrink-0" style="width:auto;padding:0;border-radius:4px;" /> I understand that MT Tech Industries LLC will issue a mutual NDA prior to any technical disclosure. I agree to maintain confidentiality of any protected information shared and to use it solely for evaluating a potential business relationship.</label>
           </div>
 
-          <button type="submit"
-            class="w-full py-5 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-black text-lg hover:scale-[1.02] transition-all">
-            Submit NDA Request
-          </button>
+          <button type="submit" class="w-full py-5 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-black text-lg hover:scale-[1.02] transition-all">Submit NDA Request</button>
         </form>
-
-        <p class="text-center text-slate-600 text-xs mt-6">
-          MT Tech Industries LLC · research@mttechindustries.com · Michigan, USA
-        </p>
+        <p class="text-center text-slate-600 text-xs mt-6">MT Tech Industries LLC · research@mttechindustries.com · Michigan, USA</p>
       </div>
-
     </div>
   </section>
 
