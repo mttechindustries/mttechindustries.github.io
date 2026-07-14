@@ -6,6 +6,14 @@ MT Tech Industries LLC maintains private systems available for controlled commer
 
 Public materials describe the commercial surface and review pathway. Detailed materials remain private or NDA-gated.
 
+## Public Website
+
+- Website: https://mttechindustries.github.io/
+- Sponsor the work: https://mttechindustries.github.io/sponsor.html
+- Contact: mt.tech.industries@gmail.com
+
+The GitHub Pages address is the active public address. The website does not depend on a paid custom domain.
+
 ## Public Taxonomy
 
 ### Private Systems
@@ -37,11 +45,10 @@ WoofWizeX-FRS is the lead public commercialization lane for controlled pilot, li
 - Implementation-sensitive materials require controlled review.
 - MT Tech Industries LLC retains ownership unless a written agreement says otherwise.
 
-## Contact
+## Contact and Support
 
-- General Inquiries: info@mttechindustries.com
-- Research / Licensing: research@mttechindustries.com
-- Investor Relations: investors@mttechindustries.com
-- Website: https://mttechindustries.com/
+- General, research, licensing, and investor inquiries: mt.tech.industries@gmail.com
+- Sponsorship: https://mttechindustries.github.io/sponsor.html
+- Controlled review: https://mttechindustries.github.io/nda_form.html
 
 © 2026 MT Tech Industries LLC. All Rights Reserved.
