@@ -48,6 +48,25 @@ class MtNav extends HTMLElement {
     document.getElementById('mt-mobile-toggle').addEventListener('click', () => {
       document.getElementById('mt-mobile-menu').classList.toggle('hidden');
     });
+
+    const repairLegacyContactLinks = () => {
+      document.querySelectorAll('a[href^="mailto:"]').forEach((link) => {
+        const href = link.getAttribute('href') || '';
+        if (!href.toLowerCase().includes('@mttechindustries.com')) return;
+        const queryIndex = href.indexOf('?');
+        const query = queryIndex >= 0 ? href.slice(queryIndex) : '';
+        link.setAttribute('href', `mailto:mt.tech.industries@gmail.com${query}`);
+        if ((link.textContent || '').toLowerCase().includes('@mttechindustries.com')) {
+          link.textContent = 'mt.tech.industries@gmail.com';
+        }
+      });
+    };
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', repairLegacyContactLinks, { once: true });
+    } else {
+      repairLegacyContactLinks();
+    }
   }
 }
 
