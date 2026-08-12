@@ -1,38 +1,36 @@
-# Product Status — MT Tech Industries LLC Website
+# Website Status — MT Tech Industries LLC
 
-**Date:** 2026-07-19  
-**Type:** Static HTML/CSS Website  
-**Status:** PRODUCTION-READY  
+**Date:** 2026-08-12  
+**Type:** Static HTML/CSS GitHub Pages site  
+**Site status:** Deployable static website
 
-## What This Is
+## Scope of this status
 
-Corporate website for MT Tech Industries LLC — research company landing page, project portfolio, licensing information, and contact.
+This file describes the **website implementation only**. It is not a readiness certification for MT Tech products, research systems, patent applications, commercial claims, or field performance.
 
-## Features
+## Website implementation
 
-- ✅ Static HTML/CSS (no build required)
-- ✅ Responsive design
-- ✅ Project portfolio showcase (9+ projects)
-- ✅ NDA form, licensing terms, contact
-- ✅ Skills/expertise documentation
+- Static HTML/CSS/JavaScript; no build step required.
+- Responsive public landing, commercialization, filing, licensing, contact, privacy, and controlled-review pages.
+- Shared navigation and footer components.
+- Public-safe project pages for selected material.
 
-## Installation
+## Public evidence standard
 
-No installation required. Serve directly:
+The website must not convert internal technical maturity into unsupported external claims.
+
+- Patent applications are described as filings/applications, not issued patents.
+- Working software is not automatically described as production-ready or commercially validated.
+- Medical, diagnostic, field-accuracy, financial-performance, or other outcome claims require the appropriate external evidence.
+- Unfiled and sensitive R&D remains compartmentalized.
+- Commercialization pages distinguish customer-validation, research-validation, and licensing pathways.
+
+## Local verification
+
+Serve directly for review:
 
 ```bash
-# Python 3.11+
 python3 -m http.server 8000
-# Visit http://localhost:8000
 ```
 
-## Verification
-
-- ✅ All .html files present
-- ✅ CSS loads correctly
-- ✅ No broken links in project pages
-- ✅ Responsive on desktop/mobile
-
-## Status
-
-**PRODUCTION-READY** — Static content, no dependencies, no runtime services needed.
+Then verify navigation, relative links, mobile layout, and the public claim boundaries before deployment.

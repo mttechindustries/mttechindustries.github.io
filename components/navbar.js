@@ -12,34 +12,29 @@ class MtNav extends HTMLElement {
           </a>
 
           <div class="hidden items-center gap-7 text-sm text-slate-400 md:flex">
-            <a href="${base}index.html#projects" class="transition hover:text-cyan-400">Private Systems</a>
+            <a href="${base}index.html#commercialization" class="transition hover:text-cyan-400">Commercialization</a>
             <a href="${base}index.html#patents" class="transition hover:text-cyan-400">Filed IP</a>
-            <a href="${base}licensing.html" class="transition hover:text-cyan-400">Licensing</a>
+            <a href="${base}licensing.html" class="transition hover:text-cyan-400">Pilot &amp; Licensing</a>
+            <a href="${base}investors.html" class="transition hover:text-amber-400">Company</a>
             <a href="${base}sponsor.html" class="font-semibold text-emerald-300 transition hover:text-emerald-200">Support</a>
-            <a href="${base}investors.html" class="font-semibold transition hover:text-amber-400">Investors</a>
           </div>
 
           <div class="flex items-center gap-3">
-            <a href="${base}nda_form.html"
-               class="rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500 px-4 py-2 text-xs font-semibold text-slate-950 shadow-lg shadow-cyan-500/20 transition hover:brightness-110 sm:text-sm">
-              Request NDA
-            </a>
+            <a href="${base}nda_form.html" class="rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500 px-4 py-2 text-xs font-semibold text-slate-950 shadow-lg shadow-cyan-500/20 transition hover:brightness-110 sm:text-sm">Protected Review</a>
             <button id="mt-mobile-toggle" class="rounded-lg border border-slate-700 p-2 text-slate-300 transition hover:text-cyan-400 md:hidden">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
             </button>
           </div>
         </div>
 
         <div id="mt-mobile-menu" class="hidden border-t border-slate-800 bg-slate-950/95 md:hidden">
           <div class="flex flex-col gap-1 px-6 py-4 text-sm text-slate-400">
-            <a href="${base}index.html#projects" class="py-2 transition hover:text-cyan-400">Private Systems</a>
+            <a href="${base}index.html#commercialization" class="py-2 transition hover:text-cyan-400">Commercialization</a>
             <a href="${base}index.html#patents" class="py-2 transition hover:text-cyan-400">Filed IP</a>
-            <a href="${base}licensing.html" class="py-2 transition hover:text-cyan-400">Licensing</a>
+            <a href="${base}licensing.html" class="py-2 transition hover:text-cyan-400">Pilot &amp; Licensing</a>
+            <a href="${base}investors.html" class="py-2 transition hover:text-amber-400">Company</a>
             <a href="${base}sponsor.html" class="py-2 font-semibold text-emerald-300 transition hover:text-emerald-200">Support</a>
-            <a href="${base}investors.html" class="py-2 font-semibold transition hover:text-amber-400">Investors</a>
-            <a href="${base}nda_form.html" class="mt-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500 px-4 py-2 text-center font-semibold text-slate-950">Request NDA</a>
+            <a href="${base}nda_form.html" class="mt-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500 px-4 py-2 text-center font-semibold text-slate-950">Protected Review</a>
           </div>
         </div>
       </nav>
