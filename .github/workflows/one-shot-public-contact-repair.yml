@@ -1,0 +1,102 @@
+name: One-shot public contact repair
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/one-shot-public-contact-repair.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Repair dead public contact endpoints
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+
+          html_files = list(Path('.').rglob('*.html'))
+          changed = []
+          total_research = 0
+          total_info = 0
+
+          for p in html_files:
+              text = p.read_text(encoding='utf-8')
+              original = text
+              research_count = text.count('research@mttechindustries.com')
+              info_count = text.count('info@mttechindustries.com')
+              if research_count:
+                  total_research += research_count
+                  text = text.replace('research@mttechindustries.com', 'mt.tech.industries@gmail.com')
+              if info_count:
+                  total_info += info_count
+                  text = text.replace('info@mttechindustries.com', 'mt.tech.industries@gmail.com')
+              if text != original:
+                  p.write_text(text, encoding='utf-8')
+                  changed.append(str(p))
+
+          # Counts are intentionally exact so an unexpected repository state fails closed.
+          if total_research != 7:
+              raise SystemExit(f'Expected exactly 7 research@ contact occurrences, found {total_research}')
+          if total_info != 1:
+              raise SystemExit(f'Expected exactly 1 info@ contact occurrence, found {total_info}')
+
+          privacy = Path('privacy-policy.html')
+          text = privacy.read_text(encoding='utf-8')
+          old = 'information collected from users of the mttechindustries.com website.'
+          new = 'information collected from users of the active MT Tech Industries public website at https://mttechindustries.github.io/.'
+          if text.count(old) != 1:
+              raise SystemExit(f'privacy-policy.html expected one active-site sentence, found {text.count(old)}')
+          privacy.write_text(text.replace(old, new), encoding='utf-8')
+          if 'privacy-policy.html' not in changed:
+              changed.append('privacy-policy.html')
+
+          # repo-template.html is a development template, not a real product page; keep search engines out.
+          template = Path('repo-template.html')
+          text = template.read_text(encoding='utf-8')
+          old_robots = '<meta name="robots" content="index, follow">'
+          new_robots = '<meta name="robots" content="noindex, nofollow">'
+          if text.count(old_robots) != 1:
+              raise SystemExit(f'repo-template.html expected one robots tag, found {text.count(old_robots)}')
+          template.write_text(text.replace(old_robots, new_robots), encoding='utf-8')
+          if 'repo-template.html' not in changed:
+              changed.append('repo-template.html')
+
+          print('Changed files:')
+          for path in sorted(changed):
+              print(f'  {path}')
+          PY
+
+      - name: Validate public surface
+        shell: bash
+        run: |
+          set -euo pipefail
+          ! grep -R --include='*.html' -nE '(research|info)@mttechindustries\.com' .
+          grep -q 'https://mttechindustries.github.io/' privacy-policy.html
+          grep -q '<meta name="robots" content="noindex, nofollow">' repo-template.html
+          # Do not touch source-history/domain references merely because the old domain string exists.
+          test -f index.html
+          test -f components/navbar.js
+
+      - name: Commit public contact repair
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet; then
+            echo 'No changes produced; refusing empty commit.' >&2
+            exit 1
+          fi
+          git config user.name 'MT Tech Industries LLC'
+          git config user.email 'mt.tech.industries@gmail.com'
+          git add -- '*.html'
+          git commit -m 'Repair public contact endpoints'
+          git push origin HEAD:main
